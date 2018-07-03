@@ -14,6 +14,42 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+.overlay{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(36,112,101,0.8);
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: .5s ease;
+    border-radius: 5px;
+}
+.container2:hover .overlay {
+  width: 100%;
+
+}
+.image {
+  display: block;
+  width: 100%;
+  height: auto;  
+}
+.container2 {
+  position: relative;
+  width: 100%;
+}
+.text {
+    white-space: nowrap; 
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;

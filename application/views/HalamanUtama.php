@@ -205,6 +205,7 @@
 						</form>						
 					</div>
 					<a href="<?php echo base_url('leaflet') ?>" style="text-decoration-line:none;"><h3 class="text-left" style="color:black;">Leaflet</h3></a>
+					
 					<hr style="border-color: grey">
 					<!-- <div class="thumbnail" style="background-color: white; border-style: none; margin-top: -10px;">
 						<h5 style="color:black;">Penyakit Lanas</h5>													

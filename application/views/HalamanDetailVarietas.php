@@ -1,4 +1,4 @@
-<!DOCTYPE <html>
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>Balittas</title>
@@ -14,7 +14,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-	</head>	
+	</head>
 	<body>
 		<header>			
 			<nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: rgba(28,69,26,1);">
@@ -70,7 +70,7 @@
 			<!-- Gambar tengah -->					
 			<div class="pcc">
 				<!-- <img src="gambar/keten.jpg" class="img-responsive" id="logotengah"> -->
-				 <p style="padding-top: 90px;">Detail Leaflet<p>
+				 <p style="padding-top: 90px;">Detail Varietas<p>
 			</div>				
 		</header>
 
@@ -83,178 +83,91 @@
 			<div class="row">
 				<div class="col-sm-9 col-lg-9">
 					<hr style="border-color: black">
-					<div class="row">
-						<div class="col-xs-12 col-sm-4 col-lg-4"> 
-							<div class="thumbnail text-center" style="height: 65%;">
-									<img class="leafletImg" src="<?php echo base_url() ?>item img/1a.jpg" alt="" style="width:100%;">
-									<img class="leafletImg" src="<?php echo base_url() ?>item img/1b.jpg" alt="" style="width: 100%; margin-top: 5px;">
-								<!-- <a href="" style="text-decoration-line: none;">
-								</a>				 -->
-								<h4 style="color:rgb(242,97,5);">KONSERVASI LAHAN TEMBAKAU TEMANGGUNG</h4>
-							</div>						
-						</div>
-						<div class="col-xs-12 col-sm-4 col-lg-4"> 
-							<div class="thumbnail text-center" style="height: 65%;">
-								<!-- <a href="" style="text-decoration-line: none;"> -->
-									<img class="leafletImg" src="<?php echo base_url() ?>item img/2a.jpg" alt="" style="width: 100%;">
-									<img class="leafletImg" src="<?php echo base_url() ?>item img/2b.jpg" alt="" style="width: 100%; margin-top: 5px;">
-								<!-- </a>				 -->
-								<h4 style="color:rgb(242,97,5);">PENYAKIT KERUPUK/KERITING</h4>
-							</div>						
-						</div>
-						<div class="col-xs-12 col-sm-4 col-lg-4"> 
-							<div class="thumbnail text-center" style="height: 65%;">
-								<!-- <a href="" style="text-decoration-line: none;"> -->
-									<img class="leafletImg" src="<?php echo base_url() ?>item img/3a.jpg" alt="" style="width: 100%;">
-									<img class="leafletImg" src="<?php echo base_url() ?>item img/3b.jpg" alt="" style="width: 100%; margin-top: 5px;">
-								<!-- </a>				 -->
-								<h4 style="color:rgb(242,97,5);">PENYAKIT LANAS</h4>
-							</div>						
-						</div>
-						<div class="col-xs-12 col-sm-4 col-lg-4"> 
-							<div class="thumbnail text-center" style="height: 65%;">
-								<!-- <a href="" style="text-decoration-line: none;"> -->
-									<img class="leafletImg" src="<?php echo base_url() ?>item img/1a.jpg" alt="" style="width: 100%;">
-									<img class="leafletImg" src="<?php echo base_url() ?>item img/1b.jpg" alt="" style="width: 100%; margin-top: 5px;">
-								<!-- </a>				 -->
-								<h4 style="color:rgb(242,97,5);">KONSERVASI LAHAN TEMBAKAU TEMANGGUNG</h4>
-							</div>						
-						</div>
-						<div class="col-xs-12 col-sm-4 col-lg-4"> 
-							<div class="thumbnail text-center" style="height: 65%;">
-								<!-- <a href="" style="text-decoration-line: none;"> -->
-									<img class="leafletImg" src="<?php echo base_url() ?>item img/2a.jpg" alt="" style="width: 100%;">
-									<img class="leafletImg" src="<?php echo base_url() ?>item img/2b.jpg" alt="" style="width: 100%; margin-top: 5px;">
-								<!-- </a>				 -->
-								<h4 style="color:rgb(242,97,5);">PENYAKIT KERUPUK/KERITING</h4>
-							</div>						
-						</div>
-						<div class="col-xs-12 col-sm-4 col-lg-4"> 
-							<div class="thumbnail text-center" style="height: 65%;">
-								<!-- <a href="" style="text-decoration-line: none;"> -->
-									<img class="leafletImg" src="<?php echo base_url() ?>item img/3a.jpg" alt="" style="width: 100%;">
-									<img class="leafletImg" src="<?php echo base_url() ?>item img/3b.jpg" alt="" style="width: 100%; margin-top: 5px;">
-								</a>				
-								<h4 style="color:rgb(242,97,5);">PENYAKIT LANAS</h4>
-							</div>						
-						</div>
+					<div class="row" style="margin-bottom: 20px;">
+						<div class="col-xs-12 col-sm-12 col-lg-12">
+								<div class="thumbnail" style=" border-radius: 5px; background-color: rgba(36,112,101,0.1);">
+									<img src="<?php echo base_url() ?>item img/tembakau.jpg" alt="" style="width: 100%;">
+									<br>
+									<span class="label label-success"><p class="glyphicon glyphicon-calendar"></p> 3 Juli 2017</span>
+									<span class="label label-warning"><p class="glyphicon glyphicon-time"></p> 14:00</span>										
+									<h4 style="color:rgb(242,97,5);font-size: 24px;">VARIETAS NC 471</h4>									
+									<!-- <hr style="border-color: black;">									 -->
+									<p>&nbsp Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab explicabo facilis natus eos molestiae magni tempore sint eum minima, a non rem laudantium possimus aliquam illo repellendus minus rerum eligendi iure voluptatum sit voluptates esse ullam. Excepturi at error fugit, vel provident rem repellendus sequi non molestiae, deleniti recusandae nulla, magnam cupiditate rerum alias tempora. Iste explicabo optio placeat, iure eligendi eum ipsum quasi quos obcaecati, dolorem officiis ipsa repellendus nesciunt corrupti inventore modi corporis culpa. Id aut ex, illum distinctio optio unde debitis eaque inventore, eligendi placeat doloremque excepturi quidem deserunt. Aperiam distinctio eaque ad optio tempore, saepe! Sapiente.</p>
+									<p>&nbsp Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab explicabo facilis natus eos molestiae magni tempore sint eum minima, a non rem laudantium possimus aliquam illo repellendus minus rerum eligendi iure voluptatum sit voluptates esse ullam. Excepturi at error fugit, vel provident rem repellendus sequi non molestiae, deleniti recusandae nulla, magnam cupiditate rerum alias tempora. Iste explicabo optio placeat, iure eligendi eum ipsum quasi quos obcaecati, dolorem officiis ipsa repellendus nesciunt corrupti inventore modi corporis culpa. Id aut ex, illum distinctio optio unde debitis eaque inventore, eligendi placeat doloremque excepturi quidem deserunt. Aperiam distinctio eaque ad optio tempore, saepe! Sapiente.</p>
+									<br>
+									<p><b>Catatan:</b></p>
+									<p>Surat Keputusan Pelepasan <b>Varietas NC 471</b> dapat diunduh <a href="" style="text-decoration-line: none"><b>di sini</b></a>.</p>
+									<br>
+									<br>
+									<div style="text-align: right; margin-bottom: 10px;margin-right: 10px;">
+									    <span style="font-size: 12px;">Bagikan &nbsp</span>
+										<a href=""><span><img src="<?php echo base_url() ?>item img/fb.png" alt=""></span></a>
+										<a href=""><span><img src="<?php echo base_url() ?>item img/twitter.png" alt=""></span></a>
+										<a href=""><span><img src="<?php echo base_url() ?>item img/gplus.png" alt=""></span></a>
+									</div>									
+								</div>
+						</div>							
 					</div>
-					<ul class="pager" >
-						<li><a href=""><</a></li>
-						<li><a href="">1</a></li>
-						<li><a href="">2</a></li>
-						<li><a href="">3</a></li>
-						<li><a href="">></a></li>
-					</ul>
 				</div>
-
 				<div class="col-sm-3 col-lg-3">
+					
 					<a href="" style="text-decoration-line:none;"><h3 class="text-left" style="color:black; margin-top: -25px;">Pencarian</h3></a>
 					<hr style="border-color: black">
-					<div class="container-fluid" style="background-color:rgba(28,69,26,0.9); border-radius: 5px;">
+					<div class="container-fluid" style="background-color:rgba(28,69,26,0.9);border-radius: 5px;">
 						<form action="" style="margin-top: 15px; margin-bottom: 15px;">
-							<div class="input-group" style="z-index: 0">
+							<div class="input-group">
 							    <input type="text" class="form-control" placeholder="Cari">
 							    <div class="input-group-btn">
-							      <button class="btn btn-success" type="submit" style="color: #5cb85c;">
-							        <i class="glyphicon glyphicon-search" style="color: white;"></i>.
+							      <button class="btn btn-success" type="submit">
+							        <i class="glyphicon glyphicon-search"></i>
+							        
 							      </button>
 							    </div>
 							 </div>
 						</form>						
 					</div>
-					<a href="" style="text-decoration-line:none;"><h3 class="text-left" style="color:black;">Varietas Terbaru</h3></a>
+					<a href="" style="text-decoration-line:none;"><h3 class="text-left" style="color:black;">Leaflet</h3></a>
 					<hr style="border-color: black">
-					<div class="beritaterbaru">
-						<a href="" style="color:black;text-decoration-line: none;">
-							<p style="color:orange;font-size: 15px;">Jalan Sehat</p>												
-							<div class="row">
-								<div class="col-xs-5 col-sm-5 col-lg-5">
-									<img src="<?php echo base_url() ?>item img/tembakau2.jpg" alt="" style="width: 100%;">	
-								</div>
-								<div class="col-xs-7 col-sm-7 col-lg-7">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, nobis.</p>					
-								</div>		
-							</div>
-						</a>
+					<h5 style="color:black;">Penyakit Lanas</h5>
+					<div class="row">
+						<div class="col-sm-6 col-lg-6">													 
+							<img src="<?php echo base_url() ?>item img/1a.jpg" class="image" style="width: 100%">						
+						</div> 
+						<div class="col-sm-6 col-lg-6">
+							<img src="<?php echo base_url() ?>item img/1a.jpg" class="image" style="width: 100%">
+						</div>						
+					</div>					
+					<h5 style="color:black;">Penyakit Lanas</h5>
+					<div class="row">
+						<div class="col-sm-6 col-lg-6">													 
+							<img src="<?php echo base_url() ?>item img/2a.jpg" class="image" style="width: 100%">						
+						</div> 
+						<div class="col-sm-6 col-lg-6">
+							<img src="<?php echo base_url() ?>item img/2b.jpg" class="image" style="width: 100%">
+						</div>						
+					</div>					
+					<h5 style="color:black;">Penyakit Lanas</h5>
+					<div class="row">
+						<div class="col-sm-6 col-lg-6">													 
+							<img src="<?php echo base_url() ?>item img/1a.jpg" class="image" style="width: 100%">						
+						</div> 
+						<div class="col-sm-6 col-lg-6">
+							<img src="<?php echo base_url() ?>item img/1a.jpg" class="image" style="width: 100%">
+						</div>						
 					</div>
-					<hr style="margin-top: 10px;margin-bottom: 5px;">
-					<div class="beritaterbaru">
-						<a href="" style="color:black;text-decoration-line: none;">
-							<p style="color:orange;font-size: 15px;">Jalan Sehat</p>												
-							<div class="row">
-								<div class="col-xs-5 col-sm-5 col-lg-5">
-									<img src="<?php echo base_url() ?>item img/tembakau2.jpg" alt="" style="width: 100%;">	
-								</div>
-								<div class="col-xs-7 col-sm-7 col-lg-7">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, nobis.</p>					
-								</div>		
-							</div>
-						</a>
-					</div>
-					<hr style="margin-top: 10px;margin-bottom: 5px;">
-					<div class="beritaterbaru">
-						<a href="" style="color:black;text-decoration-line: none;">
-							<p style="color:orange;font-size: 15px;">Jalan Sehat</p>												
-							<div class="row">
-								<div class="col-xs-5 col-sm-5 col-lg-5">
-									<img src="<?php echo base_url() ?>item img/tembakau2.jpg" alt="" style="width: 100%;">	
-								</div>
-								<div class="col-xs-7 col-sm-7 col-lg-7">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, nobis.</p>					
-								</div>		
-							</div>
-						</a>
-					</div>
-					<hr style="margin-top: 10px;margin-bottom: 5px;">
-					<div class="beritaterbaru">
-						<a href="" style="color:black;text-decoration-line: none;">
-							<p style="color:orange;font-size: 15px;">Jalan Sehat</p>												
-							<div class="row">
-								<div class="col-xs-5 col-sm-5 col-lg-5">
-									<img src="<?php echo base_url() ?>item img/tembakau2.jpg" alt="" style="width: 100%;">	
-								</div>
-								<div class="col-xs-7 col-sm-7 col-lg-7">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, nobis.</p>					
-								</div>		
-							</div>
-						</a>
-					</div>
+					<h5 style="color:black;">Penyakit Lanas</h5>
+					<div class="row">
+						<div class="col-sm-6 col-lg-6">													 
+							<img src="<?php echo base_url() ?>item img/2a.jpg" class="image" style="width: 100%">						
+						</div> 
+						<div class="col-sm-6 col-lg-6">
+							<img src="<?php echo base_url() ?>item img/2b.jpg" class="image" style="width: 100%">
+						</div>						
+					</div>	
 				</div>
+
 			</div>
 		</div>
-		<!-- END OF CONTENT -->
-
-		<!-- MODALS -->
-		<div id="myModal" class="modalLeaflet">
-		  <span class="closeModal" style="margin-top: 50px; margin-left: 15px;">&times;</span>
-		  <img class="modalLeaflet-content" id="imgModal">
-		</div>
-		<script>
-		// Get the modal
-		var modal = document.getElementById('myModal');
-
-		// Get the image and insert it inside the modal - use its "alt" text as a caption
-		var max = document.getElementsByClassName("leafletImg");
-		for (var i = 0; i < max.length; i++) {
-			var img = document.getElementsByClassName("leafletImg")[i];
-			var modalImg = document.getElementById("imgModal");
-			img.onclick = function(){
-			    modal.style.display = "block";
-			    modalImg.src = this.src;
-			}
-		}
-
-		// Get the <span> element that closes the modal
-		var span = document.getElementsByClassName("closeModal")[0];
-
-		// When the user clicks on <span> (x), close the modal
-		span.onclick = function() { 
-		    modal.style.display = "none";
-		}
-		</script>
-		<!-- END OF MODALS -->
-
 	</body>
 	<br><br>
 	<footer>
@@ -355,6 +268,4 @@
 				</div>
 			</div>
 	</footer>
-	
 </html>
-

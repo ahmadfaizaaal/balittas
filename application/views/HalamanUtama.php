@@ -18,6 +18,7 @@
 	<body>
 		<header>			
 			<nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: rgba(28,69,26,1);">
+			<!-- <nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: #57bb82;"> -->
 				<div class="container-fluid">
 				    <div class="navbar-header">
 				    <div></div>
@@ -89,7 +90,7 @@
 				<div class="row">
 					<div class="col-xs-12 col-sm-4 col-lg-4"> 
 						<div class="thumbnail">
-							<a href="" style="text-decoration-line: none;">
+							<a href="<?php echo base_url('Home/detailVarietas') ?>" style="text-decoration-line: none;">
 								<img src="item img/tembakau.jpg" alt="" style="width: 100%;">
 								<span class="label label-success"><p class="glyphicon glyphicon-calendar"></p> 3 Juli 2017</span>
 								<span class="label label-warning"><p class="glyphicon glyphicon-time"></p> 14:00</span>	
@@ -191,6 +192,7 @@
 					<a href="" style="text-decoration-line:none;"><h3 class="text-left" style="color:black;">Pencarian</h3></a>
 					<hr style="border-color: grey">
 					<div class="container-fluid" style="background-color:rgba(28,69,26,0.9);border-radius: 5px;">
+					<!-- <div class="container-fluid" style="background-color:#57bb82;border-radius: 5px;"> -->
 						<form action="" style="margin-top: 15px; margin-bottom: 15px;">
 							<div class="input-group">
 							    <input type="text" class="form-control" placeholder="Cari">
@@ -256,52 +258,58 @@
 				</div>
 			</div>
 			<!-- <hr> -->
-			<hr style="border-color: grey">
-			<!-- Produk -->
-			<a href="" style="text-decoration-line:none;"><h3 class="text-center" style="color:black;">Produk</h3></a><br>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo aut magni perferendis repellat rerum assumenda, facere. Alias deserunt pariatur magnam rerum quod voluptates, quidem id labore quam. Illum nemo minus repellat veritatis aliquid, consequatur, dolorem, laborum magnam voluptatibus consequuntur voluptate tempora! Vel, odio. Corporis nam maiores nemo, dicta temporibus et.</p>
-			<br><br>
-			<div class="row">
-			    <div class="col-sm-3 col-lg-3">
-				    <a href="" style="text-decoration-line: none;">
-				    	<div class="thumbnail text-center" style="background-color: white; border-style: none">
-				    		<img src="item img/hazelnut.png" style="width: 40%">
-				    		<br>
-							<h4 style="color:black;">Benih</h4>
-				    	</div>
-				    </a>
-			    </div>
-			    <div class="col-sm-3 col-lg-3">
-				    <a href="" style="text-decoration-line: none;">
-				    	<div class="thumbnail text-center" style="background-color: white; border-style: none">
-				    		<img src="item img/tools.png" style="width: 40%">
-				    		<br>
-							<h4 style="color:black;">Alat & Mesin</h4>
-				    	</div>
-				    </a>
-			    </div>
-			    <div class="col-sm-3 col-lg-3">
-				    <a href="" style="text-decoration-line: none;">
-				    	<div class="thumbnail text-center" style="background-color: white; border-style: none">
-				    		<img src="item img/flask.png" style="width: 40%">
-				    		<br>
-							<h4 style="color:black;">Formula</h4>
-				    	</div>
-				    </a>
-			    </div>
-			    <div class="col-sm-3 col-lg-3">
-				    <a href="" style="text-decoration-line: none;">
-				    	<div class="thumbnail text-center" style="background-color: white; border-style: none">
-				    		<img src="item img/pipe.png" style="width: 40%">
-				    		<br>
-							<h4 style="color:black;">Produk Hilir</h4>
-				    	</div>
-				    </a>
-			    </div>
+			<!-- <hr style="border-color: grey"> -->
+			<div class="container-fluid" style="background-color: rgba(28,69,26,1);">
+				<!-- Produk -->
+				<a href="" style="text-decoration-line:none;"><h3 class="text-center" style="color:white;">Produk</h3></a><br>
+				<p style="color: white;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo aut magni perferendis repellat rerum assumenda, facere. Alias deserunt pariatur magnam rerum quod voluptates, quidem id labore quam. Illum nemo minus repellat veritatis aliquid, consequatur, dolorem, laborum magnam voluptatibus consequuntur voluptate tempora! Vel, odio. Corporis nam maiores nemo, dicta temporibus et.</p>
+				<br><br>
+				<div class="row">
+				    <div class="col-sm-3 col-lg-3">
+					    <a href="" style="text-decoration-line: none;" onmouseover="hvr(this, 'in')" onmouseleave="hvr(this, 'out')">
+					    	<div class="thumbnail text-center produk" style="background-color: rgba(28,69,26,1); border-style: none;" >
+					    		<img src="item img/hazelnutWh.png" style="width: 40%" col="g">
+					    		<img src="item img/hazelnutY.png" style="width: 40%; display:none;" col="b">
+					    		<br>
+								<h4>Benih</h4>
+					    	</div>
+					    </a>
+				    </div>
+				    <div class="col-sm-3 col-lg-3">
+					    <a href="" style="text-decoration-line: none;" onmouseover="hvr(this, 'in')" onmouseleave="hvr(this, 'out')">
+					    	<div class="thumbnail text-center produk" style="background-color: rgba(28,69,26,1); border-style: none">
+					    		<img src="item img/toolsWh.png" style="width: 40%" col="g">
+					    		<img src="item img/toolsY.png" style="width: 40%; display:none;" col="b">
+					    		<br>
+								<h4>Alat & Mesin</h4>
+					    	</div>
+					    </a>
+				    </div>
+				    <div class="col-sm-3 col-lg-3">
+					    <a href="" style="text-decoration-line: none;" onmouseover="hvr(this, 'in')" onmouseleave="hvr(this, 'out')">
+					    	<div class="thumbnail text-center produk" style="background-color: rgba(28,69,26,1); border-style: none">
+					    		<img src="item img/flaskWh.png" style="width: 40%" col="g">
+					    		<img src="item img/flaskY.png" style="width: 40%; display:none;" col="b">
+					    		<br>
+								<h4>Formula</h4>
+					    	</div>
+					    </a>
+				    </div>
+				    <div class="col-sm-3 col-lg-3">
+					    <a href="" style="text-decoration-line: none;" onmouseover="hvr(this, 'in')" onmouseleave="hvr(this, 'out')">
+					    	<div class="thumbnail text-center produk" style="background-color: rgba(28,69,26,1); border-style: none">
+					    		<img src="item img/pipeWh.png" style="width: 40%" col="g">
+					    		<img src="item img/pipeY.png" style="width: 40%; display:none;" col="b">
+					    		<br>
+								<h4>Produk Hilir</h4>
+					    	</div>
+					    </a>
+				    </div>
+				</div>
+				<br>
 			</div>
-			<br>
 			<!-- <hr> -->
-			<hr style="border-color: grey">
+			<!-- <hr style="border-color: grey"> -->
 			<br>
 			<div class="row">
 				<div class="col-sm-3 col-lg-3">
@@ -557,4 +565,20 @@
 				</div>
 			</div>
 	</footer>
+	<script>
+		function hvr(dom, action)
+		{
+		    if (action == 'in')
+		    {
+		        $(dom).find("[col=g]").css("display", "none");
+		        $(dom).find("[col=b]").css("display", "block");
+		    }
+
+		    else
+		    {
+		        $(dom).find("[col=b]").css("display", "none");
+		        $(dom).find("[col=g]").css("display", "block");
+		    }
+		}
+	</script>
 </html>

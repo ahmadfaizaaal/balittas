@@ -9,8 +9,8 @@ class Home extends CI_Controller
 		$this->load->view('HalamanUtama');
 	}
 
-	public function leaflet()
+	public function detailVarietas()
 	{
-		$this->load->view('HalamanDetailLeaflet');
+		$this->load->view('HalamanDetailVarietas');
 	}
 } ?>

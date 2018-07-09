@@ -186,6 +186,7 @@
 						<li><a href="">3</a></li>
 						<li><a href="">></a></li>
 					</ul>
+					<br>
 				</div>				
 				<div class="col-sm-3 col-lg-3">
 					<br>
@@ -194,7 +195,7 @@
 					<div class="container-fluid" style="background-color:rgba(28,69,26,0.9);border-radius: 5px;">
 					<!-- <div class="container-fluid" style="background-color:#57bb82;border-radius: 5px;"> -->
 						<form action="" style="margin-top: 15px; margin-bottom: 15px;">
-							<div class="input-group">
+							<div class="input-group" style="z-index: 0;">
 							    <input type="text" class="form-control" placeholder="Cari">
 							    <div class="input-group-btn">
 							      <button class="btn btn-success" type="submit">
@@ -223,44 +224,48 @@
 					<h5 style="color:black;">Penyakit Lanas</h5>
 					<div class="row">
 						<div class="col-sm-6 col-lg-6">													 
-							<img src="item img/1a.jpg" class="image" style="width: 100%">						
+							<img class="leafletImg" src="item img/1a.jpg" class="image" style="width: 100%">						
 						</div> 
 						<div class="col-sm-6 col-lg-6">
-							<img src="item img/1a.jpg" class="image" style="width: 100%">
+							<img class="leafletImg" src="item img/1b.jpg" class="image" style="width: 100%">
 						</div>						
 					</div>					
 					<h5 style="color:black;">Penyakit Lanas</h5>
 					<div class="row">
 						<div class="col-sm-6 col-lg-6">													 
-							<img src="item img/2a.jpg" class="image" style="width: 100%">						
+							<img class="leafletImg" src="item img/2a.jpg" class="image" style="width: 100%">						
 						</div> 
 						<div class="col-sm-6 col-lg-6">
-							<img src="item img/2b.jpg" class="image" style="width: 100%">
+							<img class="leafletImg" src="item img/2b.jpg" class="image" style="width: 100%">
 						</div>						
 					</div>					
 					<h5 style="color:black;">Penyakit Lanas</h5>
 					<div class="row">
 						<div class="col-sm-6 col-lg-6">													 
-							<img src="item img/1a.jpg" class="image" style="width: 100%">						
+							<img class="leafletImg" src="item img/3a.jpg" class="image" style="width: 100%">						
 						</div> 
 						<div class="col-sm-6 col-lg-6">
-							<img src="item img/1a.jpg" class="image" style="width: 100%">
+							<img class="leafletImg" src="item img/3b.jpg" class="image" style="width: 100%">
 						</div>						
 					</div>
 					<h5 style="color:black;">Penyakit Lanas</h5>
 					<div class="row">
 						<div class="col-sm-6 col-lg-6">													 
-							<img src="item img/2a.jpg" class="image" style="width: 100%">						
+							<img class="leafletImg" src="item img/2a.jpg" class="image" style="width: 100%">						
 						</div> 
 						<div class="col-sm-6 col-lg-6">
-							<img src="item img/2b.jpg" class="image" style="width: 100%">
+							<img class="leafletImg" src="item img/2b.jpg" class="image" style="width: 100%">
 						</div>						
 					</div>	
 				</div>
 			</div>
+			</div> <!-- akhir div container atas -->
+
+
 			<!-- <hr> -->
 			<!-- <hr style="border-color: grey"> -->
-			<div class="container-fluid" style="background-color: rgba(28,69,26,1);">
+			<div class="container-fluid" style="background-color: rgba(28,69,26,0.8);">
+				<div class="container">
 				<!-- Produk -->
 				<a href="" style="text-decoration-line:none;"><h3 class="text-center" style="color:white;">Produk</h3></a><br>
 				<p style="color: white;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo aut magni perferendis repellat rerum assumenda, facere. Alias deserunt pariatur magnam rerum quod voluptates, quidem id labore quam. Illum nemo minus repellat veritatis aliquid, consequatur, dolorem, laborum magnam voluptatibus consequuntur voluptate tempora! Vel, odio. Corporis nam maiores nemo, dicta temporibus et.</p>
@@ -268,7 +273,7 @@
 				<div class="row">
 				    <div class="col-sm-3 col-lg-3">
 					    <a href="" style="text-decoration-line: none;" onmouseover="hvr(this, 'in')" onmouseleave="hvr(this, 'out')">
-					    	<div class="thumbnail text-center produk" style="background-color: rgba(28,69,26,1); border-style: none;" >
+					    	<div class="thumbnail text-center produk" style="background-color: rgba(28,69,26,0); border-style: none;" >
 					    		<img src="item img/hazelnutWh.png" style="width: 40%" col="g">
 					    		<img src="item img/hazelnutY.png" style="width: 40%; display:none;" col="b">
 					    		<br>
@@ -278,7 +283,7 @@
 				    </div>
 				    <div class="col-sm-3 col-lg-3">
 					    <a href="" style="text-decoration-line: none;" onmouseover="hvr(this, 'in')" onmouseleave="hvr(this, 'out')">
-					    	<div class="thumbnail text-center produk" style="background-color: rgba(28,69,26,1); border-style: none">
+					    	<div class="thumbnail text-center produk" style="background-color: rgba(28,69,26,0); border-style: none">
 					    		<img src="item img/toolsWh.png" style="width: 40%" col="g">
 					    		<img src="item img/toolsY.png" style="width: 40%; display:none;" col="b">
 					    		<br>
@@ -288,7 +293,7 @@
 				    </div>
 				    <div class="col-sm-3 col-lg-3">
 					    <a href="" style="text-decoration-line: none;" onmouseover="hvr(this, 'in')" onmouseleave="hvr(this, 'out')">
-					    	<div class="thumbnail text-center produk" style="background-color: rgba(28,69,26,1); border-style: none">
+					    	<div class="thumbnail text-center produk" style="background-color: rgba(28,69,26,0); border-style: none">
 					    		<img src="item img/flaskWh.png" style="width: 40%" col="g">
 					    		<img src="item img/flaskY.png" style="width: 40%; display:none;" col="b">
 					    		<br>
@@ -298,7 +303,7 @@
 				    </div>
 				    <div class="col-sm-3 col-lg-3">
 					    <a href="" style="text-decoration-line: none;" onmouseover="hvr(this, 'in')" onmouseleave="hvr(this, 'out')">
-					    	<div class="thumbnail text-center produk" style="background-color: rgba(28,69,26,1); border-style: none">
+					    	<div class="thumbnail text-center produk" style="background-color: rgba(28,69,26,0); border-style: none">
 					    		<img src="item img/pipeWh.png" style="width: 40%" col="g">
 					    		<img src="item img/pipeY.png" style="width: 40%; display:none;" col="b">
 					    		<br>
@@ -307,11 +312,12 @@
 					    </a>
 				    </div>
 				</div>
-				<br>
+				<br></div>
 			</div>
 			<!-- <hr> -->
 			<!-- <hr style="border-color: grey"> -->
-			<br>
+			<br><br>
+			<div class="container">
 			<div class="row">
 				<div class="col-sm-3 col-lg-3">
 					<a href="" style="text-decoration-line:none;"><h3 class="text-center" style="color:black;margin-top: 0px;">Teknologi Budidaya</h3></a>
@@ -466,6 +472,35 @@
 				</div>
 			</div>
 		</div>
+		<!-- MODALS -->
+		<div id="myModal" class="modalLeaflet">
+		  <span class="closeModal" style="margin-top: 50px; margin-left: 15px;">&times;</span>
+		  <img class="modalLeaflet-content" id="imgModal">
+		</div>
+		<script>
+		// Get the modal
+		var modal = document.getElementById('myModal');
+
+		// Get the image and insert it inside the modal - use its "alt" text as a caption
+		var max = document.getElementsByClassName("leafletImg");
+		for (var i = 0; i < max.length; i++) {
+			var img = document.getElementsByClassName("leafletImg")[i];
+			var modalImg = document.getElementById("imgModal");
+			img.onclick = function(){
+			    modal.style.display = "block";
+			    modalImg.src = this.src;
+			}
+		}
+
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("closeModal")[0];
+
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function() { 
+		    modal.style.display = "none";
+		}
+		</script>
+		<!-- END OF MODALS -->
 	</body>
 	<br><br><br><br><br><br>
 	<footer>

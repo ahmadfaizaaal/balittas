@@ -115,12 +115,12 @@
 					<hr style="border-color: black">
 					<div class="container-fluid" style="background-color:rgba(28,69,26,0.9);border-radius: 5px;">
 						<form action="" style="margin-top: 15px; margin-bottom: 15px;">
-							<div class="input-group">
+							<div class="input-group" style="z-index: 0">
 							    <input type="text" class="form-control" placeholder="Cari">
 							    <div class="input-group-btn">
 							      <button class="btn btn-success" type="submit">
 							        <i class="glyphicon glyphicon-search"></i>
-							        
+
 							      </button>
 							    </div>
 							 </div>
@@ -131,43 +131,72 @@
 					<h5 style="color:black;">Penyakit Lanas</h5>
 					<div class="row">
 						<div class="col-sm-6 col-lg-6">													 
-							<img src="<?php echo base_url() ?>item img/1a.jpg" class="image" style="width: 100%">						
+							<img class="leafletImg" src="<?php echo base_url() ?>item img/1a.jpg" class="image" style="width: 100%">						
 						</div> 
 						<div class="col-sm-6 col-lg-6">
-							<img src="<?php echo base_url() ?>item img/1a.jpg" class="image" style="width: 100%">
+							<img class="leafletImg" src="<?php echo base_url() ?>item img/1b.jpg" class="image" style="width: 100%">
 						</div>						
 					</div>					
 					<h5 style="color:black;">Penyakit Lanas</h5>
 					<div class="row">
 						<div class="col-sm-6 col-lg-6">													 
-							<img src="<?php echo base_url() ?>item img/2a.jpg" class="image" style="width: 100%">						
+							<img class="leafletImg" src="<?php echo base_url() ?>item img/2a.jpg" class="image" style="width: 100%">						
 						</div> 
 						<div class="col-sm-6 col-lg-6">
-							<img src="<?php echo base_url() ?>item img/2b.jpg" class="image" style="width: 100%">
+							<img class="leafletImg" src="<?php echo base_url() ?>item img/2b.jpg" class="image" style="width: 100%">
 						</div>						
 					</div>					
 					<h5 style="color:black;">Penyakit Lanas</h5>
 					<div class="row">
 						<div class="col-sm-6 col-lg-6">													 
-							<img src="<?php echo base_url() ?>item img/1a.jpg" class="image" style="width: 100%">						
+							<img class="leafletImg" src="<?php echo base_url() ?>item img/3a.jpg" class="image" style="width: 100%">						
 						</div> 
 						<div class="col-sm-6 col-lg-6">
-							<img src="<?php echo base_url() ?>item img/1a.jpg" class="image" style="width: 100%">
+							<img class="leafletImg" src="<?php echo base_url() ?>item img/3b.jpg" class="image" style="width: 100%">
 						</div>						
 					</div>
 					<h5 style="color:black;">Penyakit Lanas</h5>
 					<div class="row">
 						<div class="col-sm-6 col-lg-6">													 
-							<img src="<?php echo base_url() ?>item img/2a.jpg" class="image" style="width: 100%">						
+							<img class="leafletImg" src="<?php echo base_url() ?>item img/2a.jpg" class="image" style="width: 100%">						
 						</div> 
 						<div class="col-sm-6 col-lg-6">
-							<img src="<?php echo base_url() ?>item img/2b.jpg" class="image" style="width: 100%">
+							<img class="leafletImg" src="<?php echo base_url() ?>item img/2b.jpg" class="image" style="width: 100%">
 						</div>						
 					</div>	
 				</div>
 
 			</div>
 		</div>
+		<!-- MODALS -->
+		<div id="myModal" class="modalLeaflet">
+		  <span class="closeModal" style="margin-top: 50px; margin-left: 15px;">&times;</span>
+		  <img class="modalLeaflet-content" id="imgModal">
+		</div>
+		<script>
+		// Get the modal
+		var modal = document.getElementById('myModal');
+
+		// Get the image and insert it inside the modal - use its "alt" text as a caption
+		var max = document.getElementsByClassName("leafletImg");
+		for (var i = 0; i < max.length; i++) {
+			var img = document.getElementsByClassName("leafletImg")[i];
+			var modalImg = document.getElementById("imgModal");
+			img.onclick = function(){
+			    modal.style.display = "block";
+			    modalImg.src = this.src;
+			}
+		}
+
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("closeModal")[0];
+
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function() { 
+		    modal.style.display = "none";
+		}
+		</script>
+		<!-- END OF MODALS -->
 	</body>
 	<br><br>
 	<footer>

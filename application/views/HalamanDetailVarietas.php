@@ -7,7 +7,7 @@
 		<meta name="description" content="A Tuts+ course">
 		<meta name="author" content="Gusna Ikhsan">
 		<!-- <link rel="stylesheet" href="webdesa.css"> -->
-		<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+		<link rel="stylesheet" href="<?php echo base_url() ?>bootstrap/css/bootstrap.css">
 
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -21,7 +21,7 @@
 				<div class="container-fluid">
 				    <div class="navbar-header">
 				    <div></div>
-				      <img src="item img/Logo-Kementerian-Pertanian.png" alt="" style="width: 20%;margin-top: 5px;margin-bottom: 5px;" class="image">
+				      <img src="<?php echo base_url() ?>item img/Logo-Kementerian-Pertanian.png" alt="" style="width: 20%;margin-top: 5px;margin-bottom: 5px;" class="image">
 				      <!-- <a class="navbar-brand" href="#">WebSiteName</a> -->
 				    </div>
 				    <!-- <ul class="nav navbar-nav">
@@ -86,7 +86,7 @@
 					<div class="row" style="margin-bottom: 20px;">
 						<div class="col-xs-12 col-sm-12 col-lg-12">
 								<div class="thumbnail" style=" border-radius: 5px; background-color: rgba(36,112,101,0.1);">
-									<img src="item img/tembakau.jpg" alt="" style="width: 100%;">
+									<img src="<?php echo base_url() ?>item img/tembakau.jpg" alt="" style="width: 100%;">
 									<br>
 									<span class="label label-success"><p class="glyphicon glyphicon-calendar"></p> 3 Juli 2017</span>
 									<span class="label label-warning"><p class="glyphicon glyphicon-time"></p> 14:00</span>										
@@ -101,9 +101,9 @@
 									<br>
 									<div style="text-align: right; margin-bottom: 10px;margin-right: 10px;">
 									    <span style="font-size: 12px;">Bagikan &nbsp</span>
-										<a href=""><span><img src="item img/fb.png" alt=""></span></a>
-										<a href=""><span><img src="item img/twitter.png" alt=""></span></a>
-										<a href=""><span><img src="item img/gplus.png" alt=""></span></a>
+										<a href=""><span><img src="<?php echo base_url() ?>item img/fb.png" alt=""></span></a>
+										<a href=""><span><img src="<?php echo base_url() ?>item img/twitter.png" alt=""></span></a>
+										<a href=""><span><img src="<?php echo base_url() ?>item img/gplus.png" alt=""></span></a>
 									</div>									
 								</div>
 						</div>							
@@ -120,6 +120,7 @@
 							    <div class="input-group-btn">
 							      <button class="btn btn-success" type="submit">
 							        <i class="glyphicon glyphicon-search"></i>
+							        
 							      </button>
 							    </div>
 							 </div>
@@ -130,37 +131,37 @@
 					<h5 style="color:black;">Penyakit Lanas</h5>
 					<div class="row">
 						<div class="col-sm-6 col-lg-6">													 
-							<img src="item img/1a.jpg" class="image" style="width: 100%">						
+							<img src="<?php echo base_url() ?>item img/1a.jpg" class="image" style="width: 100%">						
 						</div> 
 						<div class="col-sm-6 col-lg-6">
-							<img src="item img/1a.jpg" class="image" style="width: 100%">
+							<img src="<?php echo base_url() ?>item img/1a.jpg" class="image" style="width: 100%">
 						</div>						
 					</div>					
 					<h5 style="color:black;">Penyakit Lanas</h5>
 					<div class="row">
 						<div class="col-sm-6 col-lg-6">													 
-							<img src="item img/2a.jpg" class="image" style="width: 100%">						
+							<img src="<?php echo base_url() ?>item img/2a.jpg" class="image" style="width: 100%">						
 						</div> 
 						<div class="col-sm-6 col-lg-6">
-							<img src="item img/2b.jpg" class="image" style="width: 100%">
+							<img src="<?php echo base_url() ?>item img/2b.jpg" class="image" style="width: 100%">
 						</div>						
 					</div>					
 					<h5 style="color:black;">Penyakit Lanas</h5>
 					<div class="row">
 						<div class="col-sm-6 col-lg-6">													 
-							<img src="item img/1a.jpg" class="image" style="width: 100%">						
+							<img src="<?php echo base_url() ?>item img/1a.jpg" class="image" style="width: 100%">						
 						</div> 
 						<div class="col-sm-6 col-lg-6">
-							<img src="item img/1a.jpg" class="image" style="width: 100%">
+							<img src="<?php echo base_url() ?>item img/1a.jpg" class="image" style="width: 100%">
 						</div>						
 					</div>
 					<h5 style="color:black;">Penyakit Lanas</h5>
 					<div class="row">
 						<div class="col-sm-6 col-lg-6">													 
-							<img src="item img/2a.jpg" class="image" style="width: 100%">						
+							<img src="<?php echo base_url() ?>item img/2a.jpg" class="image" style="width: 100%">						
 						</div> 
 						<div class="col-sm-6 col-lg-6">
-							<img src="item img/2b.jpg" class="image" style="width: 100%">
+							<img src="<?php echo base_url() ?>item img/2b.jpg" class="image" style="width: 100%">
 						</div>						
 					</div>	
 				</div>
@@ -175,7 +176,7 @@
 					<div class="col-sm-3 col-lg-3">
 						<div class="row">
 							<div class="col-xs-2 col-sm-2 col-lg-2">
-								<img src="item img/Logo-Kementerian-Pertanian.png" style="width: 230%;">
+								<img src="<?php echo base_url() ?>item img/Logo-Kementerian-Pertanian.png" style="width: 230%;">
 							</div>
 							<div class="col-xs-10 col-sm-10 col-lg-10">
 								<p>Balai Penelitian Tanaman Pemanis dan Serat</p>
@@ -219,16 +220,16 @@
 							<hr style="margin-top: 0px; margin-bottom: 13px;">
 							<div class="row">
 								<div class="col-xs-3 col-sm-3 col-lg-3" style="margin: 0px -7px 9px 0px;">
-									<img src="item img/1a.jpg" class="img-rounded" alt="Cinque Terre" width="50" height="50" >
+									<img src="<?php echo base_url() ?>item img/1a.jpg" class="img-rounded" alt="Cinque Terre" width="50" height="50" >
 								</div>
 								<div class="col-xs-3 col-sm-3 col-lg-3" style="margin: 0px -7px 9px 0px;">
-									<img src="item img/1a.jpg" class="img-rounded" alt="Cinque Terre" width="50" height="50" >
+									<img src="<?php echo base_url() ?>item img/1a.jpg" class="img-rounded" alt="Cinque Terre" width="50" height="50" >
 								</div>
 								<div class="col-xs-3 col-sm-3 col-lg-3" style="margin: 0px -7px 9px 0px;">
-									<img src="item img/1a.jpg" class="img-rounded" alt="Cinque Terre" width="50" height="50" >
+									<img src="<?php echo base_url() ?>item img/1a.jpg" class="img-rounded" alt="Cinque Terre" width="50" height="50" >
 								</div>
 								<div class="col-xs-3 col-sm-3 col-lg-3" style="margin: 0px -7px 9px 0px;">
-									<img src="item img/1a.jpg" class="img-rounded" alt="Cinque Terre" width="50" height="50" >
+									<img src="<?php echo base_url() ?>item img/1a.jpg" class="img-rounded" alt="Cinque Terre" width="50" height="50" >
 								</div>
 							</div>
 						</div>						

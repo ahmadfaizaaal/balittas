@@ -7,7 +7,7 @@
 		<meta name="description" content="A Tuts+ course">
 		<meta name="author" content="Gusna Ikhsan">
 		<!-- <link rel="stylesheet" href="webdesa.css"> -->
-		<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+		<link rel="stylesheet" href="<?php echo base_url() ?>bootstrap/css/bootstrap.css">
 
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -107,7 +107,7 @@
 				<div class="container-fluid">
 				    <div class="navbar-header">
 				    <div></div>
-				      <img src="item img/Logo-Kementerian-Pertanian.png" alt="" style="width: 20%;margin-top: 5px;margin-bottom: 5px;" class="image">
+				      <img src="<?php echo base_url() ?>item img/Logo-Kementerian-Pertanian.png" alt="" style="width: 20%;margin-top: 5px;margin-bottom: 5px;" class="image">
 				      <!-- <a class="navbar-brand" href="#">WebSiteName</a> -->
 				    </div>
 				    <!-- <ul class="nav navbar-nav">
@@ -172,8 +172,8 @@
 					<div class="row">
 						<div class="col-xs-12 col-sm-4 col-lg-4"> 
 							<div class="thumbnail text-center" style="height: 65%;">
-									<img class="leafletImg" src="item img/1a.jpg" alt="" style="width:100%;">
-									<img class="leafletImg" src="item img/1b.jpg" alt="" style="width: 100%; margin-top: 5px;">
+									<img class="leafletImg" src="<?php echo base_url() ?>item img/1a.jpg" alt="" style="width:100%;">
+									<img class="leafletImg" src="<?php echo base_url() ?>item img/1b.jpg" alt="" style="width: 100%; margin-top: 5px;">
 								<!-- <a href="" style="text-decoration-line: none;">
 								</a>				 -->
 								<h4 style="color:rgb(242,97,5);">KONSERVASI LAHAN TEMBAKAU TEMANGGUNG</h4>
@@ -182,8 +182,8 @@
 						<div class="col-xs-12 col-sm-4 col-lg-4"> 
 							<div class="thumbnail text-center" style="height: 65%;">
 								<!-- <a href="" style="text-decoration-line: none;"> -->
-									<img class="leafletImg" src="item img/2a.jpg" alt="" style="width: 100%;">
-									<img class="leafletImg" src="item img/2b.jpg" alt="" style="width: 100%; margin-top: 5px;">
+									<img class="leafletImg" src="<?php echo base_url() ?>item img/2a.jpg" alt="" style="width: 100%;">
+									<img class="leafletImg" src="<?php echo base_url() ?>item img/2b.jpg" alt="" style="width: 100%; margin-top: 5px;">
 								<!-- </a>				 -->
 								<h4 style="color:rgb(242,97,5);">PENYAKIT KERUPUK/KERITING</h4>
 							</div>						
@@ -191,8 +191,8 @@
 						<div class="col-xs-12 col-sm-4 col-lg-4"> 
 							<div class="thumbnail text-center" style="height: 65%;">
 								<!-- <a href="" style="text-decoration-line: none;"> -->
-									<img class="leafletImg" src="item img/3a.jpg" alt="" style="width: 100%;">
-									<img class="leafletImg" src="item img/3b.jpg" alt="" style="width: 100%; margin-top: 5px;">
+									<img class="leafletImg" src="<?php echo base_url() ?>item img/3a.jpg" alt="" style="width: 100%;">
+									<img class="leafletImg" src="<?php echo base_url() ?>item img/3b.jpg" alt="" style="width: 100%; margin-top: 5px;">
 								<!-- </a>				 -->
 								<h4 style="color:rgb(242,97,5);">PENYAKIT LANAS</h4>
 							</div>						
@@ -200,8 +200,8 @@
 						<div class="col-xs-12 col-sm-4 col-lg-4"> 
 							<div class="thumbnail text-center" style="height: 65%;">
 								<!-- <a href="" style="text-decoration-line: none;"> -->
-									<img class="leafletImg" src="item img/1a.jpg" alt="" style="width: 100%;">
-									<img class="leafletImg" src="item img/1b.jpg" alt="" style="width: 100%; margin-top: 5px;">
+									<img class="leafletImg" src="<?php echo base_url() ?>item img/1a.jpg" alt="" style="width: 100%;">
+									<img class="leafletImg" src="<?php echo base_url() ?>item img/1b.jpg" alt="" style="width: 100%; margin-top: 5px;">
 								<!-- </a>				 -->
 								<h4 style="color:rgb(242,97,5);">KONSERVASI LAHAN TEMBAKAU TEMANGGUNG</h4>
 							</div>						
@@ -209,8 +209,8 @@
 						<div class="col-xs-12 col-sm-4 col-lg-4"> 
 							<div class="thumbnail text-center" style="height: 65%;">
 								<!-- <a href="" style="text-decoration-line: none;"> -->
-									<img class="leafletImg" src="item img/2a.jpg" alt="" style="width: 100%;">
-									<img class="leafletImg" src="item img/2b.jpg" alt="" style="width: 100%; margin-top: 5px;">
+									<img class="leafletImg" src="<?php echo base_url() ?>item img/2a.jpg" alt="" style="width: 100%;">
+									<img class="leafletImg" src="<?php echo base_url() ?>item img/2b.jpg" alt="" style="width: 100%; margin-top: 5px;">
 								<!-- </a>				 -->
 								<h4 style="color:rgb(242,97,5);">PENYAKIT KERUPUK/KERITING</h4>
 							</div>						
@@ -218,8 +218,8 @@
 						<div class="col-xs-12 col-sm-4 col-lg-4"> 
 							<div class="thumbnail text-center" style="height: 65%;">
 								<!-- <a href="" style="text-decoration-line: none;"> -->
-									<img class="leafletImg" src="item img/3a.jpg" alt="" style="width: 100%;">
-									<img class="leafletImg" src="item img/3b.jpg" alt="" style="width: 100%; margin-top: 5px;">
+									<img class="leafletImg" src="<?php echo base_url() ?>item img/3a.jpg" alt="" style="width: 100%;">
+									<img class="leafletImg" src="<?php echo base_url() ?>item img/3b.jpg" alt="" style="width: 100%; margin-top: 5px;">
 								</a>				
 								<h4 style="color:rgb(242,97,5);">PENYAKIT LANAS</h4>
 							</div>						
@@ -256,7 +256,7 @@
 							<p style="color:orange;font-size: 15px;">Jalan Sehat</p>												
 							<div class="row">
 								<div class="col-xs-5 col-sm-5 col-lg-5">
-									<img src="item img/tembakau2.jpg" alt="" style="width: 100%;">	
+									<img src="<?php echo base_url() ?>item img/tembakau2.jpg" alt="" style="width: 100%;">	
 								</div>
 								<div class="col-xs-7 col-sm-7 col-lg-7">
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, nobis.</p>					
@@ -270,7 +270,7 @@
 							<p style="color:orange;font-size: 15px;">Jalan Sehat</p>												
 							<div class="row">
 								<div class="col-xs-5 col-sm-5 col-lg-5">
-									<img src="item img/tembakau2.jpg" alt="" style="width: 100%;">	
+									<img src="<?php echo base_url() ?>item img/tembakau2.jpg" alt="" style="width: 100%;">	
 								</div>
 								<div class="col-xs-7 col-sm-7 col-lg-7">
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, nobis.</p>					
@@ -284,7 +284,7 @@
 							<p style="color:orange;font-size: 15px;">Jalan Sehat</p>												
 							<div class="row">
 								<div class="col-xs-5 col-sm-5 col-lg-5">
-									<img src="item img/tembakau2.jpg" alt="" style="width: 100%;">	
+									<img src="<?php echo base_url() ?>item img/tembakau2.jpg" alt="" style="width: 100%;">	
 								</div>
 								<div class="col-xs-7 col-sm-7 col-lg-7">
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, nobis.</p>					
@@ -298,7 +298,7 @@
 							<p style="color:orange;font-size: 15px;">Jalan Sehat</p>												
 							<div class="row">
 								<div class="col-xs-5 col-sm-5 col-lg-5">
-									<img src="item img/tembakau2.jpg" alt="" style="width: 100%;">	
+									<img src="<?php echo base_url() ?>item img/tembakau2.jpg" alt="" style="width: 100%;">	
 								</div>
 								<div class="col-xs-7 col-sm-7 col-lg-7">
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, nobis.</p>					
@@ -351,7 +351,7 @@
 					<div class="col-sm-3 col-lg-3">
 						<div class="row">
 							<div class="col-xs-2 col-sm-2 col-lg-2">
-								<img src="item img/Logo-Kementerian-Pertanian.png" style="width: 230%;">
+								<img src="<?php echo base_url() ?>item img/Logo-Kementerian-Pertanian.png" style="width: 230%;">
 							</div>
 							<div class="col-xs-10 col-sm-10 col-lg-10">
 								<p>Balai Penelitian Tanaman Pemanis dan Serat</p>
@@ -395,16 +395,16 @@
 							<hr style="margin-top: 0px; margin-bottom: 13px;">
 							<div class="row">
 								<div class="col-xs-3 col-sm-3 col-lg-3" style="margin: 0px -7px 9px 0px;">
-									<img src="item img/1a.jpg" class="img-rounded" alt="Cinque Terre" width="50" height="50" >
+									<img src="<?php echo base_url() ?>item img/1a.jpg" class="img-rounded" alt="Cinque Terre" width="50" height="50" >
 								</div>
 								<div class="col-xs-3 col-sm-3 col-lg-3" style="margin: 0px -7px 9px 0px;">
-									<img src="item img/1a.jpg" class="img-rounded" alt="Cinque Terre" width="50" height="50" >
+									<img src="<?php echo base_url() ?>item img/1a.jpg" class="img-rounded" alt="Cinque Terre" width="50" height="50" >
 								</div>
 								<div class="col-xs-3 col-sm-3 col-lg-3" style="margin: 0px -7px 9px 0px;">
-									<img src="item img/1a.jpg" class="img-rounded" alt="Cinque Terre" width="50" height="50" >
+									<img src="<?php echo base_url() ?>item img/1a.jpg" class="img-rounded" alt="Cinque Terre" width="50" height="50" >
 								</div>
 								<div class="col-xs-3 col-sm-3 col-lg-3" style="margin: 0px -7px 9px 0px;">
-									<img src="item img/1a.jpg" class="img-rounded" alt="Cinque Terre" width="50" height="50" >
+									<img src="<?php echo base_url() ?>item img/1a.jpg" class="img-rounded" alt="Cinque Terre" width="50" height="50" >
 								</div>
 							</div>
 						</div>						

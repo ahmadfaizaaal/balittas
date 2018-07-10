@@ -21,7 +21,7 @@
 			<nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: rgba(28,69,26,0.7);">
 				<div class="container-fluid">
 				    <div class="navbar-header" style="margin-top: 5px; margin-bottom: 3px;">						    
-				      <a href=""><img src="<?php echo base_url() ?>item img/Logo-Kementerian-Pertanian.png" style="width: 55px;height:auto;" style=""></a>
+				      <a href="<?php echo base_url() ?>"><img src="<?php echo base_url() ?>item img/Logo-Kementerian-Pertanian.png" style="width: 55px;height:auto;" style=""></a>
 				      <button type="botton" class="navbar-toggle" data-toggle="collapse" data-target="#main" style="margin-top: 10px;">
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
@@ -122,7 +122,7 @@
 			<div class="containerImg">
 				<img src="<?php echo base_url() ?>item img/tembakauHeader.jpg" alt="" style="width: 100%;">
 			 	<div class="contentImg text-center">
-				    <h1 style="margin-top: 140px;font-size: 60px;">Detail Leaflet</h1>				    
+				    <h1 style="margin-top:12% ;font-size:5vw;">Detail Leaflet</h1>				    
 			  	</div>
 			</div>	
 		</header>

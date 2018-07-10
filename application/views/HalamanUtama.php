@@ -22,7 +22,7 @@
 			<nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: rgba(28,69,26,0.7);">
 				<div class="container-fluid">
 				    <div class="navbar-header" style="margin-top: 5px; margin-bottom: 3px;">						    
-				      <a href=""><img src="<?php echo base_url() ?>item img/Logo-Kementerian-Pertanian.png" style="width: 55px;height:auto;" style=""></a>
+				      <a href="<?php echo base_url() ?>"><img src="<?php echo base_url() ?>item img/Logo-Kementerian-Pertanian.png" style="width: 55px;height:auto;" style=""></a>
 				      <button type="botton" class="navbar-toggle" data-toggle="collapse" data-target="#main" style="margin-top: 10px;">
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
@@ -384,7 +384,7 @@
 				<div class="col-sm-9 col-lg-9">
 					<div class="row">
 						<div class="col-sm-4 col-lg-4">
-						 	<a href="" style="color:black;text-decoration-line: none;">
+						 	<a href="<?php echo base_url('Home/teknologibudidaya'); ?>" style="color:black;text-decoration-line: none;">
 						 		<div class="thumbnail" style="background-color: white; border-style: none">
 						 			<img src="item img/tembakau.jpg" class="img-rounded">
 									<h4 style="color:rgb(242,97,5);">Penangkaran Benih </h4>
@@ -491,7 +491,7 @@
 					<p>Lorem ipsum dolor sit amet. ipsum dolor sit amet, consectetur adipisicing elit. Provident quod, quisquam fugiat maiores ipsam. Deserunt molestiae reiciendis, eius natus iure? ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati repudiandae tenetur illo vitae impedit eum culpa esse vero, hic repellendus.</p>	
 					<!-- <br> -->
 					<div class="text-right">						
-						<a href="">
+						<a href="<?php echo base_url('Home/agribisnis'); ?>">
 							<button class="btn btn-success" style="height: 30px;"><p style="font-size: 12px;padding-top: -12px;"><i>Selengkapnya</i></p></button>
 						</a>
 					</div>

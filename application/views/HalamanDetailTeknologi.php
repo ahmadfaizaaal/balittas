@@ -122,7 +122,7 @@
 			<div class="containerImg">
 				<img src="<?php echo base_url() ?>item img/tembakauHeader.jpg" alt="" style="width: 100%;">
 			 	<div class="contentImg text-center">
-				    <h1 style="margin-top:12% ;font-size:5vw;">Detail Varietas</h1>				    
+				    <h1 style="margin-top:12% ;font-size:5vw;">Teknologi Budidaya Tembakau</h1>				    
 			  	</div>
 			</div>	
 		</header>
@@ -138,18 +138,18 @@
 					<hr style="border-color: black">
 					<div class="row" style="margin-bottom: 20px;">
 						<div class="col-xs-12 col-sm-12 col-lg-12">
-								<div class="thumbnail" style=" border-radius: 5px; background-color: rgba(36,112,101,0.1);">
+								<div class="thumbnail" style=" border-radius: 5px; background-color:white; border-color: white;">
 									<img src="<?php echo base_url() ?>item img/tembakau.jpg" alt="" style="width: 100%;">
 									<br>
-									<span class="label label-success"><p class="glyphicon glyphicon-calendar"></p> 3 Juli 2017</span>
-									<span class="label label-warning"><p class="glyphicon glyphicon-time"></p> 14:00</span>										
-									<h4 style="color:rgb(242,97,5);font-size: 24px;">VARIETAS NC 471</h4>									
+									<!-- <span class="label label-success"><p class="glyphicon glyphicon-calendar"></p> 3 Juli 2017</span>
+									<span class="label label-warning"><p class="glyphicon glyphicon-time"></p> 14:00</span> -->										
+									<h4 style="color:#FECE00;font-size: 24px;">PENANGKARAN BENIH</h4>									
 									<!-- <hr style="border-color: black;">									 -->
 									<p>&nbsp Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab explicabo facilis natus eos molestiae magni tempore sint eum minima, a non rem laudantium possimus aliquam illo repellendus minus rerum eligendi iure voluptatum sit voluptates esse ullam. Excepturi at error fugit, vel provident rem repellendus sequi non molestiae, deleniti recusandae nulla, magnam cupiditate rerum alias tempora. Iste explicabo optio placeat, iure eligendi eum ipsum quasi quos obcaecati, dolorem officiis ipsa repellendus nesciunt corrupti inventore modi corporis culpa. Id aut ex, illum distinctio optio unde debitis eaque inventore, eligendi placeat doloremque excepturi quidem deserunt. Aperiam distinctio eaque ad optio tempore, saepe! Sapiente.</p>
 									<p>&nbsp Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab explicabo facilis natus eos molestiae magni tempore sint eum minima, a non rem laudantium possimus aliquam illo repellendus minus rerum eligendi iure voluptatum sit voluptates esse ullam. Excepturi at error fugit, vel provident rem repellendus sequi non molestiae, deleniti recusandae nulla, magnam cupiditate rerum alias tempora. Iste explicabo optio placeat, iure eligendi eum ipsum quasi quos obcaecati, dolorem officiis ipsa repellendus nesciunt corrupti inventore modi corporis culpa. Id aut ex, illum distinctio optio unde debitis eaque inventore, eligendi placeat doloremque excepturi quidem deserunt. Aperiam distinctio eaque ad optio tempore, saepe! Sapiente.</p>
 									<br>
 									<p><b>Catatan:</b></p>
-									<p>Surat Keputusan Pelepasan <b>Varietas NC 471</b> dapat diunduh <a href="" style="text-decoration-line: none"><b>di sini</b></a>.</p>
+									<p>Surat Keputusan Pelepasan <b>Varietas NC 471</b> dapat diunduh <a class="hoverThumbnail" href="" style="text-decoration-line: none"><b>di sini</b></a>.</p>
 									<br>
 									<br>
 									<div style="text-align: right; margin-bottom: 10px;margin-right: 10px;">

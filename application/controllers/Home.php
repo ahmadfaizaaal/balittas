@@ -13,4 +13,12 @@ class Home extends CI_Controller
 	{
 		$this->load->view('HalamanDetailVarietas');
 	}
+
+	public function teknologibudidaya() {
+		$this->load->view('HalamanDetailTeknologi');
+	}
+
+	public function agribisnis() {
+		$this->load->view('HalamanDetailAgribisnis');
+	}
 } ?>

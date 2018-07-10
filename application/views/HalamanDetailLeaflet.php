@@ -120,13 +120,10 @@
 				 <p style="padding-top: 90px;">Detail Varietas<p>
 			</div>			 -->
 			<div class="containerImg">
-				<video autoplay muted loop style="width: 100%">
-					<source src="<?php echo base_url() ?>item img/tembakauFix.mp4" type="video/mp4">
-				</video>			  	
-			 	<!-- <div class="contentImg">
-				    <h1>Heading</h1>
-				    <p>Lorem ipsum..</p>
-			  	</div> -->
+				<img src="<?php echo base_url() ?>item img/tembakauHeader.jpg" alt="" style="width: 100%;">
+			 	<div class="contentImg text-center">
+				    <h1 style="margin-top: 140px;font-size: 60px;">Detail Leaflet</h1>				    
+			  	</div>
 			</div>	
 		</header>
 

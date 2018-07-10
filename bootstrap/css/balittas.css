@@ -175,9 +175,9 @@
     position:absolute;
     right:20px;
     bottom:20px;
-    background:#b2b2b2;
-    background:rgba(178,178,178,0.7);
-    padding:20px;
+    /*background:black;*/
+    background:rgba(178,178,178,1.0);
+    padding:10px;
     text-align: center;
     margin: 0 0 0 0;
     cursor:pointer;
@@ -187,19 +187,21 @@
     -o-transition: 0.5s;        
 }
 .scroll:hover {
-    background:rgba(178,178,178,1.0);
+    background:rgba(28,69,26,1);
     transition: 0.5s;
     -moz-transition: 0.5s;
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;        
 }
-.scroll:hover .fa {
-    padding-top:-10px;
+.scroll:hover .glyphicon {
+    /*padding-top:-10px;*/
+    color: #fece00;
 }
-.scroll .fa {
-    font-size:30px;
-    margin-top:-5px;
-    margin-left:1px;
+.scroll .glyphicon {
+    font-size:20px;
+    color: white;
+    /*margin-top:-5px;
+    margin-left:1px;*/
     transition: 0.5s;
     -moz-transition: 0.5s;
     -webkit-transition: 0.5s;

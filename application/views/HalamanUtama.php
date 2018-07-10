@@ -147,92 +147,92 @@
 				<hr style="border-color: grey">
 				<div class="row">
 					<div class="col-xs-12 col-sm-4 col-lg-4"> 
-						<div class="thumbnail">
+						<div class="thumbnail thumbku" style="box-shadow: 4px 4px lightgrey;">
 							<a href="<?php echo base_url('Home/detailVarietas') ?>" style="text-decoration-line: none;">
 								<img src="item img/tembakau.jpg" alt="" style="width: 100%;">
 								<span class="label label-success"><p class="glyphicon glyphicon-calendar"></p> 3 Juli 2017</span>
 								<span class="label label-warning"><p class="glyphicon glyphicon-time"></p> 14:00</span>	
-								<h4 style="color:rgb(242,97,5);">VARIETAS NC 471</h4>
+								<h4 style="color:#fece00;">VARIETAS NC 471</h4>
 							</a>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, nisi. ipsum dolor sit amet, consectetur adipisicing elit. Inventore, quaerat!</p>
 							<br>							
 							<div style="text-align: right; margin-bottom: 10px;margin-right: 10px;">
-								<a href="" style="text-decoration-line: none;"><i>Selengkapnya</i></a>
+								<a href="" style="text-decoration-line: none;" class="hoverThumbnail"><i>Selengkapnya</i></a>
 							</div>
 						</div>						
 					</div>
 					<div class="col-xs-12 col-sm-4 col-lg-4"> 
-						<div class="thumbnail">
+						<div class="thumbnail thumbku" style="box-shadow: 4px 4px lightgrey;">
 							<a href="" style="text-decoration-line: none;">
 								<img src="item img/tembakau.jpg" alt="" style="width: 100%;">
 								<span class="label label-success"><p class="glyphicon glyphicon-calendar"></p> 3 Juli 2017</span>
 								<span class="label label-warning"><p class="glyphicon glyphicon-time"></p> 14:00</span>	
-								<h4 style="color:rgb(242,97,5);">Jalan Sehat</h4>
+								<h4 style="color:#fece00;">VARIETAS NC 471</h4>
 							</a>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, nisi. ipsum dolor sit amet, consectetur adipisicing elit. Inventore, quaerat!</p>
 							<br>							
 							<div style="text-align: right; margin-bottom: 10px;margin-right: 10px;">
-								<a href="" style="text-decoration-line: none;"><i>Selengkapnya</i></a>
+								<a href="" style="text-decoration-line: none;" class="hoverThumbnail"><i>Selengkapnya</i></a>
 							</div>
 						</div>						
 					</div>
 					<div class="col-xs-12 col-sm-4 col-lg-4"> 
-						<div class="thumbnail">
+						<div class="thumbnail thumbku" style="box-shadow: 4px 4px lightgrey;">
 							<a href="" style="text-decoration-line: none;">
 								<img src="item img/tembakau.jpg" alt="" style="width: 100%;">
 								<span class="label label-success"><p class="glyphicon glyphicon-calendar"></p> 3 Juli 2017</span>
 								<span class="label label-warning"><p class="glyphicon glyphicon-time"></p> 14:00</span>	
-								<h4 style="color:rgb(242,97,5);">Jalan Sehat</h4>
+								<h4 style="color:#fece00;">VARIETAS NC 471</h4>
 							</a>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, nisi. ipsum dolor sit amet, consectetur adipisicing elit. Inventore, quaerat!</p>
 							<br>							
 							<div style="text-align: right; margin-bottom: 10px;margin-right: 10px;">
-								<a href="" style="text-decoration-line: none;"><i>Selengkapnya</i></a>
+								<a href="" style="text-decoration-line: none;" class="hoverThumbnail"><i>Selengkapnya</i></a>
 							</div>
 						</div>						
 					</div>
 					<div class="col-xs-12 col-sm-4 col-lg-4"> 
-						<div class="thumbnail">
+						<div class="thumbnail thumbku" style="box-shadow: 4px 4px lightgrey;">
 							<a href="" style="text-decoration-line: none;">
 								<img src="item img/tembakau.jpg" alt="" style="width: 100%;">
 								<span class="label label-success"><p class="glyphicon glyphicon-calendar"></p> 3 Juli 2017</span>
 								<span class="label label-warning"><p class="glyphicon glyphicon-time"></p> 14:00</span>	
-								<h4 style="color:rgb(242,97,5);">Jalan Sehat</h4>
+								<h4 style="color:#fece00;">VARIETAS NC 471</h4>
 							</a>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, nisi. ipsum dolor sit amet, consectetur adipisicing elit. Inventore, quaerat!</p>
 							<br>							
 							<div style="text-align: right; margin-bottom: 10px;margin-right: 10px;">
-								<a href="" style="text-decoration-line: none;"><i>Selengkapnya</i></a>
+								<a href="" style="text-decoration-line: none;" class="hoverThumbnail"><i>Selengkapnya</i></a>
 							</div>
 						</div>						
 					</div>
 					<div class="col-xs-12 col-sm-4 col-lg-4"> 
-						<div class="thumbnail">
+						<div class="thumbnail thumbku" style="box-shadow: 4px 4px lightgrey;">
 							<a href="" style="text-decoration-line: none;">
 								<img src="item img/tembakau.jpg" alt="" style="width: 100%;">
 								<span class="label label-success"><p class="glyphicon glyphicon-calendar"></p> 3 Juli 2017</span>
 								<span class="label label-warning"><p class="glyphicon glyphicon-time"></p> 14:00</span>	
-								<h4 style="color:rgb(242,97,5);">Jalan Sehat</h4>
+								<h4 style="color:#fece00;">VARIETAS NC 471</h4>
 							</a>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, nisi. ipsum dolor sit amet, consectetur adipisicing elit. Inventore, quaerat!</p>
 							<br>							
 							<div style="text-align: right; margin-bottom: 10px;margin-right: 10px;">
-								<a href="" style="text-decoration-line: none;"><i>Selengkapnya</i></a>
+								<a href="" style="text-decoration-line: none;" class="hoverThumbnail"><i>Selengkapnya</i></a>
 							</div>
 						</div>						
 					</div>
 					<div class="col-xs-12 col-sm-4 col-lg-4"> 
-						<div class="thumbnail">
+						<div class="thumbnail thumbku" style="box-shadow: 4px 4px lightgrey;">
 							<a href="" style="text-decoration-line: none;">
 								<img src="item img/tembakau.jpg" alt="" style="width: 100%;">
 								<span class="label label-success"><p class="glyphicon glyphicon-calendar"></p> 3 Juli 2017</span>
 								<span class="label label-warning"><p class="glyphicon glyphicon-time"></p> 14:00</span>	
-								<h4 style="color:rgb(242,97,5);">Jalan Sehat</h4>
+								<h4 style="color:#fece00;">VARIETAS NC 471</h4>
 							</a>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, nisi. ipsum dolor sit amet, consectetur adipisicing elit. Inventore, quaerat!</p>
 							<br>							
 							<div style="text-align: right; margin-bottom: 10px;margin-right: 10px;">
-								<a href="" style="text-decoration-line: none;"><i>Selengkapnya</i></a>
+								<a href="" style="text-decoration-line: none;" class="hoverThumbnail"><i>Selengkapnya</i></a>
 							</div>
 						</div>						
 					</div>
@@ -561,7 +561,7 @@
 		<!-- END OF MODALS -->
 
 		<div class='scrolltop'>
-		    <div class='scroll icon'>
+		    <div class='scroll icon' style="width: 50px; height: 40px;">
 		    	<i class="glyphicon glyphicon-chevron-up"></i>
 		    </div>
 		</div>

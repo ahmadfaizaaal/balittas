@@ -7,7 +7,7 @@
     z-index: 0;
 }
 
-.containerImg .contentImg {
+.containerImg .contentVid {
     position: absolute; /* Position the background text */
     top: 0; /* At the bottom. Use top:0 to append it to the top */
     background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
@@ -161,7 +161,6 @@
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
 }
-<<<<<<< HEAD
 
 /*CSS for scrolling up*/
 .scrolltop {
@@ -205,7 +204,7 @@
     -moz-transition: 0.5s;
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;    
-=======
+}
 .hoverThumbnail{
 	color:#5cb85c;
 }
@@ -216,5 +215,4 @@
   background-color: rgba(28,69,26,0.8);
   transition: .4s ease;  
   color:white;
->>>>>>> 56180075908df102ef5634d7f163e3e2f32a72db
 }

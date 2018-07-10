@@ -17,6 +17,7 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	</head>
 	<body>
+		<div class="thetop"></div>
 		<header>			
 			<nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: rgba(28,69,26,0.7);">
 				<div class="container-fluid">
@@ -558,6 +559,12 @@
 		}
 		</script>
 		<!-- END OF MODALS -->
+
+		<div class='scrolltop'>
+		    <div class='scroll icon'>
+		    	<i class="glyphicon glyphicon-chevron-up"></i>
+		    </div>
+		</div>
 	</body>
 	<br><br><br><br><br><br>
 	<footer>
@@ -673,5 +680,15 @@
 		        $(dom).find("[col=g]").css("display", "block");
 		    }
 		}
+
+		//JS for scroll to top
+		$(window).scroll(function() {
+		    if ($(this).scrollTop() > 50 ) {
+		        $('.scrolltop:hidden').stop(true, true).fadeIn();
+		    } else {
+		        $('.scrolltop').stop(true, true).fadeOut();
+		    }
+		});
+		$(function(){$(".scroll").click(function(){$("html,body").animate({scrollTop:$(".thetop").offset().top},"1000");return false})})
 	</script>
 </html>

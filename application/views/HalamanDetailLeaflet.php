@@ -8,6 +8,7 @@
 		<meta name="author" content="Gusna Ikhsan">
 		<!-- <link rel="stylesheet" href="webdesa.css"> -->
 		<link rel="stylesheet" href="<?php echo base_url() ?>bootstrap/css/bootstrap.css">
+		<link rel="stylesheet" href="<?php echo base_url() ?>bootstrap/css/balittas.css">
 
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 

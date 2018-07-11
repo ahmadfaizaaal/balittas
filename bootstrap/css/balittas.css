@@ -218,3 +218,13 @@
   transition: .4s ease;  
   color:white;
 }
+.thumbku{
+  background-color:rgba(36,112,101,0.1);  
+}
+.headerHover{
+    color:white;
+}
+.headerHover:hover{
+    color:#fece00;
+    cursor: pointer;
+}

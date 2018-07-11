@@ -19,10 +19,11 @@
 	</head>
 	<body>
 		<header>			
+			<div class="hidden-md hidden-lg" style="background-color: rgb(28,69,26); height: 70px;"></div>
 			<nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: rgba(28,69,26,0.7);">
 				<div class="container-fluid">
 				    <div class="navbar-header" style="margin-top: 5px; margin-bottom: 3px;">						    
-				      <a href="<?php echo base_url() ?>"><img src="<?php echo base_url() ?>item img/Logo-Kementerian-Pertanian.png" style="width: 55px;height:auto;" style=""></a>
+				      <a href="<?php echo base_url() ?>"><img src="<?php echo base_url() ?>item img/logoBalittas2.png" style="width:280px;margin-top: -18px;margin-bottom: -6px;"></a>
 				      <button type="botton" class="navbar-toggle" data-toggle="collapse" data-target="#main" style="margin-top: 10px;">
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
@@ -123,7 +124,8 @@
 			<div class="containerImg">
 				<img src="<?php echo base_url() ?>item img/tembakauHeader.jpg" alt="" style="width: 100%;">
 			 	<div class="contentImg text-center">
-				    <h1 style="margin-top:12% ;font-size:5vw;">Teknologi Budidaya Tembakau</h1>				    
+				    <h1 class="hidden-xs hidden-sm" style="margin-top:12%;font-size:5vw;">Teknologi Budidaya Tembakau</h1>
+				    <h1 class="hidden-md hidden-lg" style="margin-top:6vw;font-size:5vw;">Teknologi Budidaya Tembakau</h1>
 			  	</div>
 			</div>	
 		</header>
@@ -131,8 +133,10 @@
 		<!-- CONTENT -->
 		<div class="container">
 			<ul class="breadcrumb" style="margin-bottom: 0px;margin-top: 15px;">
-				<li>Beranda</li>
-				<li>Berita</li>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Private</a></li>
+				<li><a href="#">Pictures</a></li>
+				<li class="active">Vacation</li>
 			</ul>
 			<div class="row">
 				<div class="col-sm-9 col-lg-9">
@@ -257,89 +261,135 @@
 		<div class="container-fluid" style="background-color: rgba(28,69,26,1);">
 				<div class="container" style="margin-top: 20px; color:white;">
 					<div class="col-sm-3 col-lg-3">
-						<div class="row">
+						<!-- <div class="row">
 							<div class="col-xs-2 col-sm-2 col-lg-2">
-								<img src="<?php echo base_url() ?>item img/Logo-Kementerian-Pertanian.png" style="width: 230%;">
+								<img src="item img/Logo-Kementerian-Pertanian.png" style="width: 270%;">
 							</div>
 							<div class="col-xs-10 col-sm-10 col-lg-10">
-								<p>Balai Penelitian Tanaman Pemanis dan Serat</p>
+								<p style="margin-left: 7px;margin-top: 5px;">Balai Penelitian Tanaman Pemanis dan Serat</p>
 							</div>
-						</div>															
-						<p>Jalan Raya Karangploso, Kotak Pos 199, Malang <br>
-					   	Jawa Timur, Indonesia <br>
-					   	balittas@litbang.pertanian.go.id <br>
-					   	balittas.malang@gmail.com  <br>
-					   	Telepon : (0341) 491447 <br>
-					   	Fax : (0341) 485 121 <br>
-						</p>
+						</div>-->
+						<img src="<?php echo base_url() ?>item img/logoBalittas2.png" style="width: 110%;margin:-27px 0px -8px -32px;">				
+						<table>
+							<tbody>
+								<tr>
+									<td class="glyphicon glyphicon-map-marker">&nbsp</td>
+									<td>Jalan. Raya Karangploso, Kotak Pos 199, Malang, Jawa timur, Indonesia</td>
+								</tr>
+								<tr>
+									<td class="glyphicon glyphicon-envelope">&nbsp</td>
+									<td>balittas@litbang.pertanian.go.id</td>
+								</tr>
+								<tr>
+									<td class="glyphicon glyphicon-envelope">&nbsp</td>
+									<td>balittas.malang@gmail.com</td>
+								</tr>
+								<tr>
+									<td class="glyphicon glyphicon-earphone">&nbsp</td>
+									<td>Telepon : (0341) 491447</td>
+								</tr>
+								<tr>
+									<td class="glyphicon glyphicon-print">&nbsp</td>
+									<td>Fax : (0341) 485 121</td>
+								</tr>
+							</tbody>
+						</table>
+						<br>
 					</div>
 					<div class="col-sm-9 col-lg-9">
 						<div class="col-sm-4 col-lg-4 batasfooter">
-							<h4>Link Terkait</h3>
-							<hr style="margin-top: 0px; margin-bottom: 10px;">
-							<div class="footerku">
-								<a href="" style="text-decoration-line: none; color:inherit;"><p class="glyphicon glyphicon-ok"></p>&nbsp Kementrian Pertanian</a>
-								<br>								
-							</div>						
-							<div class="footerku">
-								<a href="" style="text-decoration-line: none; color:inherit;"><p class="glyphicon glyphicon-ok"></p>&nbsp badan Litbang Pertanian</a>
-								<br>								
-							</div>	
-							<div class="footerku">
-								<a href="" style="text-decoration-line: none; color:inherit;"><p class="glyphicon glyphicon-ok"></p>&nbsp UPT Badan Litbang Pertanian</a>
-								<br>								
-							</div>	
-							<div class="footerku">
-								<a href="" style="text-decoration-line: none; color:inherit;"><p class="glyphicon glyphicon-ok"></p>&nbsp Pustaka Balitbangtan</a>
-								<br>								
-							</div>	
-							<div class="footerku">
-								<a href="" style="text-decoration-line: none; color:inherit;"><p class="glyphicon glyphicon-ok"></p>&nbsp Pusat Unggulan Iptek Tanaman Serat</a>
-								<br>								
-							</div>														
+							<h3 style="margin-top: 0px;">Link Terkait</h3>
+							<hr style="margin-top: 0px; margin-bottom: 10px;">							
+							<table>
+								<tbody>
+									<a href="">
+										<tr class="headerHover">
+											<td class="glyphicon glyphicon-ok">&nbsp</td>
+											<td style="padding-top: 3px;">Kementrian Pertanian</td>
+										</tr>
+									</a>	
+									<a href="">
+										<tr class="headerHover">
+											<td class="glyphicon glyphicon-ok">&nbsp</td>
+											<td style="padding-top: 3px;">Badan Litbang Pertanian</td>
+										</tr>
+									</a>
+									<a href="">
+										<tr class="headerHover">
+											<td class="glyphicon glyphicon-ok">&nbsp</td>
+											<td style="padding-top: 3px;">UPT Badan Litbang Pertanian</td>
+										</tr>
+									</a>
+									<a href="">
+										<tr class="headerHover">
+											<td class="glyphicon glyphicon-ok">&nbsp</td>
+											<td style="padding-top: 3px;">Pustaka Balitbangtan</td>
+										</tr>
+									</a>
+									<a href="">
+										<tr class="headerHover">
+											<td class="glyphicon glyphicon-ok">&nbsp</td>
+											<td style="padding-top: 3px;">Pusat Unggulan Iptek Tanaman Serat</td>
+										</tr>
+									</a>								
+								</tbody>
+							</table>
+							<br>														
 						</div>
 						<div class="col-sm-4 col-lg-4 batasfooter">
-							<h4>Sosial Media</h3>
+							<h3 style="margin-top: 0px;">Sosial Media</h3>
 							<hr style="margin-top: 0px; margin-bottom: 13px;">
 							<div class="row">
 								<div class="col-xs-3 col-sm-3 col-lg-3" style="margin: 0px -7px 9px 0px;">
-									<img src="<?php echo base_url() ?>item img/1a.jpg" class="img-rounded" alt="Cinque Terre" width="50" height="50" >
+									<a href="">
+										<img src="<?php echo base_url() ?>item img/fbb.png" class="img-rounded" alt="Cinque Terre" width="50" height="50">
+									</a>
 								</div>
 								<div class="col-xs-3 col-sm-3 col-lg-3" style="margin: 0px -7px 9px 0px;">
-									<img src="<?php echo base_url() ?>item img/1a.jpg" class="img-rounded" alt="Cinque Terre" width="50" height="50" >
+									<a href="">
+										<img src="<?php echo base_url() ?>item img/twitterBig.png" class="img-rounded" alt="Cinque Terre" width="50" height="50">
+									</a>
 								</div>
 								<div class="col-xs-3 col-sm-3 col-lg-3" style="margin: 0px -7px 9px 0px;">
-									<img src="<?php echo base_url() ?>item img/1a.jpg" class="img-rounded" alt="Cinque Terre" width="50" height="50" >
+									<a href="">
+										<img src="<?php echo base_url() ?>item img/youtube.png" class="img-rounded" alt="Cinque Terre" width="50" height="50">
+									</a>
 								</div>
-								<div class="col-xs-3 col-sm-3 col-lg-3" style="margin: 0px -7px 9px 0px;">
-									<img src="<?php echo base_url() ?>item img/1a.jpg" class="img-rounded" alt="Cinque Terre" width="50" height="50" >
+								<div class="col-xs-3 col-sm-3 col-lg-3" style="margin: -3px -7px 9px 0px;">
+									<a href="">
+										<img src="<?php echo base_url() ?>item img/insta.png" class="img-rounded" alt="Cinque Terre" width="58" height="auto">
+									</a>
 								</div>
 							</div>
+							<br>
 						</div>						
-						<div class="col-sm-4 col-lg-4 batasfooter">						
-							<p style="margin-top: 9px; border-bottom-style: dashed; padding-bottom: 10px;">Pengunjung Hari Ini</p>				
-							<p style="margin-top: 9px; border-bottom-style: dashed; padding-bottom: 10px;">Pengunjung Bulan Ini</p>										
-							<p style="">Total Kunjungan</p>
-							<!-- <div class="row">
-								<div class="col-xs-4 col-sm-4 col-lg-4" style="margin: 0px -7px 9px 0px;">
-									<img src="item img/tembakau.jpg" class="img-rounded" alt="Cinque Terre" width="50" height="50" >
+						<div class="col-sm-4 col-lg-4 batasfooter">
+							<div class="row">
+								<div class="col-xs-9 col-sm-9 col-lg-9">
+									<p style="margin-top: 5px;">Pengunjung Hari Ini</p>
 								</div>
-								<div class="col-xs-4 col-sm-4 col-lg-4" style="margin: 0px -7px 9px 0px;">
-									<img src="item img/1a.jpg" class="img-rounded" alt="Cinque Terre" width="50" height="50">
+								<div class="col-xs-3 col-sm-3 col-lg-3">
+									<p style="margin-top: 5px;">10</p>
 								</div>								
-								<div class="col-xs-4 col-sm-4 col-lg-4" style="margin: 0px -7px 9px 0px;">
-									<img src="item img/1a.jpg" class="img-rounded" alt="Cinque Terre" width="50" height="50">
-								</div>																
-								<div class="col-xs-4 col-sm-4 col-lg-4" style="margin: 0px -7px 9px 0px;">
-									<img src="item img/1a.jpg" class="img-rounded" alt="Cinque Terre" width="50" height="50">
+							</div>
+							<hr style="border-style: dashed; margin-top: 1px;margin-bottom: 10px;">
+							<div class="row">
+								<div class="col-xs-9 col-sm-9 col-lg-9">
+									<p style="margin-top: 2px;">Pengunjung Bulan Ini</p>
 								</div>
-								<div class="col-xs-4 col-sm-4 col-lg-4" style="margin: 0px -7px 9px 0px;">
-									<img src="item img/1a.jpg" class="img-rounded" alt="Cinque Terre" width="50" height="50">
-								</div>																
-								<div class="col-xs-4 col-sm-4 col-lg-4" style="margin: 0px -7px 9px 0px;">
-									<img src="item img/1a.jpg" class="img-rounded" alt="Cinque Terre" width="50" height="50">
-								</div>																
-							</div> -->
+								<div class="col-xs-3 col-sm-3 col-lg-3">
+									<p style="margin-top: 2px;">10</p>
+								</div>								
+							</div>															
+							<hr style="border-style: dashed; margin-top: 0px;margin-bottom: 10px;">
+							<div class="row">
+								<div class="col-xs-9 col-sm-9 col-lg-9">
+									<p style="margin-top: 2px;">Total Pengunjung</p>
+								</div>
+								<div class="col-xs-3 col-sm-3 col-lg-3">
+									<p style="margin-top: 2px;">10</p>
+								</div>								
+							</div>		
 						</div>
 					</div>
 				</div>
@@ -347,7 +397,7 @@
 			</div>
 			<div class="container-fluid text-center" style="color:white;background-color: black;">
 				<div style=" margin-top: 10px;">
-					<p class="glyphicon glyphicon-copyright-mark"></p> 2018.All Reserved. Design By Balittas
+					<p class="glyphicon glyphicon-copyright-mark"></p> 2018 All Reserved Design By Balittas
 				</div>
 			</div>
 	</footer>

@@ -235,6 +235,14 @@
     background-color: rgba(28,69,26,0.95);
     transition: .8s ease;
 }
+.teknologiBudidaya{
+    /*color:rgb(28,69,26);*/
+    color:rgb(242,97,5);
+}
+.teknologiBudidaya:hover{    
+    /*color:rgb(242,97,5);*/
+    color:orange;    
+}
 .dropbtnHeader {
     background-color: transparent;
     color: white;

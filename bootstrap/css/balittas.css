@@ -301,15 +301,11 @@
     border-radius: 2px;
 }
 
-/* Change color of dropdown links on hover */
 .dropdownHeader-content a:hover {color:#fece00;background-color:  rgba(28,69,26,0.8);}
 
-/* Show the dropdown menu on hover */
 .dropdownHeader:hover .dropdownHeader-content {display: block;}
 
-/* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdownHeader:hover .dropbtnHeader {background-color: transparent;}
-<<<<<<< HEAD
 
 .itemZoom {
   border-radius: 6px;
@@ -326,5 +322,4 @@
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
-=======
->>>>>>> f985113473793c39f7bcf828de952e7135d5c03a
+

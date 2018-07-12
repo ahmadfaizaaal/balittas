@@ -20,7 +20,7 @@
 	<body>
 		<div class="thetop"></div>
 		<header>			
-			<nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: rgba(28,69,26,0.8);">
+			<nav class="navbar navbar-inverse navbar-fixed-top navbarHover">
 				<div class="container-fluid">
 				    <div class="navbar-header" style="margin-top: 5px; margin-bottom: 3px;">						    
 				      <a href=""><img src="<?php echo base_url() ?>item img/logoBalittas2.png" style="width:280px;margin-top: -18px;margin-bottom: -6px;margin-left: 5px;"></a>
@@ -37,46 +37,64 @@
 				    </ul> -->
 				    <div class="collapse navbar-collapse">			    
 					    <ul class="nav navbar-nav navbar-right" style="margin-top: 10px;margin-right: 75px;">
-					      	<li style="margin-top: -2px;"><a href="#" class="glyphicon glyphicon-home"></a></li>				      	
+					      	<a href="<?php echo base_url() ?>" class="glyphicon glyphicon-home dropbtnHeader" style="text-decoration-line: none;font-size: 14px;"></a>
 					      	<div class="dropdownHeader">
-							  	<div class="dropbtnHeader">Jenis Tembakau <span class="caret"></div>
+							  	<div class="dropbtnHeader" style="font-family: Minion Pro">Jenis Tembakau <span class="caret"></div>
 							  	<div class="dropdownHeader-content" style="margin: 0px 0px 0px -30px;">
-							  		<a href="#">Manurut Asal Usul</a>
-						          	<a href="#">Kegunaan</a>
-						          	<a href="#">Waktu Tanam</a>
-						          	<a href="#">Daerah Pengembangan</a>
-						          	<a href="#" style="padding-bottom: 8px;">Prosesing</a>
+								  	<div class="container-fluid">
+								  		<a href="#" style="margin-top: 10px;">Manurut Asal Usul</a>								  		
+								  		<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
+							          	<a href="#">Kegunaan</a>
+							          	<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
+							          	<a href="#">Waktu Tanam</a>
+							          	<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
+							          	<a href="#">Daerah Pengembangan</a>
+							          	<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
+							          	<a href="#" style="margin-bottom: 8px;">Prosesing</a>							          	
+								  	</div>							  	
 							  	</div>
 							</div>
 							<div class="dropdownHeader">
-							  	<div class="dropbtnHeader">Produk <span class="caret"></div>
-							  	<div class="dropdownHeader-content" style="margin: 0px 0px 0px -180px;">
-							  		<a href="#">Benih</a>
-						          	<a href="#">Alat dan Mesin</a>
-						          	<a href="#">Formula</a>
-						          	<a href="#" style="padding-bottom: 8px;">Produk Hilir</a>
+							  	<div class="dropbtnHeader" style="font-family: Minion Pro">Produk <span class="caret"></div>
+							  	<div class="dropdownHeader-content" style="margin: 0px 0px 0px -178px;">
+								  	<div class="container-fluid">							  										  		
+							          	<a href="#" style="margin-top: 10px;">Bernih</a>								  		
+								  		<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
+							          	<a href="#">Alat dan Mesin</a>
+							          	<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
+							          	<a href="#">Formula</a>
+							          	<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
+							          	<a href="#" style="margin-bottom: 8px;">Produk Hilir</a>					    
+								  	</div>
 							  	</div>
 							</div>
 							<div class="dropdownHeader">
-							  	<div class="dropbtnHeader">Teknologi Budidaya <span class="caret"></div>
+							  	<div class="dropbtnHeader" style="font-family: Minion Pro">Teknologi Budidaya <span class="caret"></div>
 							  	<div class="dropdownHeader-content" style="margin: 0px 0px 0px -265px;">
-							  		<div class="row">
-							  			<div class="col-sm-6 col-lg-6">
-							  				<a href="#">Penangkaran Benih</a>
-								          	<a href="#">Pesemaian</a>
-								          	<a href="#">Pemupukan</a>
-								          	<a href="#">Pemupukan Bebas Chlor</a>
-								          	<a href="#" style="padding-bottom: 8px;">Pengendalian Penyakit</a>
-							  			</div>
-							  			<div class="col-sm-6 col-lg-6">
-							  				<a href="#">Pengendalian Hama</a>
-								          	<a href="#">Panen dan Pasca Panen</a>
-								          	<a href="#">Kesesuaian Lahan</a>
-								          	<a href="#" >Budidaya Tembakau Cerutu</a>
-							  			</div>
-							  		</div>
-							  		
-						          	
+								  	<div class="container-fluid">
+								  		<div class="row">
+								  			<div class="col-sm-6 col-lg-6">
+								  				<a href="#" style="margin-top: 10px;">Penangkaran Benih</a>	
+								  				<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
+								  				<a href="#">Pesemaian</a>
+							          			<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
+							          			<a href="#">Pemupukan</a>
+							          			<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
+							          			<a href="#">Pemupukan Bebas Chlor</a>
+							          			<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
+									          	<a href="#" style="margin-bottom: 8px;">Pengendalian Penyakit</a>
+								  			</div>
+								  			<div class="col-sm-6 col-lg-6">
+								  				<a href="#" style="margin-top: 10px;">Pengendalian Hama</a>	
+								  				<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
+								  				<a href="#">Panen dan Pasca Panen</a>	
+								  				<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
+								  				<a href="#">Kesesuaian Lahan</a>	
+								  				<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
+								  				<a href="#">Budidaya Tembakau Cerutu</a>
+								  			</div>
+								  		</div>							  		
+								  	</div>							  								          
 							  	</div>
 							</div>
 					      	<!-- <li class="dropdown">
@@ -117,7 +135,7 @@
 
 				    <div class="collapse navbar-collapse" id="main">			    
 					    <ul hidden class="nav navbar-nav navbar-right" style="margin-top: 8px;margin-right: 75px;">
-					      	<li style="margin-top: -2px;"><a href="#" class="glyphicon glyphicon-home"></a></li>				      	
+					      	<li style="margin-top: -2px;"><a href="#" class="glyphicon glyphicon-home"></a></li>	      	
 					      	<li class="dropdown">
 					        	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Jenis Tembakau <span class="caret"></span></a>
 						        <ul class="dropdown-menu">
@@ -192,7 +210,7 @@
 				<hr style="border-color: grey">
 				<div class="row">
 					<div class="col-xs-12 col-sm-4 col-lg-4"> 
-						<div class="thumbnail thumbku" style="box-shadow: 4px 4px lightgrey;">
+						<div class="thumbnail thumbku" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
 							<a href="<?php echo base_url('Home/detailVarietas') ?>" style="text-decoration-line: none;">
 								<img src="item img/tembakau.jpg" alt="" style="width: 100%;">
 								<span class="label label-success"><p class="glyphicon glyphicon-calendar"></p> 3 Juli 2017</span>
@@ -207,7 +225,7 @@
 						</div>						
 					</div>
 					<div class="col-xs-12 col-sm-4 col-lg-4"> 
-						<div class="thumbnail thumbku" style="box-shadow: 4px 4px lightgrey;">
+						<div class="thumbnail thumbku" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
 							<a href="" style="text-decoration-line: none;">
 								<img src="item img/tembakau.jpg" alt="" style="width: 100%;">
 								<span class="label label-success"><p class="glyphicon glyphicon-calendar"></p> 3 Juli 2017</span>
@@ -222,7 +240,7 @@
 						</div>						
 					</div>
 					<div class="col-xs-12 col-sm-4 col-lg-4"> 
-						<div class="thumbnail thumbku" style="box-shadow: 4px 4px lightgrey;">
+						<div class="thumbnail thumbku" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
 							<a href="" style="text-decoration-line: none;">
 								<img src="item img/tembakau.jpg" alt="" style="width: 100%;">
 								<span class="label label-success"><p class="glyphicon glyphicon-calendar"></p> 3 Juli 2017</span>
@@ -237,7 +255,7 @@
 						</div>						
 					</div>
 					<div class="col-xs-12 col-sm-4 col-lg-4"> 
-						<div class="thumbnail thumbku" style="box-shadow: 4px 4px lightgrey;">
+						<div class="thumbnail thumbku" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
 							<a href="" style="text-decoration-line: none;">
 								<img src="item img/tembakau.jpg" alt="" style="width: 100%;">
 								<span class="label label-success"><p class="glyphicon glyphicon-calendar"></p> 3 Juli 2017</span>
@@ -252,7 +270,7 @@
 						</div>						
 					</div>
 					<div class="col-xs-12 col-sm-4 col-lg-4"> 
-						<div class="thumbnail thumbku" style="box-shadow: 4px 4px lightgrey;">
+						<div class="thumbnail thumbku" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
 							<a href="" style="text-decoration-line: none;">
 								<img src="item img/tembakau.jpg" alt="" style="width: 100%;">
 								<span class="label label-success"><p class="glyphicon glyphicon-calendar"></p> 3 Juli 2017</span>
@@ -267,7 +285,7 @@
 						</div>						
 					</div>
 					<div class="col-xs-12 col-sm-4 col-lg-4"> 
-						<div class="thumbnail thumbku" style="box-shadow: 4px 4px lightgrey;">
+						<div class="thumbnail thumbku" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
 							<a href="" style="text-decoration-line: none;">
 								<img src="item img/tembakau.jpg" alt="" style="width: 100%;">
 								<span class="label label-success"><p class="glyphicon glyphicon-calendar"></p> 3 Juli 2017</span>
@@ -431,7 +449,10 @@
 						<div class="col-sm-4 col-lg-4">
 						 	<a href="<?php echo base_url('Home/teknologibudidaya'); ?>" style="color:black;text-decoration-line: none;">
 						 		<div class="thumbnail" style="background-color: white; border-style: none">
-						 			<img src="item img/tembakau.jpg" class="img-rounded" style="box-shadow: 4px 4px lightgrey;">
+							 		<div class="itemZoom" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
+										<img src="<?php echo base_url() ?>item img/tembakau.jpg" class="imageZoom" >
+										<div class="itemZoom-overlay top"></div>
+									</div>
 									<h4 style="color:rgb(242,97,5);">Penangkaran Benih </h4>
 									<div class="overlayhr"></div>
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure inventore nisi quo, praesentium aspernatur deleniti.</p>
@@ -441,7 +462,10 @@
 						<div class="col-sm-4 col-lg-4">
 						 	<a href="" style="color:black;text-decoration-line: none;">
 						 		<div class="thumbnail" style="background-color: white; border-style: none">
-						 			<img src="item img/tembakau.jpg" class="img-rounded" style="box-shadow: 4px 4px lightgrey;">
+						 			<div class="itemZoom" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
+										<img src="<?php echo base_url() ?>item img/tembakau.jpg" class="imageZoom" >
+										<div class="itemZoom-overlay top"></div>
+									</div>
 									<h4 style="color:rgb(242,97,5);">Pesemaian</h4>
 									<div class="overlayhr"></div>
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure inventore nisi quo, praesentium aspernatur deleniti.</p>
@@ -451,7 +475,10 @@
 						<div class="col-sm-4 col-lg-4">
 						 	<a href="" style="color:black;text-decoration-line: none;">
 						 		<div class="thumbnail" style="background-color: white; border-style: none">
-						 			<img src="item img/tembakau.jpg" class="img-rounded" style="box-shadow: 4px 4px lightgrey;">
+						 			<div class="itemZoom" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
+										<img src="<?php echo base_url() ?>item img/tembakau.jpg" class="imageZoom" >
+										<div class="itemZoom-overlay top"></div>
+									</div>
 									<h4 style="color:rgb(242,97,5);">Pemupukan</h4>
 									<div class="overlayhr"></div>
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure inventore nisi quo, praesentium aspernatur deleniti.</p>
@@ -461,7 +488,10 @@
 						<div class="col-sm-4 col-lg-4">
 						 	<a href="" style="color:black;text-decoration-line: none;">
 						 		<div class="thumbnail" style="background-color: white; border-style: none">
-						 			<img src="item img/tembakau.jpg" class="img-rounded" style="box-shadow: 4px 4px lightgrey;">
+						 			<div class="itemZoom" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
+										<img src="<?php echo base_url() ?>item img/tembakau.jpg" class="imageZoom" >
+										<div class="itemZoom-overlay top"></div>
+									</div>
 									<h4 style="color:rgb(242,97,5);">Pemupukan Bebas Chlor</h4>
 									<div class="overlayhr"></div>
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure inventore nisi quo, praesentium aspernatur deleniti.</p>
@@ -471,7 +501,10 @@
 						<div class="col-sm-4 col-lg-4">
 						 	<a href="" style="color:black;text-decoration-line: none;">
 						 		<div class="thumbnail" style="background-color: white; border-style: none">
-						 			<img src="item img/tembakau.jpg" class="img-rounded" style="box-shadow: 4px 4px lightgrey;">
+						 			<div class="itemZoom" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
+										<img src="<?php echo base_url() ?>item img/tembakau.jpg" class="imageZoom" >
+										<div class="itemZoom-overlay top"></div>
+									</div>
 									<h4 style="color:rgb(242,97,5);">Pengendalian Penyakit </h4>
 									<div class="overlayhr"></div>
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure inventore nisi quo, praesentium aspernatur deleniti.</p>
@@ -481,7 +514,10 @@
 						<div class="col-sm-4 col-lg-4">
 						 	<a href="" style="color:black;text-decoration-line: none;">
 						 		<div class="thumbnail" style="background-color: white; border-style: none">
-						 			<img src="item img/tembakau.jpg" class="img-rounded" style="box-shadow: 4px 4px lightgrey;">
+						 			<div class="itemZoom" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
+										<img src="<?php echo base_url() ?>item img/tembakau.jpg" class="imageZoom" >
+										<div class="itemZoom-overlay top"></div>
+									</div>
 									<h4 style="color:rgb(242,97,5);">Pengendalian Hama </h4>
 									<div class="overlayhr"></div>
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure inventore nisi quo, praesentium aspernatur deleniti.</p>
@@ -491,7 +527,10 @@
 						<div class="col-sm-4 col-lg-4">
 						 	<a href="" style="color:black;text-decoration-line: none;">
 						 		<div class="thumbnail" style="background-color: white; border-style: none">
-						 			<img src="item img/tembakau.jpg" class="img-rounded" style="box-shadow: 4px 4px lightgrey;">
+						 			<div class="itemZoom" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
+										<img src="<?php echo base_url() ?>item img/tembakau.jpg" class="imageZoom" >
+										<div class="itemZoom-overlay top"></div>
+									</div>
 									<h4 style="color:rgb(242,97,5);">Panen dan Pasca Panen </h4>
 									<div class="overlayhr"></div>
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure inventore nisi quo, praesentium aspernatur deleniti.</p>
@@ -501,7 +540,10 @@
 						<div class="col-sm-4 col-lg-4">
 						 	<a href="" style="color:black;text-decoration-line: none;">
 						 		<div class="thumbnail" style="background-color: white; border-style: none">
-						 			<img src="item img/tembakau.jpg" class="img-rounded" style="box-shadow: 4px 4px lightgrey;">
+						 			<div class="itemZoom" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
+										<img src="<?php echo base_url() ?>item img/tembakau.jpg" class="imageZoom" >
+										<div class="itemZoom-overlay top"></div>
+									</div>
 									<h4 style="color:rgb(242,97,5);">Kesesuaian Lahan </h4>
 									<div class="overlayhr"></div>
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure inventore nisi quo, praesentium aspernatur deleniti.</p>
@@ -511,7 +553,10 @@
 						<div class="col-sm-4 col-lg-4">
 						 	<a href="" style="color:black;text-decoration-line: none;">
 						 		<div class="thumbnail" style="background-color: white; border-style: none">
-						 			<img src="item img/tembakau.jpg" class="img-rounded" style="box-shadow: 4px 4px lightgrey;">
+						 			<div class="itemZoom" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
+										<img src="<?php echo base_url() ?>item img/tembakau.jpg" class="imageZoom" >
+										<div class="itemZoom-overlay top"></div>
+									</div>
 									<h4 style="color:rgb(242,97,5);">Budidaya Tembakau Cerutu</h4>
 									<div class="overlayhr"></div>
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure inventore nisi quo, praesentium aspernatur deleniti.</p>
@@ -528,7 +573,7 @@
 			<br><br>
 			<div class="row">
 				<div class="col-xs-3 col-sm-3 col-lg-3">
-					<img src="item img/tembakau.jpg" class="image img-rounded" style="box-shadow: 4px 4px lightgrey;">
+					<img src="item img/tembakau.jpg" class="image img-rounded" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
 				</div>
 				<div class="col-xs-8 col-sm-8 col-lg-8">
 					<p style="font-size: 20px;color:rgb(242,97,5);">Budidaya tembakau madura</p>
@@ -545,7 +590,7 @@
 			<hr>
 			<div class="row">
 				<div class="col-xs-3 col-sm-3 col-lg-3">
-					<img src="item img/tembakau.jpg" class="image img-rounded" style="box-shadow: 4px 4px lightgrey;">
+					<img src="item img/tembakau.jpg" class="image img-rounded" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
 				</div>
 				<div class="col-xs-8 col-sm-8 col-lg-8">
 					<p style="font-size: 20px;color:rgb(242,97,5);">Budidaya tembakau madura</p>
@@ -561,7 +606,7 @@
 			<hr>
 			<div class="row">
 				<div class="col-xs-3 col-sm-3 col-lg-3">
-					<img src="item img/tembakau.jpg" class="image img-rounded" style="box-shadow: 4px 4px lightgrey;">
+					<img src="item img/tembakau.jpg" class="image img-rounded" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
 				</div>
 				<div class="col-xs-8 col-sm-8 col-lg-8">
 					<p style="font-size: 20px;color:rgb(242,97,5);">Budidaya tembakau madura</p>
@@ -752,7 +797,7 @@
 			</div>
 			<div class="container-fluid text-center" style="color:white;background-color: black;">
 				<div style=" margin-top: 10px;">
-					<p><span class="glyphicon glyphicon-copyright-mark"></span> 2018 All Reserved Design By Balittas</p>
+					<p style="font-family: calibri"><span class="glyphicon glyphicon-copyright-mark"></span> 2018 All Reserved Design By BALITTAS</p>
 				</div>
 			</div>
 	</footer>

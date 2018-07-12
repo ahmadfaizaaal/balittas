@@ -20,10 +20,10 @@
 	<body>
 		<header>
 			<div class="hidden-md hidden-lg" style="background-color: rgb(28,69,26); height: 70px;"></div>			
-			<nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: rgba(28,69,26,0.7);">
+			<nav class="navbar navbar-inverse navbar-fixed-top navbarHover">
 				<div class="container-fluid">
 				    <div class="navbar-header" style="margin-top: 5px; margin-bottom: 3px;">						    
-				      <a href="<?php echo base_url() ?>"><img src="<?php echo base_url() ?>item img/logoBalittas2.png" style="width:280px;margin-top: -18px;margin-bottom: -6px;"></a>
+				      <a href="<?php echo base_url() ?>"><img src="<?php echo base_url() ?>item img/logoBalittas2.png" style="width:280px;margin-top: -18px;margin-bottom: -6px;margin-left: 5px;"></a>
 				      <button type="botton" class="navbar-toggle" data-toggle="collapse" data-target="#main" style="margin-top: 10px;">
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
@@ -36,19 +36,78 @@
 				      <li><a href="#">Page 2</a></li>
 				    </ul> -->
 				    <div class="collapse navbar-collapse">			    
-					    <ul class="nav navbar-nav navbar-right" style="margin-top: 8px;margin-right: 75px;">
-					      	<li style="margin-top: -2px;"><a href="#" class="glyphicon glyphicon-home"></a></li>				      	
-					      	<li class="dropdown">
+					    <ul class="nav navbar-nav navbar-right" style="margin-top: 10px;margin-right: 75px;">
+					      	<a href="<?php echo base_url() ?>" class="glyphicon glyphicon-home dropbtnHeader" style="text-decoration-line: none;font-size: 14px;"></a>
+					      	<div class="dropdownHeader">
+							  	<div class="dropbtnHeader" style="font-family: Minion Pro">Jenis Tembakau <span class="caret"></div>
+							  	<div class="dropdownHeader-content" style="margin: 0px 0px 0px -30px;">
+								  	<div class="container-fluid">
+								  		<a href="#" style="margin-top: 10px;">Manurut Asal Usul</a>								  		
+								  		<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
+							          	<a href="#">Kegunaan</a>
+							          	<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
+							          	<a href="#">Waktu Tanam</a>
+							          	<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
+							          	<a href="#">Daerah Pengembangan</a>
+							          	<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
+							          	<a href="#" style="margin-bottom: 8px;">Prosesing</a>							          	
+								  	</div>							  	
+							  	</div>
+							</div>
+							<div class="dropdownHeader">
+							  	<div class="dropbtnHeader" style="font-family: Minion Pro">Produk <span class="caret"></div>
+							  	<div class="dropdownHeader-content" style="margin: 0px 0px 0px -178px;">
+								  	<div class="container-fluid">							  										  		
+							          	<a href="#" style="margin-top: 10px;">Bernih</a>								  		
+								  		<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
+							          	<a href="#">Alat dan Mesin</a>
+							          	<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
+							          	<a href="#">Formula</a>
+							          	<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
+							          	<a href="#" style="margin-bottom: 8px;">Produk Hilir</a>					    
+								  	</div>
+							  	</div>
+							</div>
+							<div class="dropdownHeader">
+							  	<div class="dropbtnHeader" style="font-family: Minion Pro">Teknologi Budidaya <span class="caret"></div>
+							  	<div class="dropdownHeader-content" style="margin: 0px 0px 0px -265px;">
+								  	<div class="container-fluid">
+								  		<div class="row">
+								  			<div class="col-sm-6 col-lg-6">
+								  				<a href="#" style="margin-top: 10px;">Penangkaran Benih</a>	
+								  				<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
+								  				<a href="#">Pesemaian</a>
+							          			<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
+							          			<a href="#">Pemupukan</a>
+							          			<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
+							          			<a href="#">Pemupukan Bebas Chlor</a>
+							          			<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
+									          	<a href="#" style="margin-bottom: 8px;">Pengendalian Penyakit</a>
+								  			</div>
+								  			<div class="col-sm-6 col-lg-6">
+								  				<a href="#" style="margin-top: 10px;">Pengendalian Hama</a>	
+								  				<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
+								  				<a href="#">Panen dan Pasca Panen</a>	
+								  				<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
+								  				<a href="#">Kesesuaian Lahan</a>	
+								  				<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
+								  				<a href="#">Budidaya Tembakau Cerutu</a>
+								  			</div>
+								  		</div>							  		
+								  	</div>							  								          
+							  	</div>
+							</div>
+					      	<!-- <li class="dropdown">
 					        	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Jenis Tembakau <span class="caret"></span></a>
 						        <ul class="dropdown-menu">
 						        	<li><a href="#">Manurut Asal Usul</a></li>
 						          	<li><a href="#">Kegunaan</a></li>
 						          	<li><a href="#">Waktu Tanam</a></li>
-						          	<li><a href="#">Daerah Pengaembangan</a></li>
+						          	<li><a href="#">Daerah Pengembangan</a></li>
 						          	<li><a href="#">Prosesing</a></li>
 						       	</ul>
-					      	</li>
-					      	<li class="dropdown">
+					      	</li> -->
+					      	<!-- <li class="dropdown">
 					        	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Produk <span class="caret"></span></a>
 						        <ul class="dropdown-menu">
 						        	<li><a href="#">Benih</a></li>
@@ -70,13 +129,13 @@
 						          	<li><a href="#">Kesesuaian Lahan</a></li>
 						          	<li><a href="#">Budidaya Tembakau Cerutu</a></li>
 						       	</ul>
-					      	</li>				      	
+					      	</li> -->				      	
 					    </ul>				    
 				    </div>
 
 				    <div class="collapse navbar-collapse" id="main">			    
-					    <ul hidden="main" class="nav navbar-nav navbar-right" style="margin-top: 8px;margin-right: 75px;">
-					      	<li style="margin-top: -2px;"><a href="#" class="glyphicon glyphicon-home"></a></li>				      	
+					    <ul hidden class="nav navbar-nav navbar-right" style="margin-top: 8px;margin-right: 75px;">
+					      	<li style="margin-top: -2px;"><a href="#" class="glyphicon glyphicon-home"></a></li>	      	
 					      	<li class="dropdown">
 					        	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Jenis Tembakau <span class="caret"></span></a>
 						        <ul class="dropdown-menu">
@@ -397,7 +456,7 @@
 			</div>
 			<div class="container-fluid text-center" style="color:white;background-color: black;">
 				<div style=" margin-top: 10px;">
-					<p class="glyphicon glyphicon-copyright-mark"></p> 2018 All Reserved Design By Balittas
+					<p style="font-family: calibri"><span class="glyphicon glyphicon-copyright-mark"></span> 2018 All Reserved Design By BALITTAS</p>
 				</div>
 			</div>
 	</footer>

@@ -19,14 +19,12 @@
 	</head>
 	<body>
 		<div class="thetop"></div>
-		<header>
-			<div class="hidden-md hidden-lg" style="background-color: rgb(28,69,26); height: 70px;"></div>						
-			<nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: rgba(28,69,26,0.7);">
+		<header>			
+			<nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: rgba(28,69,26,0.8);">
 				<div class="container-fluid">
-				    <div class="navbar-header" style="margin-top: 5px; margin-bottom: 3px;">
-				    	<a href="<?php echo base_url() ?>"><img src="<?php echo base_url() ?>item img/logoBalittas2.png" style="width:280px;margin-top: -18px;margin-bottom: -6px;"></a>
-				      	<!-- <a href="<?php echo base_url() ?>"><img src="<?php echo base_url() ?>item img/Logo-Kementerian-Pertanian.png" style="width: 55px;height:auto;" style=""></a> -->
-				      	<button type="botton" class="navbar-toggle" data-toggle="collapse" data-target="#main" style="margin-top: 10px;">
+				    <div class="navbar-header" style="margin-top: 5px; margin-bottom: 3px;">						    
+				      <a href=""><img src="<?php echo base_url() ?>item img/logoBalittas2.png" style="width:280px;margin-top: -18px;margin-bottom: -6px;margin-left: 5px;"></a>
+				      <button type="botton" class="navbar-toggle" data-toggle="collapse" data-target="#main" style="margin-top: 10px;">
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
@@ -38,19 +36,60 @@
 				      <li><a href="#">Page 2</a></li>
 				    </ul> -->
 				    <div class="collapse navbar-collapse">			    
-					    <ul class="nav navbar-nav navbar-right" style="margin-top: 8px;margin-right: 75px;">
+					    <ul class="nav navbar-nav navbar-right" style="margin-top: 10px;margin-right: 75px;">
 					      	<li style="margin-top: -2px;"><a href="#" class="glyphicon glyphicon-home"></a></li>				      	
-					      	<li class="dropdown">
+					      	<div class="dropdownHeader">
+							  	<div class="dropbtnHeader">Jenis Tembakau <span class="caret"></div>
+							  	<div class="dropdownHeader-content" style="margin: 0px 0px 0px -30px;">
+							  		<a href="#">Manurut Asal Usul</a>
+						          	<a href="#">Kegunaan</a>
+						          	<a href="#">Waktu Tanam</a>
+						          	<a href="#">Daerah Pengembangan</a>
+						          	<a href="#" style="padding-bottom: 8px;">Prosesing</a>
+							  	</div>
+							</div>
+							<div class="dropdownHeader">
+							  	<div class="dropbtnHeader">Produk <span class="caret"></div>
+							  	<div class="dropdownHeader-content" style="margin: 0px 0px 0px -180px;">
+							  		<a href="#">Benih</a>
+						          	<a href="#">Alat dan Mesin</a>
+						          	<a href="#">Formula</a>
+						          	<a href="#" style="padding-bottom: 8px;">Produk Hilir</a>
+							  	</div>
+							</div>
+							<div class="dropdownHeader">
+							  	<div class="dropbtnHeader">Teknologi Budidaya <span class="caret"></div>
+							  	<div class="dropdownHeader-content" style="margin: 0px 0px 0px -265px;">
+							  		<div class="row">
+							  			<div class="col-sm-6 col-lg-6">
+							  				<a href="#">Penangkaran Benih</a>
+								          	<a href="#">Pesemaian</a>
+								          	<a href="#">Pemupukan</a>
+								          	<a href="#">Pemupukan Bebas Chlor</a>
+								          	<a href="#" style="padding-bottom: 8px;">Pengendalian Penyakit</a>
+							  			</div>
+							  			<div class="col-sm-6 col-lg-6">
+							  				<a href="#">Pengendalian Hama</a>
+								          	<a href="#">Panen dan Pasca Panen</a>
+								          	<a href="#">Kesesuaian Lahan</a>
+								          	<a href="#" >Budidaya Tembakau Cerutu</a>
+							  			</div>
+							  		</div>
+							  		
+						          	
+							  	</div>
+							</div>
+					      	<!-- <li class="dropdown">
 					        	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Jenis Tembakau <span class="caret"></span></a>
 						        <ul class="dropdown-menu">
 						        	<li><a href="#">Manurut Asal Usul</a></li>
 						          	<li><a href="#">Kegunaan</a></li>
 						          	<li><a href="#">Waktu Tanam</a></li>
-						          	<li><a href="#">Daerah Pengaembangan</a></li>
+						          	<li><a href="#">Daerah Pengembangan</a></li>
 						          	<li><a href="#">Prosesing</a></li>
 						       	</ul>
-					      	</li>
-					      	<li class="dropdown">
+					      	</li> -->
+					      	<!-- <li class="dropdown">
 					        	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Produk <span class="caret"></span></a>
 						        <ul class="dropdown-menu">
 						        	<li><a href="#">Benih</a></li>
@@ -72,12 +111,12 @@
 						          	<li><a href="#">Kesesuaian Lahan</a></li>
 						          	<li><a href="#">Budidaya Tembakau Cerutu</a></li>
 						       	</ul>
-					      	</li>				      	
+					      	</li> -->				      	
 					    </ul>				    
 				    </div>
 
 				    <div class="collapse navbar-collapse" id="main">			    
-					    <ul hidden="main" class="nav navbar-nav navbar-right" style="margin-top: 8px;margin-right: 75px;">
+					    <ul hidden class="nav navbar-nav navbar-right" style="margin-top: 8px;margin-right: 75px;">
 					      	<li style="margin-top: -2px;"><a href="#" class="glyphicon glyphicon-home"></a></li>				      	
 					      	<li class="dropdown">
 					        	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Jenis Tembakau <span class="caret"></span></a>
@@ -117,23 +156,26 @@
 
 				  </div>
 			</nav>
-			<!-- gambar tengah -->
-			<!-- <div style="height: 50px; background-color: red;"></div>
-			<div class="jumbotron text-center">
-				<h1>Bootstrap Tutorial</h1> 
-    			<p>Bootstrap is the most popular HTML, CSS, and JS framework for developing
-    			   responsive, mobile-first projects on the web.</p> 
-			</div> -->
-			<!-- <div style="height: 50px; background-color: red;"></div> -->
+			<!-- <div style="height: 65px;background-color: red;"> -->
+				
+			</div>
+			<!-- gambar tengah -->			
 			<div class="containerImg">
 				<video autoplay muted loop style="width: 100%">
 					<source src="<?php echo base_url() ?>item img/tembakauFix.mp4" type="video/mp4">
 				</video>			  	
-			 	<!-- <div class="contentImg">
+			 	<!-- <div class="contentVid">
 				    <h1>Heading</h1>
 				    <p>Lorem ipsum..</p>
 			  	</div> -->
-			</div>			
+			</div>	
+			<!-- <div class="containerImg">
+				<img src="item img/tembakauHeader.jpg" alt="" style="width: 100%;">
+			 	<div class="contentImg text-center">
+				    <h1 style="margin-top:12% ;font-size:5vw;">Detail Varietas</h1>				    
+			  	</div>
+			</div> -->	
+			
 		</header>
 		<br>
 		<!-- content -->
@@ -710,7 +752,7 @@
 			</div>
 			<div class="container-fluid text-center" style="color:white;background-color: black;">
 				<div style=" margin-top: 10px;">
-					<p class="glyphicon glyphicon-copyright-mark"></p> 2018 All Reserved Design By Balittas
+					<p><span class="glyphicon glyphicon-copyright-mark"></span> 2018 All Reserved Design By Balittas</p>
 				</div>
 			</div>
 	</footer>

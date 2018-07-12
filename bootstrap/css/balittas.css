@@ -100,7 +100,7 @@
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 700px){
     .modalLeaflet-content {
-        width: 100%;
+        width: 90%;
     }
 }
 .beritaterbaru{    
@@ -212,6 +212,24 @@
 }
 .hoverThumbnail:hover{
 	color:#fece00;
+}
+.thumbnailLeaflet {
+    height: 65%;
+    display: block;
+    padding: 4px;
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    -webkit-transition: border 0.2s ease-in-out;
+    -o-transition: border 0.2s ease-in-out;
+    transition: border 0.2s ease-in-out;
+}
+@media only screen and (max-device-height: 750px){
+    .thumbnailLeaflet {
+        height: 82%;
+    }
 }
 .thumbku:hover{
   background-color: rgba(28,69,26,0.8);

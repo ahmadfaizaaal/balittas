@@ -143,16 +143,16 @@
 					<hr style="border-color: black">
 					<div class="row">
 						<div class="col-xs-12 col-sm-4 col-lg-4"> 
-							<div class="thumbnail text-center" style="height: 65%;">
-									<img class="leafletImg" src="<?php echo base_url() ?>item img/1a.jpg" alt="" style="width:100%;">
-									<img class="leafletImg" src="<?php echo base_url() ?>item img/1b.jpg" alt="" style="width: 100%; margin-top: 5px;">
+							<div class="thumbnailLeaflet text-center">
+										<img class="leafletImg" src="<?php echo base_url() ?>item img/1a.jpg" alt="" style="width:100%;">
+										<img class="leafletImg" src="<?php echo base_url() ?>item img/1b.jpg" alt="" style="width: 100%; margin-top: 5px;">
 								<!-- <a href="" style="text-decoration-line: none;">
 								</a>				 -->
 								<h4 style="color:rgb(242,97,5);">KONSERVASI LAHAN TEMBAKAU TEMANGGUNG</h4>
 							</div>						
 						</div>
 						<div class="col-xs-12 col-sm-4 col-lg-4"> 
-							<div class="thumbnail text-center" style="height: 65%;">
+							<div class="thumbnailLeaflet text-center">
 								<!-- <a href="" style="text-decoration-line: none;"> -->
 									<img class="leafletImg" src="<?php echo base_url() ?>item img/2a.jpg" alt="" style="width: 100%;">
 									<img class="leafletImg" src="<?php echo base_url() ?>item img/2b.jpg" alt="" style="width: 100%; margin-top: 5px;">
@@ -161,7 +161,7 @@
 							</div>						
 						</div>
 						<div class="col-xs-12 col-sm-4 col-lg-4"> 
-							<div class="thumbnail text-center" style="height: 65%;">
+							<div class="thumbnailLeaflet text-center">
 								<!-- <a href="" style="text-decoration-line: none;"> -->
 									<img class="leafletImg" src="<?php echo base_url() ?>item img/3a.jpg" alt="" style="width: 100%;">
 									<img class="leafletImg" src="<?php echo base_url() ?>item img/3b.jpg" alt="" style="width: 100%; margin-top: 5px;">
@@ -170,7 +170,7 @@
 							</div>						
 						</div>
 						<div class="col-xs-12 col-sm-4 col-lg-4"> 
-							<div class="thumbnail text-center" style="height: 65%;">
+							<div class="thumbnailLeaflet text-center">
 								<!-- <a href="" style="text-decoration-line: none;"> -->
 									<img class="leafletImg" src="<?php echo base_url() ?>item img/1a.jpg" alt="" style="width: 100%;">
 									<img class="leafletImg" src="<?php echo base_url() ?>item img/1b.jpg" alt="" style="width: 100%; margin-top: 5px;">
@@ -179,7 +179,7 @@
 							</div>						
 						</div>
 						<div class="col-xs-12 col-sm-4 col-lg-4"> 
-							<div class="thumbnail text-center" style="height: 65%;">
+							<div class="thumbnailLeaflet text-center">
 								<!-- <a href="" style="text-decoration-line: none;"> -->
 									<img class="leafletImg" src="<?php echo base_url() ?>item img/2a.jpg" alt="" style="width: 100%;">
 									<img class="leafletImg" src="<?php echo base_url() ?>item img/2b.jpg" alt="" style="width: 100%; margin-top: 5px;">
@@ -188,7 +188,7 @@
 							</div>						
 						</div>
 						<div class="col-xs-12 col-sm-4 col-lg-4"> 
-							<div class="thumbnail text-center" style="height: 65%;">
+							<div class="thumbnailLeaflet text-center">
 								<!-- <a href="" style="text-decoration-line: none;"> -->
 									<img class="leafletImg" src="<?php echo base_url() ?>item img/3a.jpg" alt="" style="width: 100%;">
 									<img class="leafletImg" src="<?php echo base_url() ?>item img/3b.jpg" alt="" style="width: 100%; margin-top: 5px;">
@@ -203,7 +203,7 @@
 						<li><a href="">2</a></li>
 						<li><a href="">3</a></li>
 						<li><a href="">></a></li>
-					</ul>
+					</ul><br>
 				</div>
 
 				<div class="col-sm-3 col-lg-3">

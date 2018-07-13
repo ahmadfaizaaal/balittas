@@ -58,7 +58,74 @@ $(document).ready(function(){
 	});
 	checkbox.click(function(){
 		if(!this.checked){
-			$("#selectAll").prop("checked", false);
+			$("#selectAll2").prop("checked", false);
 		}
 	});
 });
+
+//checkbox
+$("#checkAll").click(function () {
+    $(".checkbox").prop('checked', $(this).prop('checked'));
+});
+
+//checkbox2
+$("#checkAll2").click(function () {
+    $(".checkbox2").prop('checked', $(this).prop('checked'));
+});
+
+//checkbox3
+$("#checkAll3").click(function () {
+    $(".checkbox3").prop('checked', $(this).prop('checked'));
+});
+
+//checkbox4
+$("#checkAll4").click(function () {
+    $(".checkbox4").prop('checked', $(this).prop('checked'));
+});
+
+//checkbox5
+$("#checkAll5").click(function () {
+    $(".checkbox5").prop('checked', $(this).prop('checked'));
+});
+
+//checkbox6
+$("#checkAll6").click(function () {
+    $(".checkbox6").prop('checked', $(this).prop('checked'));
+});
+
+//checkbox7
+$("#checkAll7").click(function () {
+    $(".checkbox7").prop('checked', $(this).prop('checked'));
+});
+
+//checkbox8
+$("#checkAll8").click(function () {
+    $(".checkbox8").prop('checked', $(this).prop('checked'));
+});
+
+//checkbox9
+$("#checkAll9").click(function () {
+    $(".checkbox9").prop('checked', $(this).prop('checked'));
+});
+
+//checkbox10
+$("#checkAll10").click(function () {
+    $(".checkbox10").prop('checked', $(this).prop('checked'));
+});
+
+//dropdown
+$('.dropdown-toggle').dropdown()
+
+//upload
+ function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#blah')
+                        .attr('src', e.target.result);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }

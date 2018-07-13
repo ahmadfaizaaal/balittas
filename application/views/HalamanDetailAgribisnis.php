@@ -199,7 +199,7 @@
 			</ul>
 			<div class="row">
 				<div class="col-sm-9 col-lg-9">
-					<hr style="border-color: black">
+					<hr style="border-color: grey;margin-top: 3px;">
 					<div class="row" style="margin-bottom: 20px;">
 						<div class="col-xs-12 col-sm-12 col-lg-12">
 								<div class="thumbnail" style=" border-radius: 5px; background-color:white; border-color: white;">
@@ -207,7 +207,7 @@
 									<br>
 									<!-- <span class="label label-success"><p class="glyphicon glyphicon-calendar"></p> 3 Juli 2017</span>
 									<span class="label label-warning"><p class="glyphicon glyphicon-time"></p> 14:00</span> -->										
-									<h4 style="color:#FECE00;font-size: 24px;">BUDIDAYA TEMBAKAU MADURA</h4>									
+									<h4 style="color:#FECE00;font-size: 24px; font-family: Minion Pro;">BUDIDAYA TEMBAKAU MADURA</h4>									
 									<!-- <hr style="border-color: black;">									 -->
 									<p>&nbsp Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab explicabo facilis natus eos molestiae magni tempore sint eum minima, a non rem laudantium possimus aliquam illo repellendus minus rerum eligendi iure voluptatum sit voluptates esse ullam. Excepturi at error fugit, vel provident rem repellendus sequi non molestiae, deleniti recusandae nulla, magnam cupiditate rerum alias tempora. Iste explicabo optio placeat, iure eligendi eum ipsum quasi quos obcaecati, dolorem officiis ipsa repellendus nesciunt corrupti inventore modi corporis culpa. Id aut ex, illum distinctio optio unde debitis eaque inventore, eligendi placeat doloremque excepturi quidem deserunt. Aperiam distinctio eaque ad optio tempore, saepe! Sapiente.</p>
 									<p>&nbsp Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab explicabo facilis natus eos molestiae magni tempore sint eum minima, a non rem laudantium possimus aliquam illo repellendus minus rerum eligendi iure voluptatum sit voluptates esse ullam. Excepturi at error fugit, vel provident rem repellendus sequi non molestiae, deleniti recusandae nulla, magnam cupiditate rerum alias tempora. Iste explicabo optio placeat, iure eligendi eum ipsum quasi quos obcaecati, dolorem officiis ipsa repellendus nesciunt corrupti inventore modi corporis culpa. Id aut ex, illum distinctio optio unde debitis eaque inventore, eligendi placeat doloremque excepturi quidem deserunt. Aperiam distinctio eaque ad optio tempore, saepe! Sapiente.</p>
@@ -229,7 +229,7 @@
 				<div class="col-sm-3 col-lg-3">
 					
 					<a href="" style="text-decoration-line:none;"><h3 class="text-left" style="color:black; margin-top: -25px;">Pencarian</h3></a>
-					<hr style="border-color: black">
+					<hr style="border-color: grey;margin-top: -8px;">
 					<div class="container-fluid" style="background-color:rgba(28,69,26,0.9);border-radius: 5px;">
 						<form action="" style="margin-top: 15px; margin-bottom: 15px;">
 							<div class="input-group" style="z-index: 0">
@@ -244,41 +244,41 @@
 						</form>						
 					</div>
 					<a href="" style="text-decoration-line:none;"><h3 class="text-left" style="color:black;">Leaflet</h3></a>
-					<hr style="border-color: black">
+					<hr style="border-color: grey;margin-top: -8px;">	
 					<h5 style="color:black;">Penyakit Lanas</h5>
 					<div class="row">
 						<div class="col-sm-6 col-lg-6">													 
-							<img class="leafletImg" src="<?php echo base_url() ?>item img/1a.jpg" class="image" style="width: 100%">						
+							<img class="leafletImg" src="<?php echo base_url() ?>item img/1a.jpg" class="image" style="width: 110%;border-radius: 3px;">						
 						</div> 
 						<div class="col-sm-6 col-lg-6">
-							<img class="leafletImg" src="<?php echo base_url() ?>item img/1b.jpg" class="image" style="width: 100%">
+							<img class="leafletImg" src="<?php echo base_url() ?>item img/1b.jpg" class="image" style="width: 110%;border-radius: 3px; margin-left: -10px;">
 						</div>						
 					</div>					
 					<h5 style="color:black;">Penyakit Lanas</h5>
 					<div class="row">
 						<div class="col-sm-6 col-lg-6">													 
-							<img class="leafletImg" src="<?php echo base_url() ?>item img/2a.jpg" class="image" style="width: 100%">						
+							<img class="leafletImg" src="<?php echo base_url() ?>item img/2a.jpg" class="image" style="width: 110%;border-radius: 3px;">						
 						</div> 
 						<div class="col-sm-6 col-lg-6">
-							<img class="leafletImg" src="<?php echo base_url() ?>item img/2b.jpg" class="image" style="width: 100%">
+							<img class="leafletImg" src="<?php echo base_url() ?>item img/2b.jpg" class="image" style="width: 110%;border-radius: 3px; margin-left: -10px;">
 						</div>						
 					</div>					
 					<h5 style="color:black;">Penyakit Lanas</h5>
 					<div class="row">
 						<div class="col-sm-6 col-lg-6">													 
-							<img class="leafletImg" src="<?php echo base_url() ?>item img/3a.jpg" class="image" style="width: 100%">						
+							<img class="leafletImg" src="<?php echo base_url() ?>item img/3a.jpg" class="image" style="width: 110%;border-radius: 3px;">						
 						</div> 
 						<div class="col-sm-6 col-lg-6">
-							<img class="leafletImg" src="<?php echo base_url() ?>item img/3b.jpg" class="image" style="width: 100%">
+							<img class="leafletImg" src="<?php echo base_url() ?>item img/3b.jpg" class="image" style="width: 110%;border-radius: 3px; margin-left: -10px;">
 						</div>						
 					</div>
 					<h5 style="color:black;">Penyakit Lanas</h5>
 					<div class="row">
 						<div class="col-sm-6 col-lg-6">													 
-							<img class="leafletImg" src="<?php echo base_url() ?>item img/2a.jpg" class="image" style="width: 100%">						
+							<img class="leafletImg" src="<?php echo base_url() ?>item img/2a.jpg" class="image" style="width: 110%;border-radius: 3px;">						
 						</div> 
 						<div class="col-sm-6 col-lg-6">
-							<img class="leafletImg" src="<?php echo base_url() ?>item img/2b.jpg" class="image" style="width: 100%">
+							<img class="leafletImg" src="<?php echo base_url() ?>item img/2b.jpg" class="image" style="width: 110%;border-radius: 3px; margin-left: -10px;">
 						</div>						
 					</div>	
 				</div>
@@ -357,8 +357,8 @@
 					</div>
 					<div class="col-sm-9 col-lg-9">
 						<div class="col-sm-4 col-lg-4 batasfooter">
-							<h3 style="margin-top: 0px;">Link Terkait</h3>
-							<hr style="margin-top: 0px; margin-bottom: 10px;">							
+							<h3 style="margin-top: 0px; font-family: Minion Pro;">Link Terkait</h3>
+							<hr style="margin-top: 0px; margin-bottom: 10px; border-color: #fece00;">							
 							<table>
 								<tbody>
 									<a href="">
@@ -396,8 +396,8 @@
 							<br>														
 						</div>
 						<div class="col-sm-4 col-lg-4 batasfooter">
-							<h3 style="margin-top: 0px;">Sosial Media</h3>
-							<hr style="margin-top: 0px; margin-bottom: 13px;">
+							<h3 style="margin-top: 0px; font-family: Minion Pro;">Sosial Media</h3>
+							<hr style="margin-top: 0px; margin-bottom: 13px; border-color: #fece00;">
 							<div class="row">
 								<div class="col-xs-3 col-sm-3 col-lg-3" style="margin: 0px -7px 9px 0px;">
 									<a href="">
@@ -431,7 +431,7 @@
 									<p style="margin-top: 5px;">10</p>
 								</div>								
 							</div>
-							<hr style="border-style: dashed; margin-top: 1px;margin-bottom: 10px;">
+							<hr style="border-style: dashed; margin-top: 1px;margin-bottom: 10px; border-color: #fece00;">
 							<div class="row">
 								<div class="col-xs-9 col-sm-9 col-lg-9">
 									<p style="margin-top: 2px;">Pengunjung Bulan Ini</p>
@@ -440,7 +440,7 @@
 									<p style="margin-top: 2px;">10</p>
 								</div>								
 							</div>															
-							<hr style="border-style: dashed; margin-top: 0px;margin-bottom: 10px;">
+							<hr style="border-style: dashed; margin-top: 0px;margin-bottom: 10px; border-color: #fece00;">
 							<div class="row">
 								<div class="col-xs-9 col-sm-9 col-lg-9">
 									<p style="margin-top: 2px;">Total Pengunjung</p>

@@ -213,7 +213,7 @@
 									<p>&nbsp Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab explicabo facilis natus eos molestiae magni tempore sint eum minima, a non rem laudantium possimus aliquam illo repellendus minus rerum eligendi iure voluptatum sit voluptates esse ullam. Excepturi at error fugit, vel provident rem repellendus sequi non molestiae, deleniti recusandae nulla, magnam cupiditate rerum alias tempora. Iste explicabo optio placeat, iure eligendi eum ipsum quasi quos obcaecati, dolorem officiis ipsa repellendus nesciunt corrupti inventore modi corporis culpa. Id aut ex, illum distinctio optio unde debitis eaque inventore, eligendi placeat doloremque excepturi quidem deserunt. Aperiam distinctio eaque ad optio tempore, saepe! Sapiente.</p>
 									<br>
 									<p><b>Catatan:</b></p>
-									<p>Surat Keputusan Pelepasan <b>Varietas NC 471</b> dapat diunduh <a href="" style="text-decoration-line: none"><b>di sini</b></a>.</p>
+									<p>Surat Keputusan Pelepasan <b>Varietas NC 471</b> dapat diunduh <a href="" class="hoverThumbnail" style="text-decoration-line: none"><b>di sini</b></a>.</p>
 									<br>
 									<br>
 									<div style="text-align: right; margin-bottom: 10px;margin-right: 10px;">
@@ -460,10 +460,5 @@
 				</div>
 			</div>
 	</footer>
-	<script>
-		function myFunction() {
-		    document.getElementsByClassName("switching")[1].removeAttribute("hidden");
-		    document.getElementsByClassName("switching")[0].innerHTML = "<h1 hidden class=\"switching\" style=\"margin-top:12% ;font-size:5vw;\">Detail Varietas</h1>"; 
-		}
-	</script>
+	
 </html>

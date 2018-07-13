@@ -206,8 +206,8 @@
 					  	<li><a href="#">Pictures</a></li>
 					  	<li class="active">Vacation</li> 
 					</ul>
-				<a href="" style="text-decoration-line:none;"><h3 class="text-left" style="color:black;">Varietas Terbaru</h3></a>
-				<hr style="border-color: grey">
+				<h3 class="text-left" style="color:black; font-family: Minion Pro">Varietas Terbaru</h3>
+				<hr style="border-color: grey; margin-top: -8px;">
 				<div class="row">
 					<div class="col-xs-12 col-sm-4 col-lg-4"> 
 						<div class="thumbnail thumbku" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
@@ -311,8 +311,8 @@
 				</div>				
 				<div class="col-sm-3 col-lg-3">
 					<br>
-					<a href="" style="text-decoration-line:none;"><h3 class="text-left" style="color:black;">Pencarian</h3></a>
-					<hr style="border-color: grey">
+					<h3 class="text-left" style="color:black;font-family: Minion Pro">Pencarian</h3>
+					<hr style="border-color: grey;margin-top: -8px;">
 					<div class="container-fluid" style="background-color:rgba(28,69,26,0.9);border-radius: 5px;">
 					<!-- <div class="container-fluid" style="background-color:#57bb82;border-radius: 5px;"> -->
 						<form action="" style="margin-top: 15px; margin-bottom: 15px;">
@@ -326,56 +326,42 @@
 							 </div>
 						</form>						
 					</div>
-					<a href="<?php echo base_url('leaflet') ?>" style="text-decoration-line:none;"><h3 class="text-left" style="color:black;">Leaflet</h3></a>
-					
-					<hr style="border-color: grey">
-					<!-- <div class="thumbnail" style="background-color: white; border-style: none; margin-top: -10px;">
-						<h5 style="color:black;">Penyakit Lanas</h5>													
-						<img src="item img/1a.jpg" class="img-rounded">
-					</div>	
-
-					<div class="thumbnail" style="background-color: white; border-style: none; margin-top: -10px;">
-						<div class="container2">
-							<img src="item img/1a.jpg" class="image img-rounded">
-							<div class="overlay">
-								<div class="text">Penyakit Lanas</div>
-							</div>						
-						</div>													 
-					</div> -->				
+					<a href="<?php echo base_url('leaflet') ?>" style="text-decoration-line:none;"><h3 class="text-left" style="color:black;font-family: Minion Pro">Leaflet</h3></a>
+					<hr style="border-color: grey;margin-top: -8px;">	
 					<h5 style="color:black;">Penyakit Lanas</h5>
 					<div class="row">
 						<div class="col-sm-6 col-lg-6">													 
-							<img class="leafletImg" src="item img/1a.jpg" class="image" style="width: 100%">						
+							<img class="leafletImg" src="item img/1a.jpg" class="image" style="width: 110%;border-radius: 3px;">						
 						</div> 
 						<div class="col-sm-6 col-lg-6">
-							<img class="leafletImg" src="item img/1b.jpg" class="image" style="width: 100%">
+							<img class="leafletImg" src="item img/1b.jpg" class="image" style="width: 110%;border-radius: 3px; margin-left: -10px;">
 						</div>						
 					</div>					
 					<h5 style="color:black;">Penyakit Lanas</h5>
 					<div class="row">
 						<div class="col-sm-6 col-lg-6">													 
-							<img class="leafletImg" src="item img/2a.jpg" class="image" style="width: 100%">						
+							<img class="leafletImg" src="item img/2a.jpg" class="image" style="width: 110%;border-radius: 3px;">						
 						</div> 
 						<div class="col-sm-6 col-lg-6">
-							<img class="leafletImg" src="item img/2b.jpg" class="image" style="width: 100%">
+							<img class="leafletImg" src="item img/2b.jpg" class="image" style="width: 110%;border-radius: 3px; margin-left: -10px;">
 						</div>						
 					</div>					
 					<h5 style="color:black;">Penyakit Lanas</h5>
 					<div class="row">
 						<div class="col-sm-6 col-lg-6">													 
-							<img class="leafletImg" src="item img/3a.jpg" class="image" style="width: 100%">						
+							<img class="leafletImg" src="item img/3a.jpg" class="image" style="width: 110%;border-radius: 3px;">						
 						</div> 
 						<div class="col-sm-6 col-lg-6">
-							<img class="leafletImg" src="item img/3b.jpg" class="image" style="width: 100%">
+							<img class="leafletImg" src="item img/3b.jpg" class="image" style="width: 110%;border-radius: 3px; margin-left: -10px;">
 						</div>						
 					</div>
 					<h5 style="color:black;">Penyakit Lanas</h5>
 					<div class="row">
 						<div class="col-sm-6 col-lg-6">													 
-							<img class="leafletImg" src="item img/2a.jpg" class="image" style="width: 100%">						
+							<img class="leafletImg" src="item img/2a.jpg" class="image" style="width: 110%;border-radius: 3px;">						
 						</div> 
 						<div class="col-sm-6 col-lg-6">
-							<img class="leafletImg" src="item img/2b.jpg" class="image" style="width: 100%">
+							<img class="leafletImg" src="item img/2b.jpg" class="image" style="width: 110%;border-radius: 3px; margin-left: -10px;">
 						</div>						
 					</div>	
 				</div>
@@ -388,8 +374,8 @@
 			<div class="container-fluid" style="background-color: rgba(28,69,26,0.8);">
 				<div class="container">
 				<!-- Produk -->
-				<a href="" style="text-decoration-line:none;"><h3 class="text-center" style="color:white;">Produk</h3></a><br>
-				<p style="color: white;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo aut magni perferendis repellat rerum assumenda, facere. Alias deserunt pariatur magnam rerum quod voluptates, quidem id labore quam. Illum nemo minus repellat veritatis aliquid, consequatur, dolorem, laborum magnam voluptatibus consequuntur voluptate tempora! Vel, odio. Corporis nam maiores nemo, dicta temporibus et.</p>
+				<h3 class="text-center" style="color:white;font-family: Minion Pro;">Produk</h3>
+				<p class="text-center" style="color: white;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo aut magni perferendis repellat rerum assumenda, facere. Alias deserunt pariatur magnam rerum quod voluptates, quidem id labore quam. Illum nemo minus repellat veritatis aliquid, consequatur, dolorem, laborum magnam voluptatibus consequuntur voluptate tempora! Vel, odio. Corporis nam maiores nemo, dicta temporibus et.</p>
 				<br><br>
 				<div class="row">
 				    <div class="col-sm-3 col-lg-3">
@@ -441,125 +427,134 @@
 			<div class="container">
 			<div class="row">
 				<div class="col-sm-3 col-lg-3">
-					<a href="" style="text-decoration-line:none;"><h3 class="text-center" style="color:black;margin-top: 0px;">Teknologi Budidaya</h3></a>
+					<h3 class="text-center" style="color:black;margin-top: 0px;font-family: Minion Pro;">Teknologi Budidaya</h3>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, quae iure blanditiis veniam adipisci, facilis ab necessitatibus! Reiciendis, praesentium, accusamus.</p>
 				</div>
 				<div class="col-sm-9 col-lg-9">
 					<div class="row">
 						<div class="col-sm-4 col-lg-4">
-						 	<a href="<?php echo base_url('Home/teknologibudidaya'); ?>" style="color:black;text-decoration-line: none;">
+						 	<a href="<?php echo base_url('Home/teknologibudidaya'); ?>" style="text-decoration-line: none;" class="teknologiBudidaya">
 						 		<div class="thumbnail" style="background-color: white; border-style: none">
 							 		<div class="itemZoom" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
 										<img src="<?php echo base_url() ?>item img/tembakau.jpg" class="imageZoom" >
 										<div class="itemZoom-overlay top"></div>
 									</div>
-									<h4 style="color:rgb(242,97,5);">Penangkaran Benih </h4>
+									<h4 style="font-family: Minion Pro;">Penangkaran Benih </h4>
+									<hr style="margin:-6px 0px 5px 0px; border-color: orange;">
 									<div class="overlayhr"></div>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure inventore nisi quo, praesentium aspernatur deleniti.</p>
+									<p style="color:black;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure inventore nisi quo, praesentium aspernatur deleniti.</p>
 						 		</div>
 						 	</a>
 						</div>
 						<div class="col-sm-4 col-lg-4">
-						 	<a href="" style="color:black;text-decoration-line: none;">
+						 	<a href="" style="text-decoration-line: none;" class="teknologiBudidaya">
 						 		<div class="thumbnail" style="background-color: white; border-style: none">
 						 			<div class="itemZoom" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
 										<img src="<?php echo base_url() ?>item img/tembakau.jpg" class="imageZoom" >
 										<div class="itemZoom-overlay top"></div>
 									</div>
-									<h4 style="color:rgb(242,97,5);">Pesemaian</h4>
+									<h4 style="font-family: Minion Pro;">Pesemaian</h4>
+									<hr style="margin:-6px 0px 5px 0px; border-color: orange;">
 									<div class="overlayhr"></div>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure inventore nisi quo, praesentium aspernatur deleniti.</p>
+									<p style="color:black;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure inventore nisi quo, praesentium aspernatur deleniti.</p>
 						 		</div>
 						 	</a>
 						</div>
 						<div class="col-sm-4 col-lg-4">
-						 	<a href="" style="color:black;text-decoration-line: none;">
+						 	<a href="" style="text-decoration-line: none;" class="teknologiBudidaya">
 						 		<div class="thumbnail" style="background-color: white; border-style: none">
 						 			<div class="itemZoom" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
 										<img src="<?php echo base_url() ?>item img/tembakau.jpg" class="imageZoom" >
 										<div class="itemZoom-overlay top"></div>
 									</div>
-									<h4 style="color:rgb(242,97,5);">Pemupukan</h4>
+									<h4 style="font-family: Minion Pro;">Pemupukan</h4>
+									<hr style="margin:-6px 0px 5px 0px; border-color: orange;">
 									<div class="overlayhr"></div>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure inventore nisi quo, praesentium aspernatur deleniti.</p>
+									<p style="color:black;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure inventore nisi quo, praesentium aspernatur deleniti.</p>
 						 		</div>
 						 	</a>
 						</div>
 						<div class="col-sm-4 col-lg-4">
-						 	<a href="" style="color:black;text-decoration-line: none;">
+						 	<a href="" style="text-decoration-line: none;" class="teknologiBudidaya">
 						 		<div class="thumbnail" style="background-color: white; border-style: none">
 						 			<div class="itemZoom" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
 										<img src="<?php echo base_url() ?>item img/tembakau.jpg" class="imageZoom" >
 										<div class="itemZoom-overlay top"></div>
 									</div>
-									<h4 style="color:rgb(242,97,5);">Pemupukan Bebas Chlor</h4>
+									<h4 style="font-family: Minion Pro;">Pemupukan Bebas Chlor</h4>
+									<hr style="margin:-6px 0px 5px 0px; border-color: orange;">
 									<div class="overlayhr"></div>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure inventore nisi quo, praesentium aspernatur deleniti.</p>
+									<p style="color:black;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure inventore nisi quo, praesentium aspernatur deleniti.</p>
 						 		</div>
 						 	</a>
 						</div>
 						<div class="col-sm-4 col-lg-4">
-						 	<a href="" style="color:black;text-decoration-line: none;">
+						 	<a href="" style="text-decoration-line: none;" class="teknologiBudidaya">
 						 		<div class="thumbnail" style="background-color: white; border-style: none">
 						 			<div class="itemZoom" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
 										<img src="<?php echo base_url() ?>item img/tembakau.jpg" class="imageZoom" >
 										<div class="itemZoom-overlay top"></div>
 									</div>
-									<h4 style="color:rgb(242,97,5);">Pengendalian Penyakit </h4>
+									<h4 style="font-family: Minion Pro;">Pengendalian Penyakit </h4>
+									<hr style="margin:-6px 0px 5px 0px; border-color: orange;">
 									<div class="overlayhr"></div>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure inventore nisi quo, praesentium aspernatur deleniti.</p>
+									<p style="color:black;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure inventore nisi quo, praesentium aspernatur deleniti.</p>
 						 		</div>
 						 	</a>
 						</div>
 						<div class="col-sm-4 col-lg-4">
-						 	<a href="" style="color:black;text-decoration-line: none;">
+						 	<a href="" style="text-decoration-line: none;" class="teknologiBudidaya">
 						 		<div class="thumbnail" style="background-color: white; border-style: none">
 						 			<div class="itemZoom" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
 										<img src="<?php echo base_url() ?>item img/tembakau.jpg" class="imageZoom" >
 										<div class="itemZoom-overlay top"></div>
 									</div>
-									<h4 style="color:rgb(242,97,5);">Pengendalian Hama </h4>
+									<h4 style="font-family: Minion Pro;">Pengendalian Hama </h4>
+									<hr style="margin:-6px 0px 5px 0px; border-color: orange;">
 									<div class="overlayhr"></div>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure inventore nisi quo, praesentium aspernatur deleniti.</p>
+									<p style="color:black;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure inventore nisi quo, praesentium aspernatur deleniti.</p>
 						 		</div>
 						 	</a>
 						</div>
 						<div class="col-sm-4 col-lg-4">
-						 	<a href="" style="color:black;text-decoration-line: none;">
+						 	<a href="" style="text-decoration-line: none;" class="teknologiBudidaya">
 						 		<div class="thumbnail" style="background-color: white; border-style: none">
 						 			<div class="itemZoom" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
 										<img src="<?php echo base_url() ?>item img/tembakau.jpg" class="imageZoom" >
 										<div class="itemZoom-overlay top"></div>
 									</div>
-									<h4 style="color:rgb(242,97,5);">Panen dan Pasca Panen </h4>
+									<h4 style="font-family: Minion Pro;">Panen dan Pasca Panen </h4>
+									<hr style="margin:-6px 0px 5px 0px; border-color: orange;">
 									<div class="overlayhr"></div>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure inventore nisi quo, praesentium aspernatur deleniti.</p>
+									<p style="color:black;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure inventore nisi quo, praesentium aspernatur deleniti.</p>
 						 		</div>
 						 	</a>
 						</div>
 						<div class="col-sm-4 col-lg-4">
-						 	<a href="" style="color:black;text-decoration-line: none;">
+						 	<a href="" style="text-decoration-line: none;" class="teknologiBudidaya">
 						 		<div class="thumbnail" style="background-color: white; border-style: none">
 						 			<div class="itemZoom" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
 										<img src="<?php echo base_url() ?>item img/tembakau.jpg" class="imageZoom" >
 										<div class="itemZoom-overlay top"></div>
 									</div>
-									<h4 style="color:rgb(242,97,5);">Kesesuaian Lahan </h4>
+									<h4 style="font-family: Minion Pro;">Kesesuaian Lahan </h4>
+									<hr style="margin:-6px 0px 5px 0px; border-color: orange;">
 									<div class="overlayhr"></div>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure inventore nisi quo, praesentium aspernatur deleniti.</p>
+									<p style="color:black;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure inventore nisi quo, praesentium aspernatur deleniti.</p>
 						 		</div>
 						 	</a>
 						</div>
 						<div class="col-sm-4 col-lg-4">
-						 	<a href="" style="color:black;text-decoration-line: none;">
+						 	<a href="" style="text-decoration-line: none;" class="teknologiBudidaya">
 						 		<div class="thumbnail" style="background-color: white; border-style: none">
 						 			<div class="itemZoom" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
 										<img src="<?php echo base_url() ?>item img/tembakau.jpg" class="imageZoom" >
 										<div class="itemZoom-overlay top"></div>
 									</div>
-									<h4 style="color:rgb(242,97,5);">Budidaya Tembakau Cerutu</h4>
+									<h4 style="font-family: Minion Pro;">Budidaya Tembakau Cerutu</h4>
+									<hr style="margin:-6px 0px 5px 0px; border-color: orange;">
 									<div class="overlayhr"></div>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure inventore nisi quo, praesentium aspernatur deleniti.</p>
+									<p style="color:black;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure inventore nisi quo, praesentium aspernatur deleniti.</p>
 						 		</div>
 						 	</a>
 						</div>
@@ -568,7 +563,7 @@
 			</div>
 			<!-- <hr> -->
 			<hr style="border-color: grey">
-			<a href="" style="text-decoration-line:none;"><h3 class="text-center" style="color:black;">Agribisnis</h3></a>
+			<a href="" style="text-decoration-line:none;"><h3 class="text-center" style="color:black;font-family: Minion Pro;">Agribisnis</h3></a>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum perferendis, quas consectetur cum. Dolorum quae quam neque facere perspiciatis dignissimos. ipsum dolor sit amet, consectetur adipisicing elit. Distinctio accusantium perferendis eaque, aspernatur ex eos et ad dignissimos, voluptates beatae!</p>
 			<br><br>
 			<div class="row">
@@ -576,7 +571,7 @@
 					<img src="item img/tembakau.jpg" class="image img-rounded" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
 				</div>
 				<div class="col-xs-8 col-sm-8 col-lg-8">
-					<p style="font-size: 20px;color:rgb(242,97,5);">Budidaya tembakau madura</p>
+					<p style="font-size: 20px;color:rgb(242,97,5); font-family: Minion Pro;">Budidaya tembakau madura</p>
 					<!-- <br> -->
 					<p>Lorem ipsum dolor sit amet. ipsum dolor sit amet, consectetur adipisicing elit. Provident quod, quisquam fugiat maiores ipsam. Deserunt molestiae reiciendis, eius natus iure? ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati repudiandae tenetur illo vitae impedit eum culpa esse vero, hic repellendus.</p>	
 					<!-- <br> -->
@@ -593,7 +588,7 @@
 					<img src="item img/tembakau.jpg" class="image img-rounded" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
 				</div>
 				<div class="col-xs-8 col-sm-8 col-lg-8">
-					<p style="font-size: 20px;color:rgb(242,97,5);">Budidaya tembakau madura</p>
+					<p style="font-size: 20px;color:rgb(242,97,5); font-family: Minion Pro;">Budidaya tembakau madura</p>
 					<!-- <br> -->
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident quod, quisquam fugiat maiores ipsam. Deserunt molestiae reiciendis, eius natus iure? ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati repudiandae tenetur illo vitae impedit eum culpa esse vero, hic repellendus.</p>
 					<div class="text-right">						
@@ -609,7 +604,7 @@
 					<img src="item img/tembakau.jpg" class="image img-rounded" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
 				</div>
 				<div class="col-xs-8 col-sm-8 col-lg-8">
-					<p style="font-size: 20px;color:rgb(242,97,5);">Budidaya tembakau madura</p>
+					<p style="font-size: 20px;color:rgb(242,97,5); font-family: Minion Pro;">Budidaya tembakau madura</p>
 					<!-- <br> -->
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident quod, quisquam fugiat maiores ipsam. Deserunt molestiae reiciendis, eius natus iure? ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati repudiandae tenetur illo vitae impedit eum culpa esse vero, hic repellendus.</p>
 					<div class="text-right">						
@@ -698,8 +693,8 @@
 					</div>
 					<div class="col-sm-9 col-lg-9">
 						<div class="col-sm-4 col-lg-4 batasfooter">
-							<h3 style="margin-top: 0px;">Link Terkait</h3>
-							<hr style="margin-top: 0px; margin-bottom: 10px;">							
+							<h3 style="margin-top: 0px; font-family: Minion Pro;">Link Terkait</h3>
+							<hr style="margin-top: 0px; margin-bottom: 10px; border-color: #fece00;">							
 							<table>
 								<tbody>
 									<a href="">
@@ -737,8 +732,8 @@
 							<br>														
 						</div>
 						<div class="col-sm-4 col-lg-4 batasfooter">
-							<h3 style="margin-top: 0px;">Sosial Media</h3>
-							<hr style="margin-top: 0px; margin-bottom: 13px;">
+							<h3 style="margin-top: 0px; font-family: Minion Pro;">Sosial Media</h3>
+							<hr style="margin-top: 0px; margin-bottom: 13px; border-color: #fece00;">
 							<div class="row">
 								<div class="col-xs-3 col-sm-3 col-lg-3" style="margin: 0px -7px 9px 0px;">
 									<a href="">
@@ -772,7 +767,7 @@
 									<p style="margin-top: 5px;">10</p>
 								</div>								
 							</div>
-							<hr style="border-style: dashed; margin-top: 1px;margin-bottom: 10px;">
+							<hr style="border-style: dashed; margin-top: 1px;margin-bottom: 10px; border-color: #fece00;">
 							<div class="row">
 								<div class="col-xs-9 col-sm-9 col-lg-9">
 									<p style="margin-top: 2px;">Pengunjung Bulan Ini</p>
@@ -781,7 +776,7 @@
 									<p style="margin-top: 2px;">10</p>
 								</div>								
 							</div>															
-							<hr style="border-style: dashed; margin-top: 0px;margin-bottom: 10px;">
+							<hr style="border-style: dashed; margin-top: 0px;margin-bottom: 10px; border-color: #fece00;">
 							<div class="row">
 								<div class="col-xs-9 col-sm-9 col-lg-9">
 									<p style="margin-top: 2px;">Total Pengunjung</p>

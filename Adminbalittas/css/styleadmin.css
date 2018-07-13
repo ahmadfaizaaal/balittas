@@ -186,17 +186,17 @@
 	}
 	/* Modal styles */
 	.modal .modal-dialog {
-		max-width: 400px;
+		max-width: 600px;
 	}
 	.modal .modal-header, .modal .modal-body, .modal .modal-footer {
 		padding: 20px 30px;
 	}
 	.modal .modal-content {
-		border-radius: 3px;
+		border-radius: 10px;
 	}
 	.modal .modal-footer {
 		background: #ecf0f1;
-		border-radius: 0 0 3px 3px;
+		border-radius: 0 0 10px 10px;
 	}
     .modal .modal-title {
         display: inline-block;
@@ -220,3 +220,19 @@
 	.GroomingAdmin{
 		background-color: #eee;
 	}
+
+	.modal .modal-content img{
+  		max-width:100px;
+  		height:100px;
+  		margin-top:20px;
+	}
+
+	.tabel{
+		background-color: #eee;
+	}
+
+	.table-wrapper{
+		background-color:#b7feb8;
+	}
+
+

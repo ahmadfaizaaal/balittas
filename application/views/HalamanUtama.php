@@ -30,11 +30,7 @@
 							<span class="icon-bar"></span>
 						</button>
 				    </div>
-				    <!-- <ul class="nav navbar-nav">
-				      <li class="active"><a href="#">Home</a></li>
-				      <li><a href="#">Page 1</a></li>
-				      <li><a href="#">Page 2</a></li>
-				    </ul> -->
+			
 				    <div class="collapse navbar-collapse">			    
 					    <ul class="nav navbar-nav navbar-right" style="margin-top: 10px;margin-right: 75px;">
 					      	<a href="<?php echo base_url() ?>" class="glyphicon glyphicon-home dropbtnHeader" style="text-decoration-line: none;font-size: 14px;"></a>
@@ -97,45 +93,14 @@
 								  	</div>							  								          
 							  	</div>
 							</div>
-					      	<!-- <li class="dropdown">
-					        	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Jenis Tembakau <span class="caret"></span></a>
-						        <ul class="dropdown-menu">
-						        	<li><a href="#">Manurut Asal Usul</a></li>
-						          	<li><a href="#">Kegunaan</a></li>
-						          	<li><a href="#">Waktu Tanam</a></li>
-						          	<li><a href="#">Daerah Pengembangan</a></li>
-						          	<li><a href="#">Prosesing</a></li>
-						       	</ul>
-					      	</li> -->
-					      	<!-- <li class="dropdown">
-					        	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Produk <span class="caret"></span></a>
-						        <ul class="dropdown-menu">
-						        	<li><a href="#">Benih</a></li>
-						          	<li><a href="#">Alat dan Mesin</a></li>
-						          	<li><a href="#">Formula</a></li>
-						          	<li><a href="#">Produk Hilir</a></li>
-						       	</ul>
-					      	</li>
-					      	<li class="dropdown">
-					        	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Teknologi Budidaya <span class="caret"></span></a>
-						        <ul class="dropdown-menu">
-						        	<li><a href="#">Penangkaran Benih</a></li>
-						          	<li><a href="#">Pesemaian</a></li>
-						          	<li><a href="#">Pemupukan</a></li>
-						          	<li><a href="#">Pemupukan Bebas Chlor</a></li>
-						          	<li><a href="#">Pengendalian Penyakit</a></li>
-						          	<li><a href="#">Pengendalian Hama</a></li>
-						          	<li><a href="#">Panen dan Pasca Panen</a></li>
-						          	<li><a href="#">Kesesuaian Lahan</a></li>
-						          	<li><a href="#">Budidaya Tembakau Cerutu</a></li>
-						       	</ul>
-					      	</li> -->				      	
+					      		      	
 					    </ul>				    
 				    </div>
 
 				    <div class="collapse navbar-collapse" id="main">			    
-					    <ul hidden class="nav navbar-nav navbar-right" style="margin-top: 8px;margin-right: 75px;">
-					      	<li style="margin-top: -2px;"><a href="#" class="glyphicon glyphicon-home"></a></li>	      	
+					    <ul class="nav navbar-nav navbar-right hidden-md hidden-lg" style="margin-top: 8px;margin-right: 75px;">
+					      	<!-- <li style="margin-top: -2px;"><a href="#" class="glyphicon glyphicon-home"></a></li> -->
+					      	<a href="<?php echo base_url() ?>" class="glyphicon glyphicon-home dropbtnHeader" style="text-decoration-line: none;font-size: 14px;margin-left: 8px;"></a>
 					      	<li class="dropdown">
 					        	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Jenis Tembakau <span class="caret"></span></a>
 						        <ul class="dropdown-menu">
@@ -174,7 +139,7 @@
 
 				  </div>
 			</nav>
-			<!-- <div style="height: 65px;background-color: red;"> -->
+			
 				
 			</div>
 			<!-- gambar tengah -->			
@@ -182,17 +147,9 @@
 				<video autoplay muted loop style="width: 100%">
 					<source src="<?php echo base_url() ?>item img/tembakauFix.mp4" type="video/mp4">
 				</video>			  	
-			 	<!-- <div class="contentVid">
-				    <h1>Heading</h1>
-				    <p>Lorem ipsum..</p>
-			  	</div> -->
+			 	
 			</div>	
-			<!-- <div class="containerImg">
-				<img src="item img/tembakauHeader.jpg" alt="" style="width: 100%;">
-			 	<div class="contentImg text-center">
-				    <h1 style="margin-top:12% ;font-size:5vw;">Detail Varietas</h1>				    
-			  	</div>
-			</div> -->	
+			
 			
 		</header>
 		<br>
@@ -330,47 +287,45 @@
 					<hr style="border-color: grey;margin-top: -8px;">	
 					<h5 style="color:black;">Penyakit Lanas</h5>
 					<div class="row">
-						<div class="col-sm-6 col-lg-6">													 
+						<div class="col-xs-6 col-sm-6 col-lg-6">													 
 							<img class="leafletImg" src="item img/1a.jpg" class="image" style="width: 110%;border-radius: 3px;">						
 						</div> 
-						<div class="col-sm-6 col-lg-6">
+						<div class="col-xs-6 col-sm-6 col-lg-6">
 							<img class="leafletImg" src="item img/1b.jpg" class="image" style="width: 110%;border-radius: 3px; margin-left: -10px;">
 						</div>						
 					</div>					
 					<h5 style="color:black;">Penyakit Lanas</h5>
 					<div class="row">
-						<div class="col-sm-6 col-lg-6">													 
+						<div class="col-xs-6 col-sm-6 col-lg-6">												 
 							<img class="leafletImg" src="item img/2a.jpg" class="image" style="width: 110%;border-radius: 3px;">						
 						</div> 
-						<div class="col-sm-6 col-lg-6">
+						<div class="col-xs-6 col-sm-6 col-lg-6">
 							<img class="leafletImg" src="item img/2b.jpg" class="image" style="width: 110%;border-radius: 3px; margin-left: -10px;">
 						</div>						
 					</div>					
 					<h5 style="color:black;">Penyakit Lanas</h5>
 					<div class="row">
-						<div class="col-sm-6 col-lg-6">													 
+						<div class="col-xs-6 col-sm-6 col-lg-6">												 
 							<img class="leafletImg" src="item img/3a.jpg" class="image" style="width: 110%;border-radius: 3px;">						
 						</div> 
-						<div class="col-sm-6 col-lg-6">
+						<div class="col-xs-6 col-sm-6 col-lg-6">
 							<img class="leafletImg" src="item img/3b.jpg" class="image" style="width: 110%;border-radius: 3px; margin-left: -10px;">
 						</div>						
 					</div>
 					<h5 style="color:black;">Penyakit Lanas</h5>
 					<div class="row">
-						<div class="col-sm-6 col-lg-6">													 
+						<div class="col-xs-6 col-sm-6 col-lg-6">												 
 							<img class="leafletImg" src="item img/2a.jpg" class="image" style="width: 110%;border-radius: 3px;">						
 						</div> 
-						<div class="col-sm-6 col-lg-6">
+						<div class="col-xs-6 col-sm-6 col-lg-6">
 							<img class="leafletImg" src="item img/2b.jpg" class="image" style="width: 110%;border-radius: 3px; margin-left: -10px;">
 						</div>						
 					</div>	
 				</div>
 			</div>
 			</div> <!-- akhir div container atas -->
-
-
-			<!-- <hr> -->
-			<!-- <hr style="border-color: grey"> -->
+			<br><br>
+	
 			<div class="container-fluid" style="background-color: rgba(28,69,26,0.8);">
 				<div class="container">
 				<!-- Produk -->
@@ -421,8 +376,7 @@
 				</div>
 				<br></div>
 			</div>
-			<!-- <hr> -->
-			<!-- <hr style="border-color: grey"> -->
+
 			<br><br>
 			<div class="container">
 			<div class="row">

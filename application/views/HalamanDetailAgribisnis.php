@@ -134,8 +134,9 @@
 				    </div>
 
 				    <div class="collapse navbar-collapse" id="main">			    
-					    <ul hidden class="nav navbar-nav navbar-right" style="margin-top: 8px;margin-right: 75px;">
-					      	<li style="margin-top: -2px;"><a href="#" class="glyphicon glyphicon-home"></a></li>	      	
+					    <ul class="nav navbar-nav navbar-right hidden-md hidden-lg" style="margin-top: 8px;margin-right: 75px;">
+					      	<!-- <li style="margin-top: -2px;"><a href="#" class="glyphicon glyphicon-home"></a></li> -->
+					      	<a href="<?php echo base_url() ?>" class="glyphicon glyphicon-home dropbtnHeader" style="text-decoration-line: none;font-size: 14px;margin-left: 8px;"></a>
 					      	<li class="dropdown">
 					        	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Jenis Tembakau <span class="caret"></span></a>
 						        <ul class="dropdown-menu">
@@ -228,7 +229,7 @@
 				</div>
 				<div class="col-sm-3 col-lg-3">
 					
-					<a href="" style="text-decoration-line:none;"><h3 class="text-left" style="color:black; margin-top: -25px;">Pencarian</h3></a>
+					<h3 class="text-left" style="color:black; margin-top: -25px; font-family: Minion Pro">Pencarian</h3>
 					<hr style="border-color: grey;margin-top: -8px;">
 					<div class="container-fluid" style="background-color:rgba(28,69,26,0.9);border-radius: 5px;">
 						<form action="" style="margin-top: 15px; margin-bottom: 15px;">
@@ -243,44 +244,45 @@
 							 </div>
 						</form>						
 					</div>
-					<a href="" style="text-decoration-line:none;"><h3 class="text-left" style="color:black;">Leaflet</h3></a>
+					<a href="<?php echo base_url('leaflet') ?>" style="text-decoration-line:none;"><h3 class="text-left" style="color:black;font-family: Minion Pro">Leaflet</h3></a>
 					<hr style="border-color: grey;margin-top: -8px;">	
 					<h5 style="color:black;">Penyakit Lanas</h5>
 					<div class="row">
-						<div class="col-sm-6 col-lg-6">													 
+						<div class="col-xs-6 col-sm-6 col-lg-6">													 
 							<img class="leafletImg" src="<?php echo base_url() ?>item img/1a.jpg" class="image" style="width: 110%;border-radius: 3px;">						
 						</div> 
-						<div class="col-sm-6 col-lg-6">
+						<div class="col-xs-6 col-sm-6 col-lg-6">
 							<img class="leafletImg" src="<?php echo base_url() ?>item img/1b.jpg" class="image" style="width: 110%;border-radius: 3px; margin-left: -10px;">
 						</div>						
 					</div>					
 					<h5 style="color:black;">Penyakit Lanas</h5>
 					<div class="row">
-						<div class="col-sm-6 col-lg-6">													 
+						<div class="col-xs-6 col-sm-6 col-lg-6">												 
 							<img class="leafletImg" src="<?php echo base_url() ?>item img/2a.jpg" class="image" style="width: 110%;border-radius: 3px;">						
 						</div> 
-						<div class="col-sm-6 col-lg-6">
+						<div class="col-xs-6 col-sm-6 col-lg-6">
 							<img class="leafletImg" src="<?php echo base_url() ?>item img/2b.jpg" class="image" style="width: 110%;border-radius: 3px; margin-left: -10px;">
 						</div>						
 					</div>					
 					<h5 style="color:black;">Penyakit Lanas</h5>
 					<div class="row">
-						<div class="col-sm-6 col-lg-6">													 
+						<div class="col-xs-6 col-sm-6 col-lg-6">												 
 							<img class="leafletImg" src="<?php echo base_url() ?>item img/3a.jpg" class="image" style="width: 110%;border-radius: 3px;">						
 						</div> 
-						<div class="col-sm-6 col-lg-6">
+						<div class="col-xs-6 col-sm-6 col-lg-6">
 							<img class="leafletImg" src="<?php echo base_url() ?>item img/3b.jpg" class="image" style="width: 110%;border-radius: 3px; margin-left: -10px;">
 						</div>						
 					</div>
 					<h5 style="color:black;">Penyakit Lanas</h5>
 					<div class="row">
-						<div class="col-sm-6 col-lg-6">													 
+						<div class="col-xs-6 col-sm-6 col-lg-6">												 
 							<img class="leafletImg" src="<?php echo base_url() ?>item img/2a.jpg" class="image" style="width: 110%;border-radius: 3px;">						
 						</div> 
-						<div class="col-sm-6 col-lg-6">
+						<div class="col-xs-6 col-sm-6 col-lg-6">
 							<img class="leafletImg" src="<?php echo base_url() ?>item img/2b.jpg" class="image" style="width: 110%;border-radius: 3px; margin-left: -10px;">
 						</div>						
 					</div>	
+				</div>	
 				</div>
 
 			</div>

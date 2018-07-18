@@ -272,9 +272,9 @@
 					<hr style="border-color: grey;margin-top: -8px;">
 					<div class="container-fluid" style="background-color:rgba(28,69,26,0.9);border-radius: 5px;">
 					<!-- <div class="container-fluid" style="background-color:#57bb82;border-radius: 5px;"> -->
-						<form action="" style="margin-top: 15px; margin-bottom: 15px;">
+						<form method="get" action="<?php echo base_url('Pencarian')?>" style="margin-top: 15px; margin-bottom: 15px;">
 							<div class="input-group" style="z-index: 0;">
-							    <input type="text" class="form-control" placeholder="Cari">
+							    <input type="text" class="form-control" placeholder="Cari" required>
 							    <div class="input-group-btn">
 							      <button class="btn btn-success" type="submit">
 							        <i class="glyphicon glyphicon-search"></i>

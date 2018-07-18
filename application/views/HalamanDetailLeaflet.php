@@ -199,58 +199,58 @@
 			</ul>
 			<div class="row">
 				<div class="col-sm-9 col-lg-9">
-					<hr style="border-color: black">
+					<hr style="border-color: grey;margin-top: 10px;">
 					<div class="row">
 						<div class="col-xs-12 col-sm-4 col-lg-4"> 
-							<div class="thumbnailLeaflet text-center">
-										<img class="leafletImg" src="<?php echo base_url() ?>item img/1a.jpg" alt="" style="width:100%;">
-										<img class="leafletImg" src="<?php echo base_url() ?>item img/1b.jpg" alt="" style="width: 100%; margin-top: 5px;">
+							<div class="thumbnailLeaflet text-center" style="box-shadow: 5px 5px 7px 0px rgba(0,0,0,0.2);">
+										<img class="leafletImg" src="<?php echo base_url() ?>item img/1a.jpg" alt="" style="width:100%;border-radius: 3px;">
+										<img class="leafletImg" src="<?php echo base_url() ?>item img/1b.jpg" alt="" style="width: 100%;border-radius: 3px; margin-top: 5px;">
 								<!-- <a href="" style="text-decoration-line: none;">
 								</a>				 -->
 								<h4 style="color:rgb(242,97,5);">KONSERVASI LAHAN TEMBAKAU TEMANGGUNG</h4>
 							</div>						
 						</div>
 						<div class="col-xs-12 col-sm-4 col-lg-4"> 
-							<div class="thumbnailLeaflet text-center">
+							<div class="thumbnailLeaflet text-center" style="box-shadow: 5px 5px 7px 0px rgba(0,0,0,0.2);">
 								<!-- <a href="" style="text-decoration-line: none;"> -->
-									<img class="leafletImg" src="<?php echo base_url() ?>item img/2a.jpg" alt="" style="width: 100%;">
-									<img class="leafletImg" src="<?php echo base_url() ?>item img/2b.jpg" alt="" style="width: 100%; margin-top: 5px;">
+									<img class="leafletImg" src="<?php echo base_url() ?>item img/2a.jpg" alt="" style="width: 100%;border-radius: 3px;">
+									<img class="leafletImg" src="<?php echo base_url() ?>item img/2b.jpg" alt="" style="width: 100%;border-radius: 3px; margin-top: 5px;">
 								<!-- </a>				 -->
 								<h4 style="color:rgb(242,97,5);">PENYAKIT KERUPUK/KERITING</h4>
 							</div>						
 						</div>
 						<div class="col-xs-12 col-sm-4 col-lg-4"> 
-							<div class="thumbnailLeaflet text-center">
+							<div class="thumbnailLeaflet text-center" style="box-shadow: 5px 5px 7px 0px rgba(0,0,0,0.2);">
 								<!-- <a href="" style="text-decoration-line: none;"> -->
-									<img class="leafletImg" src="<?php echo base_url() ?>item img/3a.jpg" alt="" style="width: 100%;">
-									<img class="leafletImg" src="<?php echo base_url() ?>item img/3b.jpg" alt="" style="width: 100%; margin-top: 5px;">
+									<img class="leafletImg" src="<?php echo base_url() ?>item img/3a.jpg" alt="" style="width: 100%;border-radius: 3px;">
+									<img class="leafletImg" src="<?php echo base_url() ?>item img/3b.jpg" alt="" style="width: 100%;border-radius: 3px; margin-top: 5px;">
 								<!-- </a>				 -->
 								<h4 style="color:rgb(242,97,5);">PENYAKIT LANAS</h4>
 							</div>						
 						</div>
 						<div class="col-xs-12 col-sm-4 col-lg-4"> 
-							<div class="thumbnailLeaflet text-center">
+							<div class="thumbnailLeaflet text-center" style="box-shadow: 5px 5px 7px 0px rgba(0,0,0,0.2);">
 								<!-- <a href="" style="text-decoration-line: none;"> -->
-									<img class="leafletImg" src="<?php echo base_url() ?>item img/1a.jpg" alt="" style="width: 100%;">
-									<img class="leafletImg" src="<?php echo base_url() ?>item img/1b.jpg" alt="" style="width: 100%; margin-top: 5px;">
+									<img class="leafletImg" src="<?php echo base_url() ?>item img/1a.jpg" alt="" style="width: 100%;border-radius: 3px;">
+									<img class="leafletImg" src="<?php echo base_url() ?>item img/1b.jpg" alt="" style="width: 100%;border-radius: 3px; margin-top: 5px;">
 								<!-- </a>				 -->
 								<h4 style="color:rgb(242,97,5);">KONSERVASI LAHAN TEMBAKAU TEMANGGUNG</h4>
 							</div>						
 						</div>
 						<div class="col-xs-12 col-sm-4 col-lg-4"> 
-							<div class="thumbnailLeaflet text-center">
+							<div class="thumbnailLeaflet text-center" style="box-shadow: 5px 5px 7px 0px rgba(0,0,0,0.2);">
 								<!-- <a href="" style="text-decoration-line: none;"> -->
-									<img class="leafletImg" src="<?php echo base_url() ?>item img/2a.jpg" alt="" style="width: 100%;">
-									<img class="leafletImg" src="<?php echo base_url() ?>item img/2b.jpg" alt="" style="width: 100%; margin-top: 5px;">
+									<img class="leafletImg" src="<?php echo base_url() ?>item img/2a.jpg" alt="" style="width: 100%;border-radius: 3px;">
+									<img class="leafletImg" src="<?php echo base_url() ?>item img/2b.jpg" alt="" style="width: 100%;border-radius: 3px; margin-top: 5px;">
 								<!-- </a>				 -->
 								<h4 style="color:rgb(242,97,5);">PENYAKIT KERUPUK/KERITING</h4>
 							</div>						
 						</div>
 						<div class="col-xs-12 col-sm-4 col-lg-4"> 
-							<div class="thumbnailLeaflet text-center">
+							<div class="thumbnailLeaflet text-center" style="box-shadow: 5px 5px 7px 0px rgba(0,0,0,0.2);">
 								<!-- <a href="" style="text-decoration-line: none;"> -->
-									<img class="leafletImg" src="<?php echo base_url() ?>item img/3a.jpg" alt="" style="width: 100%;">
-									<img class="leafletImg" src="<?php echo base_url() ?>item img/3b.jpg" alt="" style="width: 100%; margin-top: 5px;">
+									<img class="leafletImg" src="<?php echo base_url() ?>item img/3a.jpg" alt="" style="width: 100%;border-radius: 3px;">
+									<img class="leafletImg" src="<?php echo base_url() ?>item img/3b.jpg" alt="" style="width: 100%;border-radius: 3px; margin-top: 5px;">
 								</a>				
 								<h4 style="color:rgb(242,97,5);">PENYAKIT LANAS</h4>
 							</div>						
@@ -266,8 +266,8 @@
 				</div>
 
 				<div class="col-sm-3 col-lg-3">
-					<a href="" style="text-decoration-line:none;"><h3 class="text-left" style="color:black; margin-top: -25px;">Pencarian</h3></a>
-					<hr style="border-color: black">
+					<a href="" style="text-decoration-line:none;"><h3 class="text-left" style="color:black; margin-top: -21px;font-family: Monion pro">Pencarian</h3></a>
+					<hr style="border-color: grey;margin-top: -5px;">
 					<div class="container-fluid" style="background-color:rgba(28,69,26,0.9); border-radius: 5px;">
 						<form action="" style="margin-top: 15px; margin-bottom: 15px;">
 							<div class="input-group" style="z-index: 0">
@@ -280,59 +280,73 @@
 							 </div>
 						</form>						
 					</div>
-					<a href="" style="text-decoration-line:none;"><h3 class="text-left" style="color:black;">Varietas Terbaru</h3></a>
-					<hr style="border-color: black">
-					<div class="beritaterbaru">
+					<a href="" style="text-decoration-line:none;"><h3 class="text-left" style="color:black;font-family: Monion pro">Varietas Terbaru</h3></a>
+					<hr style="border-color: grey;margin-top: -5px;">
+					<div style="margin-top: -5px;">
 						<a href="" style="color:black;text-decoration-line: none;">
-							<p style="color:orange;font-size: 15px;">Jalan Sehat</p>												
+							<p style="color:rgb(242,97,5);font-size: 15px;margin-bottom: 5px;">VARIETAS NC 471</p>
 							<div class="row">
 								<div class="col-xs-5 col-sm-5 col-lg-5">
-									<img src="<?php echo base_url() ?>item img/tembakau2.jpg" alt="" style="width: 100%;">	
+									<img src="item img/3a.jpg" alt="" style="width: 115px;">	
 								</div>
 								<div class="col-xs-7 col-sm-7 col-lg-7">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, nobis.</p>					
+									<p style="margin-top: -5px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, nobis.</p>					
 								</div>		
 							</div>
 						</a>
 					</div>
-					<hr style="margin-top: 10px;margin-bottom: 5px;">
-					<div class="beritaterbaru">
+					<hr style="margin-top: 10px;margin-bottom: 10px;">
+					<div>
 						<a href="" style="color:black;text-decoration-line: none;">
-							<p style="color:orange;font-size: 15px;">Jalan Sehat</p>												
+							<p style="color:rgb(242,97,5);font-size: 15px;margin-bottom: 5px;">VARIETAS NC 471</p>												
 							<div class="row">
 								<div class="col-xs-5 col-sm-5 col-lg-5">
-									<img src="<?php echo base_url() ?>item img/tembakau2.jpg" alt="" style="width: 100%;">	
+									<img src="item img/3b.jpg" alt="" style="width: 115px;">	
 								</div>
 								<div class="col-xs-7 col-sm-7 col-lg-7">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, nobis.</p>					
+									<p style="margin-top: -5px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, nobis.</p>					
 								</div>		
 							</div>
 						</a>
 					</div>
-					<hr style="margin-top: 10px;margin-bottom: 5px;">
-					<div class="beritaterbaru">
+					<hr style="margin-top: 10px;margin-bottom: 10px;">
+					<div>
 						<a href="" style="color:black;text-decoration-line: none;">
-							<p style="color:orange;font-size: 15px;">Jalan Sehat</p>												
+							<p style="color:rgb(242,97,5);font-size: 15px;margin-bottom: 5px;">VARIETAS NC 471</p>												
 							<div class="row">
 								<div class="col-xs-5 col-sm-5 col-lg-5">
-									<img src="<?php echo base_url() ?>item img/tembakau2.jpg" alt="" style="width: 100%;">	
+									<img src="item img/3a.jpg" alt="" style="width: 115px;">	
 								</div>
 								<div class="col-xs-7 col-sm-7 col-lg-7">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, nobis.</p>					
+									<p style="margin-top: -5px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, nobis.</p>					
 								</div>		
 							</div>
 						</a>
 					</div>
-					<hr style="margin-top: 10px;margin-bottom: 5px;">
-					<div class="beritaterbaru">
+					<hr style="margin-top: 10px;margin-bottom: 10px;">
+					<div>
 						<a href="" style="color:black;text-decoration-line: none;">
-							<p style="color:orange;font-size: 15px;">Jalan Sehat</p>												
+							<p style="color:rgb(242,97,5);font-size: 15px;margin-bottom: 5px;">VARIETAS NC 471</p>												
 							<div class="row">
 								<div class="col-xs-5 col-sm-5 col-lg-5">
-									<img src="<?php echo base_url() ?>item img/tembakau2.jpg" alt="" style="width: 100%;">	
+									<img src="item img/3b.jpg" alt="" style="width: 115px;">	
 								</div>
 								<div class="col-xs-7 col-sm-7 col-lg-7">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, nobis.</p>					
+									<p style="margin-top: -5px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, nobis.</p>					
+								</div>		
+							</div>
+						</a>
+					</div>
+					<hr style="margin-top: 10px;margin-bottom: 10px;">
+					<div>
+						<a href="" style="color:black;text-decoration-line: none;">
+							<p style="color:rgb(242,97,5);font-size: 15px;margin-bottom: 5px;">VARIETAS NC 471</p>												
+							<div class="row">
+								<div class="col-xs-5 col-sm-5 col-lg-5">
+									<img src="item img/3a.jpg" alt="" style="width: 115px;">	
+								</div>
+								<div class="col-xs-7 col-sm-7 col-lg-7">
+									<p style="margin-top: -5px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, nobis.</p>					
 								</div>		
 							</div>
 						</a>
@@ -373,7 +387,7 @@
 		<!-- END OF MODALS -->
 
 	</body>
-	<br><br>
+	<br><br><br><br><br><br>
 	<footer>
 		<div class="container-fluid" style="background-color: rgba(28,69,26,1);">
 				<div class="container" style="margin-top: 20px; color:white;">
@@ -386,7 +400,7 @@
 								<p style="margin-left: 7px;margin-top: 5px;">Balai Penelitian Tanaman Pemanis dan Serat</p>
 							</div>
 						</div>-->
-						<img src="<?php echo base_url() ?>item img/logoBalittas2.png" style="width: 110%;margin:-27px 0px -8px -32px;">				
+						<img src="item img/logoBalittas2.png" style="width: 110%;margin:-27px 0px -8px -32px;">				
 						<table>
 							<tbody>
 								<tr>
@@ -398,7 +412,7 @@
 									<td>balittas@litbang.pertanian.go.id</td>
 								</tr>
 								<tr>
-									<td class="glyphicon glyphicon-envelope">&nbsp</td>
+									<td>&nbsp</td>
 									<td>balittas.malang@gmail.com</td>
 								</tr>
 								<tr>
@@ -415,8 +429,8 @@
 					</div>
 					<div class="col-sm-9 col-lg-9">
 						<div class="col-sm-4 col-lg-4 batasfooter">
-							<h3 style="margin-top: 0px;">Link Terkait</h3>
-							<hr style="margin-top: 0px; margin-bottom: 10px;">							
+							<h3 style="margin-top: 4px;font-family: Minion Pro;">Link Terkait</h3>
+							<hr style="margin-top: -4px; margin-bottom: 10px; border-color: #fece00">							
 							<table>
 								<tbody>
 									<a href="">
@@ -454,27 +468,27 @@
 							<br>														
 						</div>
 						<div class="col-sm-4 col-lg-4 batasfooter">
-							<h3 style="margin-top: 0px;">Sosial Media</h3>
-							<hr style="margin-top: 0px; margin-bottom: 13px;">
+							<h3 style="margin-top: 4px;font-family: Minion Pro;">Sosial Media</h3>
+							<hr style="margin-top: -4px; margin-bottom: 13px;border-color: #fece00">
 							<div class="row">
 								<div class="col-xs-3 col-sm-3 col-lg-3" style="margin: 0px -7px 9px 0px;">
 									<a href="">
-										<img src="<?php echo base_url() ?>item img/fbb.png" class="img-rounded" alt="Cinque Terre" width="50" height="50">
+										<img src="item img/fbb.png" class="img-rounded" alt="Cinque Terre" width="50" height="50">
 									</a>
 								</div>
 								<div class="col-xs-3 col-sm-3 col-lg-3" style="margin: 0px -7px 9px 0px;">
 									<a href="">
-										<img src="<?php echo base_url() ?>item img/twitterBig.png" class="img-rounded" alt="Cinque Terre" width="50" height="50">
+										<img src="item img/twitterBig.png" class="img-rounded" alt="Cinque Terre" width="50" height="50">
 									</a>
 								</div>
 								<div class="col-xs-3 col-sm-3 col-lg-3" style="margin: 0px -7px 9px 0px;">
 									<a href="">
-										<img src="<?php echo base_url() ?>item img/youtube.png" class="img-rounded" alt="Cinque Terre" width="50" height="50">
+										<img src="item img/youtube.png" class="img-rounded" alt="Cinque Terre" width="50" height="50">
 									</a>
 								</div>
 								<div class="col-xs-3 col-sm-3 col-lg-3" style="margin: -3px -7px 9px 0px;">
 									<a href="">
-										<img src="<?php echo base_url() ?>item img/insta.png" class="img-rounded" alt="Cinque Terre" width="58" height="auto">
+										<img src="item img/insta.png" class="img-rounded" alt="Cinque Terre" width="58" height="auto">
 									</a>
 								</div>
 							</div>
@@ -489,7 +503,7 @@
 									<p style="margin-top: 5px;">10</p>
 								</div>								
 							</div>
-							<hr style="border-style: dashed; margin-top: 1px;margin-bottom: 10px;">
+							<hr style="border-style: dashed; margin-top: 1px;margin-bottom: 10px;border-color: #fece00">
 							<div class="row">
 								<div class="col-xs-9 col-sm-9 col-lg-9">
 									<p style="margin-top: 2px;">Pengunjung Bulan Ini</p>
@@ -498,7 +512,7 @@
 									<p style="margin-top: 2px;">10</p>
 								</div>								
 							</div>															
-							<hr style="border-style: dashed; margin-top: 0px;margin-bottom: 10px;">
+							<hr style="border-style: dashed; margin-top: 0px;margin-bottom: 10px;border-color: #fece00">
 							<div class="row">
 								<div class="col-xs-9 col-sm-9 col-lg-9">
 									<p style="margin-top: 2px;">Total Pengunjung</p>
@@ -513,7 +527,7 @@
 				<br><br><br>				
 			</div>
 			<div class="container-fluid text-center" style="color:white;background-color: black;">
-				<div style=" margin-top: 10px;">
+				<div style=" margin-top: 13px;">
 					<p style="font-family: calibri"><span class="glyphicon glyphicon-copyright-mark"></span> 2018 All Reserved Design By BALITTAS</p>
 				</div>
 			</div>

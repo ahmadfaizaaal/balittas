@@ -1,11 +1,9 @@
-<?php /**
-* 
-*/
-class leaflet extends CI_Controller
-{
-	
-	public function index()
+<?php 
+	class leaflet extends CI_Controller
 	{
-		$this->load->view('HalamanDetailLeaflet');
-	}
-} ?>
+		
+		public function index(){
+			$this->load->view('HalamanDetailLeaflet');
+		}
+	} 
+?>

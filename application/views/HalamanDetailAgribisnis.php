@@ -23,18 +23,13 @@
 			<nav class="navbar navbar-inverse navbar-fixed-top navbarHover">
 				<div class="container-fluid">
 				    <div class="navbar-header" style="margin-top: 5px; margin-bottom: 3px;">						    
-				      <a href="<?php echo base_url() ?>"><img src="<?php echo base_url() ?>item img/logoBalittas2.png" style="width:280px;margin-top: -18px;margin-bottom: -6px;margin-left: 5px;"></a>
+				      <a href="<?php echo base_url()?>"><img src="<?php echo base_url() ?>item img/logoBalittas2.png" style="width:280px;margin-top: -18px;margin-bottom: -6px;margin-left: 5px;"></a>
 				      <button type="botton" class="navbar-toggle" data-toggle="collapse" data-target="#main" style="margin-top: 10px;">
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-				    </div>
-				    <!-- <ul class="nav navbar-nav">
-				      <li class="active"><a href="#">Home</a></li>
-				      <li><a href="#">Page 1</a></li>
-				      <li><a href="#">Page 2</a></li>
-				    </ul> -->
+				    </div>			
 				    <div class="collapse navbar-collapse">			    
 					    <ul class="nav navbar-nav navbar-right" style="margin-top: 10px;margin-right: 75px;">
 					      	<a href="<?php echo base_url() ?>" class="glyphicon glyphicon-home dropbtnHeader" style="text-decoration-line: none;font-size: 14px;"></a>
@@ -42,29 +37,29 @@
 							  	<div class="dropbtnHeader" style="font-family: Minion Pro">Jenis Tembakau <span class="caret"></div>
 							  	<div class="dropdownHeader-content" style="margin: 0px 0px 0px -30px;">
 								  	<div class="container-fluid">
-								  		<a href="#" style="margin-top: 10px;">Manurut Asal Usul</a>								  		
+								  		<a href="<?php echo base_url() ?>varietas/jenisAsal" style="margin-top: 10px;">Manurut Asal Usul</a>
 								  		<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
-							          	<a href="#">Kegunaan</a>
+							          	<a href="<?php echo base_url() ?>varietas/jenisKegunaan">Kegunaan</a>
 							          	<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
-							          	<a href="#">Waktu Tanam</a>
+							          	<a href="<?php echo base_url() ?>varietas/jenisWaktu">Waktu Tanam</a>
 							          	<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
-							          	<a href="#">Daerah Pengembangan</a>
+							          	<a href="<?php echo base_url() ?>varietas/jenisDaerah">Daerah Pengembangan</a>
 							          	<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
-							          	<a href="#" style="margin-bottom: 8px;">Prosesing</a>							          	
+							          	<a href="<?php echo base_url() ?>varietas/jenisProsesing" style="margin-bottom: 8px;">Prosesing</a>							          	
 								  	</div>							  	
 							  	</div>
 							</div>
 							<div class="dropdownHeader">
 							  	<div class="dropbtnHeader" style="font-family: Minion Pro">Produk <span class="caret"></div>
 							  	<div class="dropdownHeader-content" style="margin: 0px 0px 0px -178px;">
-								  	<div class="container-fluid">							  										  		
-							          	<a href="#" style="margin-top: 10px;">Bernih</a>								  		
+								  	<div class="container-fluid">	  		
+							          	<a href="<?php echo base_url() ?>produk/produk1" style="margin-top: 10px;">Bernih</a>
 								  		<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
-							          	<a href="#">Alat dan Mesin</a>
+							          	<a href="<?php echo base_url() ?>produk/produk2">Alat dan Mesin</a>
 							          	<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
-							          	<a href="#">Formula</a>
+							          	<a href="<?php echo base_url() ?>produk/produk1">Formula</a>
 							          	<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
-							          	<a href="#" style="margin-bottom: 8px;">Produk Hilir</a>					    
+							          	<a href="<?php echo base_url() ?>produk/produk2" style="margin-bottom: 8px;">Produk Hilir</a>					    
 								  	</div>
 							  	</div>
 							</div>
@@ -74,118 +69,78 @@
 								  	<div class="container-fluid">
 								  		<div class="row">
 								  			<div class="col-sm-6 col-lg-6">
-								  				<a href="#" style="margin-top: 10px;">Penangkaran Benih</a>	
+								  				<a href="<?php echo base_url() ?>teknologibudidaya/penangkaranBenih" style="margin-top: 10px;">Penangkaran Benih</a>	
 								  				<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
-								  				<a href="#">Pesemaian</a>
+								  				<a href="<?php echo base_url() ?>teknologibudidaya/pesemaian">Pesemaian</a>
 							          			<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
-							          			<a href="#">Pemupukan</a>
+							          			<a href="<?php echo base_url() ?>teknologibudidaya/pemupukan">Pemupukan</a>
 							          			<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
-							          			<a href="#">Pemupukan Bebas Chlor</a>
+							          			<a href="<?php echo base_url() ?>teknologibudidaya/bebasChlor">Pemupukan Bebas Chlor</a>
 							          			<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
-									          	<a href="#" style="margin-bottom: 8px;">Pengendalian Penyakit</a>
+									          	<a href="<?php echo base_url() ?>teknologibudidaya/pengendalianPenyakit" style="margin-bottom: 8px;">Pengendalian Penyakit</a>
 								  			</div>
 								  			<div class="col-sm-6 col-lg-6">
-								  				<a href="#" style="margin-top: 10px;">Pengendalian Hama</a>	
+								  				<a href="<?php echo base_url() ?>teknologibudidaya/pengendalianHama" style="margin-top: 10px;">Pengendalian Hama</a>	
 								  				<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
-								  				<a href="#">Panen dan Pasca Panen</a>	
+								  				<a href="<?php echo base_url() ?>teknologibudidaya/panen">Panen dan Pasca Panen</a>	
 								  				<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
-								  				<a href="#">Kesesuaian Lahan</a>	
+								  				<a href="<?php echo base_url() ?>teknologibudidaya/kesesuaian">Kesesuaian Lahan</a>	
 								  				<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
-								  				<a href="#">Budidaya Tembakau Cerutu</a>
+								  				<a href="<?php echo base_url() ?>teknologibudidaya/budidaya">Budidaya Tembakau Cerutu</a>
 								  			</div>
 								  		</div>							  		
 								  	</div>							  								          
 							  	</div>
-							</div>
-					      	<!-- <li class="dropdown">
-					        	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Jenis Tembakau <span class="caret"></span></a>
-						        <ul class="dropdown-menu">
-						        	<li><a href="#">Manurut Asal Usul</a></li>
-						          	<li><a href="#">Kegunaan</a></li>
-						          	<li><a href="#">Waktu Tanam</a></li>
-						          	<li><a href="#">Daerah Pengembangan</a></li>
-						          	<li><a href="#">Prosesing</a></li>
-						       	</ul>
-					      	</li> -->
-					      	<!-- <li class="dropdown">
-					        	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Produk <span class="caret"></span></a>
-						        <ul class="dropdown-menu">
-						        	<li><a href="#">Benih</a></li>
-						          	<li><a href="#">Alat dan Mesin</a></li>
-						          	<li><a href="#">Formula</a></li>
-						          	<li><a href="#">Produk Hilir</a></li>
-						       	</ul>
-					      	</li>
-					      	<li class="dropdown">
-					        	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Teknologi Budidaya <span class="caret"></span></a>
-						        <ul class="dropdown-menu">
-						        	<li><a href="#">Penangkaran Benih</a></li>
-						          	<li><a href="#">Pesemaian</a></li>
-						          	<li><a href="#">Pemupukan</a></li>
-						          	<li><a href="#">Pemupukan Bebas Chlor</a></li>
-						          	<li><a href="#">Pengendalian Penyakit</a></li>
-						          	<li><a href="#">Pengendalian Hama</a></li>
-						          	<li><a href="#">Panen dan Pasca Panen</a></li>
-						          	<li><a href="#">Kesesuaian Lahan</a></li>
-						          	<li><a href="#">Budidaya Tembakau Cerutu</a></li>
-						       	</ul>
-					      	</li> -->				      	
+							</div>					      		      	
 					    </ul>				    
 				    </div>
 
 				    <div class="collapse navbar-collapse" id="main">			    
 					    <ul class="nav navbar-nav navbar-right hidden-md hidden-lg" style="margin-top: 8px;margin-right: 75px;">
-					      	<!-- <li style="margin-top: -2px;"><a href="#" class="glyphicon glyphicon-home"></a></li> -->
 					      	<a href="<?php echo base_url() ?>" class="glyphicon glyphicon-home dropbtnHeader" style="text-decoration-line: none;font-size: 14px;margin-left: 8px;"></a>
 					      	<li class="dropdown">
 					        	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Jenis Tembakau <span class="caret"></span></a>
 						        <ul class="dropdown-menu">
-						        	<li><a href="#">Manurut Asal Usul</a></li>
-						          	<li><a href="#">Kegunaan</a></li>
-						          	<li><a href="#">Waktu Tanam</a></li>
-						          	<li><a href="#">Daerah Pengaembangan</a></li>
-						          	<li><a href="#">Prosesing</a></li>
+						        	<li><a href="<?php echo base_url() ?>varietas/jenisAsal">Manurut Asal Usul</a></li>
+						          	<li><a href="<?php echo base_url() ?>varietas/jenisKegunaan">Kegunaan</a></li>
+						          	<li><a href="<?php echo base_url() ?>varietas/jenisWaktu">Waktu Tanam</a></li>
+						          	<li><a href="<?php echo base_url() ?>varietas/jenisDaerah">Daerah Pengaembangan</a></li>
+						          	<li><a href="<?php echo base_url() ?>varietas/jenisProsesing">Prosesing</a></li>
 						       	</ul>
 					      	</li>
 					      	<li class="dropdown">
 					        	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Produk <span class="caret"></span></a>
 						        <ul class="dropdown-menu">
-						        	<li><a href="#">Benih</a></li>
-						          	<li><a href="#">Alat dan Mesin</a></li>
-						          	<li><a href="#">Formula</a></li>
-						          	<li><a href="#">Produk Hilir</a></li>
+						        	<li><a href="<?php echo base_url() ?>produk/produk1">Benih</a></li>
+						          	<li><a href="<?php echo base_url() ?>produk/produk2">Alat dan Mesin</a></li>
+						          	<li><a href="<?php echo base_url() ?>produk/produk1">Formula</a></li>
+						          	<li><a href="<?php echo base_url() ?>produk/produk2">Produk Hilir</a></li>
 						       	</ul>
 					      	</li>
 					      	<li class="dropdown">
 					        	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Teknologi Budidaya <span class="caret"></span></a>
 						        <ul class="dropdown-menu">
-						        	<li><a href="#">Penangkaran Benih</a></li>
-						          	<li><a href="#">Pesemaian</a></li>
-						          	<li><a href="#">Pemupukan</a></li>
-						          	<li><a href="#">Pemupukan Bebas Chlor</a></li>
-						          	<li><a href="#">Pengendalian Penyakit</a></li>
-						          	<li><a href="#">Pengendalian Hama</a></li>
-						          	<li><a href="#">Panen dan Pasca Panen</a></li>
-						          	<li><a href="#">Kesesuaian Lahan</a></li>
-						          	<li><a href="#">Budidaya Tembakau Cerutu</a></li>
+						        	<li><a href="<?php echo base_url() ?>teknologibudidaya/penangkaranBenih">Penangkaran Benih</a></li>
+						          	<li><a href="<?php echo base_url() ?>teknologibudidaya/pesemaian">Pesemaian</a></li>
+						          	<li><a href="<?php echo base_url() ?>teknologibudidaya/pemupukan">Pemupukan</a></li>
+						          	<li><a href="<?php echo base_url() ?>teknologibudidaya/bebasChlor">Pemupukan Bebas Chlor</a></li>
+						          	<li><a href="<?php echo base_url() ?>teknologibudidaya/pengendalianPenyakit">Pengendalian Penyakit</a></li>
+						          	<li><a href="<?php echo base_url() ?>teknologibudidaya/pengendalianHama">Pengendalian Hama</a></li>
+						          	<li><a href="<?php echo base_url() ?>teknologibudidaya/panen">Panen dan Pasca Panen</a></li>
+						          	<li><a href="<?php echo base_url() ?>teknologibudidaya/kesesuaian">Kesesuaian Lahan</a></li>
+						          	<li><a href="<?php echo base_url() ?>teknologibudidaya/budidaya">Budidaya Tembakau Cerutu</a></li>
 						       	</ul>
 					      	</li>				      	
 					    </ul>				    
 				    </div>
-
-				  </div>
-			</nav>
-			 
-			<!-- Gambar tengah -->					
-			<!-- <div class="pcc">
-				<img src="gambar/keten.jpg" class="img-responsive" id="logotengah">
-				 <p style="padding-top: 90px;">Detail Varietas<p>
-			</div>			 -->
+				</div>
+			</nav>			 
+			<!-- Gambar tengah -->									 
 			<div class="containerImg">
 				<img src="<?php echo base_url() ?>item img/tembakauHeader.jpg" alt="" style="width: 100%;">
 			 	<div class="contentImg text-center">
 				    <h1 class="hidden-xs hidden-sm" style="margin-top:12%;font-size:5vw;">Agribisnis Tanaman Tembakau</h1>
-				    <h1 class="hidden-md hidden-lg" style="margin-top:6vw;font-size:5vw;">Agribisnis Tanaman Tembakau</h1>				    
+				    <h1 class="hidden-md hidden-lg" style="margin-top:6vw;font-size:5vw;">Agribisnis Tanaman Tembakau</h1>
 			  	</div>
 			</div>	
 		</header>
@@ -205,9 +160,7 @@
 						<div class="col-xs-12 col-sm-12 col-lg-12">
 								<div class="thumbnail" style=" border-radius: 5px; background-color:white; border-color: white;">
 									<img src="<?php echo base_url() ?>item img/tembakau2.jpg" alt="" style="width: 100%;">
-									<br>
-									<!-- <span class="label label-success"><p class="glyphicon glyphicon-calendar"></p> 3 Juli 2017</span>
-									<span class="label label-warning"><p class="glyphicon glyphicon-time"></p> 14:00</span> -->										
+									<br>																	
 									<h4 style="color:#FECE00;font-size: 24px; font-family: Minion Pro;">BUDIDAYA TEMBAKAU MADURA</h4>									
 									<!-- <hr style="border-color: black;">									 -->
 									<p>&nbsp Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab explicabo facilis natus eos molestiae magni tempore sint eum minima, a non rem laudantium possimus aliquam illo repellendus minus rerum eligendi iure voluptatum sit voluptates esse ullam. Excepturi at error fugit, vel provident rem repellendus sequi non molestiae, deleniti recusandae nulla, magnam cupiditate rerum alias tempora. Iste explicabo optio placeat, iure eligendi eum ipsum quasi quos obcaecati, dolorem officiis ipsa repellendus nesciunt corrupti inventore modi corporis culpa. Id aut ex, illum distinctio optio unde debitis eaque inventore, eligendi placeat doloremque excepturi quidem deserunt. Aperiam distinctio eaque ad optio tempore, saepe! Sapiente.</p>
@@ -227,18 +180,16 @@
 						</div>							
 					</div>
 				</div>
-				<div class="col-sm-3 col-lg-3">
-					
+				<div class="col-sm-3 col-lg-3">					
 					<h3 class="text-left" style="color:black; margin-top: -25px; font-family: Minion Pro">Pencarian</h3>
 					<hr style="border-color: grey;margin-top: -8px;">
 					<div class="container-fluid" style="background-color:rgba(28,69,26,0.9);border-radius: 5px;">
-						<form action="" style="margin-top: 15px; margin-bottom: 15px;">
+						<form method="get" action="<?php echo base_url('pencarian')?>" style="margin-top: 15px; margin-bottom: 15px;">
 							<div class="input-group" style="z-index: 0">
-							    <input type="text" class="form-control" placeholder="Cari">
+							    <input type="text" class="form-control" placeholder="Cari" required>
 							    <div class="input-group-btn">
 							      <button class="btn btn-success" type="submit">
 							        <i class="glyphicon glyphicon-search"></i>
-
 							      </button>
 							    </div>
 							 </div>

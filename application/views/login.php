@@ -24,7 +24,7 @@
 			</div>
 			<?php  } ?>		
 		<div class="text-center" style="margin-top: 100px; background-color: none;">
-			<img src="<?php echo base_url() ?>item img/logoBalittas2.png" style="width:350px;height: auto">
+			<a href="<?php echo base_url() ?>"><img src="<?php echo base_url() ?>item img/logoBalittas2.png" style="width:350px;height: auto"></a>
 		</div>
 		<div style="background-color: none;" align="center">			
 			<div style="background-color:orange; width: 350px;border-radius: 5px;" class="text-center">

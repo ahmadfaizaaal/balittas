@@ -2,17 +2,24 @@
         color: #566787;
 		font-family: 'Varela Round', sans-serif;
 		font-size: 13px;
+		background-color: #eee;
 	}
 	.table-wrapper {
-        background-color:#b7feb8;
+		background:white;
         padding: 20px 25px;
-        margin: 30px 0;
+        margin: 10px 0px 40px;
 		border-radius: 3px;
-        box-shadow: 0 1px 1px rgba(0,0,0,.05);
+        box-shadow: 14px 14px 14px rgba(0,0,0,.09);
     }
+    .tabel{
+		background-color: #eee;
+	}
+	.table-responsive{
+			max-height: 450px;
+	}
 	.table-title {        
 		padding-bottom: 15px;
-		background: #435d7d;
+		background: rgba(28,69,26,0.95);;
 		color: #fff;
 		padding: 16px 30px;
 		margin: -20px -25px 10px;
@@ -226,15 +233,6 @@
   		height:100px;
   		margin-top:20px;
 	}
-
-	.tabel{
-		background-color: #eee;
-	}
-	
-	.table-responsive{
-		max-height: 600px;
-	}
-	
 .container{
     margin-top:20px;
 }
@@ -260,4 +258,3 @@
 .image-preview-input-title {
     margin-left:2px;
 }
-	

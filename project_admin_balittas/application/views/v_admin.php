@@ -10,14 +10,15 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>/assets/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="<?php echo base_url();?>/assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="<?php echo base_url();?>/assets/css/bootstrap.css" rel="stylesheet">
     <link href="<?php echo base_url();?>/assets/css/style.css" rel="stylesheet">
     <link href="<?php echo base_url();?>/assets/css/styleadmin.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>/assets/css/simple-sidebar.css" rel="stylesheet">
+    <link href="<?php echo base_url() ?>/assets/img/Logo-Kementerian-Pertanian.png" rel="shortcut icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -32,68 +33,161 @@
 
   <body>
 <header>
+
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+       <div class="navbar-header">
+       <!-- <a class="navbar-brand" href="#menu-toggle" id="menu-toggle" style="margin-top: 10px; margin-left: -15px;"> <i class="fa fa-list" aria-hidden="true" style="margin-left: -5px; font-size: 35px; padding-left: -50px"></i></a> -->
+         <a href="#home" class="navbar-brand halaman">
+        <img src="<?php echo base_url();?>/assets/img/balittaslitbang.png" width="270" style="margin-right:-90px; padding-right: 25px;">
+      </a>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bar" aria-expanded="false" style="margin-top:25px; margin-right: -20px;">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="#Welcome" class="navbar-brand halaman">
-        <img src="<?php echo base_url();?>/assets/img/adminbalittas.png" width="290">
-      </a>
-    </div>   
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-    <ul class="nav navbar-nav navbar-right">
+    </div>
 
-         <li class="dropdown">
-                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Varietas <span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                     <li><a href="#Welcome" class="halaman">Tembakau</a></li>
-                    <li><a href="#JarakPagar" class="halaman">Jarak Pagar</a></li>
-                      <li><a href="#JarakKepyar" class="halaman">Jarak Kepyar</a></li>
-                      <li><a href="#Kapas" class="halaman">Kapas</a></li>
-                      <li><a href="#Kapuk" class="halaman">Kapuk</a></li>
-                      <li><a href="#Kenaf" class="halaman">Kenaf</a></li>
-                      <li><a href="#Rami" class="halaman">Rami</a></li>
-                      <li><a href="#Rosela" class="halaman">Rosela</a></li>
-                      <li><a href="#Tebu" class="halaman">Tebu</a></li>
-                      <li><a href="#Wijen" class="halaman">Wijen</a></li>
-                  </ul>
-                </li>
-      <li> <a href="#login" data-toggle="modal" data-target="#login-modal" class="halaman">Welcome Admin</a></li>
-      <li> <a href="index.html#layanan" class="halaman">Logout</a></li>
-
-  </ul>
-
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse">
+        <ul class="nav navbar-nav navbar-right" >
+             <li class="dropdown">
+                      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Varietas <span class="caret"></span></a>
+                      <ul class="dropdown-menu" style="margin:-5px 0px 0px 0px; width:280px; background-color:#fece00;">
+                        <div class="container-fluid">
+                            <div class="col-sm-6 col-lg-6">
+                           <li><a href="#Welcome" class="halaman">Tembakau</a></li>
+                            <hr style="margin-left:0px; margin: 1px 0px 1px 0px; text-align: left; width:95%;">
+                            <li><a href="#JarakPagar" class="halaman">Jarak Pagar</a></li>
+                            <hr style="margin-left:0px; margin: 1px 0px 1px 0px; text-align: left; width:95%;">
+                            <li><a href="#JarakKepyar" class="halaman">Jarak Kepyar</a></li>
+                            <hr style="margin-left:0px; margin: 1px 0px 1px 0px; text-align: left; width:95%;">
+                            <li><a href="#Kapas" class="halaman">Kapas</a></li>
+                            <hr style="margin-left:0px; margin: 1px 0px 1px 0px; text-align: left; width:95%;">
+                            <li><a href="#Kapuk" class="halaman">Kapuk</a></li>
+                            <hr style="margin-left:0px; margin: 1px 0px 1px 0px; text-align: left; width:95%;">
+                        </div>
+                            <div class="col-sm-6 col-lg-6">
+                          <li><a href="#Kenaf" class="halaman">Kenaf</a></li>
+                           <hr style="margin-left:0px; margin: 1px 0px 1px 0px; text-align: left; width:95%;">
+                          <li><a href="#Rami" class="halaman">Rami</a></li>
+                          <hr style="margin-left:0px; margin: 1px 0px 1px 0px; text-align: left; width:95%;">
+                          <li><a href="#Rosela" class="halaman">Rosela</a></li>
+                          <hr style="margin-left:0px; margin: 1px 0px 1px 0px; text-align: left; width:95%;">
+                          <li><a href="#Tebu" class="halaman">Tebu</a></li>
+                          <hr style="margin-left:0px; margin: 1px 0px 1px 0px; text-align: left; width:95%;">
+                          <li><a href="#Wijen" class="halaman">Wijen</a></li>
+                          <hr style="margin-left:0px; margin: 1px 0px 1px 0px; text-align: left; width:95%;">
+                        </div>
+                            </div>
+                      </ul>
+                  </li>
+                    <li> <a href="#login" data-toggle="modal" data-target="#login-modal" class="halaman">Welcome Admin</a></li>
+                    <li> <a href="index.html#layanan" class="halaman">Logout</a></li>
+      </ul>
     </div> 
+
+     <div class="collapse navbar-collapse" id="bar"  style="margin-top:5px; margin-left: -60px; margin-right: -60px; border:0;" >
+        <ul class="nav navbar-nav navbar-right hidden-md hidden-lg" style="background-color:#57bb82;">
+             <li class="dropdown">
+                      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Varietas <span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                         <li><a href="#Welcome" class="halaman">Tembakau</a></li>
+                          <li><a href="#JarakPagar" class="halaman">Jarak Pagar</a></li>
+                          <li><a href="#JarakKepyar" class="halaman">Jarak Kepyar</a></li>
+                          <li><a href="#Kapas" class="halaman">Kapas</a></li>
+                          <li><a href="#Kapuk" class="halaman">Kapuk</a></li>
+                          <li><a href="#Kenaf" class="halaman">Kenaf</a></li>
+                          <li><a href="#Rami" class="halaman">Rami</a></li>
+                          <li><a href="#Rosela" class="halaman">Rosela</a></li>
+                          <li><a href="#Tebu" class="halaman">Tebu</a></li>
+                          <li><a href="#Wijen" class="halaman">Wijen</a></li>
+                      </ul>
+                  </li>
+                    <li> <a href="#login" data-toggle="modal" data-target="#login-modal" class="halaman">Welcome Admin</a></li>
+                    <li> <a href="index.html#layanan" class="halaman">Logout</a></li>
+      </ul>
+    </div> 
+    </div>
+   
   </nav>  
-
-
-
 <!-- gambar tengah -->
-      <div class="jumbotron text-center" style="margin-bottom: 5px;">
-        <h4>Selamat Datang Di Halaman Admin Balittas</h4>
+     <!--  <div class="jumbotron text-center" id="home" style="margin-bottom: 5px;">
+        <h3>Selamat Datang Di Halaman Admin Balittas</h3>
         <hr align="center">
-      </div>  
+      </div>   -->
 </header>
-    <section class="Welcome" id="Welcome" style="padding-top: 2px">
+
+<!-- <div id="wrapper">
+    <div class="container-fluid"> -->
+        <!-- Sidebar -->
+        <!-- <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <br>
+                </li>
+                <li class="sidebar-brand">
+                    <a href="#" class="navbar-brand">
+                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span> Profile
+                    </a>
+                </li>
+                <li>
+                    <a href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a>
+                </li>
+                 <li>
+                    <a href="#"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search</a>
+                </li>                
+                <li>
+                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span><font color="#337AB7"> STATISTICS</font>
+                </li>
+                <li>
+                    <a href="#"><span class="glyphicon glyphicon-tasks" aria-hidden="true"></span> Reports</a>
+                </li>
+                <li>
+                    <a href="#"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Statistic</a>
+                </li>
+                <li>
+                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span><font color="#337AB7"> ADMINISTRATION</font>
+                </li>
+                <li>
+                    <a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Users</a>
+                </li>
+                <li>
+                    <a href="#"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Messages</a>
+                </li>
+            </ul>
+        </div> -->
+        <!-- /#sidebar-wrapper
+
+        <!-- Page Content-->
+         <!-- <div id="page-content-wrapper" >
+            <div class="container-fluid" style="margin-left: 0px;">
+                <div class="row">
+                    <div class="col-lg-12" style="margin-left:20px;">
+                      <br>
+                      <h1>Your Title</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                      Your Content
+                    </div>
+                </div> -->
+
+                <!-- Content Web
+<!-- <section class="Welcome" id="Welcome" style="padding-top: 2px">
           <div class="container">
              <div class="table table-wrapper">
-        <div class="row">
-          <div class="garis col-md-12">
-          <h4 class="">Tambah Data Tanaman Tembakau</h4> 
-          <hr align="left">
+        <div class="table-title">
+                <div class="row">
+                    <div class="col-sm-6">
+            <h2>Data <b>Tembakau</b></h2>
           </div>
-        </div>
-          <div class="row">
           <div class="col-sm-6">
-            <a href="#tambahtembakau" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Tambah Data</span></a>
-            <a href="#hapustembakau" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Hapus Data</span></a>            
+            <a href="#tambahtembakau" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Tambah Data</span></a>            
           </div>
                 </div>
+            </div>
                 <div class="table-responsive">
                   <table class="table table-striped table-hover table-fixed">
                 <thead>
@@ -663,38 +757,32 @@
             </div>
             </div>
         </div>
-    </section>
+    </section> -->
+
+    
 
    <section class="jarakpagar" id="JarakPagar">
-
-          <div class="container" >
-            <div class="table table-wrapper" >
-              <div class="row">
-          <div class="garis col-md-12">
-          <h4 class="">Tambah Data Jarak Pagar</h4> 
-          <hr align="left">
-          </div>
-        </div>
-          <div class="row">
-          <div class="col-sm-6">
-            <a href="#tambahjarakpagar" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Tambah Data</span></a>
-            <a href="#hapusjarakpagar" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Hapus Data</span></a>            
-          </div>
-                </div>
-                <div class="table-responsive">
-                <table class="table table-striped table-hover">
-                <thead>
-                    <tr>
-                        <th>
-                          <span class="custom-checkbox">
-                            <input type="checkbox" id="checkAll2" >
-                            <label for="checkAll2"></label>
-                          </span>
-                        </th>
+          <div class="container">
+            <div class="col-md-12">
+              <div class="table table-wrapper" >
+                  <div class="table-title">
+                <div class="row">
+                    <div class="col-sm-6 ">
+                        <h2>Data <b>Jarak Pagar</b></h2>
+                      </div>
+                      <div class="col-sm-6 ">
+                        <a href="#tambahjarakpagar" class="btn btn-success" data-toggle="modal"><i class="fa fa-plus-square" aria-hidden="true"></i> <span>Tambah Data</span></a>            
+                      </div>
+                            </div>
+                        </div>
+                            <div class="table-responsive">
+                            <table class="table table-striped table-hover">
+                            <thead style="font-size: 0.9em;">
+                                <tr>
                         <th>No</th>
                         <th>ID Jarak Pagar</th>
                         <th>ID Deskripsi Umum</th>
-                        <th>Nama Jarak Pagar</th>
+                        <th style="width:100%">Nama Jarak Pagar</th>
                         <th>Komoditas</th>
                         <th>Tahun Pelepasan</th>
                         <th>Karakteristik</th>
@@ -719,13 +807,7 @@
                           $deskripsi_cut = substr($row['DESKRIPSI'], 0, 50).' ...';
                         }
                     ?>
-                    <tr>
-                      <td>
-                        <span class="custom-checkbox">
-                          <input type="checkbox" class="checkbox2" name="options[]" value="1">
-                          <label for="checkbox2"></label>
-                        </span>
-                      </td>
+                    <tr style="font-size: 0.9em;">
                       <td><?php echo $no++ ?></td>
                       <td><?php echo "$row[ID_JARAK_PAGAR]"?></td>
                       <td><?php echo "$row[ID_DESKRIPSI_UMUM]"?></td>
@@ -739,9 +821,9 @@
                       <td><?php echo "$deskripsi_cut"?></td>
                       <td>1</td> <!-- gambar blm -->
                       <td>
-                          <a href='c_data/ubah/<?php echo "$row[ID_JARAK_PAGAR]"?>' class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="ubah">&#xE254;</i></a>
+                          <a href='c_data/ubah/<?php echo "$row[ID_JARAK_PAGAR]"?>' class="edit" data-toggle="modal"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                           <!-- <a href='c_data/hapus/<?php echo "$row[ID_JARAK_PAGAR]"?>' class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="hapus">&#xE872;</></a> -->
-                          <a href="#hapusjarakpagar" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                          <a href="#hapusjarakpagar" class="delete" data-toggle="modal"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
                       </td>
                     </tr>
                     <?php
@@ -769,79 +851,63 @@
                 </tbody>
             </table>
                 </div>
+            </div>
+            </div>
             
-      <div class="clearfix">
-                <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
-                <ul class="pagination">
-                    <li class="page-item disabled"><a href="#">Previous</a></li>
-                    <li class="page-item"><a href="#" class="page-link">1</a></li>
-                    <li class="page-item"><a href="#" class="page-link">2</a></li>
-                    <li class="page-item active"><a href="#" class="page-link">3</a></li>
-                    <li class="page-item"><a href="#" class="page-link">4</a></li>
-                    <li class="page-item"><a href="#" class="page-link">5</a></li>
-                    <li class="page-item"><a href="#" class="page-link">Next</a></li>
-                </ul>
-            </div>
-
-            </div>
-        
     </div>
     </section>
 
 
     <section class="JarakKepyar" id="JarakKepyar">
-
-          <div class="container">
-            <div class="table table-wrapper">
-              
-              <div class="row">
-          <div class="garis col-md-12">
-          <h4 class="">Tambah Data Tanaman Jarak Kepyar</h4> 
-          <hr align="left">
-          </div>
-        </div>
-          <div class="row">
-          <div class="col-sm-6">
-            <a href="#tambahjarakkepyar" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Tambah Data</span></a>
-            <a href="#hapusjarakkepyar" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Hapus Data</span></a>            
-          </div>
-                </div>
-                <div class="table-responsive">
-                  <table class="table table-striped table-hover">
-                <thead>
-                    <tr>
-            <th>
-              <span class="custom-checkbox">
-                <input type="checkbox" id="checkAll3">
-                <label for="checkAll3"></label>
-              </span>
-            </th>
-                        <th>No</th>
-                          <th>Nama Tanaman</th>
-                          <th>Warna Batang</th>
-                          <th>Warna Tangkai Daun</th>
-                          <th>Warna Biji</th>
-                          <th>Diameter Batang</th>
-                          <th>Tinggi Tanaman</th>
-                          <th>Umur Panen</th>
-                          <th>Jumlah Tandan Buah</th>
-                          <th>Jumlah Buah</th>
-                          <th>Potensi Produksi</th>
-                          <th>Berat</th>
-                          <th>Proses Pembijian</th>
-                          <th>Kandungan Minyak</th>
-                          <th>Gambar</th>
-                          <th>Aksi</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-            <td>
-              <span class="custom-checkbox">
-                <input type="checkbox" class="checkbox3" name="options[]" value="1">
-                <label for="checkbox3"></label>
-              </span>
-            </td>
+                  <div class="container">
+                    <div class="col-md-12">
+                       <div class="table table-wrapper">
+                      <div class="table-title">
+                        <div class="row">
+                            <div class="col-sm-6">
+                    <h2>Data <b>Jarak Kepyar</b></h2>
+                  </div>
+                  <div class="col-sm-6">
+                    <a href="#tambahjarakkepyar" class="btn btn-success" data-toggle="modal"><i class="fa fa-plus-square" aria-hidden="true"></i><span>Tambah Data</span></a>            
+                  </div>
+                        </div>
+                    </div>
+                        <div class="table-responsive">
+                          <table class="table table-striped table-hover">
+                        <thead style="font-size: 0.9em;">
+                            <tr>
+                    <th>
+                      <span class="custom-checkbox">
+                        <input type="checkbox" id="checkAll3">
+                        <label for="checkAll3"></label>
+                      </span>
+                    </th>
+                                <th>No</th>
+                                  <th>Nama Tanaman</th>
+                                  <th>Warna Batang</th>
+                                  <th>Warna Tangkai Daun</th>
+                                  <th>Warna Biji</th>
+                                  <th>Diameter Batang</th>
+                                  <th>Tinggi Tanaman</th>
+                                  <th>Umur Panen</th>
+                                  <th>Jumlah Tandan Buah</th>
+                                  <th>Jumlah Buah</th>
+                                  <th>Potensi Produksi</th>
+                                  <th>Berat</th>
+                                  <th>Proses Pembijian</th>
+                                  <th>Kandungan Minyak</th>
+                                  <th>Gambar</th>
+                                  <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="font-size: 0.9em;">
+                    <td>
+                      <span class="custom-checkbox">
+                        <input type="checkbox" class="checkbox3" name="options[]" value="1">
+                        <label for="checkbox3"></label>
+                      </span>
+                    </td>
                         <td>1</td>
                         <td>Ada</td>
                         <td>Ada</td>
@@ -858,87 +924,67 @@
                         <td>Ada</td>
                         <td>Ada</td>
                         <td>
-                                 <a href="#editjarakkepyar" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                            <a href="#hapusjarakkepyar" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                            <a href="#editjarakkepyar" class="edit" data-toggle="modal"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                            <a href="#hapusjarakkepyar" class="delete" data-toggle="modal"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
                         </td>
                     </tr>
                 </tbody>
             </table>
                 </div>
-
-            <div class="clearfix">
-                <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
-                <ul class="pagination">
-                    <li class="page-item disabled"><a href="#">Previous</a></li>
-                    <li class="page-item"><a href="#" class="page-link">1</a></li>
-                    <li class="page-item"><a href="#" class="page-link">2</a></li>
-                    <li class="page-item active"><a href="#" class="page-link">3</a></li>
-                    <li class="page-item"><a href="#" class="page-link">4</a></li>
-                    <li class="page-item"><a href="#" class="page-link">5</a></li>
-                    <li class="page-item"><a href="#" class="page-link">Next</a></li>
-                </ul>
             </div>
-            </div>
-        
-      
-    </div>
-
-
+          </div> 
         </div>
-      </div>
     </section>
 
     <section class="Kapas" id="Kapas">
-
-          <div class="container">
-            <div class="table table-wrapper">
-              <div class="row">
-          <div class="garis col-md-12">
-          <h4 class="">Tambah Data Tanaman Kapas</h4> 
-          <hr align="left">
-          </div>
-        </div>
-          <div class="row">
-          <div class="col-sm-6">
-            <a href="#tambahkapas" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Tambah Data</span></a>
-            <a href="#hapuskapas" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Hapus Data</span></a>            
-          </div>
-                </div>
-                <div class="table-responsive">
-                  <table class="table table-striped table-hover">
-                <thead>
-                    <tr>
-            <th>
-              <span class="custom-checkbox">
-                <input type="checkbox" id="checkAll4">
-                <label for="checkAll4"></label>
-              </span>
-            </th>
-                          <th>No</th>
-                          <th>Nama Tanaman</th>
-                          <th>Deskripsi Kapas</th>
-                          <th>Tahun Pelepasan</th>
-                          <th>Umum Panen</th>
-                          <th>Produktivitas</th>
-                          <th>Potensi Produksi</th>
-                          <th>Kandungan Serat</th>
-                          <th>Mutu Serat</th>
-                          <th>Ketahanan</th>
-                          <th>Status</th>
-                          <th>Peneliti</th>
-                          <th>Instansi</th>
-                          <th>Gambar</th>
-                          <th>Aksi</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-            <td>
-              <span class="custom-checkbox">
-                <input type="checkbox" class="checkbox4" name="options[]" value="1">
-                <label for="checkbox4"></label>
-              </span>
-            </td>
+                      <div class="container">
+                        <div class="col-md-12">
+                        <div class="table table-wrapper">
+                         <div class="table-title">
+                            <div class="row">
+                                <div class="col-sm-6">
+                        <h2>Data <b>Kapas</b></h2>
+                      </div>
+                      <div class="col-sm-6">
+                        <a href="#tambahjarakkepyar" class="btn btn-success" data-toggle="modal"><i class="fa fa-plus-square" aria-hidden="true"></i><span>Tambah Data</span></a>            
+                      </div>
+                            </div>
+                        </div>
+                            <div class="table-responsive">
+                              <table class="table table-striped table-hover">
+                            <thead style="font-size: 0.9em;">
+                                <tr>
+                        <th>
+                          <span class="custom-checkbox">
+                            <input type="checkbox" id="checkAll4">
+                            <label for="checkAll4"></label>
+                          </span>
+                        </th>
+                                      <th>No</th>
+                                      <th>Nama Tanaman</th>
+                                      <th>Deskripsi Kapas</th>
+                                      <th>Tahun Pelepasan</th>
+                                      <th>Umum Panen</th>
+                                      <th>Produktivitas</th>
+                                      <th>Potensi Produksi</th>
+                                      <th>Kandungan Serat</th>
+                                      <th>Mutu Serat</th>
+                                      <th>Ketahanan</th>
+                                      <th>Status</th>
+                                      <th>Peneliti</th>
+                                      <th>Instansi</th>
+                                      <th>Gambar</th>
+                                      <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="font-size: 0.9em;">
+                        <td>
+                          <span class="custom-checkbox">
+                            <input type="checkbox" class="checkbox4" name="options[]" value="1">
+                            <label for="checkbox4"></label>
+                          </span>
+                        </td>
                         <td>1</td>
                         <td>Ada</td>
                         <td>Ada</td>
@@ -954,62 +1000,42 @@
                         <td>Ada</td>
                         <td>Ada</td>
                         <td>
-                                 <a href="#editkapas" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                            <a href="#hapuskapas" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                            <a href="#editkapas" class="edit" data-toggle="modal"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                            <a href="#hapuskapas" class="delete" data-toggle="modal"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
                         </td>
                     </tr>
                 </tbody>
             </table>
-
                 </div>
-            
-            <div class="clearfix">
-                <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
-                <ul class="pagination">
-                    <li class="page-item disabled"><a href="#">Previous</a></li>
-                    <li class="page-item"><a href="#" class="page-link">1</a></li>
-                    <li class="page-item"><a href="#" class="page-link">2</a></li>
-                    <li class="page-item active"><a href="#" class="page-link">3</a></li>
-                    <li class="page-item"><a href="#" class="page-link">4</a></li>
-                    <li class="page-item"><a href="#" class="page-link">5</a></li>
-                    <li class="page-item"><a href="#" class="page-link">Next</a></li>
-                </ul>
             </div>
             </div>
-      
     </div>
-
-
-        </div>
-      </div>
     </section>
 
     <section class="Kapuk" id="Kapuk">
-
-          <div class="container">
-            <div class="table table-wrapper">
-              <div class="row">
-          <div class="garis col-md-12">
-          <h4 class="">Tambah Data Kapuk</h4> 
-          <hr align="left">
-          </div>
-        </div>
-          <div class="row">
-          <div class="col-sm-6">
-            <a href="#tambahkapuk" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Tambah Data</span></a>
-            <a href="#hapuskapuk" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Hapus Data</span></a>            
-          </div>
-                </div>
-                <div class="table-responsive">
-                  <table class="table table-striped table-hover">
-                <thead>
-                    <tr>
-            <th>
-              <span class="custom-checkbox">
-                <input type="checkbox" id="checkAll5">
-                <label for="checkAll5"></label>
-              </span>
-            </th>
+                      <div class="container">
+                        <div class="col-md-12">
+                        <div class="table table-wrapper">
+                         <div class="table-title">
+                            <div class="row">
+                                <div class="col-sm-6">
+                        <h2>Data <b>Kapuk</b></h2>
+                      </div>
+                      <div class="col-sm-6">
+                        <a href="#tambahkapuk" class="btn btn-success" data-toggle="modal"><i class="fa fa-plus-square" aria-hidden="true"></i> <span>Tambah Data</span></a>            
+                      </div>
+                            </div>
+                        </div>
+                            <div class="table-responsive">
+                              <table class="table table-striped table-hover">
+                            <thead style="font-size: 0.9em;">
+                                <tr>
+                        <th>
+                          <span class="custom-checkbox">
+                            <input type="checkbox" id="checkAll5">
+                            <label for="checkAll5"></label>
+                          </span>
+                        </th>
                         <th>No</th>
                           <th>Nama Tanaman</th>
                           <th>Deskripsi Kapuk</th>
@@ -1029,13 +1055,13 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-            <td>
-              <span class="custom-checkbox">
-                <input type="checkbox" class="checkbox5" name="options[]" value="1">
-                <label for="checkbox5"></label>
-              </span>
-            </td>
+                    <tr style="font-size: 0.9em;">
+                      <td>
+                        <span class="custom-checkbox">
+                          <input type="checkbox" class="checkbox5" name="options[]" value="1">
+                          <label for="checkbox5"></label>
+                        </span>
+                      </td>
                            <td>1</td>
                         <td>Ada</td>
                         <td>Ada</td>
@@ -1052,55 +1078,35 @@
                         <td>Ada</td>
                         <td>Ada</td>
                         <td>
-                                 <a href="#editkapuk" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                            <a href="#hapuskapuk" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                                 <a href="#editkapuk" class="edit" data-toggle="modal"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                            <a href="#hapuskapuk" class="delete" data-toggle="modal"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
                         </td>
                     </tr>
-                    
                 </tbody>
             </table>
                 </div>
-            
-            <div class="clearfix">
-                <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
-                <ul class="pagination">
-                    <li class="page-item disabled"><a href="#">Previous</a></li>
-                    <li class="page-item"><a href="#" class="page-link">1</a></li>
-                    <li class="page-item"><a href="#" class="page-link">2</a></li>
-                    <li class="page-item active"><a href="#" class="page-link">3</a></li>
-                    <li class="page-item"><a href="#" class="page-link">4</a></li>
-                    <li class="page-item"><a href="#" class="page-link">5</a></li>
-                    <li class="page-item"><a href="#" class="page-link">Next</a></li>
-                </ul>
             </div>
             </div>
-      
     </div>
-
-
-        </div>
-      </div>
     </section>
 
     <section class="Kenaf" id="Kenaf">
-
           <div class="container">
+            <div class="col-md-12">
             <div class="table table-wrapper">
-              <div class="row">
-          <div class="garis col-md-12">
-          <h4 class="">Tambah Data Kenaf</h4> 
-          <hr align="left">
+             <div class="table-title">
+                <div class="row">
+                    <div class="col-sm-6">
+            <h2>Data <b>Kenaf</b></h2>
           </div>
-        </div>
-          <div class="row">
           <div class="col-sm-6">
-            <a href="#tambahkenaf" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Tambah Data</span></a>
-            <a href="#hapuskenaf" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Hapus Data</span></a>            
+            <a href="#tambahkenaf" class="btn btn-success" data-toggle="modal"><i class="fa fa-plus-square" aria-hidden="true"></i> <span>Tambah Data</span></a>            
           </div>
                 </div>
+            </div>
                 <div class="table-responsive">
                   <table class="table table-striped table-hover">
-                <thead>
+                <thead style="font-size: 0.9em;">
                     <tr>
             <th>
               <span class="custom-checkbox">
@@ -1130,7 +1136,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <tr style="font-size: 0.9em;">
             <td>
               <span class="custom-checkbox">
                 <input type="checkbox" class="checkbox6" name="options[]" value="1">
@@ -1156,55 +1162,35 @@
                         <td>Ada</td>
                         <td>Ada</td>
                         <td>
-                                 <a href="#editkenaf" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                            <a href="#hapuskenaf" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                                 <a href="#editkenaf" class="edit" data-toggle="modal"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                            <a href="#hapuskenaf" class="delete" data-toggle="modal"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
                         </td>
                     </tr>
                 </tbody>
             </table>
                 </div>
-            
-            <div class="clearfix">
-                <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
-                <ul class="pagination">
-                    <li class="page-item disabled"><a href="#">Previous</a></li>
-                    <li class="page-item"><a href="#" class="page-link">1</a></li>
-                    <li class="page-item"><a href="#" class="page-link">2</a></li>
-                    <li class="page-item active"><a href="#" class="page-link">3</a></li>
-                    <li class="page-item"><a href="#" class="page-link">4</a></li>
-                    <li class="page-item"><a href="#" class="page-link">5</a></li>
-                    <li class="page-item"><a href="#" class="page-link">Next</a></li>
-                </ul>
             </div>
             </div>
-        
-      
     </div>
-
-
-        </div>
-      </div>
     </section>
 
     <section class="Rami" id="Rami">
-
           <div class="container">
+            <div class="col-md-12">
             <div class="table table-wrapper">
-              <div class="row">
-          <div class="garis col-md-12">
-          <h4 class="">Tambah Data Rami</h4> 
-          <hr align="left">
+              <div class="table-title">
+                <div class="row">
+                    <div class="col-sm-6">
+            <h2>Data <b>Rami</b></h2>
           </div>
-        </div>
-          <div class="row">
           <div class="col-sm-6">
-            <a href="#tambahrami" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Tambah Data</span></a>
-            <a href="#hapusrami" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Hapus Data</span></a>            
+            <a href="#tambahrami" class="btn btn-success" data-toggle="modal"><i class="fa fa-plus-square" aria-hidden="true"></i> <span>Tambah Data</span></a>            
           </div>
                 </div>
+            </div>
                <div class="table-responsive">
                  <table class="table table-striped table-hover">
-                <thead>
+                <thead style="font-size: 0.9em;">
                     <tr>
             <th>
               <span class="custom-checkbox">
@@ -1238,7 +1224,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <tr style="font-size: 0.9em;">
             <td>
               <span class="custom-checkbox">
                 <input type="checkbox" class="checkbox7" name="options[]" value="1">
@@ -1268,55 +1254,37 @@
                         <td>Ada</td>
                         <td>Ada</td>
                         <td>
-                                 <a href="#editrami" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                            <a href="#hapusrami" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                                 <a href="#editrami" class="edit" data-toggle="modal"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                            <a href="#hapusrami" class="delete" data-toggle="modal"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
                         </td>
                     </tr>
                    
                 </tbody>
             </table>
                </div>
-            <div class="clearfix">
-                <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
-                <ul class="pagination">
-                    <li class="page-item disabled"><a href="#">Previous</a></li>
-                    <li class="page-item"><a href="#" class="page-link">1</a></li>
-                    <li class="page-item"><a href="#" class="page-link">2</a></li>
-                    <li class="page-item active"><a href="#" class="page-link">3</a></li>
-                    <li class="page-item"><a href="#" class="page-link">4</a></li>
-                    <li class="page-item"><a href="#" class="page-link">5</a></li>
-                    <li class="page-item"><a href="#" class="page-link">Next</a></li>
-                </ul>
             </div>
             </div>
-        
-      
     </div>
-
-
-        </div>
-      </div>
     </section>
 
     <section class="Rosela" id="Rosela">
 
           <div class="container">
+            <div class="col-md-12">
             <div class="table table-wrapper">
-              <div class="row">
-          <div class="garis col-md-12">
-          <h4 class="">Tambah Data Rosela</h4> 
-          <hr align="left">
+              <div class="table-title">
+                <div class="row">
+                    <div class="col-sm-6">
+            <h2>Data <b>Rosela</b></h2>
           </div>
-        </div>
-          <div class="row">
           <div class="col-sm-6">
-            <a href="#tambahrosela" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Tambah Data</span></a>
-            <a href="#hapusrosela" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Hapus Data</span></a>            
+            <a href="#tambahrosela" class="btn btn-success" data-toggle="modal"><i class="fa fa-plus-square" aria-hidden="true"></i> <span>Tambah Data</span></a>            
           </div>
                 </div>
+            </div>
                 <div class="table-responsive">
                   <table class="table table-striped table-hover">
-                <thead>
+                <thead style="font-size: 0.9em;">
                     <tr>
             <th>
               <span class="custom-checkbox">
@@ -1362,7 +1330,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <tr style="font-size: 0.9em;">
             <td>
               <span class="custom-checkbox">
                 <input type="checkbox" class="checkbox8" name="options[]" value="1">
@@ -1404,185 +1372,86 @@
                         <td>Ada</td>
                         <td>Ada</td>
                         <td>
-                                 <a href="#editrosela" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                            <a href="#hapusrosela" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                                 <a href="#editrosela" class="edit" data-toggle="modal"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                            <a href="#hapusrosela" class="delete" data-toggle="modal"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
                         </td>
                     </tr>
 
                 </tbody>
             </table>
                 </div>
-            
-            <div class="clearfix">
-                <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
-                <ul class="pagination">
-                    <li class="page-item disabled"><a href="#">Previous</a></li>
-                    <li class="page-item"><a href="#" class="page-link">1</a></li>
-                    <li class="page-item"><a href="#" class="page-link">2</a></li>
-                    <li class="page-item active"><a href="#" class="page-link">3</a></li>
-                    <li class="page-item"><a href="#" class="page-link">4</a></li>
-                    <li class="page-item"><a href="#" class="page-link">5</a></li>
-                    <li class="page-item"><a href="#" class="page-link">Next</a></li>
-                </ul>
             </div>
             </div>
     </div>
-        </div>
-      </div>
     </section>
 
 <section class="Tebu" id="Tebu">
-
-          <div class="container">
-            <div class="table table-wrapper">
-              <div class="row">
-          <div class="garis col-md-12">
-          <h4 class="">Tambah Data Tebu</h4> 
-          <hr align="left">
-          </div>
-        </div>
-          <div class="row">
-          <div class="col-sm-6">
-            <a href="#tambahtebu" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Tambah Data</span></a>
-            <a href="#hapustebu" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Hapus Data</span></a>            
-          </div>
-                </div>
-                <div class="table-responsive" >
-                  <table class="table table-striped table-hover">
-                <thead>
-                    <tr>
-            <th>
-              <span class="custom-checkbox">
-                <input type="checkbox" id="checkAll9">
-                <label for="checkAll9"></label>
-              </span>
-            </th>
-                          <th>No</th>
-                          <th>Deskripsi Umum</th>
-                          <th>Aksi</th>
-                    </tr>
-                </thead>
-                <tbody>
-            <tr>
-            <td>
-              <span class="custom-checkbox">
-                <input type="checkbox" class="checkbox9" name="options[]" value="1">
-                <label for="checkbox9"></label>
-              </span>
-            </td>
+                        <div class="container">
+                          <div class="col-md-12">
+                          <div class="table table-wrapper">
+                           <div class="table-title">
+                              <div class="row">
+                                  <div class="col-sm-6">
+                          <h2>Data <b>Tebu</b></h2>
+                        </div>
+                        <div class="col-sm-6">
+                          <a href="#tambahtebu" class="btn btn-success" data-toggle="modal"><i class="fa fa-plus-square" aria-hidden="true"></i> <span>Tambah Data</span></a>            
+                        </div>
+                              </div>
+                          </div>
+                              <div class="table-responsive" >
+                                <table class="table table-striped table-hover">
+                              <thead style="font-size: 0.9em;">
+                                  <tr>
+                          <th>
+                            <span class="custom-checkbox">
+                              <input type="checkbox" id="checkAll9">
+                              <label for="checkAll9"></label>
+                            </span>
+                          </th>
+                                        <th>No</th>
+                                        <th>Nama Pemuliaan Tanaman</th>
+                                        <th>Aksi</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                          <tr style="font-size: 0.9em;">
+                          <td>
+                            <span class="custom-checkbox">
+                              <input type="checkbox" class="checkbox9" name="options[]" value="1">
+                              <label for="checkbox9"></label>
+                            </span>
+                          </td>
                         <td>1</td>
                         <td>Ada</td>
                         <td>
-                                 <a href="#edittebu" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                            <a href="#hapustebu" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                                 <a href="#edittebu" class="edit" data-toggle="modal"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                            <a href="#hapustebu" class="delete" data-toggle="modal"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
                         </td>
-            </tr>
-
-                    <tr>
-            <td>
-              <span class="custom-checkbox">
-                <input type="checkbox" class="checkbox9" name="options[]" value="1">
-                <label for="checkbox9"></label>
-              </span>
-            </td>
-                        <td>2</td>
-                        <td>Ada</td>
-                        <td>
-                             <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                     <td>
-              <span class="custom-checkbox">
-                <input type="checkbox" class="checkbox9" name="options[]" value="1">
-                <label for="checkbox9"></label>
-              </span>
-            </td>
-                        <td>3</td>
-                        <td>Ada</td>
-                        <td>
-                                 <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-                        </td>
-                    </tr>
-                    <tr>
-
-                       <td>
-              <span class="custom-checkbox">
-                <input type="checkbox" class="checkbox9" name="options[]" value="1">
-                <label for="checkbox9"></label>
-              </span>
-            </td>
-                        <td>4</td>
-                        <td>Ada</td>
-                        <td>
-                                 <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-                        </td>
-                    </tr>
-                    <tr>
-
-                       <td>
-              <span class="custom-checkbox">
-                <input type="checkbox" class="checkbox9" name="options[]" value="1">
-                <label for="checkbox9"></label>
-              </span>
-            </td>
-                        <td>5</td>
-                        <td>Ada</td>
-                        <td>
-                                 <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-                        </td>
-                    </tr>
-
-
+                     </tr>
                 </tbody>
             </table>
                 </div>
-            
-            <div class="clearfix">
-                <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
-                <ul class="pagination">
-                    <li class="page-item disabled"><a href="#">Previous</a></li>
-                    <li class="page-item"><a href="#" class="page-link">1</a></li>
-                    <li class="page-item"><a href="#" class="page-link">2</a></li>
-                    <li class="page-item active"><a href="#" class="page-link">3</a></li>
-                    <li class="page-item"><a href="#" class="page-link">4</a></li>
-                    <li class="page-item"><a href="#" class="page-link">5</a></li>
-                    <li class="page-item"><a href="#" class="page-link">Next</a></li>
-                </ul>
             </div>
-            </div>
-        
-      
     </div>
-
-
-        </div>
-      </div>
     </section>
-
     <section class="Wijen" id="Wijen">
    
           <div class="container">
              <div class="table table-wrapper">
-      <div class="row">
-          <div class="garis col-md-12">
-          <h4 class="">Tambah Data Wijen</h4> 
-          <hr align="left">
+     <div class="table-title">
+                <div class="row">
+                    <div class="col-sm-6">
+            <h2>Data <b>Wijen</b></h2>
           </div>
-        </div>
-          <div class="row">
           <div class="col-sm-6">
-            <a href="#tambahwijen" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Tambah Data</span></a>
-            <a href="#hapuswijen" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Hapus Data</span></a>            
+            <a href="#tambahwijen" class="btn btn-success" data-toggle="modal"><i class="fa fa-plus-square" aria-hidden="true"></i><span>Tambah Data</span></a>            
           </div>
                 </div>
+            </div>
                 <div class="table-responsive">
                   <table class="table table-striped table-hover">
-                <thead>
+                <thead style="font-size: 0.9em;">
                     <tr>
             <th>
               <span class="custom-checkbox">
@@ -1596,7 +1465,7 @@
                           <th>Habitus</th>
                           <th>Umur Panen</th>
                           <th>Jumlah Ruang Polong</th>
-                          <td>Potensi Produk</td>
+                          <th>Potensi Produk</th>
                           <th>Sesuai Daya Adaptasi</th>
                           <th>Adaptasi</th>
                           <th>Ketahanan Terhadap</th>
@@ -1605,7 +1474,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+            <tr style="font-size: 0.9em;">
             <td>
               <span class="custom-checkbox">
                 <input type="checkbox" class="checkbox10" name="options[]" value="1">
@@ -1624,38 +1493,16 @@
                         <td>Ada</td>
                         <td>Ada</td>
                         <td>
-                                 <a href="#editwijen" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                            <a href="#hapuswijen" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                                 <a href="#editwijen" class="edit" data-toggle="modal"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                            <a href="#hapuswijen" class="delete" data-toggle="modal"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
                         </td>
                     </tr>
-                    
-         
-
                 </tbody>
-            </table>
-           
+                  </table>
                 </div>
-
-             <div class="clearfix">
-                <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
-                <ul class="pagination">
-                    <li class="page-item disabled"><a href="#">Previous</a></li>
-                    <li class="page-item"><a href="#" class="page-link">1</a></li>
-                    <li class="page-item"><a href="#" class="page-link">2</a></li>
-                    <li class="page-item active"><a href="#" class="page-link">3</a></li>
-                    <li class="page-item"><a href="#" class="page-link">4</a></li>
-                    <li class="page-item"><a href="#" class="page-link">5</a></li>
-                    <li class="page-item"><a href="#" class="page-link">Next</a></li>
-                </ul>
-            </div>
-      
-    </div> 
-        
-    </div>
-
-
-        </div>
-      </div>
+          </div> 
+          </div>
+          </div>
     </section>
 <!-- Tambah Modal HTML Tembakau-->
   <div id="tambahtembakau" class="modal fade">
@@ -2332,6 +2179,7 @@
       </div>
     </div>
   </div>
+
 
   <!-- Edit Modal HTML JARAK PAGAR-->
   <div id="editjarakpagar" class="modal fade">
@@ -3675,19 +3523,64 @@
     </div>
   </div>
 
+ 
+
+        <!--     </div>
+        </div> -->
+        <!-- /#page-content-wrapper -->
+
+ 
+
+    <!-- </div>
+</div> -->
+<!-- /#wrapper -->
 
 <footer>
-  <div class="container text-center">
-    <figure>
+  <!-- <div class="container-fluid">
+    <div class="container" style="margin-top: 50px; margin-bottom: 40px;">
+    <figure style="margin-bottom: 30px;">
       <img src="<?php echo base_url();?>/assets/img/adminbalittas.png" width=250 alt="Logo">
-    </figure> <br>
-    <div class="row">
-      <div class="col-sm-12 text-center">
-        <p >&copy; Copyright 2018 | Built with <i id="cp" class="glyphicon glyphicon-heart"></i> by Magang</p>
+    </figure> -->
+       <!--  <p >&copy; Copyright 2018 | Built with <i id="cp" class="glyphicon glyphicon-heart"></i> by Magang</p>
         <p> <i class="glyphicon glyphicon-phone-alt"></i> 000 000 000 000 | <i class="glyphicon glyphicon-envelope"></i> wkwkwkwkwk@gmail.com</p>
+        <div class="row table-center" >
+          <div class="col-sm-2 col-lg-2">
+           <table>
+              <tbody>
+                <tr>
+                  <td class="glyphicon glyphicon-map-marker">&nbsp</td>
+                  <td>Jalan. Raya Karangploso, Kotak Pos 199, Malang, Jawa timur, Indonesia</td>
+                </tr>
+                <tr>
+                  <td class="glyphicon glyphicon-envelope">&nbsp</td>
+                  <td>balittas@litbang.pertanian.go.id</td>
+                </tr>
+                <tr>
+                  <td class="glyphicon glyphicon-envelope">&nbsp</td>
+                  <td>balittas.malang@gmail.com</td>
+                </tr>
+                <tr>
+                  <td class="glyphicon glyphicon-earphone">&nbsp</td>
+                  <td>Telepon : (0341) 491447</td>
+                </tr>
+                <tr>
+                  <td class="glyphicon glyphicon-print">&nbsp</td>
+                  <td>Fax : (0341) 485 121</td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+        </div>
+
+        
       </div>
-    </div>
-  </div>
+  </div> -->
+  <div class="container-fluid text-center" style="color:white;background-color: black;">
+        <div style=" margin-top: 10px;">
+          <p style="font-family: calibri"><span class="glyphicon glyphicon-copyright-mark"></span> 2018 All Reserved Design By BALITTAS</p>
+        </div>
+      </div>
+  
 </footer>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -3699,6 +3592,5 @@
     <script src="<?php echo base_url();?>/assets/js/script.js"></script>
     <script src="<?php echo base_url();?>/assets/perfect-scrollbar/perfect-scrollbar.min.js"></script>
 
-    
   </body>
 </html>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 23, 2018 at 08:24 AM
+-- Generation Time: Jul 24, 2018 at 04:25 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -148,6 +148,76 @@ DELIMITER ;
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `benih_varietas`
+--
+
+CREATE TABLE `benih_varietas` (
+  `id_varietas` char(7) NOT NULL,
+  `id_benih` char(7) NOT NULL,
+  `persediaan_sampai` date DEFAULT NULL,
+  `jumlah_gr` varchar(10) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `benih_varietas`
+--
+
+INSERT INTO `benih_varietas` (`id_varietas`, `id_benih`, `persediaan_sampai`, `jumlah_gr`) VALUES
+('V0001', 'B0001', '2018-05-04', '-'),
+('V0002', 'B0002', '2018-05-04', '-'),
+('V0003', 'B0003', '2018-05-04', '-'),
+('V0004', 'B0004', '2018-05-04', '-'),
+('V0005', 'B0005', '2018-05-04', '-'),
+('V0006', 'B0006', '2018-05-04', '-'),
+('V0007', 'B0007', '2018-05-04', '-'),
+('V0008', 'B0008', '2018-05-04', '-'),
+('V0009', 'B0009', '2018-05-04', '6,675'),
+('V0010', 'B0010', '2018-05-04', '19,622'),
+('V0011', 'B0011', '2018-05-04', '12,688'),
+('V0012', 'B0012', '2018-05-04', '0'),
+('V0013', 'B0013', '2018-05-04', '-'),
+('V0014', 'B0014', '2018-05-04', '0,471'),
+('V0015', 'B0015', '2018-05-04', '3,963'),
+('V0016', 'B0016', '2018-05-04', '-'),
+('V0017', 'B0017', '2018-05-04', '-'),
+('V0018', 'B0018', '2018-05-04', '-'),
+('V0019', 'B0019', '2018-05-04', '-'),
+('V0020', 'B0020', '2018-05-04', '-'),
+('V0021', 'B0021', '2018-05-04', '-'),
+('V0022', 'B0022', '2018-05-04', '-'),
+('V0023', 'B0023', '2018-05-04', '-'),
+('V0024', 'B0024', '2018-05-04', '-'),
+('V0025', 'B0025', '2018-05-04', '-'),
+('V0026', 'B0026', '2018-05-04', '30,856'),
+('V0027', 'B0027', '2018-05-04', '-'),
+('V0028', 'B0028', '2018-05-04', '-'),
+('V0029', 'B0029', '2018-05-04', '-'),
+('V0030', 'B0030', '2018-05-04', '-');
+
+--
+-- Triggers `benih_varietas`
+--
+DELIMITER $$
+CREATE TRIGGER `tr_id_benih_varietas` BEFORE INSERT ON `benih_varietas` FOR EACH ROW BEGIN
+SET @hitung = CONVERT((RIGHT((SELECT id_benih FROM `benih_varietas` ORDER by id_benih DESC LIMIT 1), 4)), UNSIGNED) + 1;
+if (@hitung > 1) THEN
+if (@hitung < 10) THEN 
+SET new.id_benih = concat('B000',@hitung);
+ELSEIF (@hitung < 100) THEN
+SET new.id_benih = concat('B00',@hitung);
+ELSEIF (@hitung < 1000) THEN
+SET new.id_benih = concat('B0',@hitung);
+ELSE
+SET new.id_benih = concat('B',@hitung);
+END IF;
+END IF;
+END
+$$
+DELIMITER ;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `deskripsi_varietas`
 --
 
@@ -191,7 +261,8 @@ INSERT INTO `deskripsi_varietas` (`id_varietas`, `id_deskripsi_varietas`, `naras
 ('V0027', 'DSV0027', ''),
 ('V0028', 'DSV0028', ''),
 ('V0029', 'DSV0029', ''),
-('V0030', 'DSV0030', '');
+('V0030', 'DSV0030', ''),
+('V0031', 'DSV0031', '');
 
 --
 -- Triggers `deskripsi_varietas`
@@ -1356,7 +1427,8 @@ INSERT INTO `detail_deskripsi` (`id_deskripsi_varietas`, `id_atribut`, `detail_v
 ('DSV0030', 'ATR0011', 'Tahan'),
 ('DSV0030', 'ATR0055', 'Sangat rentan'),
 ('DSV0030', 'ATR0009', 'Moderat tahan'),
-('DSV0030', 'ATR0045', 'Bahruddin S, Mei Yusri, Anik Herwati dan Fatkhur Rochman');
+('DSV0030', 'ATR0045', 'Bahruddin S, Mei Yusri, Anik Herwati dan Fatkhur Rochman'),
+('DSV0031', 'ATR0002', 'Sidoarjo');
 
 -- --------------------------------------------------------
 
@@ -1375,28 +1447,28 @@ CREATE TABLE `gambar_leaflet` (
 --
 
 INSERT INTO `gambar_leaflet` (`id_leaflet`, `id_gambar`, `file`) VALUES
-('LFL0001', 'IMG0001', ''),
-('LFL0001', 'IMG0002', ''),
-('LFL0002', 'IMG0003', ''),
-('LFL0002', 'IMG0004', ''),
-('LFL0003', 'IMG0005', ''),
-('LFL0003', 'IMG0006', ''),
-('LFL0004', 'IMG0007', ''),
-('LFL0004', 'IMG0008', ''),
-('LFL0005', 'IMG0009', ''),
-('LFL0005', 'IMG0010', ''),
-('LFL0006', 'IMG0011', ''),
-('LFL0006', 'IMG0012', ''),
-('LFL0007', 'IMG0013', ''),
-('LFL0007', 'IMG0014', ''),
-('LFL0008', 'IMG0015', ''),
-('LFL0008', 'IMG0016', ''),
-('LFL0009', 'IMG0017', ''),
-('LFL0009', 'IMG0018', ''),
-('LFL0010', 'IMG0019', ''),
-('LFL0010', 'IMG0020', ''),
-('LFL0011', 'IMG0021', ''),
-('LFL0011', 'IMG0022', '');
+('LFL0001', 'IMG0001', 'konservasilahantemanggung1.jpg'),
+('LFL0001', 'IMG0002', 'konservasilahantemanggung2.jpg'),
+('LFL0002', 'IMG0003', 'pemb temb.jpg'),
+('LFL0002', 'IMG0004', 'pemb temb2.jpg'),
+('LFL0003', 'IMG0005', 'penyakitkrupuk1.jpg'),
+('LFL0003', 'IMG0006', 'penyakitkrupuk2.jpg'),
+('LFL0004', 'IMG0007', 'penyakitlanas1.jpg'),
+('LFL0004', 'IMG0008', 'penyakitlanas2.jpg'),
+('LFL0005', 'IMG0009', 'penyakitlayubakteri1.jpg'),
+('LFL0005', 'IMG0010', 'penyakitlayubakteri2.jpg'),
+('LFL0006', 'IMG0011', 'penyakitlayufusarium1.jpg'),
+('LFL0006', 'IMG0012', 'penyakitlayufusarium2.jpg'),
+('LFL0007', 'IMG0013', 'prosesingtembakautemanggung1.jpg'),
+('LFL0007', 'IMG0014', 'prosesingtembakautemanggung2.jpg'),
+('LFL0008', 'IMG0015', 'temb madura.jpg'),
+('LFL0008', 'IMG0016', 'temb madurai.jpg'),
+('LFL0009', 'IMG0017', 'tembakausrintil1.jpg'),
+('LFL0009', 'IMG0018', 'tembakausrintil2.jpg'),
+('LFL0010', 'IMG0019', 'tembvirginia1.jpg'),
+('LFL0010', 'IMG0020', 'tembvirginia2.jpg'),
+('LFL0011', 'IMG0021', 'varietasunggultemanggung1.jpg'),
+('LFL0011', 'IMG0022', 'varietasunggultemanggung2.jpg');
 
 -- --------------------------------------------------------
 
@@ -1450,6 +1522,54 @@ DELIMITER ;
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `teknologi_budidaya`
+--
+
+CREATE TABLE `teknologi_budidaya` (
+  `id_teknologi_budidaya` char(7) NOT NULL,
+  `jenis_teknologi_budidaya` varchar(255) NOT NULL,
+  `deskripsi` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `teknologi_budidaya`
+--
+
+INSERT INTO `teknologi_budidaya` (`id_teknologi_budidaya`, `jenis_teknologi_budidaya`, `deskripsi`) VALUES
+('TBD0001', 'Penangkaran benih', ''),
+('TBD0002', 'Pesemaian', ''),
+('TBD0003', 'Pemupukan', ''),
+('TBD0004', 'Pemupukan bebas chlor', ''),
+('TBD0005', 'Pengendalian penyakit', ''),
+('TBD0006', 'Pengendalian hama', ''),
+('TBD0007', 'Panen dan pasca panen', ''),
+('TBD0008', 'Kesesuaian lahan', ''),
+('TBD0009', 'Budidaya tembakau cerutu', '');
+
+--
+-- Triggers `teknologi_budidaya`
+--
+DELIMITER $$
+CREATE TRIGGER `tr_id_teknologi_budidaya` BEFORE INSERT ON `teknologi_budidaya` FOR EACH ROW BEGIN
+SET @hitung = CONVERT((RIGHT((SELECT id_teknologi_budidaya FROM `teknologi_budidaya` ORDER by id_teknologi_budidaya DESC LIMIT 1), 4)), UNSIGNED) + 1;
+if (@hitung > 1) THEN
+if (@hitung < 10) THEN 
+SET new.id_teknologi_budidaya = concat('TBD000',@hitung);
+ELSEIF (@hitung < 100) THEN
+SET new.id_teknologi_budidaya = concat('TBD00',@hitung);
+ELSEIF (@hitung < 1000) THEN
+SET new.id_teknologi_budidaya = concat('TBD0',@hitung);
+ELSE
+SET new.id_teknologi_budidaya = concat('TBD',@hitung);
+END IF;
+END IF;
+END
+$$
+DELIMITER ;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `varietas`
 --
 
@@ -1469,33 +1589,34 @@ INSERT INTO `varietas` (`id_varietas`, `nama_varietas`, `tanggal_diterbitkan`, `
 ('V0001', 'Varietas NC 471', '2017-11-23', 'SK NC 471.pdf', 'Virginia Hibrida NC 471.jpg'),
 ('V0002', 'Varietas GL 26H', '2017-11-23', 'SK GL 26H.pdf', 'Virginia Hibrida GL 26 H.jpg'),
 ('V0003', 'Varietas GF 318', '2017-11-16', 'SK GF 318.pdf', 'Virginia Hibrida GF 318.jpg'),
-('V0004', 'Varietas Gagang Rejeb Sidi', '2017-11-13', '', ''),
-('V0005', 'Tembakau Temanggung Varietas Kemloko 6 Agribun', '2017-09-14', '', ''),
-('V0006', 'Tembakau Temanggung Varietas Kemloko 5 Agribun', '2017-09-14', '', ''),
-('V0007', 'Tembakau Temanggung Varietas Kemloko 4 Agribun', '2017-09-14', '', ''),
-('V0008', 'Tembakau Prancak-95', '2014-01-29', '', ''),
-('V0009', 'Varietas Kemloko 2', '2014-01-29', '', ''),
-('V0010', 'Varietas Kemloko 3', '2014-01-29', '', ''),
-('V0011', 'Varietas Bligon 1', '2014-01-29', '', ''),
-('V0012', 'Varietas Grompol Jatim 1', '2014-01-29', '', ''),
-('V0013', 'Varietas Tembakau Kasturi 1', '2014-01-29', '', ''),
-('V0014', 'Varietas Tembakau Kasturi 2', '2014-01-29', '', ''),
-('V0015', 'Tembakau - Bojonegoro 1', '0000-00-00', '', ''),
-('V0016', 'Tembakau - Burley HP 14 P', '0000-00-00', '', ''),
-('V0017', 'Tembakau - Burley NC3', '0000-00-00', '', ''),
-('V0018', 'Tembakau - Burley TN 90', '0000-00-00', '', ''),
-('V0019', 'Tembakau - Cangkring 95', '0000-00-00', '', ''),
-('V0020', 'Tembakau - Coker 176', '0000-00-00', '', ''),
-('V0021', 'Tembakau - Dixie Bright 101', '0000-00-00', '', ''),
-('V0022', 'Tembakau - Maesan 1', '0000-00-00', '', ''),
-('V0023', 'Tembakau - Maesan 2', '0000-00-00', '', ''),
-('V0024', 'Tembakau - Paiton 1', '0000-00-00', '', ''),
-('V0025', 'Tembakau - Paiton 2', '0000-00-00', '', ''),
-('V0026', 'Tembakau - Prancak N1', '0000-00-00', '', ''),
-('V0027', 'Tembakau - Prancak N2', '0000-00-00', '', ''),
-('V0028', 'Tembakau - Sindoro 1', '0000-00-00', '', ''),
-('V0029', 'Tembakau - Virginia PVH 20', '0000-00-00', '', ''),
-('V0030', 'Tembakau - Virginia PVH 21', '0000-00-00', '', '');
+('V0004', 'Varietas Gagang Rejeb Sidi', '2017-11-13', 'SK Gagang Sidi.pdf', 'Gagang Sidi.jpg'),
+('V0005', 'Tembakau Temanggung Varietas Kemloko 6 Agribun', '2017-09-14', 'SK Kemloko 6 Agribun.pdf', 'Kemloko 6.jpg'),
+('V0006', 'Tembakau Temanggung Varietas Kemloko 5 Agribun', '2017-09-14', 'SK Kemloko 5 Agribun.pdf', 'Kemloko 5.jpg'),
+('V0007', 'Tembakau Temanggung Varietas Kemloko 4 Agribun', '2017-09-14', 'SK Kemloko 4 Agribun.pdf', 'Kemloko 4.jpg'),
+('V0008', 'Tembakau Prancak-95', '2014-01-29', 'Tembakau - Prancak 95.pdf', 'prancak95a.jpeg'),
+('V0009', 'Varietas Kemloko 2', '2014-01-29', 'Tembakau - Kemloko 2.pdf', 'kemloko 2.jpeg'),
+('V0010', 'Varietas Kemloko 3', '2014-01-29', 'Tembakau - Kemloko 3.pdf', 'kemloko 3.jpeg'),
+('V0011', 'Varietas Bligon 1', '2014-01-29', 'Tembakau - Bligon 1.pdf', 'bligon 1.jpeg'),
+('V0012', 'Varietas Grompol Jatim 1', '2014-01-29', 'Tembakau - Grompol Jatim 1.pdf', 'grompol 1 jatim.jpeg'),
+('V0013', 'Varietas Tembakau Kasturi 1', '2014-01-29', 'Tembakau - Kasturi 1.pdf', 'kasturi 1.jpeg'),
+('V0014', 'Varietas Tembakau Kasturi 2', '2014-01-29', 'Tembakau - Kasturi 2.pdf', 'kasturi 2.jpeg'),
+('V0015', 'Tembakau - Bojonegoro 1', '0000-00-00', 'Tembakau - Bojonegoro 1.pdf', ''),
+('V0016', 'Tembakau - Burley HP 14 P', '0000-00-00', 'Tembakau - Burley HP 14 P.pdf', ''),
+('V0017', 'Tembakau - Burley NC3', '0000-00-00', 'Tembakau - Burley NC3.pdf', ''),
+('V0018', 'Tembakau - Burley TN 90', '0000-00-00', 'Tembakau - Burley TN 90.pdf', ''),
+('V0019', 'Tembakau - Cangkring 95', '0000-00-00', 'Tembakau - Cangkring 95.pdf', ''),
+('V0020', 'Tembakau - Coker 176', '0000-00-00', 'Tembakau - Coker 176.pdf', ''),
+('V0021', 'Tembakau - Dixie Bright 101', '0000-00-00', 'Tembakau - Dixie Bright 101.pdf', ''),
+('V0022', 'Tembakau - Maesan 1', '0000-00-00', 'Tembakau - Maesan 1.pdf', ''),
+('V0023', 'Tembakau - Maesan 2', '0000-00-00', 'Tembakau - Maesan 2.pdf', ''),
+('V0024', 'Tembakau - Paiton 1', '0000-00-00', 'Tembakau - Paiton 1.pdf', ''),
+('V0025', 'Tembakau - Paiton 2', '0000-00-00', 'Tembakau - Paiton 2.pdf', ''),
+('V0026', 'Tembakau - Prancak N1', '0000-00-00', 'Tembakau - Prancak N1.pdf', ''),
+('V0027', 'Tembakau - Prancak N2', '0000-00-00', 'Tembakau - Prancak N2.pdf', ''),
+('V0028', 'Tembakau - Sindoro 1', '0000-00-00', 'Tembakau - Sindoro 1.pdf', ''),
+('V0029', 'Tembakau - Virginia PVH 20', '0000-00-00', 'Tembakau - Virginia PVH 20.pdf', ''),
+('V0030', 'Tembakau - Virginia PVH 21', '0000-00-00', 'Tembakau - Virginia PVH 21.pdf', ''),
+('V0031', 'Varietas Baru', '2016-06-22', 'Varietas Baru.pdf', 'VB.jpg');
 
 --
 -- Triggers `varietas`
@@ -1529,6 +1650,13 @@ ALTER TABLE `atribut`
   ADD PRIMARY KEY (`id_atribut`);
 
 --
+-- Indexes for table `benih_varietas`
+--
+ALTER TABLE `benih_varietas`
+  ADD PRIMARY KEY (`id_benih`),
+  ADD KEY `id_varietas` (`id_varietas`);
+
+--
 -- Indexes for table `deskripsi_varietas`
 --
 ALTER TABLE `deskripsi_varietas`
@@ -1556,6 +1684,12 @@ ALTER TABLE `leaflet`
   ADD PRIMARY KEY (`id_leaflet`);
 
 --
+-- Indexes for table `teknologi_budidaya`
+--
+ALTER TABLE `teknologi_budidaya`
+  ADD PRIMARY KEY (`id_teknologi_budidaya`);
+
+--
 -- Indexes for table `varietas`
 --
 ALTER TABLE `varietas`
@@ -1564,6 +1698,12 @@ ALTER TABLE `varietas`
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `benih_varietas`
+--
+ALTER TABLE `benih_varietas`
+  ADD CONSTRAINT `benih_varietas_ibfk_1` FOREIGN KEY (`id_varietas`) REFERENCES `varietas` (`id_varietas`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `deskripsi_varietas`

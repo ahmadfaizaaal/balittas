@@ -157,60 +157,59 @@
 				<div class="col-sm-9 col-lg-9">
 					<hr style="border-color: grey;margin-top: 10px;">
 					<div class="row">
+						<?php
+							$ganjil = true;
+							$tem = 0;							
+							for ($tem; $tem < count($dataLeaflet) ; $tem++) { 
+								
+								if ($ganjil) {
+								
+						?>
 						<div class="col-xs-12 col-sm-4 col-lg-4"> 
 							<div class="thumbnailLeaflet text-center" style="box-shadow: 5px 5px 7px 0px rgba(0,0,0,0.2);">
-										<img class="leafletImg" src="<?php echo base_url() ?>item img/1a.jpg" alt="" style="width:100%;border-radius: 3px;">
-										<img class="leafletImg" src="<?php echo base_url() ?>item img/1b.jpg" alt="" style="width: 100%;border-radius: 3px; margin-top: 5px;">
-								<!-- <a href="" style="text-decoration-line: none;">
-								</a>				 -->
-								<h4 style="color:rgb(242,97,5);">KONSERVASI LAHAN TEMBAKAU TEMANGGUNG</h4>
+								<img class="leafletImg" src="<?php echo base_url() ?>assets/img/leaflet/<?php echo $dataLeaflet[$tem]->file; ?>" alt="" style="width:100%;border-radius: 3px;">
+						<?php 	$ganjil = false; } else { ?>
+								<img class="leafletImg" src="<?php echo base_url() ?>assets/img/leaflet/<?php echo $dataLeaflet[$tem]->file; ?>" alt="" style="width: 100%;border-radius: 3px; margin-top: 5px;">
+								<h4 style="color:rgb(242,97,5);"><?php echo strtoupper($dataLeaflet[$tem]->nama_leaflet); ?></h4>
 							</div>						
 						</div>
-						<div class="col-xs-12 col-sm-4 col-lg-4"> 
+						<?php 	$ganjil = true; } } echo "$tem"; ?>
+						
+						<!-- <div class="col-xs-12 col-sm-4 col-lg-4"> 
 							<div class="thumbnailLeaflet text-center" style="box-shadow: 5px 5px 7px 0px rgba(0,0,0,0.2);">
-								<!-- <a href="" style="text-decoration-line: none;"> -->
-									<img class="leafletImg" src="<?php echo base_url() ?>item img/2a.jpg" alt="" style="width: 100%;border-radius: 3px;">
-									<img class="leafletImg" src="<?php echo base_url() ?>item img/2b.jpg" alt="" style="width: 100%;border-radius: 3px; margin-top: 5px;">
-								<!-- </a>				 -->
+								<img class="leafletImg" src="<?php echo base_url() ?>item img/2a.jpg" alt="" style="width: 100%;border-radius: 3px;">
+								<img class="leafletImg" src="<?php echo base_url() ?>item img/2b.jpg" alt="" style="width: 100%;border-radius: 3px; margin-top: 5px;">
 								<h4 style="color:rgb(242,97,5);">PENYAKIT KERUPUK/KERITING</h4>
 							</div>						
 						</div>
 						<div class="col-xs-12 col-sm-4 col-lg-4"> 
 							<div class="thumbnailLeaflet text-center" style="box-shadow: 5px 5px 7px 0px rgba(0,0,0,0.2);">
-								<!-- <a href="" style="text-decoration-line: none;"> -->
-									<img class="leafletImg" src="<?php echo base_url() ?>item img/3a.jpg" alt="" style="width: 100%;border-radius: 3px;">
-									<img class="leafletImg" src="<?php echo base_url() ?>item img/3b.jpg" alt="" style="width: 100%;border-radius: 3px; margin-top: 5px;">
-								<!-- </a>				 -->
+								<img class="leafletImg" src="<?php echo base_url() ?>item img/3a.jpg" alt="" style="width: 100%;border-radius: 3px;">
+								<img class="leafletImg" src="<?php echo base_url() ?>item img/3b.jpg" alt="" style="width: 100%;border-radius: 3px; margin-top: 5px;">
 								<h4 style="color:rgb(242,97,5);">PENYAKIT LANAS</h4>
 							</div>						
 						</div>
 						<div class="col-xs-12 col-sm-4 col-lg-4"> 
 							<div class="thumbnailLeaflet text-center" style="box-shadow: 5px 5px 7px 0px rgba(0,0,0,0.2);">
-								<!-- <a href="" style="text-decoration-line: none;"> -->
-									<img class="leafletImg" src="<?php echo base_url() ?>item img/1a.jpg" alt="" style="width: 100%;border-radius: 3px;">
-									<img class="leafletImg" src="<?php echo base_url() ?>item img/1b.jpg" alt="" style="width: 100%;border-radius: 3px; margin-top: 5px;">
-								<!-- </a>				 -->
+								<img class="leafletImg" src="<?php echo base_url() ?>item img/1a.jpg" alt="" style="width: 100%;border-radius: 3px;">
+								<img class="leafletImg" src="<?php echo base_url() ?>item img/1b.jpg" alt="" style="width: 100%;border-radius: 3px; margin-top: 5px;">
 								<h4 style="color:rgb(242,97,5);">KONSERVASI LAHAN TEMBAKAU TEMANGGUNG</h4>
 							</div>						
 						</div>
 						<div class="col-xs-12 col-sm-4 col-lg-4"> 
 							<div class="thumbnailLeaflet text-center" style="box-shadow: 5px 5px 7px 0px rgba(0,0,0,0.2);">
-								<!-- <a href="" style="text-decoration-line: none;"> -->
-									<img class="leafletImg" src="<?php echo base_url() ?>item img/2a.jpg" alt="" style="width: 100%;border-radius: 3px;">
-									<img class="leafletImg" src="<?php echo base_url() ?>item img/2b.jpg" alt="" style="width: 100%;border-radius: 3px; margin-top: 5px;">
-								<!-- </a>				 -->
+								<img class="leafletImg" src="<?php echo base_url() ?>item img/2a.jpg" alt="" style="width: 100%;border-radius: 3px;">
+								<img class="leafletImg" src="<?php echo base_url() ?>item img/2b.jpg" alt="" style="width: 100%;border-radius: 3px; margin-top: 5px;">
 								<h4 style="color:rgb(242,97,5);">PENYAKIT KERUPUK/KERITING</h4>
 							</div>						
 						</div>
 						<div class="col-xs-12 col-sm-4 col-lg-4"> 
 							<div class="thumbnailLeaflet text-center" style="box-shadow: 5px 5px 7px 0px rgba(0,0,0,0.2);">
-								<!-- <a href="" style="text-decoration-line: none;"> -->
-									<img class="leafletImg" src="<?php echo base_url() ?>item img/3a.jpg" alt="" style="width: 100%;border-radius: 3px;">
-									<img class="leafletImg" src="<?php echo base_url() ?>item img/3b.jpg" alt="" style="width: 100%;border-radius: 3px; margin-top: 5px;">
-								</a>				
+								<img class="leafletImg" src="<?php echo base_url() ?>item img/3a.jpg" alt="" style="width: 100%;border-radius: 3px;">
+								<img class="leafletImg" src="<?php echo base_url() ?>item img/3b.jpg" alt="" style="width: 100%;border-radius: 3px; margin-top: 5px;">
 								<h4 style="color:rgb(242,97,5);">PENYAKIT LANAS</h4>
 							</div>						
-						</div>
+						</div> -->
 					</div>
 					<ul class="pager" >
 						<li><a href=""><</a></li>

@@ -273,17 +273,25 @@
 						</form>						
 					</div>
 					<a href="<?php echo base_url('leaflet') ?>" style="text-decoration-line:none;"><h3 class="text-left" style="color:black;font-family: Minion Pro">Leaflet</h3></a>
-					<hr style="border-color: grey;margin-top: -8px;">	
-					<h5 style="color:black;">Penyakit Lanas</h5>
+					<hr style="border-color: grey;margin-top: -8px;">
+					<?php 
+						$ganjil = true;
+						foreach ($subLeaflet as $leafletSide) {
+							if ($ganjil) {
+							
+					?>	
+					<h5 style="color:black;"><?php echo $leafletSide->nama_leaflet; ?></h5>
 					<div class="row">
 						<div class="col-xs-6 col-sm-6 col-lg-6">													 
-							<img class="leafletImg" src="item img/1a.jpg" class="image" style="width: 110%;border-radius: 3px;">						
-						</div> 
+							<img class="leafletImg" src="assets/img/leaflet/<?php echo $leafletSide->file; ?>" class="image" style="width: 110%;border-radius: 3px;">						
+						</div>
+					<?php 	$ganjil = false; } else { ?> 
 						<div class="col-xs-6 col-sm-6 col-lg-6">
-							<img class="leafletImg" src="item img/1b.jpg" class="image" style="width: 110%;border-radius: 3px; margin-left: -10px;">
+							<img class="leafletImg" src="assets/img/leaflet/<?php echo $leafletSide->file; ?>" class="image" style="width: 110%;border-radius: 3px; margin-left: -10px;">
 						</div>						
-					</div>					
-					<h5 style="color:black;">Penyakit Lanas</h5>
+					</div>
+					<?php $ganjil = true; } } ?>					
+					<!-- <h5 style="color:black;">Penyakit Lanas</h5>
 					<div class="row">
 						<div class="col-xs-6 col-sm-6 col-lg-6">												 
 							<img class="leafletImg" src="item img/2a.jpg" class="image" style="width: 110%;border-radius: 3px;">						
@@ -309,7 +317,7 @@
 						<div class="col-xs-6 col-sm-6 col-lg-6">
 							<img class="leafletImg" src="item img/2b.jpg" class="image" style="width: 110%;border-radius: 3px; margin-left: -10px;">
 						</div>						
-					</div>	
+					</div> -->	
 				</div>
 			</div>
 			</div> <!-- akhir div container atas -->

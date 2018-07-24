@@ -7,6 +7,7 @@
 		<meta name="author" content="Gusna Ikhsan">		
 		<link rel="stylesheet" href="<?php echo base_url() ?>bootstrap/css/bootstrap.css">
 		<link rel="stylesheet" href="<?php echo base_url() ?>bootstrap/css/balittas.css">
+		<link href="<?php echo base_url() ?>item img/Logo-Kementerian-Pertanian.png" rel="shortcut icon">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -240,7 +241,7 @@
 							 </div>
 						</form>						
 					</div>
-					<a href="" style="text-decoration-line:none;"><h3 class="text-left" style="color:black;font-family: Minion Pro">Leaflet</h3></a>
+					<a href="<?php echo base_url()?>leaflet" style="text-decoration-line:none;"><h3 class="text-left" style="color:black;font-family: Minion Pro">Leaflet</h3></a>
 					<hr style="border-color: grey;margin-top: -8px;">					
 					<h5 style="color:black;">Penyakit Lanas</h5>
 					<div class="row">

@@ -159,7 +159,7 @@
 					<div class="row" style="margin-bottom: 20px;">
 						<div class="col-xs-12 col-sm-12 col-lg-12">
 								<div class="thumbnail" style=" border-radius: 5px; background-color: rgba(36,112,101,0.1);">
-									<img src="<?php echo base_url() ?>item img/tembakau.jpg" alt="" style="width: 100%;">
+									<img src="<?php echo base_url() ?>item img/tembakau.jpg" alt="" style="width: 100%;border-radius: 3px;">
 									<br>
 									<span class="label label-success"><p class="glyphicon glyphicon-calendar"></p> 3 Juli 2017</span>
 									<span class="label label-warning"><p class="glyphicon glyphicon-time"></p> 14:00</span>										

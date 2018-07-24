@@ -6,6 +6,19 @@ Class C_data extends CI_Controller{
 		$this->load->view("v_admin",$data);
 		
 	}
+	public function tembakau(){
+		$this->load->model("m_data");
+		$this->load->model("m_tembakau");
+		$data['jarak_pagar'] = $this->m_data->load_jarakpagar();
+		$data['varietas_tembakau'] = $this->m_tembakau->get_varietas();
+		$data['leaflet'] = $this->m_tembakau->get_leaflet();
+		$this->load->view("v_admin_tembakau",$data);
+	}
+	public function deleteVarietas($id){		
+		$this->load->model("m_tembakau");
+		$this->m_tembakau->delete_varietas($id);
+		$this->load->view("c_data/tembakau");
+	}
 	public function tambah(){
 		$this->load->model("m_data");
 		$data['tipe'] = "Tambah";

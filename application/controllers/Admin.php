@@ -10,9 +10,10 @@
 			$username = $_POST['username']; 
 			$password = $_POST['password'];			
 			if ($username=="balittas"&&$password=="magang") {
-				echo "Selamat datang cah magang";
+				redirect(base_url('project_admin_balittas'));
 			}else{
 				$data['coba']="gusna";
+				$data['judul'] = "Balittas";
 				$this->load->view('login', $data);
 			}			
 		}

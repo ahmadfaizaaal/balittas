@@ -322,7 +322,7 @@
 				<p class="text-center" style="color: white;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo aut magni perferendis repellat rerum assumenda, facere. Alias deserunt pariatur magnam rerum quod voluptates, quidem id labore quam. Illum nemo minus repellat veritatis aliquid, consequatur, dolorem, laborum magnam voluptatibus consequuntur voluptate tempora! Vel, odio. Corporis nam maiores nemo, dicta temporibus et.</p>
 				<br><br>
 				<div class="row">
-				    <div class="col-sm-3 col-lg-3">
+				    <div class="col-xs-6 col-sm-3 col-lg-3">
 					    <a href="<?php echo base_url() ?>produk/produk1" style="text-decoration-line: none;" onmouseover="hvr(this, 'in')" onmouseleave="hvr(this, 'out')">
 					    	<div class="thumbnail text-center produk" style="background-color: rgba(28,69,26,0); border-style: none;" >
 					    		<img src="<?php echo base_url() ?>item img/hazelnutWh.png" style="width: 40%" col="g">
@@ -332,7 +332,7 @@
 					    	</div>
 					    </a>
 				    </div>
-				    <div class="col-sm-3 col-lg-3">
+				    <div class="col-xs-6 col-sm-3 col-lg-3">
 					    <a href="<?php echo base_url() ?>produk/produk2" style="text-decoration-line: none;" onmouseover="hvr(this, 'in')" onmouseleave="hvr(this, 'out')">
 					    	<div class="thumbnail text-center produk" style="background-color: rgba(28,69,26,0); border-style: none">
 					    		<img src="<?php echo base_url() ?>item img/toolsWh.png" style="width: 40%" col="g">
@@ -342,7 +342,7 @@
 					    	</div>
 					    </a>
 				    </div>
-				    <div class="col-sm-3 col-lg-3">
+				    <div class="col-xs-6 col-sm-3 col-lg-3">
 					    <a href="<?php echo base_url() ?>produk/produk1" style="text-decoration-line: none;" onmouseover="hvr(this, 'in')" onmouseleave="hvr(this, 'out')">
 					    	<div class="thumbnail text-center produk" style="background-color: rgba(28,69,26,0); border-style: none">
 					    		<img src="item img/flaskWh.png" style="width: 40%" col="g">
@@ -352,7 +352,7 @@
 					    	</div>
 					    </a>
 				    </div>
-				    <div class="col-sm-3 col-lg-3">
+				    <div class="col-xs-6 col-sm-3 col-lg-3">
 					    <a href="<?php echo base_url() ?>produk/produk2" style="text-decoration-line: none;" onmouseover="hvr(this, 'in')" onmouseleave="hvr(this, 'out')">
 					    	<div class="thumbnail text-center produk" style="background-color: rgba(28,69,26,0); border-style: none">
 					    		<img src="item img/pipeWh.png" style="width: 40%" col="g">
@@ -510,10 +510,10 @@
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum perferendis, quas consectetur cum. Dolorum quae quam neque facere perspiciatis dignissimos. ipsum dolor sit amet, consectetur adipisicing elit. Distinctio accusantium perferendis eaque, aspernatur ex eos et ad dignissimos, voluptates beatae!</p>
 			<br><br>
 			<div class="row">
-				<div class="col-xs-3 col-sm-3 col-lg-3">
+				<div class="col-sm-3 col-lg-3">
 					<img src="item img/tembakau.jpg" class="image img-rounded" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
 				</div>
-				<div class="col-xs-8 col-sm-8 col-lg-8">
+				<div class="col-sm-8 col-lg-8">
 					<p style="font-size: 20px;color:rgb(242,97,5); font-family: Minion Pro;">Budidaya tembakau madura</p>
 					<!-- <br> -->
 					<p>Lorem ipsum dolor sit amet. ipsum dolor sit amet, consectetur adipisicing elit. Provident quod, quisquam fugiat maiores ipsam. Deserunt molestiae reiciendis, eius natus iure? ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati repudiandae tenetur illo vitae impedit eum culpa esse vero, hic repellendus.</p>	
@@ -527,10 +527,10 @@
 			</div>
 			<hr>
 			<div class="row">
-				<div class="col-xs-3 col-sm-3 col-lg-3">
+				<div class="col-sm-3 col-lg-3">
 					<img src="item img/tembakau.jpg" class="image img-rounded" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
 				</div>
-				<div class="col-xs-8 col-sm-8 col-lg-8">
+				<div class="col-sm-8 col-lg-8">
 					<p style="font-size: 20px;color:rgb(242,97,5); font-family: Minion Pro;">Budidaya tembakau madura</p>
 					<!-- <br> -->
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident quod, quisquam fugiat maiores ipsam. Deserunt molestiae reiciendis, eius natus iure? ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati repudiandae tenetur illo vitae impedit eum culpa esse vero, hic repellendus.</p>
@@ -543,10 +543,10 @@
 			</div>
 			<hr>
 			<div class="row">
-				<div class="col-xs-3 col-sm-3 col-lg-3">
+				<div class="col-sm-3 col-lg-3">
 					<img src="item img/tembakau.jpg" class="image img-rounded" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
 				</div>
-				<div class="col-xs-8 col-sm-8 col-lg-8">
+				<div class="col-sm-8 col-lg-8">
 					<p style="font-size: 20px;color:rgb(242,97,5); font-family: Minion Pro;">Budidaya tembakau madura</p>
 					<!-- <br> -->
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident quod, quisquam fugiat maiores ipsam. Deserunt molestiae reiciendis, eius natus iure? ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati repudiandae tenetur illo vitae impedit eum culpa esse vero, hic repellendus.</p>

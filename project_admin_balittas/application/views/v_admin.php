@@ -56,7 +56,7 @@
                       <ul class="dropdown-menu" style="margin:-5px 0px 0px 0px; width:280px; background-color:#fece00;">
                         <div class="container-fluid">
                             <div class="col-sm-6 col-lg-6">
-                           <li><a href="#Welcome" class="halaman">Tembakau</a></li>
+                           <li><a href="<?php echo base_url();?>c_data/tembakau" class="halaman">Tembakau</a></li>
                             <hr style="margin-left:0px; margin: 1px 0px 1px 0px; text-align: left; width:95%;">
                             <li><a href="#JarakPagar" class="halaman">Jarak Pagar</a></li>
                             <hr style="margin-left:0px; margin: 1px 0px 1px 0px; text-align: left; width:95%;">

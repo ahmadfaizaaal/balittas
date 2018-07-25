@@ -167,9 +167,9 @@
 						?>
 						<div class="col-xs-12 col-sm-4 col-lg-4"> 
 							<div class="thumbnailLeaflet text-center" style="box-shadow: 5px 5px 7px 0px rgba(0,0,0,0.2);">
-								<img class="leafletImg" src="<?php echo base_url() ?>assets/img/leaflet/<?php echo $dataLeaflet[$tem]->file; ?>" alt="" style="width:100%;border-radius: 3px;">
+								<img class="leafletImg" src="<?php echo base_url() ?>assets/leaflet/<?php echo $dataLeaflet[$tem]->file; ?>" alt="" style="width:100%;border-radius: 3px;">
 						<?php 	$ganjil = false; } else { ?>
-								<img class="leafletImg" src="<?php echo base_url() ?>assets/img/leaflet/<?php echo $dataLeaflet[$tem]->file; ?>" alt="" style="width: 100%;border-radius: 3px; margin-top: 5px;">
+								<img class="leafletImg" src="<?php echo base_url() ?>assets/leaflet/<?php echo $dataLeaflet[$tem]->file; ?>" alt="" style="width: 100%;border-radius: 3px; margin-top: 5px;">
 								<h4 style="color:rgb(242,97,5);"><?php echo strtoupper($dataLeaflet[$tem]->nama_leaflet); ?></h4>
 							</div>						
 						</div>

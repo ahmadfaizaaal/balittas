@@ -283,11 +283,11 @@
 					<h5 style="color:black;"><?php echo $leafletSide->nama_leaflet; ?></h5>
 					<div class="row">
 						<div class="col-xs-6 col-sm-6 col-lg-6">													 
-							<img class="leafletImg" src="assets/img/leaflet/<?php echo $leafletSide->file; ?>" class="image" style="width: 110%;border-radius: 3px;">						
+							<img class="leafletImg" src="assets/leaflet/<?php echo $leafletSide->file; ?>" class="image" style="width: 110%;border-radius: 3px;">						
 						</div>
 					<?php 	$ganjil = false; } else { ?> 
 						<div class="col-xs-6 col-sm-6 col-lg-6">
-							<img class="leafletImg" src="assets/img/leaflet/<?php echo $leafletSide->file; ?>" class="image" style="width: 110%;border-radius: 3px; margin-left: -10px;">
+							<img class="leafletImg" src="assets/leaflet/<?php echo $leafletSide->file; ?>" class="image" style="width: 110%;border-radius: 3px; margin-left: -10px;">
 						</div>						
 					</div>
 					<?php $ganjil = true; } } ?>					

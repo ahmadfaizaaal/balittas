@@ -122,32 +122,54 @@
                                 <th>Nama Varietas</th>
                                 <th>Narasi</th>
                                 <th>Spesifikasi</th>                              
-                                <th>Tanggal Diterbit</th>                              
+                                <th>Tanggal Pelepasan</th>                              
                                 <th>File Gambar</th>
                                 <th>File SK</th>                                
+                                <th>Tanggal Upload</th>                                
+                                <th>Waktu Upload</th>                                
                             </tr>
                         </thead>
                         <tbody>
                         <?php 
-                            $no = 1;
-                            $temp_id = null;
+                            $no = 1;                     
                             foreach ($varietas_tembakau as $row) {
-                                               
                          ?>
                             <tr>                                
-                                <td><?php echo $no++; ?></td>
+                                <td><?php echo $no; ?></td>
                                 <td><?php echo "$row[nama_varietas]"; ?></td>
-                                <td><?php echo "$row[id_varietas]"; ?></td>
-                                <td><a href="" style="font-weight: unset;"><?php echo "Spesifikasi "."$row[nama_varietas]"; ?></a></td>       
+                                <td><?php echo "$row[narasi]"; ?></td>
+                                <td><a href="#spesifikasi" data-toggle = "modal" style="font-weight: unset;"><?php echo "Spesifikasi "."$row[nama_varietas]"; ?></a></td>       
                                 <td><?php echo "$row[tanggal_diterbitkan]"; ?></td>                         
-                                <td><?php echo "$row[file_SK]"; ?></td>
                                 <td><?php echo "$row[file_gambar]"; ?></td>
-                                <td>
-                                    <a href="#edittembakau" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                                    <a href="c_data.php" class="delete" data-toggle="modal" data-target="#hapustembakau" data-href="c_data.php"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                                <td><?php echo "$row[file_SK]"; ?></td>
+                                <td><?php echo "Tanggal Saiki"; ?></td>
+                                <td><?php echo "Waktu Saiki"; ?></td>
+                                <td>                                
+                                    <?php 
+                                        $id = $row['id_varietas'];                                     
+                                        $nama = $row['nama_varietas'];
+                                        $gmbr = $row['file_gambar'];
+                                        $sk = $row['file_SK'];
+                                        $tgl = $row['tanggal_diterbitkan'];
+                                        $nar = $row['narasi'];
+                                    ?>
+                                    <a href="#edittembakau" class="edit" onclick="modal_edit('<?php echo "$id"; ?>','<?php echo "$nama"; ?>','<?php echo "$gmbr"; ?>','<?php echo "$sk"; ?>','<?php echo "$tgl"; ?>','<?php echo "$nar"; ?>');"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>                                                                     
+                                    <a href="" class="delete" data-toggle="modal" onclick="confirm_modal('<?php echo "$id"; ?>');"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                                 </td>
                             </tr>
-                            <?php } ?>
+                            <?php                                 
+
+                                $no++;
+
+                                }
+
+                                date_default_timezone_set('Asia/Jakarta');
+                                $tgl = date('d/m/Y'); $wkt = date('H:i');
+                                echo "$tgl";
+                                echo "<br>";
+                                echo "$wkt";
+
+                            ?>
                         </tbody>
                     </table>
                 </div>
@@ -333,7 +355,7 @@
                                 <td><?php echo "$row[file_gambar]"; ?></td>
                                 <td>
                                     <a href="#edittembakau" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>                                    
-                                    <a href="#hapustembakau"  class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                                    <a href="#hapustembakau" data-id="<?php echo "$row[id_varietas]"; ?>" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                                 </td>
                             </tr>
                             <?php } ?>
@@ -362,14 +384,14 @@
         <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <h4 class="modal-title">Tambah Data Tanaman Tembakau</h4>
+                <h4 class="modal-title">Tambah Data Varietas</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
               </div>
-                 <form action="#" method="post" class="form-horizontal">
+                 <form action="<?php echo base_url('c_data/tambahVarietas'); ?>" method="post" class="form-horizontal">
                     <div class="modal-body">
                         <div class="form-group">
                             <label>Nama Varietas</label>
-                            <input type="text" class="form-control" required>
+                            <input type="text" name="namaVarietas" class="form-control" required>
                         </div>
                         <div class="form-group" style="padding-bottom: 0px">
                             <label>Upload Gambar</label>
@@ -379,33 +401,28 @@
                                     <button type="button" class="btn btn-default image-preview-clear" style="display:none;">
                                         <span class="glyphicon glyphicon-remove"></span> Clear
                                     </button>                                    
-                                    <div class="btn btn-default image-preview-input">
-                                        <span class="glyphicon glyphicon-folder-open"></span>
-                                        <span class="image-preview-input-title">Browse</span>
-                                        <input type="file" style="width:100px" accept="image/png, image/jpeg, image/gif," name="input-file-preview" />                                        
+                                    <div class="btn btn-default image-preview-input">                                        
+                                        <span class="image-preview-input-title">Pilih File</span>
+                                        <input type="file" style="width:100px" accept="image/png, image/jpeg, image/gif," name="gambar">                                        
                                     </div>
                                 </span>
                             </div>
                         </div>
                         <div class="form-group" style="padding-bottom: 0px">
                             <label>Upload SK</label>
-                            <div class="input-group">
-                                <input type="text" class="form-control image-preview-filename" disabled="disabled">    
-                                <span class="input-group-btn">
-                                    <button type="button" class="btn btn-default image-preview-clear" style="display:none;">
-                                        <span class="glyphicon glyphicon-remove"></span> Clear
-                                    </button>                                    
-                                    <div class="btn btn-default image-preview-input">
-                                        <span class="glyphicon glyphicon-folder-open"></span>
-                                        <span class="image-preview-input-title">Browse</span>
-                                        <input type="file" style="width:100px" accept="image/png, image/jpeg, image/gif," name="input-file-preview" />                                        
-                                    </div>
-                                </span>
+                            <div class="input-group">                                
+                                <input type="file" id="pic" name="sk" style="display:none" onchange="document.getElementById('filename').value=this.value">
+                                <input type="text" id="filename" style="width: 468px;height: 35px;" disabled="disable">
+                                <input type="button" value="Pilih File" onclick="document.getElementById('pic').click()" style="height: 35px;margin-top: -2px;" class="btn btn-default">
                             </div>
+                        </div>
+                         <div class="form-group">
+                            <label>Tanggal Pelepasan</label>
+                            <input type="text" name="tanggalPelepasan" class="form-control" placeholder="ex : 2018/07/27" required>
                         </div>
                         <div class="form-group">
                             <label>Deskripsi</label>
-                            <textarea type="text" class="form-control" required ></textarea>
+                            <textarea type="text" name="deskripsi" class="form-control" required ></textarea>
                         </div>
                         <div class="form-group"> 
                             <label>Spesifikasi</label>                            
@@ -420,31 +437,32 @@
                               <!--elemet sebagai target append-->
                               <tbody id="itemlist">
                                 <tr>
-                                  <td><input name="jenis_input[0]" class="" type="text" style="border-radius: 0px;width: 224px; height: 35px;"></td>
-                                      <td><input name="jumlah_input[0]" class="" type="text" style="border-radius: 0px;margin:0px 10px;width: 224px;height: 35px;"></td>
+                                  <td><input name="atribut0" class="" type="text" style="border-radius: 0px;width: 224px; height: 35px;"></td>
+                                      <td><input name="value0" class="" type="text" style="border-radius: 0px;margin:0px 10px;width: 224px;height: 35px;"></td>
                                       <td></td>
                                 </tr> 
                                 <tr>
-                                      <td><input name="jenis_input[1]" class="" type="text" style="margin-top: 10px;width: 224px;height: 35px;"></td>
-                                      <td><input name="jumlah_input[1]" class="" type="text" style="margin:10px 10px 0px 10px;width:224px;height: 35px;"></td>
+                                      <td><input name="atribut1" class="" type="text" style="margin-top: 10px;width: 224px;height: 35px;"></td>
+                                      <td><input name="value1" class="" type="text" style="margin:10px 10px 0px 10px;width:224px;height: 35px;"></td>
                                       <td></td>
                                   </tr>
                                   <tr>
-                                      <td><input name="jenis_input[2]" class="" type="text" style="margin-top: 10px;width: 224px;height: 35px;"></td>
-                                      <td><input name="jumlah_input[2]" class="" type="text" style="margin:10px 10px 0px 10px;width: 224px;height: 35px;"></td>
+                                      <td><input name="atribut2" class="" type="text" style="margin-top: 10px;width: 224px;height: 35px;"></td>
+                                      <td><input name="value2" class="" type="text" style="margin:10px 10px 0px 10px;width: 224px;height: 35px;"></td>
                                       <td></td>
                                   </tr>
                                   <tr>
-                                      <td><input name="jenis_input[3]" class="" type="text" style="margin-top: 10px;width: 224px;height: 35px;"></td>
-                                      <td><input name="jumlah_input[3]" class="" type="text" style="margin:10px 10px 0px 10px;width: 224px;height: 35px;"></td>
+                                      <td><input name="atribut3" class="" type="text" style="margin-top: 10px;width: 224px;height: 35px;"></td>
+                                      <td><input name="value3" class="" type="text" style="margin:10px 10px 0px 10px;width: 224px;height: 35px;"></td>
                                       <td></td>
                                   </tr>                               
                                   <tr>
-                                      <td><input name="jenis_input[4]" class="" type="text" style="margin-top: 10px; width: 224px;height: 35px;"></td>
-                                      <td><input name="jumlah_input[4]" class="" type="text" style="margin:10px 10px 0px 10px; width: 224px;height: 35px;"></td>
+                                      <td><input name="atribut4" class="" type="text" style="margin-top: 10px; width: 224px;height: 35px;"></td>
+                                      <td><input name="value4" class="" type="text" style="margin:10px 10px 0px 10px; width: 224px;height: 35px;"></td>
                                       <td class="text-center"></td>
                                   </tr>
                               </tbody>
+                              <form method="post" action="<?php base_url('c_data/tambahVarietas') ?>"><input hidden name="temp" id="temp"></form>
                               <tfoot>
                                 <tr>
                                   <td></td>
@@ -454,7 +472,6 @@
                               </tfoot>                                                                     
                           </table>
                         </div>
-
                     </div>
                     <div class="modal-footer">
                         <input type="button" class="btn btn-default" data-dismiss="modal" value="Batal">
@@ -466,7 +483,8 @@
     </div>
 
     <script>
-            var i = 4;
+            var i = 5;            
+            
             function additem() {
 //                menentukan target append
                 var itemlist = document.getElementById('itemlist');
@@ -486,12 +504,12 @@
 
 //                membuat element input
                 var jenis_input = document.createElement('input');
-                jenis_input.setAttribute('name', 'jenis_input[' + i + ']');
+                jenis_input.setAttribute('name', 'atribut'+ i);
                 jenis_input.setAttribute('type', 'text');
                 jenis_input.setAttribute('style', 'margin-top : 10px;width: 224px;height: 35px;');
 
                 var jumlah_input = document.createElement('input');
-                jumlah_input.setAttribute('name', 'jumlah_input[' + i + ']');
+                jumlah_input.setAttribute('name', 'value'+ i);
                 jumlah_input.setAttribute('type', 'text');
                 jumlah_input.setAttribute('style', 'margin : 10px 10px 0px 10px;width: 224px;height: 35px;');
 
@@ -510,6 +528,7 @@
                 };
 
                 i++;
+                document.getElementById('temp').value = i;
             }
       </script>
 
@@ -517,51 +536,77 @@
     <div id="edittembakau" class="modal fade">
         <div class="modal-dialog">
             <div class="modal-content">
-                <form>
-                    <div class="modal-header">
-                        <h4 class="modal-title">Edit Data</h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    </div>
+                <div class="modal-header">
+                    <h4 class="modal-title">Edit Data Varietas</h4>`
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <form action="<?php echo base_url('c_data/editVarietas'); ?>" method="post" class="form-horizontal">
                     <div class="modal-body">
+                        <input hidden id="idvar" name="idVarietas">
                         <div class="form-group">
-                            <label>Nama Tanaman</label>
-                            <input type="text" class="form-control" required>
+                            <label>Nama Varietas</label>
+                            <input type="text" name="namaVarietas" class="form-control" id="nama" required>
+                        </div>
+                        <div class="form-group" style="padding-bottom: 0px">
+                            <label>Upload Gambar</label>
+                            <div class="input-group image-preview">
+                                <input type="text" class="form-control image-preview-filename" disabled="disabled" id="gmbr">    
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default image-preview-clear" style="display:none;">
+                                        <span class="glyphicon glyphicon-remove"></span> Clear
+                                    </button>                                    
+                                    <div class="btn btn-default image-preview-input">                                        
+                                        <span class="image-preview-input-title">Pilih File</span>
+                                        <input type="file" style="width:100px" accept="image/png, image/jpeg, image/gif," name="gambar">                                        
+                                    </div>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group" style="padding-bottom: 0px">
+                            <label>Upload SK</label>
+                            <div class="input-group">                                
+                                <input type="file" id="pic" name="sk" style="display:none" onchange="document.getElementById('sklur').value=this.value">
+                                <input type="text" id="sklur" style="width: 468px;height: 35px;" disabled="disable">
+                                <input type="button" value="Pilih File" onclick="document.getElementById('pic').click()" style="height: 35px;margin-top: -2px;" class="btn btn-default">
+                                <!-- <input type="file" id="pic" name="sk"> -->
+                            </div>
+                        </div>
+                         <div class="form-group">
+                            <label>Tanggal Pelepasan</label>
+                            <input type="text" name="tanggalDiterbitkan" class="form-control" placeholder="ex : 2018/07/27" required id="tgl">
                         </div>
                         <div class="form-group">
                             <label>Deskripsi</label>
-                            <input type="text" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Kode Seleksi</label>
-                            <input type="text" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Jenis Tanaman</label>
-                            <input type="text" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Asal</label>
-                            <input type="text" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Metode Pemuliaan</label>
-                            <input type="text" class="form-control" required>
+                            <textarea type="text" name="deskripsi" class="form-control" required id="nar"></textarea>
                         </div>                        
                     </div>
                     <div class="modal-footer">
                         <input type="button" class="btn btn-default" data-dismiss="modal" value="Batal">
-                        <input type="submit" class="btn btn-info" value="Simpan">
+                        <input type="submit" class="btn btn-success" value="Simpan">
                     </div>
                 </form>
             </div>
         </div>
     </div>
+    <script>
+        function modal_edit(idvar,nama,gmbr,sk,tgl,nar)
+        {
+          $('#edittembakau').modal('show', {backdrop: 'static'});          
+          document.getElementById('idvar').value = idvar;
+          document.getElementById('nama').value = nama;
+          document.getElementById('gmbr').value = gmbr;
+          document.getElementById('sklur').value = sk;
+          document.getElementById('tgl').value = tgl;
+          document.getElementById('nar').value = nar;
+        }
+    </script>
+
     <!-- Delete Modal HTML Tembakau-->
     <div id="hapustembakau" class="modal fade">
         <div class="modal-dialog">
             <div class="modal-content">                
                 <div class="modal-header">
-                        <h4 class="modal-title">Hapus Data</h4>
+                        <h4 class="modal-title">Hapus Data Varietas</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 </div>
                 <div class="modal-body">                        
@@ -570,18 +615,86 @@
                 </div>           
                 <div class="modal-footer">
                     <input type="button" class="btn btn-default" data-dismiss="modal" value="Batal">
-                    <input type="button" class="btn btn-danger" value="Hapuslur" id="hapus-true">
+                    <a href="" id="hapustem"><input type="button" class="btn btn-danger" value="Hapus"></a>
                 </div>                
             </div>
         </div>
+        <?php  ?>
     </div>   
     <script>
-        $(document).ready(function() {
-        $('#hapustembakau').on('show.bs.modal', function(e) {
-            $(this).find('.btn-danger').attr('href', $(e.relatedTarget).data('href'));
-        });
-    });
+        function confirm_modal(delete_url)
+        {
+          $('#hapustembakau').modal('show', {backdrop: 'static'});
+          document.getElementById('hapustem').setAttribute('href' ,"deleteVarietas/"+delete_url);
+        }
     </script>
+    
+    <!-- spesifikasi varietas -->
+    <div id="spesifikasi" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Data Spesifikasi Varietas</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              </div>
+                 <form action="<?php echo base_url('c_data'); ?>" method="post" class="form-horizontal">
+                    <div class="modal-body">                                         
+                        <div class="form-group">
+                            <label>Deskripsi</label>
+                            <textarea type="text" name="deskripsi" class="form-control" required ></textarea>
+                        </div>
+                        <div class="form-group"> 
+                            <div class="text-center">                                
+                                <label>Spesifikasi</label>                            
+                            </div>
+                            <table style="margin-left: 0px;">
+                              <thead style="background-color: none;">
+                                  <tr>
+                                      <th style="font-weight: unset;">Atribut</th>
+                                      <th style="font-weight: unset;padding-left: 10px;">Value</th>
+                                      <th></th>
+                                  </tr>
+                              </thead>
+                              <!--elemet sebagai target append-->
+                              <tbody>
+                                <tr>
+                                  <td><input name="atribut0" type="text" style="border-radius: 0px;width: 224px; height: 35px;" disabled></td>
+                                      <td><input name="value0" id="vl0" type="text" style="border-radius: 0px;margin:0px 10px;width: 224px;height: 35px;" disabled></td>
+                                      <td><input type="button" value="&#x270E" style="height: 35px;width: 50px;"></td>
+                                </tr> 
+                                <tr>
+                                      <td><input name="atribut1" class="" type="text" style="margin-top: 10px;width: 224px;height: 35px;"></td>
+                                      <td><input name="value1" class="" type="text" style="margin:10px 10px 0px 10px;width:224px;height: 35px;"></td>
+                                      <td><button class="btn btn-small btn-default" style="margin-top: 10px;width: 5px;height: 35px;"><i class="fa fa-trash 0"></i></button></td>
+                                  </tr>
+                                  <tr>
+                                      <td><input name="atribut2" class="" type="text" style="margin-top: 10px;width: 224px;height: 35px;"></td>
+                                      <td><input name="value2" class="" type="text" style="margin:10px 10px 0px 10px;width: 224px;height: 35px;"></td>
+                                      <td><button class="btn btn-small btn-default" style="margin-top: 10px; width: 5px;height: 35px;"><i class="fa fa-trash 0"></i></button></td>
+                                  </tr>
+                                  <tr>
+                                      <td><input name="atribut3" class="" type="text" style="margin-top: 10px;width: 224px;height: 35px;"></td>
+                                      <td><input name="value3" class="" type="text" style="margin:10px 10px 0px 10px;width: 224px;height: 35px;"></td>
+                                      <td><button class="btn btn-small btn-default" style="margin-top: 10px; width: 5px;height: 35px;"><i class="fa fa-trash 0"></i></button></td>
+                                  </tr>                               
+                                  <tr>
+                                      <td><input name="atribut4" class="" type="text" style="margin-top: 10px; width: 224px;height: 35px;"></td>
+                                      <td><input name="value4" class="" type="text" style="margin:10px 10px 0px 10px; width: 224px;height: 35px;"></td>
+                                      <td><button class="btn btn-small btn-default" style="margin-top: 10px; width: 5px;height: 35px;"><i class="fa fa-trash 0"></i></button></td>
+                                  </tr>
+                              </tbody>
+                              <!-- <form method="post" action="<?php base_url('c_data/tambahVarietas') ?>"><input hidden name="temp" id="temp"></form> -->
+                          </table>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Batal">
+                        <input type="submit" class="btn btn-success" value="Simpan">
+                    </div>
+                </form>              
+            </div>
+        </div>
+    </div>
 
     <!-- Tambah Modal HTML leaflet-->
     <div id="tambahleaflet" class="modal fade">
@@ -591,7 +704,7 @@
                 <h4 class="modal-title">Tambah Data Leaflet</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
               </div>
-                 <form action="#" method="post" class="form-horizontal">
+                 <form action="<?php echo base_url('c_data/tambahVarietas'); ?>" method="post" class="form-horizontal">
                     <div class="modal-body">
                         <div class="form-group">
                             <label>Nama Varietas</label>

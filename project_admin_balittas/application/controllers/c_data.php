@@ -14,10 +14,32 @@ Class C_data extends CI_Controller{
 		$data['leaflet'] = $this->m_tembakau->get_leaflet();
 		$this->load->view("v_admin_tembakau",$data);
 	}
-	public function deleteVarietas($id){		
+	public function deleteVarietas($id){			
 		$this->load->model("m_tembakau");
 		$this->m_tembakau->delete_varietas($id);
-		$this->load->view("c_data/tembakau");
+		redirect(base_url('c_data/tembakau'));
+	}
+	public function tambahVarietas(){
+		$this->load->model("m_tembakau");
+
+		date_default_timezone_set('Asia/Jakarta');
+        $tgl = date('Y-m-d'); 
+        $wkt = date('H:i');		
+
+		$namaVarietas = $this->input->post('namaVarietas');
+		$gambar = $this->input->post('gambar');
+		$sk = $this->input->post('sk');
+
+		$deskripsi = $this->input->post('deskripsi');
+					
+		$this->m_tembakau->add_varietas($namaVarietas,$tgl,$sk,$gambar);
+		$this->m_tembakau->add_deskripsi_varietas($deskripsi);
+
+		for ($i=0; $i <$this->input->post('temp') ; $i++) { 
+			$this->m_tembakau->add_detail_deskripsi($this->input->post('atribut'."$i"),$this->input->post('value'."$i"));
+		}
+		
+		redirect(base_url('c_data/tembakau'));	
 	}
 	public function tambah(){
 		$this->load->model("m_data");

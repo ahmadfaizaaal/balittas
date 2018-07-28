@@ -181,17 +181,17 @@
     text-align: center;
     margin: 0 0 0 0;
     cursor:pointer;
-    transition: 0.5s;
-    -moz-transition: 0.5s;
-    -webkit-transition: 0.5s;
-    -o-transition: 0.5s;        
+    transition: 0.8s;
+    -moz-transition: 0.8s;
+    -webkit-transition: 0.8s;
+    -o-transition: 0.8s;        
 }
 .scroll:hover {
     background:rgba(28,69,26,1);
-    transition: 0.5s;
-    -moz-transition: 0.5s;
-    -webkit-transition: 0.5s;
-    -o-transition: 0.5s;        
+    transition: 0.8s;
+    -moz-transition: 0.8s;
+    -webkit-transition: 0.8s;
+    -o-transition: 0.8s;        
 }
 .scroll:hover .glyphicon {
     /*padding-top:-10px;*/
@@ -202,10 +202,10 @@
     color: white;
     /*margin-top:-5px;
     margin-left:1px;*/
-    transition: 0.5s;
-    -moz-transition: 0.5s;
-    -webkit-transition: 0.5s;
-    -o-transition: 0.5s;    
+    transition: 0.8s;
+    -moz-transition: 0.8s;
+    -webkit-transition: 0.8s;
+    -o-transition: 0.8s;    
 }
 .hoverThumbnail{
 	color:#5cb85c;
@@ -323,3 +323,44 @@
   transform: scale(1.1);
 }
 
+/*PAGINATION CUSTOM */
+.pagerCustom {
+  font-family: Calibri;  
+  font-weight: bold;
+  font-size: 16px;
+  padding-left: 0;
+  margin: 20px 0px;
+  list-style: none;
+  text-align: center;
+}
+.pagerCustom li {
+  display: inline;
+}
+.pagerCustom li > a,
+.pagerCustom li > span {
+  display: inline-block;
+  border-radius: 100%;
+}
+
+
+ul.paginationKu li
+{
+    margin-left:10px;
+}
+
+ul.paginationKu li a
+{
+    color:black;
+    text-align: center;
+    text-decoration:none;
+    padding:7px 10px 7px 10px;
+    background-color: rgba(36,112,101,0.1);
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);
+}
+
+ul.paginationKu li a:hover,
+ul.paginationKu li a.current
+{
+    color:#fece00;
+    background:rgba(28, 69, 26);
+}

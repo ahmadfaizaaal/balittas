@@ -7,8 +7,8 @@
 		<meta name="description" content="A Tuts+ course">
 		<meta name="author" content="Gusna Ikhsan">
 		<!-- <link rel="stylesheet" href="webdesa.css"> -->
-		<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
-		<link rel="stylesheet" href="bootstrap/css/balittas.css">
+		<link rel="stylesheet" href="<?php echo base_url() ?>bootstrap/css/bootstrap.css">
+		<link rel="stylesheet" href="<?php echo base_url() ?>bootstrap/css/balittas.css">
 		<link href="<?php echo base_url() ?>item img/Logo-Kementerian-Pertanian.png" rel="shortcut icon">
 
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -37,13 +37,13 @@
 							  	<div class="dropbtnHeader" style="font-family: Minion Pro">Jenis Tembakau <span class="caret"></div>
 							  	<div class="dropdownHeader-content" style="margin: 0px 0px 0px -30px;">
 								  	<div class="container-fluid">
-								  		<a href="<?php echo base_url() ?>varietas/jenisAsal" style="margin-top: 10px;">Manurut Asal Usul</a>
+								  		<a href="<?php echo base_url() ?>varietas/asalUsul" style="margin-top: 10px;">Manurut Asal Usul</a>
 								  		<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
 							          	<a href="<?php echo base_url() ?>varietas/jenisKegunaan">Kegunaan</a>
 							          	<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
 							          	<a href="<?php echo base_url() ?>varietas/jenisWaktu">Waktu Tanam</a>
 							          	<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
-							          	<a href="<?php echo base_url() ?>varietas/jenisDaerah">Daerah Pengembangan</a>
+							          	<a href="<?php echo base_url() ?>varietas/daerahPengembangan">Daerah Pengembangan</a>
 							          	<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
 							          	<a href="<?php echo base_url() ?>varietas/jenisProsesing" style="margin-bottom: 8px;">Prosesing</a>							          	
 								  	</div>							  	
@@ -53,7 +53,7 @@
 							  	<div class="dropbtnHeader" style="font-family: Minion Pro">Produk <span class="caret"></div>
 							  	<div class="dropdownHeader-content" style="margin: 0px 0px 0px -178px;">
 								  	<div class="container-fluid">	  		
-							          	<a href="<?php echo base_url() ?>produk/produk1" style="margin-top: 10px;">Bernih</a>
+							          	<a href="<?php echo base_url() ?>produk/benih" style="margin-top: 10px;">Bernih</a>
 								  		<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
 							          	<a href="<?php echo base_url() ?>produk/produk2">Alat dan Mesin</a>
 							          	<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
@@ -156,22 +156,47 @@
 				<h3 class="text-left" style="color:black; font-family: Minion Pro">Varietas Terbaru</h3>
 				<hr style="border-color: grey; margin-top: -8px;">
 				<div class="row">
+					<?php 
+						foreach ($varietas as $row) {
+							$namaVarietas = ""; $narasi = "";
+							if (strlen($row->nama_varietas) > 22) {
+								$namaVarietas = substr($row->nama_varietas, 0, 22)." ...";
+							} else {
+								$namaVarietas = $row->nama_varietas;
+							}
+
+							
+					 ?>
 					<div class="col-xs-12 col-sm-4 col-lg-4"> 
 						<div class="thumbnail thumbku" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
 							<a href="<?php echo base_url('varietas/detailVarietas') ?>" style="text-decoration-line: none;">
-								<img src="item img/tembakau.jpg" alt="" style="width: 100%;">
-								<span class="label label-success"><p class="glyphicon glyphicon-calendar"></p> 3 Juli 2017</span>
-								<span class="label label-warning"><p class="glyphicon glyphicon-time"></p> 14:00</span>	
-								<h4 style="color:#fece00;">VARIETAS NC 471</h4>
+								<img src="<?php echo base_url() ?>assets/varietas/<?php echo $row->file_gambar; ?>" alt="" style="width: 100%;">
+								<span class="label label-success"><p class="glyphicon glyphicon-calendar"></p> <?php echo $row->tanggal_upload ?></span>
+								<span class="label label-warning"><p class="glyphicon glyphicon-time"></p> <?php echo $row->waktu_upload; ?></span>	
+								<h4 style="color:#fece00;" title="<?php echo $row->nama_varietas; ?>"><?php echo $namaVarietas; ?></h4>
 							</a>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, nisi. ipsum dolor sit amet, consectetur adipisicing elit. Inventore, quaerat!</p>
+							
+							<!-- DESKRIPSI -->
+							<?php 
+								if (!empty($row->narasi)) {
+									$narasi = substr($row->narasi, 0, 25)." [..]";
+									echo "<p>$narasi</p>";
+								} else {
+									$narasi = "(Belum ada deskripsi)";
+									echo "<p style=\"font-style: italic;\">$narasi</p>";
+								}
+							 ?>
+							
 							<br>							
 							<div style="text-align: right; margin-bottom: 10px;margin-right: 10px;">
 								<a href="<?php echo base_url('varietas/detailVarietas') ?>" style="text-decoration-line: none;" class="hoverThumbnail"><i>Selengkapnya</i></a>
 							</div>
 						</div>						
 					</div>
-					<div class="col-xs-12 col-sm-4 col-lg-4"> 
+					<?php 
+						}
+					 ?>
+					<!-- <div class="col-xs-12 col-sm-4 col-lg-4"> 
 						<div class="thumbnail thumbku" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
 							<a href="" style="text-decoration-line: none;">
 								<img src="item img/tembakau.jpg" alt="" style="width: 100%;">
@@ -245,14 +270,12 @@
 								<a href="" style="text-decoration-line: none;" class="hoverThumbnail"><i>Selengkapnya</i></a>
 							</div>
 						</div>						
-					</div>
+					</div> -->
 				</div>
-					<ul class="pager" >
-						<li><a href=""><</a></li>
-						<li><a href="">1</a></li>
-						<li><a href="">2</a></li>
-						<li><a href="">3</a></li>
-						<li><a href="">></a></li>
+					<ul class="paginationKu pagerCustom" >
+						<?php foreach ($links as $link) {
+							echo "<li>". $link."</li>";
+						} ?>
 					</ul>
 					<br>
 				</div>				
@@ -283,11 +306,11 @@
 					<h5 style="color:black;"><?php echo $leafletSide->nama_leaflet; ?></h5>
 					<div class="row">
 						<div class="col-xs-6 col-sm-6 col-lg-6">													 
-							<img class="leafletImg" src="assets/img/leaflet/<?php echo $leafletSide->file; ?>" class="image" style="width: 110%;border-radius: 3px;">						
+							<img class="leafletImg" src="<?php echo base_url() ?>assets/leaflet/<?php echo $leafletSide->file; ?>" class="image" style="width: 110%;border-radius: 3px;">						
 						</div>
 					<?php 	$ganjil = false; } else { ?> 
 						<div class="col-xs-6 col-sm-6 col-lg-6">
-							<img class="leafletImg" src="assets/img/leaflet/<?php echo $leafletSide->file; ?>" class="image" style="width: 110%;border-radius: 3px; margin-left: -10px;">
+							<img class="leafletImg" src="<?php echo base_url() ?>assets/leaflet/<?php echo $leafletSide->file; ?>" class="image" style="width: 110%;border-radius: 3px; margin-left: -10px;">
 						</div>						
 					</div>
 					<?php $ganjil = true; } } ?>					
@@ -353,8 +376,8 @@
 				    <div class="col-xs-6 col-sm-3 col-lg-3">
 					    <a href="<?php echo base_url() ?>produk/produk1" style="text-decoration-line: none;" onmouseover="hvr(this, 'in')" onmouseleave="hvr(this, 'out')">
 					    	<div class="thumbnail text-center produk" style="background-color: rgba(28,69,26,0); border-style: none">
-					    		<img src="item img/flaskWh.png" style="width: 40%" col="g">
-					    		<img src="item img/flaskY.png" style="width: 40%; display:none;" col="b">
+					    		<img src="<?php echo base_url() ?>item img/flaskWh.png" style="width: 40%" col="g">
+					    		<img src="<?php echo base_url() ?>item img/flaskY.png" style="width: 40%; display:none;" col="b">
 					    		<br>
 								<h4>Formula</h4>
 					    	</div>
@@ -363,8 +386,8 @@
 				    <div class="col-xs-6 col-sm-3 col-lg-3">
 					    <a href="<?php echo base_url() ?>produk/produk2" style="text-decoration-line: none;" onmouseover="hvr(this, 'in')" onmouseleave="hvr(this, 'out')">
 					    	<div class="thumbnail text-center produk" style="background-color: rgba(28,69,26,0); border-style: none">
-					    		<img src="item img/pipeWh.png" style="width: 40%" col="g">
-					    		<img src="item img/pipeY.png" style="width: 40%; display:none;" col="b">
+					    		<img src="<?php echo base_url() ?>item img/pipeWh.png" style="width: 40%" col="g">
+					    		<img src="<?php echo base_url() ?>item img/pipeY.png" style="width: 40%; display:none;" col="b">
 					    		<br>
 								<h4>Produk Hilir</h4>
 					    	</div>
@@ -519,7 +542,7 @@
 			<br><br>
 			<div class="row">
 				<div class="col-sm-3 col-lg-3">
-					<img src="item img/tembakau.jpg" class="image img-rounded" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
+					<img src="<?php echo base_url() ?>item img/tembakau.jpg" class="image img-rounded" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
 				</div>
 				<div class="col-sm-8 col-lg-8">
 					<p style="font-size: 20px;color:rgb(242,97,5); font-family: Minion Pro;">Budidaya tembakau madura</p>
@@ -536,7 +559,7 @@
 			<hr>
 			<div class="row">
 				<div class="col-sm-3 col-lg-3">
-					<img src="item img/tembakau.jpg" class="image img-rounded" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
+					<img src="<?php echo base_url() ?>item img/tembakau.jpg" class="image img-rounded" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
 				</div>
 				<div class="col-sm-8 col-lg-8">
 					<p style="font-size: 20px;color:rgb(242,97,5); font-family: Minion Pro;">Budidaya tembakau madura</p>
@@ -552,7 +575,7 @@
 			<hr>
 			<div class="row">
 				<div class="col-sm-3 col-lg-3">
-					<img src="item img/tembakau.jpg" class="image img-rounded" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
+					<img src="<?php echo base_url() ?>item img/tembakau.jpg" class="image img-rounded" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
 				</div>
 				<div class="col-sm-8 col-lg-8">
 					<p style="font-size: 20px;color:rgb(242,97,5); font-family: Minion Pro;">Budidaya tembakau madura</p>

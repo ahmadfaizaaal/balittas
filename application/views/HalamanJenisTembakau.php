@@ -153,21 +153,30 @@
 					  	<li><a href="#">Pictures</a></li>
 					  	<li class="active">Vacation</li> 
 					</ul>
-				<a href="" style="text-decoration-line:none;"><h3 class="text-left" style="color:black; font-family: Minion Pro">Menurut Asal Usul</h3></a>
+				<a href="" style="text-decoration-line:none;"><h3 class="text-left" style="color:black; font-family: Minion Pro">Menurut <?php echo $kategori; ?></h3></a>
 				<hr style="border-color: grey;margin-top: -8px;">
 					<table class="table table-hover">
 						<thead style="background-color: rgba(28,69,26,0.9);border-bottom: 3px solid white; color:#fece00;">
 							<th>No</th>
 							<th>Varietas</th>
-							<th>Asal</th>							
+							<th><?php echo $kategori; ?></th>							
 						</thead>
 						<tbody>
+						<?php 
+							$count = 1;
+							foreach ($dataJenisTembakau as $row) {
+								
+						 ?>
 							<tr>
-								<td>1</td>
-								<td><a href="" style="text-decoration-line:none;" class="teknologiBudidaya"><b>Tembakau Kemloko</b></a></td>
-								<td>20 Agustus 2018</td>								
+								<td><?php echo $count; ?></td>
+								<td><a href="" style="text-decoration-line:none;" class="teknologiBudidaya"><b><?php echo $row->nama_varietas ?></b></a></td>
+								<td><?php echo $row->detail_value; ?></td>								
 							</tr>
-							<tr>
+						<?php 
+							$count++;
+							}
+						 ?>
+							<!-- <tr>
 								<td>2</td>
 								<td>N1</td>
 								<td>20 Agustus 2018</td>								
@@ -181,7 +190,7 @@
 								<td>4</td>
 								<td>N1</td>
 								<td>20 Agustus 2018</td>								
-							</tr>
+							</tr> -->
 						</tbody>
 					</table>				
 				</div>				

@@ -152,17 +152,32 @@
 					  	<li><a href="#">Pictures</a></li>
 					  	<li class="active">Vacation</li> 
 					</ul>
-				<h3 class="text-left" style="color:black; font-family: Minion Pro">Benih</h3>
+				<h3 class="text-left" style="color:black; font-family: Minion Pro"><?php echo $kategori; ?></h3>
 				<hr style="border-color: grey;margin-top: -8px;">
 					<table class="table table-hover">
 						<thead style="background-color: rgba(28,69,26,0.9);border-bottom: 3px solid white; color:#fece00;">
 							<th>No</th>
 							<th>Varietas</th>
-							<th>Ketersediaan</th>
-							<th>Jumlah</th>
+							<th>Persediaan sampai</th>
+							<th>Jumlah (gr)</th>
 						</thead >
 						<tbody>
+						<?php 
+							$count = 1;
+							foreach ($dataBenih as $row) {
+								
+						 ?>
 							<tr>
+								<td><?php echo $count; ?></td>
+								<td><?php echo $row->nama_varietas; ?></td>
+								<td><?php echo $row->persediaan_sampai; ?></td>
+								<td><?php echo $row->jumlah_gr ?></td>
+							</tr>
+						<?php 
+						$count++;
+						}
+						 ?>
+							<!-- <tr>
 								<td>1</td>
 								<td>N1</td>
 								<td>20 Agustus 2018</td>
@@ -179,13 +194,7 @@
 								<td>N1</td>
 								<td>20 Agustus 2018</td>
 								<td>1000</td>
-							</tr>
-							<tr>
-								<td>1</td>
-								<td>N1</td>
-								<td>20 Agustus 2018</td>
-								<td>1000</td>
-							</tr>
+							</tr> -->
 						</tbody>
 					</table>				
 				</div>				

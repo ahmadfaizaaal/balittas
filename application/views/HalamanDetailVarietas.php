@@ -23,10 +23,9 @@
 		<!-- CONTENT -->
 		<div class="container">
 			<ul class="breadcrumb" style="margin-bottom: 0px;margin-top: 15px;">
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Private</a></li>
-				<li><a href="#">Pictures</a></li>
-				<li class="active">Vacation</li>
+				<li><a href="<?php echo base_url() ?>">Beranda</a></li>
+				<li><a href="<?php echo base_url() ?>">Varietas</a></li>
+				<li class="active">Detail Varietas</li>
 			</ul>
 			<div class="row">
 				<div class="col-sm-9 col-lg-9">
@@ -61,9 +60,21 @@
 													
 											 ?>
 												<tr>
-													<td><?php echo $count; ?></td>
-													<td><?php echo $rowDetail->nama_atribut; ?></td>
-													<td><?php echo $rowDetail->detail_value; ?></td>
+													<?php 
+														if (empty($rowDetail->detail_value)) {
+															$count-=1;
+															echo "<td></td>";
+															echo "<td style=\"font-weight: bold; font-style: italic;\">".$rowDetail->nama_atribut."</td>";
+															echo "<td>".$rowDetail->detail_value."</td>";
+														} else {
+															echo "<td>".$count."</td>";
+															echo "<td>".$rowDetail->nama_atribut."</td>";
+															echo "<td>".$rowDetail->detail_value."</td>";
+														}
+													 ?>
+													<!-- <td><?php //echo $count; ?></td>
+													<td><?php //echo $rowDetail->nama_atribut; ?></td>
+													<td><?php //echo $rowDetail->detail_value; ?></td> -->
 												</tr>
 											<?php 
 											$count++;
@@ -109,7 +120,7 @@
 							 </div>
 						</form>						
 					</div>
-					<a href="<?php echo base_url('leaflet') ?>" style="text-decoration-line:none;"><h3 class="text-left" style="color:black;font-family: Minion Pro">Leaflet</h3></a>
+					<a href="<?php echo base_url('leaflet') ?>" style="text-decoration-line:none;" title="Klik untuk menuju halaman leaflet"><h3 class="text-left" style="color:black;font-family: Minion Pro">Leaflet</h3></a>
 					<hr style="border-color: grey;margin-top: -8px;">	
 					<?php 
 						$ganjil = true;

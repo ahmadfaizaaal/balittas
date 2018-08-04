@@ -22,12 +22,11 @@
 			<div class="row">		
 				<div class="col-sm-9 col-lg-9">
 				    <ul class="breadcrumb" style="margin: -6px 0px -10px -15px;">
-					  	<li><a href="#">Home</a></li>
-					  	<li><a href="#">Private</a></li>
-					  	<li><a href="#">Pictures</a></li>
-					  	<li class="active">Vacation</li> 
+					  	<li><a href="<?php echo base_url() ?>">Beranda</a></li>
+						<li><a href="<?php echo base_url() ?>">Varietas</a></li>
+						<li class="active">Jenis Tembakau</li> 
 					</ul>
-				<a href="" style="text-decoration-line:none;"><h3 class="text-left" style="color:black; font-family: Minion Pro">Menurut <?php echo $kategori; ?></h3></a>
+				<h3 class="text-left" style="color:black; font-family: Minion Pro">Menurut <?php echo $kategori; ?></h3>
 				<hr style="border-color: grey;margin-top: -8px;">
 					<table class="table table-hover">
 						<thead style="background-color: rgba(28,69,26,0.9);border-bottom: 3px solid white; color:#fece00;">
@@ -37,36 +36,35 @@
 						</thead>
 						<tbody>
 						<?php 
-							$count = 1;
+							if($this->uri->segment(4)){
+			                     $count = $this->uri->segment(4);
+			                } else{
+			                     $count = 0;
+			                }
+							
 							foreach ($dataJenisTembakau as $row) {
-								
+								$count++;
 						 ?>
 							<tr>
 								<td><?php echo $count; ?></td>
-								<td><a href="" style="text-decoration-line:none;" class="teknologiBudidaya"><b><?php echo $row->nama_varietas ?></b></a></td>
+								<td><a href="<?php echo base_url('varietas/detailvarietas/').urlencode(strtolower($row->nama_varietas)) ?>" style="text-decoration-line:none;" class="teknologiBudidaya" title="Klik untuk melihat detil varietas"><b><?php echo $row->nama_varietas ?></b></a></td>
 								<td><?php echo $row->detail_value; ?></td>								
 							</tr>
 						<?php 
-							$count++;
+							// $count++;
 							}
 						 ?>
-							<!-- <tr>
-								<td>2</td>
-								<td>N1</td>
-								<td>20 Agustus 2018</td>								
-							</tr>
-							<tr>
-								<td>3</td>
-								<td>N1</td>
-								<td>20 Agustus 2018</td>								
-							</tr>
-							<tr>
-								<td>4</td>
-								<td>N1</td>
-								<td>20 Agustus 2018</td>								
-							</tr> -->
 						</tbody>
-					</table>				
+					</table>
+					<br>
+					<div>
+						<ul class="paginationKu pagerCustom" >
+							<?php foreach ($links as $link) {
+								echo "<li>". $link."</li>";
+								// echo $jumlah;
+							} ?>
+						</ul>
+					</div>				
 				</div>				
 				<div class="col-sm-3 col-lg-3">
 					<br>
@@ -84,44 +82,25 @@
 							 </div>
 						</form>						
 					</div>
-					<a href="<?php echo base_url() ?>leaflet" style="text-decoration-line:none;"><h3 class="text-left" style="color:black;font-family: Minion Pro">Leaflet</h3></a>
+					<a href="<?php echo base_url() ?>leaflet" style="text-decoration-line:none;" title="Klik untuk menuju halaman leaflet"><h3 class="text-left" style="color:black;font-family: Minion Pro">Leaflet</h3></a>
 					<hr style="border-color: grey;margin-top: -8px;">					
-					<h5 style="color:black;">Penyakit Lanas</h5>
+					<?php 
+						$ganjil = true;
+						foreach ($subLeaflet as $leafletSide) {
+							if ($ganjil) {
+							
+					?>	
+					<h5 style="color:black;"><?php echo $leafletSide->nama_leaflet; ?></h5>
 					<div class="row">
 						<div class="col-xs-6 col-sm-6 col-lg-6">													 
-							<img class="leafletImg" src="<?php echo base_url() ?>item img/1a.jpg" class="image" style="width: 110%;border-radius: 3px;">						
-						</div> 
+							<img class="leafletImg" src="<?php echo base_url() ?>assets/leaflet/<?php echo $leafletSide->file; ?>" class="image" style="width: 110%;border-radius: 3px;">						
+						</div>
+					<?php 	$ganjil = false; } else { ?> 
 						<div class="col-xs-6 col-sm-6 col-lg-6">
-							<img class="leafletImg" src="<?php echo base_url() ?>item img/1b.jpg" class="image" style="width: 110%;border-radius: 3px; margin-left: -10px;">
-						</div>						
-					</div>					
-					<h5 style="color:black;">Penyakit Lanas</h5>
-					<div class="row">
-						<div class="col-xs-6 col-sm-6 col-lg-6">												 
-							<img class="leafletImg" src="<?php echo base_url() ?>item img/2a.jpg" class="image" style="width: 110%;border-radius: 3px;">						
-						</div> 
-						<div class="col-xs-6 col-sm-6 col-lg-6">
-							<img class="leafletImg" src="<?php echo base_url() ?>item img/2b.jpg" class="image" style="width: 110%;border-radius: 3px; margin-left: -10px;">
-						</div>						
-					</div>					
-					<h5 style="color:black;">Penyakit Lanas</h5>
-					<div class="row">
-						<div class="col-xs-6 col-sm-6 col-lg-6">												 
-							<img class="leafletImg" src="<?php echo base_url() ?>item img/3a.jpg" class="image" style="width: 110%;border-radius: 3px;">						
-						</div> 
-						<div class="col-xs-6 col-sm-6 col-lg-6">
-							<img class="leafletImg" src="<?php echo base_url() ?>item img/3b.jpg" class="image" style="width: 110%;border-radius: 3px; margin-left: -10px;">
+							<img class="leafletImg" src="<?php echo base_url() ?>assets/leaflet/<?php echo $leafletSide->file; ?>" class="image" style="width: 110%;border-radius: 3px; margin-left: -10px;">
 						</div>						
 					</div>
-					<h5 style="color:black;">Penyakit Lanas</h5>
-					<div class="row">
-						<div class="col-xs-6 col-sm-6 col-lg-6">												 
-							<img class="leafletImg" src="<?php echo base_url() ?>item img/2a.jpg" class="image" style="width: 110%;border-radius: 3px;">						
-						</div> 
-						<div class="col-xs-6 col-sm-6 col-lg-6">
-							<img class="leafletImg" src="<?php echo base_url() ?>item img/2b.jpg" class="image" style="width: 110%;border-radius: 3px; margin-left: -10px;">
-						</div>						
-					</div>	
+					<?php $ganjil = true; } } ?>	
 				</div>
 			</div>								
 		</div>

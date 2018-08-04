@@ -10,6 +10,7 @@
 		<link href="<?php echo base_url() ?>item img/Logo-Kementerian-Pertanian.png" rel="shortcut icon">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+		<script type="text/javascript" src="<?php echo base_url() ?>bootstrap/js/jQuery.highlight.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -20,10 +21,8 @@
 		<!-- content -->
 		<div class="container">			
 				<ul class="breadcrumb" style="margin: -6px 0px -10px -15px;">
-					  	<li><a href="#">Home</a></li>
-					  	<li><a href="#">Private</a></li>
-					  	<li><a href="#">Pictures</a></li>
-					  	<li class="active">Vacation</li> 
+					  	<li><a href="<?php echo base_url() ?>">Beranda</a></li>
+					  	<li class="active">Pencarian</li> 
 				</ul>			
 				<br><br>										
 					<!-- <h3 class="text-left" style="color:black;font-family: Minion Pro">Pencarian</h3>
@@ -43,7 +42,7 @@
 				<br><br>
 				<div>					
 						<a href="" style="text-decoration-line: none;" class="teknologiBudidaya">						
-							<h3>Tembakau</h3>
+							<h3><span style="background-color: rgba(255,203,13,0.4);">Tembakau</span></h3>
 						</a>					
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates tenetur eum molestiae alias, incidunt vitae, beatae ratione adipisci repellendus iusto, ut! Magnam dignissimos unde autem nihil minus, reiciendis eius sunt vitae sequi possimus suscipit quibusdam maxime totam est repudiandae provident illum sit quaerat excepturi, sapiente. Minima, ad quis voluptatibus debitis.</p>
 						<hr>
@@ -57,6 +56,15 @@
 				</div>																
 			<!-- </div>								 -->
 		</div>
+		<script>
+			$(selector).highlight('', {
+			    color: 'black',
+			    background: 'yellow',
+			    ignoreCase: true,
+			    wholeWord: false,
+			    bold: false
+			});
+		</script>
 	</body>	
 	<br><br><br>
 	

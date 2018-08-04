@@ -42,13 +42,13 @@
 							  	<div class="dropbtnHeader" style="font-family: Minion Pro">Jenis Tembakau <span class="caret"></div>
 							  	<div class="dropdownHeader-content" style="margin: 0px 0px 0px -30px;">
 								  	<div class="container-fluid">
-								  		<a href="<?php echo base_url() ?>varietas/asalusul" style="margin-top: 10px;">Manurut Asal Usul</a>
+								  		<a href="<?php echo base_url() ?>varietas/jenistembakau/asalusul" style="margin-top: 10px;">Menurut Asal Usul</a>
 								  		<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
 							          	<a href="<?php echo base_url() ?>varietas/jenisKegunaan">Kegunaan</a>
 							          	<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
 							          	<a href="<?php echo base_url() ?>varietas/jenisWaktu">Waktu Tanam</a>
 							          	<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
-							          	<a href="<?php echo base_url() ?>varietas/daerahpengembangan">Daerah Pengembangan</a>
+							          	<a href="<?php echo base_url() ?>varietas/jenistembakau/daerahpengembangan">Daerah Pengembangan</a>
 							          	<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
 							          	<a href="<?php echo base_url() ?>varietas/jenisProsesing" style="margin-bottom: 8px;">Prosesing</a>							          	
 								  	</div>							  	
@@ -153,8 +153,8 @@
 					<div class="containerImg">
 						<img src="<?php echo base_url() ?>item img/tembakauHeader.jpg" alt="" style="width: 100%;">
 					 	<div class="contentImg text-center">
-						    <h1 class="hidden-xs hidden-sm" style="margin-top:12%;font-size:5vw;"><?php echo $judul; ?></h1>
-						    <h1 class="hidden-md hidden-lg" style="margin-top:6vw;font-size:5vw;"><?php echo $judul; ?></h1>
+						    <h1 class="hidden-xs hidden-sm" style="margin-top:12%;font-size:5vw; font-family: futura md bt;"><?php echo $judul; ?></h1>
+						    <h1 class="hidden-md hidden-lg" style="margin-top:6vw;font-size:5vw; font-family: futura md bt;"><?php echo $judul; ?></h1>
 					  	</div>
 					</div>
 			<?php

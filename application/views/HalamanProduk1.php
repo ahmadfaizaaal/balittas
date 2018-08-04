@@ -22,14 +22,12 @@
 			<div class="row">		
 				<div class="col-sm-9 col-lg-9">
 				    <ul class="breadcrumb" style="margin: -6px 0px -10px -15px;">
-					  	<li><a href="#">Home</a></li>
-					  	<li><a href="#">Private</a></li>
-					  	<li><a href="#">Pictures</a></li>
-					  	<li class="active">Vacation</li> 
+					  	<li><a href="<?php echo base_url() ?>">Beranda</a></li>
+						<li class="active">Produk</li> 
 					</ul>
 				<h3 class="text-left" style="color:black; font-family: Minion Pro"><?php echo $kategori; ?></h3>
 				<hr style="border-color: grey;margin-top: -8px;">
-					<table class="table table-hover">
+					<table class="table table-hover" >
 						<thead style="background-color: rgba(28,69,26,0.9);border-bottom: 3px solid white; color:#fece00;">
 							<th>No</th>
 							<th>Varietas</th>
@@ -38,22 +36,127 @@
 						</thead >
 						<tbody>
 						<?php 
-							$count = 1;
+							if($this->uri->segment(3)){
+			                     $count = $this->uri->segment(3);
+			                } else{
+			                     $count = 0;
+			                }
+
 							foreach ($dataBenih as $row) {
-								
+								$count++;	
 						 ?>
 							<tr>
 								<td><?php echo $count; ?></td>
-								<td><?php echo $row->nama_varietas; ?></td>
-								<td><?php echo $row->persediaan_sampai; ?></td>
-								<td><?php echo $row->jumlah_gr ?></td>
+								<td><?php echo $row->nama_benih; ?></td>
+								<td><?php echo $row->stok_sampai; ?></td>
+								<td><?php echo $row->jumlah_stok ?></td>
 							</tr>
 						<?php 
-						$count++;
-						}
+							}
 						 ?>
 						</tbody>
-					</table>				
+					</table>
+					<br>
+					<ul class="paginationKu pagerCustom" >
+						<?php foreach ($links as $link) {
+							echo "<li>". $link."</li>";
+							// echo $jumlah;
+						} ?>
+					</ul>
+					<br>
+
+					<!-- DISTRIBUSI BENIH -->				
+					<h3 class="text-left" style="color:black; font-family: Minion Pro">Distribusi Benih UPBS</h3>
+					<hr style="border-color: grey;margin-top: -8px;">
+					<!-- <div class="container-fluid"> -->
+						<div class="row">
+							<div class="col-xs-4 col-sm-8 col-lg-8">
+								<h5 class="text-right" style="margin-left: 20px;"><b>Filter by :</b></h5>
+							</div>
+							<div class="col-xs-4 col-sm-2 col-lg-2 text-right">
+							    <select class="form-control bulan" id="bulan" name="bulan" style="margin-left: 13px;" onchange="filter();">
+							        <option disabled>Bulan</option>
+							        <option value="Januari" selected>Januari</option>
+								<?php
+									$bulan = array("Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember","--Semua--");
+									for($i = 1;$i < count($bulan);$i++){
+										echo"<option value=$bulan[$i]> $bulan[$i] </option>";
+									}
+								?>
+							    </select>
+							</div>
+							<div class="col-xs-3 col-sm-2 col-lg-2 text-right">
+								<select class="form-control tahun" id="tahun" name="tahun" onchange="filter();">
+							    	<option disabled>Tahun</option>
+							    	<option value="2009" selected>2009</option>
+							    	<?php
+										for($i = 2010;$i <= 2050;$i++){
+											echo"<option value=$i> $i </option>";
+										}
+									?>
+							    </select>
+							</div>
+							<!-- <div class="col-xs-1 col-sm-1 col-lg-1 text-right">
+							    <button class="btn btn-success" type="submit">Lihat</button>
+							</div> -->
+						<!-- </div> -->
+					</div>
+					<br>
+					<div id="table-data">
+						<table class="table table-hover">
+							<thead style="background-color: rgba(28,69,26,0.9);border-bottom: 3px solid white; color:#fece00;">
+								<th>No.</th>
+								<th>Varietas</th>
+								<th>Tanggal</th>
+								<th>Tahun Panen</th>
+								<th>Kelas Benih</th>
+								<th class="text-center">Jumlah (Kg)</th>
+								<th>Keterangan</th>
+							</thead >
+							<tbody>
+							<?php 
+								// if($this->uri->segment(3)){
+				    //                  $count = $this->uri->segment(3);
+				    //             } else{
+				                     $count = 0;
+				    //             }
+
+								$jumlah = 0;
+
+								foreach ($dataDistribusiBenih as $row) {
+									$count++;
+									$jumlah += $row->jumlah_kg;
+									$keterangan = "";
+									if (!empty($row->keterangan)) {
+										$keterangan = substr($row->keterangan, 0, 20)." ...";
+									} else {
+										$keterangan = $row->keterangan;
+									}	
+							 ?>
+								<tr>
+									<td><?php echo $count; ?></td>
+									<td><?php echo $row->nama_benih; ?></td>
+									<td><?php echo $row->tanggal; ?></td>
+									<td><?php echo $row->tahun_panen; ?></td>
+									<td><?php echo $row->kelas_benih; ?></td>
+									<td class="text-center"><?php echo $row->jumlah_kg; ?></td>
+									<td title="<?php echo $row->keterangan; ?>"><?php echo $keterangan; ?></td>
+								</tr>
+							<?php 
+								}
+							 ?>
+							 	<tr style="background-color: rgba(28,69,26, 0.3);">
+							 		<td></td>
+							 		<td></td>
+							 		<td></td>
+							 		<td style="font-weight: bold;">JUMLAH</td>
+							 		<td></td>
+							 		<td class="text-center" style="font-weight: bold;"><?php echo number_format($jumlah, 3); ?></td>
+							 		<td></td>
+							 	</tr>
+							</tbody>
+						</table>
+					</div>
 				</div>				
 				<div class="col-sm-3 col-lg-3">
 					<br>
@@ -71,44 +174,25 @@
 							 </div>
 						</form>						
 					</div>
-					<a href="<?php echo base_url() ?>leaflet" style="text-decoration-line:none;"><h3 class="text-left" style="color:black;font-family: Minion Pro">Leaflet</h3></a>
+					<a href="<?php echo base_url() ?>leaflet" style="text-decoration-line:none;" title="Klik untuk menuju halaman leaflet"><h3 class="text-left" style="color:black;font-family: Minion Pro">Leaflet</h3></a>
 					<hr style="border-color: grey;margin-top: -8px;">					
-					<h5 style="color:black;">Penyakit Lanas</h5>
+					<?php 
+						$ganjil = true;
+						foreach ($subLeaflet as $leafletSide) {
+							if ($ganjil) {
+							
+					?>	
+					<h5 style="color:black;"><?php echo $leafletSide->nama_leaflet; ?></h5>
 					<div class="row">
 						<div class="col-xs-6 col-sm-6 col-lg-6">													 
-							<img class="leafletImg" src="<?php echo base_url() ?>item img/1a.jpg" class="image" style="width: 110%;border-radius: 3px;">						
-						</div> 
+							<img class="leafletImg" src="<?php echo base_url() ?>assets/leaflet/<?php echo $leafletSide->file; ?>" class="image" style="width: 110%;border-radius: 3px;">						
+						</div>
+					<?php 	$ganjil = false; } else { ?> 
 						<div class="col-xs-6 col-sm-6 col-lg-6">
-							<img class="leafletImg" src="<?php echo base_url() ?>item img/1b.jpg" class="image" style="width: 110%;border-radius: 3px; margin-left: -10px;">
-						</div>						
-					</div>					
-					<h5 style="color:black;">Penyakit Lanas</h5>
-					<div class="row">
-						<div class="col-xs-6 col-sm-6 col-lg-6">												 
-							<img class="leafletImg" src="<?php echo base_url() ?>item img/2a.jpg" class="image" style="width: 110%;border-radius: 3px;">						
-						</div> 
-						<div class="col-xs-6 col-sm-6 col-lg-6">
-							<img class="leafletImg" src="<?php echo base_url() ?>item img/2b.jpg" class="image" style="width: 110%;border-radius: 3px; margin-left: -10px;">
-						</div>						
-					</div>					
-					<h5 style="color:black;">Penyakit Lanas</h5>
-					<div class="row">
-						<div class="col-xs-6 col-sm-6 col-lg-6">												 
-							<img class="leafletImg" src="<?php echo base_url() ?>item img/3a.jpg" class="image" style="width: 110%;border-radius: 3px;">						
-						</div> 
-						<div class="col-xs-6 col-sm-6 col-lg-6">
-							<img class="leafletImg" src="<?php echo base_url() ?>item img/3b.jpg" class="image" style="width: 110%;border-radius: 3px; margin-left: -10px;">
+							<img class="leafletImg" src="<?php echo base_url() ?>assets/leaflet/<?php echo $leafletSide->file; ?>" class="image" style="width: 110%;border-radius: 3px; margin-left: -10px;">
 						</div>						
 					</div>
-					<h5 style="color:black;">Penyakit Lanas</h5>
-					<div class="row">
-						<div class="col-xs-6 col-sm-6 col-lg-6">												 
-							<img class="leafletImg" src="<?php echo base_url() ?>item img/2a.jpg" class="image" style="width: 110%;border-radius: 3px;">						
-						</div> 
-						<div class="col-xs-6 col-sm-6 col-lg-6">
-							<img class="leafletImg" src="<?php echo base_url() ?>item img/2b.jpg" class="image" style="width: 110%;border-radius: 3px; margin-left: -10px;">
-						</div>						
-					</div>	
+					<?php $ganjil = true; } } ?>	
 				</div>
 			</div>								
 		</div>
@@ -139,8 +223,53 @@
 		span.onclick = function() { 
 		    modal.style.display = "none";
 		}
-		</script>
 		<!-- END OF MODALS -->
+
+		function filter(){
+			var acuan = ["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember","--Semua--"];
+			var bulan = $("#bulan").val();
+			for (var i = 0; i < acuan.length; i++) {
+				if (bulan == acuan[i]) {
+					if (i < 9) {
+						bulan = "0" + (i+1);
+					} else {
+						if (i == 12) {
+							bulan = "_%_%";
+						} else {
+							bulan = (i+1);
+						}
+					}
+				}
+			}
+			var tahun = $("#tahun").val();
+			// alert(bulan);
+		    $.ajax({
+		        type:"POST",
+		        url: "../produk/filterDistribusi",
+		        data: "tahun_bulan=" + tahun + "-" + bulan,
+		        dataType : "html",
+		        success:function(msg){
+		            $("#table-data").html(msg);                
+		        },
+		        error:function(){
+					alert("Search failed");
+				}
+		  	});
+		 //  	var input, filter, table, tr, td, i;
+			// table = document.getElementById("tabelku");
+			// tr = table.getElementsByTagName("tr");
+			// for (i = 0; i < tr.length; i++) {
+			//   td = tr[i].getElementsByTagName("td")[2];
+			//   if (td) {
+			//     if ((td.innerHTML.toUpperCase().indexOf(bulan) > -1) && (td.innerHTML.toUpperCase().indexOf(tahun) > -1))  {
+			//       tr[i].style.display = "";
+			//     } else {
+			//       tr[i].style.display = "none";
+			//     }
+			//   }       
+			// }
+		}
+		</script>
 	</body>	
 	<br><br><br>
 	

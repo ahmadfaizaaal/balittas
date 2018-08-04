@@ -26,10 +26,8 @@
 			<div class="row">		
 				<div class="col-sm-9 col-lg-9">
 				    <ul class="breadcrumb" style="margin: -6px 0px -10px -15px;">
-					  	<li><a href="#">Home</a></li>
-					  	<li><a href="#">Private</a></li>
-					  	<li><a href="#">Pictures</a></li>
-					  	<li class="active">Vacation</li> 
+					  	<li class="active">Beranda</li> 
+					  	<li></li>
 					</ul>
 				<h3 class="text-left" style="color:black; font-family: Minion Pro">Varietas Terbaru</h3>
 				<hr style="border-color: grey; margin-top: -8px;">
@@ -58,16 +56,16 @@
 							<?php 
 								if (!empty($row->narasi)) {
 									$narasi = substr($row->narasi, 0, 25)." [..]";
-									echo "<p>$narasi</p>";
+									echo "<p>&nbsp $narasi</p>";
 								} else {
-									$narasi = "(Belum ada deskripsi)";
-									echo "<p style=\"font-style: italic;\">$narasi</p>";
+									$narasi = "Belum ada deskripsi";
+									echo "<p style=\"font-style: italic; color:lightgrey;\">&nbsp $narasi</p>";
 								}
 							 ?>
 							
 							<br>							
 							<div style="text-align: right; margin-bottom: 10px;margin-right: 10px;">
-								<a href="<?php echo base_url('varietas/detailvarietas').urlencode(strtolower($row->nama_varietas)) ?>" style="text-decoration-line: none;" class="hoverThumbnail"><i>Selengkapnya</i></a>
+								<a href="<?php echo base_url('varietas/detailvarietas/').urlencode(strtolower($row->nama_varietas)) ?>" style="text-decoration-line: none;" class="hoverThumbnail"><i>Selengkapnya</i></a>
 							</div>
 						</div>						
 					</div>
@@ -98,7 +96,7 @@
 							 </div>
 						</form>						
 					</div>
-					<a href="<?php echo base_url('leaflet') ?>" style="text-decoration-line:none;"><h3 class="text-left" style="color:black;font-family: Minion Pro">Leaflet</h3></a>
+					<a href="<?php echo base_url('leaflet') ?>" style="text-decoration-line:none;" title="Klik untuk menuju halaman leaflet"><h3 class="text-left" style="color:black;font-family: Minion Pro">Leaflet</h3></a>
 					<hr style="border-color: grey;margin-top: -8px;">
 					<?php 
 						$ganjil = true;
@@ -121,6 +119,7 @@
 				</div>
 			</div>
 			</div> <!-- akhir div container atas -->
+			<br>
 			
 	
 			<div class="container-fluid" style="background-color: rgba(28,69,26,0.8);">
@@ -131,7 +130,7 @@
 				<br><br>
 				<div class="row">
 				    <div class="col-xs-6 col-sm-3 col-lg-3">
-					    <a href="<?php echo base_url() ?>produk/produk1" style="text-decoration-line: none;" onmouseover="hvr(this, 'in')" onmouseleave="hvr(this, 'out')">
+					    <a href="<?php echo base_url() ?>produk/benih" style="text-decoration-line: none;" onmouseover="hvr(this, 'in')" onmouseleave="hvr(this, 'out')">
 					    	<div class="thumbnail text-center produk" style="background-color: rgba(28,69,26,0); border-style: none;" >
 					    		<img src="<?php echo base_url() ?>item img/hazelnutWh.png" style="width: 40%" col="g">
 					    		<img src="<?php echo base_url() ?>item img/hazelnutY.png" style="width: 40%; display:none;" col="b">
@@ -187,7 +186,7 @@
 						 	<a href="<?php echo base_url('teknologibudidaya/penangkaranBenih'); ?>" style="text-decoration-line: none;" class="teknologiBudidaya">
 						 		<div class="thumbnail" style="background-color: white; border-style: none">
 							 		<div class="itemZoom" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
-										<img src="<?php echo base_url() ?>item img/tembakau.jpg" class="imageZoom" >
+										<img src="<?php echo base_url() ?>item img/tembakau2.jpg" class="imageZoom" >
 										<div class="itemZoom-overlay top"></div>
 									</div>
 									<h4 style="font-family: Minion Pro;">Penangkaran Benih </h4>
@@ -215,7 +214,7 @@
 						 	<a href="" style="text-decoration-line: none;" class="teknologiBudidaya">
 						 		<div class="thumbnail" style="background-color: white; border-style: none">
 						 			<div class="itemZoom" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
-										<img src="<?php echo base_url() ?>item img/tembakau.jpg" class="imageZoom" >
+										<img src="<?php echo base_url() ?>item img/tembakau2.jpg" class="imageZoom" >
 										<div class="itemZoom-overlay top"></div>
 									</div>
 									<h4 style="font-family: Minion Pro;">Pemupukan</h4>
@@ -243,7 +242,7 @@
 						 	<a href="" style="text-decoration-line: none;" class="teknologiBudidaya">
 						 		<div class="thumbnail" style="background-color: white; border-style: none">
 						 			<div class="itemZoom" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
-										<img src="<?php echo base_url() ?>item img/tembakau.jpg" class="imageZoom" >
+										<img src="<?php echo base_url() ?>item img/tembakau2.jpg" class="imageZoom" >
 										<div class="itemZoom-overlay top"></div>
 									</div>
 									<h4 style="font-family: Minion Pro;">Pengendalian Penyakit </h4>
@@ -271,7 +270,7 @@
 						 	<a href="" style="text-decoration-line: none;" class="teknologiBudidaya">
 						 		<div class="thumbnail" style="background-color: white; border-style: none">
 						 			<div class="itemZoom" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
-										<img src="<?php echo base_url() ?>item img/tembakau.jpg" class="imageZoom" >
+										<img src="<?php echo base_url() ?>item img/tembakau2.jpg" class="imageZoom" >
 										<div class="itemZoom-overlay top"></div>
 									</div>
 									<h4 style="font-family: Minion Pro;">Panen dan Pasca Panen </h4>
@@ -299,7 +298,7 @@
 						 	<a href="" style="text-decoration-line: none;" class="teknologiBudidaya">
 						 		<div class="thumbnail" style="background-color: white; border-style: none">
 						 			<div class="itemZoom" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
-										<img src="<?php echo base_url() ?>item img/tembakau.jpg" class="imageZoom" >
+										<img src="<?php echo base_url() ?>item img/tembakau2.jpg" class="imageZoom" >
 										<div class="itemZoom-overlay top"></div>
 									</div>
 									<h4 style="font-family: Minion Pro;">Budidaya Tembakau Cerutu</h4>

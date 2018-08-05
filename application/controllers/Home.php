@@ -12,9 +12,7 @@
 
 		public function index()
 		{
-			// $data['varietas'] = $this->m_varietas->selectAllVarietas();
-			$data['jumlahVarietas'] = $this->m_varietas->getJumlahVarietas();
-			$data['subLeaflet'] = $this->M_leaflet->selectTop4Leaflet();
+			$data['subLeaflet'] = $this->M_leaflet->selectLeafletTerbaru();
 
 			$jumlah = $this->m_varietas->getJumlahVarietas();
 			
@@ -51,19 +49,17 @@
            
             $dari = $this->uri->segment('3');
  
-            //inisialisasi array
-            // $data = array();
- 
             //ambil data buku dari database
-            $data['varietas'] = $this->m_varietas->selectAllVarietas($config['per_page'],$dari);
-            // $data['varietas'] = $this->m_varietas->getVarietas($config['per_page'],$dari);
-            
+            $data['varietas'] = $this->m_varietas->selectVarietasPerPage($config['per_page'],$dari);
  
             //Membuat link
             $str_links = $this->pagination->create_links();
             $data['links'] = explode('&nbsp;',$str_links );
 
+            $dataHeader['judul'] = "";
+            $this->load->view('header', $dataHeader);
 			$this->load->view('HalamanUtama', $data);
+			$this->load->view('footer');
 		}	
 		
 

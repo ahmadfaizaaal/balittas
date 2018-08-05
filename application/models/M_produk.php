@@ -2,12 +2,43 @@
 	class M_produk extends CI_Model
 	{
 
-		public function selectBenihAll()
+		public function selectBenihAll($sampai, $dari)
 		{
-	        $query = $this->db->select("v.id_varietas, b.id_benih, v.nama_varietas, b.persediaan_sampai, b.jumlah_gr");
-	        $query = $this->db->from("benih_varietas b");
-			$query = $this->db->join("varietas v", "v.id_varietas = b.id_varietas");
-			// $query = $this->db->where("atr.nama_atribut", $kategori);
+	        $query = $this->db->select("*");
+	        $query = $this->db->from("benih b");
+			$query = $this->db->limit($sampai, $dari);
+	        $query = $this->db->get();
+	        return $query->result();
+		}
+
+		public function getJumlahBenih() {
+			$query = $this->db->get('benih');
+	        return $query->num_rows();
+		}
+
+		public function getJumlahDistribusiBenih() {
+			$query = $this->db->get('distribusi_benih');
+	        return $query->num_rows();
+		}
+
+		public function selectDistribusiBenih() {
+			$query = $this->db->select("db.id_distribusi, b.nama_benih, db.tanggal, db.tahun_panen, db.kelas_benih, db.jumlah_kg, db.keterangan");
+	        $query = $this->db->from("benih b");
+	        $query = $this->db->join("distribusi_benih db", "b.id_benih = db.id_benih");
+			$query = $this->db->where("tanggal like","2009-01-_%_%");
+	        $query = $this->db->order_by("db.id_distribusi", "asc");
+			// $query = $this->db->limit($sampai, $dari);
+	        $query = $this->db->get();
+	        return $query->result();
+		}
+
+		public function selectDistribusiFiltered($tahun, $bulan) {
+			$query = $this->db->select("db.id_distribusi, b.nama_benih, db.tanggal, db.tahun_panen, db.kelas_benih, db.jumlah_kg, db.keterangan");
+	        $query = $this->db->from("benih b");
+	        $query = $this->db->join("distribusi_benih db", "b.id_benih = db.id_benih");
+			$query = $this->db->where("tanggal like",$tahun."-".$bulan."-_%_%");
+			$query = $this->db->order_by("db.id_distribusi", "asc");
+			// $query = $this->db->limit($sampai, $dari);
 	        $query = $this->db->get();
 	        return $query->result();
 		}

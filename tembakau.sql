@@ -3,7 +3,11 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
+<<<<<<< HEAD
 -- Generation Time: Jul 30, 2018 at 05:22 AM
+=======
+-- Generation Time: Aug 04, 2018 at 05:01 AM
+>>>>>>> 4873309b36ce0c6ac462d1e9cd078935572a67d2
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -23,6 +27,52 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
+=======
+-- Table structure for table `agribisnis`
+--
+
+CREATE TABLE `agribisnis` (
+  `id_agribisnis` char(7) NOT NULL,
+  `jenis_agribisnis` varchar(50) NOT NULL,
+  `deskripsi_agribisnis` text NOT NULL,
+  `gambar_agribisnis` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `agribisnis`
+--
+
+INSERT INTO `agribisnis` (`id_agribisnis`, `jenis_agribisnis`, `deskripsi_agribisnis`, `gambar_agribisnis`) VALUES
+('AGR0001', 'Usahatani Tembakau Madura', '', 'tembakau2.jpg'),
+('AGR0002', 'Usahatani Tembakau Kasturi', '', 'tembakau.jpg'),
+('AGR0003', 'Usahatani Tembakau Selopuro', '', 'tembakau2.jpg');
+
+--
+-- Triggers `agribisnis`
+--
+DELIMITER $$
+CREATE TRIGGER `tr_id_agribisnis` BEFORE INSERT ON `agribisnis` FOR EACH ROW BEGIN
+SET @hitung = CONVERT((RIGHT((SELECT id_agribisnis FROM `agribisnis` ORDER by id_agribisnis DESC LIMIT 1), 4)), UNSIGNED) + 1;
+if (@hitung > 1) THEN
+if (@hitung < 10) THEN 
+SET new.id_agribisnis = concat('AGR000',@hitung);
+ELSEIF (@hitung < 100) THEN
+SET new.id_agribisnis = concat('AGR00',@hitung);
+ELSEIF (@hitung < 1000) THEN
+SET new.id_agribisnis = concat('AGR0',@hitung);
+ELSE
+SET new.id_agribisnis = concat('AGR',@hitung);
+END IF;
+END IF;
+END
+$$
+DELIMITER ;
+
+-- --------------------------------------------------------
+
+--
+>>>>>>> 4873309b36ce0c6ac462d1e9cd078935572a67d2
 -- Table structure for table `atribut`
 --
 
@@ -148,6 +198,65 @@ DELIMITER ;
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
+=======
+-- Table structure for table `benih`
+--
+
+CREATE TABLE `benih` (
+  `id_benih` char(5) NOT NULL,
+  `nama_benih` varchar(50) NOT NULL,
+  `stok_sampai` date NOT NULL,
+  `jumlah_stok` double(4,3) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `benih`
+--
+
+INSERT INTO `benih` (`id_benih`, `nama_benih`, `stok_sampai`, `jumlah_stok`) VALUES
+('B0001', 'Kemloko 1', '2018-06-30', 0.000),
+('B0002', 'Kemloko 2', '2018-06-30', 6.975),
+('B0003', 'Kemloko 3', '2018-06-30', 9.999),
+('B0004', 'Kasturi 1', '2018-06-30', 0.000),
+('B0005', 'Kasturi 2', '2018-06-30', 0.471),
+('B0006', 'Bligon 1', '2018-06-30', 9.999),
+('B0007', 'Grompol Jatim 1', '2018-06-30', 0.000),
+('B0008', 'Prancak 95', '2018-06-30', 0.000),
+('B0009', 'Prancak N1', '2018-06-30', 9.999),
+('B0010', 'Prancak N2', '2018-06-30', 0.000),
+('B0011', 'Bojonegoro 1', '2018-06-30', 3.963),
+('B0012', 'Coker 176', '2018-06-30', 0.000),
+('B0013', 'DB 101', '2018-06-30', 0.000),
+('B0014', 'TN 90', '2018-06-30', 0.000),
+('B0015', 'Cangkring 95', '2018-06-30', 0.000),
+('B0016', 'Sindoro 1', '2018-07-01', 0.000);
+
+--
+-- Triggers `benih`
+--
+DELIMITER $$
+CREATE TRIGGER `tr_id_benih` BEFORE INSERT ON `benih` FOR EACH ROW BEGIN
+SET @hitung = CONVERT((RIGHT((SELECT id_benih FROM `benih` ORDER by id_benih DESC LIMIT 1), 4)), UNSIGNED) + 1;
+if (@hitung > 1) THEN
+if (@hitung < 10) THEN 
+SET new.id_benih = concat('B000',@hitung);
+ELSEIF (@hitung < 100) THEN
+SET new.id_benih = concat('B00',@hitung);
+ELSEIF (@hitung < 1000) THEN
+SET new.id_benih = concat('B0',@hitung);
+ELSE
+SET new.id_benih = concat('B',@hitung);
+END IF;
+END IF;
+END
+$$
+DELIMITER ;
+
+-- --------------------------------------------------------
+
+--
+>>>>>>> 4873309b36ce0c6ac462d1e9cd078935572a67d2
 -- Table structure for table `benih_varietas`
 --
 
@@ -1435,6 +1544,574 @@ INSERT INTO `detail_deskripsi` (`id_deskripsi_varietas`, `id_atribut`, `detail_v
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
+=======
+-- Table structure for table `distribusi_benih`
+--
+
+CREATE TABLE `distribusi_benih` (
+  `id_distribusi` char(7) NOT NULL,
+  `id_benih` char(5) NOT NULL,
+  `tanggal` date NOT NULL,
+  `tahun_panen` varchar(50) NOT NULL,
+  `kelas_benih` varchar(20) NOT NULL,
+  `jumlah_kg` double(4,3) DEFAULT NULL,
+  `keterangan` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `distribusi_benih`
+--
+
+INSERT INTO `distribusi_benih` (`id_distribusi`, `id_benih`, `tanggal`, `tahun_panen`, `kelas_benih`, `jumlah_kg`, `keterangan`) VALUES
+('DB00001', 'B0002', '2009-01-20', 'Pasirian 2002', '', 0.100, 'PT. Djarum'),
+('DB00002', 'B0003', '2009-01-20', 'Sumberrejo 2006', '', 0.100, ''),
+('DB00003', 'B0007', '2009-01-21', 'Bojonegoro 2003', '', 2.000, 'PT. MDR Jember'),
+('DB00004', 'B0007', '2009-01-23', 'Bojonegoro 2003', '', 2.000, 'PT. IDS Klaten'),
+('DB00005', 'B0007', '2009-02-26', 'Bojonegoro 2006', '', 0.500, 'PT. Pandusata Bondowoso'),
+('DB00006', 'B0007', '2009-03-04', 'Bojonegoro 2003', '', 1.000, 'PT. IDS Klaten'),
+('DB00007', 'B0008', '2009-03-06', 'Sumberrejo 2006', '', 0.010, 'Disbun Jateng'),
+('DB00008', 'B0011', '2009-03-18', 'Pasirian 2002', '', 0.100, 'PT. Podo Trisno Bojonegoro'),
+('DB00009', 'B0006', '2009-04-01', 'Bojonegoro 2002', '', 0.020, 'Disbun Sleman'),
+('DB00010', 'B0008', '2009-04-27', 'Sumberrejo 2006', '', 0.010, 'Univ. Trunojoyo Madura'),
+('DB00011', 'B0009', '2009-04-27', 'Sumberrejo 2006', '', 0.010, ''),
+('DB00012', 'B0010', '2009-04-27', 'Karangploso 1995', '', 0.010, ''),
+('DB00013', 'B0015', '2009-04-27', 'Pasirian 2002', '', 0.010, ''),
+('DB00014', 'B0012', '2009-06-29', 'Bojonegoro 2007', '', 4.000, 'PT. Eli Solo'),
+('DB00015', 'B0008', '2009-07-23', 'Sumberrejo 2006', '', 0.020, 'PTPN 10 Jember'),
+('DB00016', 'B0009', '2009-07-23', 'Sumberrejo 2006', '', 0.020, ''),
+('DB00017', 'B0010', '2009-07-23', 'Karangploso 1995', '', 0.020, ''),
+('DB00018', 'B0015', '2009-07-23', 'Pasirian 2002', '', 0.020, ''),
+('DB00019', 'B0008', '2009-09-10', 'Sumberrejo 2006', '', 0.100, 'Bram H Univ. Brawijaya'),
+('DB00020', 'B0008', '2009-10-27', 'Sumberrejo 2006', '', 0.005, 'Nelly N Malang'),
+('DB00021', 'B0012', '2009-10-27', 'Bojonegoro 2007', '', 0.005, ''),
+('DB00022', 'B0006', '2009-10-27', 'Sumberrejo 2006', '', 0.005, ''),
+('DB00023', 'B0002', '2009-12-01', 'Sumberrejo 2009', '', 2.000, 'Dishutbun Banjarnegara'),
+('DB00024', 'B0001', '2009-12-12', 'Pasirian 2002', '', 0.020, 'Dibun Temanggung'),
+('DB00025', 'B0002', '2009-12-12', 'Pasirian 2002', '', 0.020, ''),
+('DB00026', 'B0003', '2009-12-12', 'Sumberrejo 2006', '', 0.040, ''),
+('DB00027', 'B0009', '2010-02-03', 'Sumberrejo 2003', '', 0.100, 'PTPN X Jember'),
+('DB00028', 'B0010', '2010-02-03', 'Karangploso 1995', '', 0.100, ''),
+('DB00029', 'B0008', '2010-02-03', 'Sumberrejo 2003', '', 0.050, ''),
+('DB00030', 'B0008', '2010-02-12', 'Sumberrejo 2006', '', 0.050, 'Dishutbun Pamekasan'),
+('DB00031', 'B0009', '2010-02-18', 'Sumberrejo 2003', '', 0.010, 'PTPN X Jateng'),
+('DB00032', 'B0010', '2010-02-18', 'Sumberrejo 2009', '', 0.010, ''),
+('DB00033', 'B0008', '2010-02-18', 'Sumberrejo 2006', '', 0.010, ''),
+('DB00034', 'B0008', '2010-03-04', 'Sumberrejo 2006', '', 0.100, 'Disbun Sumenep'),
+('DB00035', 'B0008', '2010-03-19', 'Sumberrejo 2002', '', 0.001, 'Michael Malang'),
+('DB00036', 'B0009', '2010-03-19', 'Karangploso 2004', '', 0.001, ''),
+('DB00037', 'B0010', '2010-03-19', 'Karangploso 1995', '', 0.001, ''),
+('DB00038', 'B0001', '2010-03-19', 'Pasirian 2002', '', 0.001, ''),
+('DB00039', 'B0002', '2010-03-19', 'Pasirian 2002', '', 0.001, ''),
+('DB00040', 'B0003', '2010-03-19', 'Sumberrejo 2006', '', 0.001, ''),
+('DB00041', 'B0015', '2010-03-19', 'Pasirian 2002', '', 0.001, ''),
+('DB00042', 'B0016', '2010-03-19', 'Pasirian 2002', '', 0.001, ''),
+('DB00043', 'B0007', '2010-04-01', 'Sumberrejo 2009', '', 5.000, 'Setiawan Dishutbun Bojonegoro'),
+('DB00044', 'B0011', '2010-04-01', 'Sumberrejo 2009', '', 0.100, ''),
+('DB00045', 'B0012', '2010-04-08', 'Sumberrejo 2009', '', 5.000, 'Disbun Singaraja'),
+('DB00046', 'B0012', '2010-04-14', 'Sumberrejo 2009', '', 1.000, 'Disbun Lamongan'),
+('DB00047', 'B0011', '2010-04-14', 'Sumberrejo 2009', '', 9.000, ''),
+('DB00048', 'B0008', '2010-05-04', 'Sumberrejo 2003', '', 0.050, 'Disbun Pamekasan'),
+('DB00049', 'B0007', '2010-06-09', 'Bojonegoro 2003', '', 0.020, 'Panitia Pelatihan Tembakau Sleman'),
+('DB00050', 'B0001', '2010-09-29', 'Pasirian 2002', '', 0.010, 'KPRI Budikarti'),
+('DB00051', 'B0002', '2010-09-29', 'Pasirian 2002', '', 0.010, ''),
+('DB00052', 'B0003', '2010-09-29', 'Sumberrejo 2006', '', 0.010, ''),
+('DB00053', 'B0008', '2010-09-29', 'Pasirian 2002', '', 0.010, ''),
+('DB00054', 'B0009', '2010-09-29', 'Sumberrejo 2003', '', 0.010, ''),
+('DB00055', 'B0010', '2010-09-29', 'Karangploso 1995', '', 0.010, ''),
+('DB00056', 'B0015', '2010-09-29', 'Pasirian 2002', '', 0.010, ''),
+('DB00057', 'B0007', '2010-09-29', 'Sumberrejo 2003', '', 0.010, ''),
+('DB00058', 'B0004', '2010-09-29', 'Pasirian 2002', '', 0.010, ''),
+('DB00059', 'B0005', '2010-09-29', 'Bojonegoro 2007', '', 0.010, ''),
+('DB00060', 'B0016', '2010-09-29', 'Sumberrejo 2006', '', 0.010, ''),
+('DB00061', 'B0006', '2010-09-29', 'Sumberrejo 2006', '', 0.010, ''),
+('DB00062', 'B0011', '2010-09-29', 'Pasirian 2002', '', 0.010, ''),
+('DB00063', 'B0008', '2010-11-08', 'Pasirian 2002', '', 0.010, 'Disbun Makassar'),
+('DB00064', 'B0009', '2010-11-08', 'Sumberrejo 2003', '', 0.010, ''),
+('DB00065', 'B0010', '2010-11-08', 'Karangploso 1995', '', 0.010, ''),
+('DB00066', 'B0001', '2010-12-02', 'Pasirian 2002', '', 0.178, 'KPRI Budikarti'),
+('DB00067', 'B0001', '2010-12-02', 'Sumberrejo 2009', '', 0.022, 'KPRI Budikarti'),
+('DB00068', 'B0002', '2010-12-02', 'Pasirian 2002', '', 0.089, 'KPRI Budikarti'),
+('DB00069', 'B0002', '2010-12-02', 'Sumberrejo 2009', '', 0.111, 'KPRI Budikarti'),
+('DB00070', 'B0003', '2010-12-02', 'Sumberrejo 2006', '', 0.200, 'KPRI Budikarti'),
+('DB00071', 'B0011', '2010-12-02', 'Pasirian 2002', '', 0.100, 'KPRI Budikarti'),
+('DB00072', 'B0011', '2010-12-02', 'Sumberrejo 2009', '', 0.100, 'KPRI Budikarti'),
+('DB00073', 'B0004', '2010-12-02', 'Pasirian 2002', '', 0.200, 'KPRI Budikarti'),
+('DB00074', 'B0005', '2010-12-02', 'Bojonegoro 2007', '', 0.200, 'KPRI Budikarti'),
+('DB00075', 'B0008', '2010-12-02', 'Pasirian 2002', '', 0.200, 'KPRI Budikarti'),
+('DB00076', 'B0009', '2010-12-02', 'Sumberrejo 2003', '', 0.200, 'KPRI Budikarti'),
+('DB00077', 'B0010', '2010-12-02', 'Karangploso 1995', '', 0.028, 'KPRI Budikarti'),
+('DB00078', 'B0010', '2010-12-02', 'Sumberrejo 2009', '', 0.172, 'KPRI Budikarti'),
+('DB00079', 'B0007', '2010-12-02', 'Sumberrejo 2003', '', 0.200, 'KPRI Budikarti'),
+('DB00080', 'B0016', '2010-12-02', 'Bojonegoro 2002', '', 0.200, 'KPRI Budikarti'),
+('DB00081', 'B0015', '2010-12-02', 'Pasirian 2002', '', 0.200, 'KPRI Budikarti'),
+('DB00082', 'B0006', '2010-12-02', 'Sumberrejo 2006', '', 0.200, 'KPRI Budikarti'),
+('DB00083', 'B0003', '2010-12-21', 'Sumberrejo 2006', '', 0.010, 'Distan Payakumbuh'),
+('DB00084', 'B0012', '2011-01-05', 'Sumberrejo 2009', '', 0.010, 'UIN Maliki Malang'),
+('DB00085', 'B0012', '2011-01-10', 'Sumberrejo 2009', '', 0.030, 'UIN Maliki Malang'),
+('DB00086', 'B0010', '2011-02-10', 'Sumberrejo 2009', '', 0.150, 'Hadi Prayitno Sumenep'),
+('DB00087', 'B0008', '2011-02-10', 'Pasirian 2002', '', 0.150, 'Hadi Prayitno Sumenep'),
+('DB00088', 'B0012', '2011-02-10', 'Asembagus 2009', '', 0.050, 'Hadi Prayitno Sumenep'),
+('DB00089', 'B0008', '2011-02-11', 'Sumberrejo 2009', '', 0.100, 'Dishutbun Pamekasan'),
+('DB00090', 'B0004', '2011-02-18', 'Pasirian 2002', '', 0.100, 'Abdurrahman Jember'),
+('DB00091', 'B0008', '2011-02-25', 'Pasirian 2002', '', 0.500, 'Disbun Sampang'),
+('DB00092', 'B0004', '2011-03-22', 'Bojonegoro 2007', '', 6.000, 'PT. IDS Surabaya'),
+('DB00093', 'B0011', '2011-04-04', 'Sumberrejo 2009', '', 0.010, 'PT. IDS Surabaya'),
+('DB00094', 'B0008', '2011-04-04', 'Pasirian 2002', '', 0.150, 'PT. IDS Surabaya'),
+('DB00095', 'B0011', '2011-04-06', 'Sumberrejo 2010', '', 1.000, 'PTPN X Klaten'),
+('DB00096', 'B0006', '2011-04-12', 'Sumberrejo 2006', '', 0.100, 'Disbun Bojonegoro'),
+('DB00097', 'B0011', '2011-04-12', 'Sumberrejo 2009', '', 0.100, 'Disbun Bojonegoro'),
+('DB00098', 'B0011', '2011-04-13', 'Sumberrejo 2010', '', 2.000, 'Disbun Lamongan'),
+('DB00099', 'B0006', '2011-04-26', 'Sumberrejo 2006', '', 0.360, 'Pelani Sleman'),
+('DB00100', 'B0011', '2011-04-26', 'Sumberrejo 2009', '', 0.029, 'Disbun Jawa Barat'),
+('DB00101', 'B0011', '2011-04-26', 'Sumberrejo 2010', '', 0.121, 'Disbun Jawa Barat'),
+('DB00102', 'B0012', '2011-04-28', 'Asembagus 2009', '', 0.200, 'Iryono, TTN Jember'),
+('DB00103', 'B0006', '2011-04-28', 'Sumberrejo 2006', '', 6.000, 'Disbun Bojonegoro'),
+('DB00104', 'B0011', '2011-05-28', 'Sumberrejo 2010', '', 0.050, 'Suro Putro Distanbud Lamongan'),
+('DB00105', 'B0009', '2011-06-13', 'Sumberrejo 2006', '', 0.010, 'Dr. Dadang BPTP Jatim'),
+('DB00106', 'B0010', '2011-06-13', 'Sumberrejo 2009', '', 0.010, 'Dr. Dadang BPTP Jatim'),
+('DB00107', 'B0004', '2011-07-21', 'Pasirian 2002', '', 0.100, 'KPRI Budikarti'),
+('DB00108', 'B0001', '2011-09-14', 'Sumberrejo 2009', '', 0.020, 'Heni Semarang'),
+('DB00109', 'B0004', '2011-10-04', 'Bojonegoro 2007', '', 0.010, 'KPRI Budikarti'),
+('DB00110', 'B0005', '2011-10-04', 'Bojonegoro 2007', '', 0.010, 'KPRI Budikarti'),
+('DB00111', 'B0008', '2011-10-04', 'Sumberrejo 2009', '', 0.010, 'KPRI Budikarti'),
+('DB00112', 'B0012', '2011-10-04', 'Sumberrejo 2010', '', 0.010, 'KPRI Budikarti'),
+('DB00113', 'B0007', '2011-10-04', 'Bojonegoro 2006', '', 0.010, 'KPRI Budikarti'),
+('DB00114', 'B0011', '2011-10-04', 'Sumberrejo 2010', '', 0.010, 'KPRI Budikarti'),
+('DB00115', 'B0003', '2011-10-17', 'Sumberrejo 2009', '', 1.000, 'KPRI Budikarti'),
+('DB00116', 'B0012', '2011-10-21', 'Sumberrejo 2010', '', 0.010, 'Disbun Sulawesi Selatan'),
+('DB00117', 'B0011', '2011-12-01', 'Sumberrejo 2010', '', 7.500, 'Pemd Sumba Barat Daya'),
+('DB00118', 'B0004', '2011-12-06', 'Bojonegoro 2007', '', 0.023, 'Ahmad Hasa Lembata'),
+('DB00119', 'B0004', '2011-12-06', 'Bojonegoro 2007', '', 0.001, 'Ibon Suparman Lembata'),
+('DB00120', 'B0003', '2011-12-06', 'Sumberrejo 2009', '', 0.001, 'Ibon Suparman Lembata'),
+('DB00121', 'B0011', '2011-12-06', 'Sumberrejo 2010', '', 0.001, 'Ibon Suparman Lembata'),
+('DB00122', 'B0004', '2011-12-06', 'Bojonegoro 2007', '', 0.003, 'Lubus Len Lembata'),
+('DB00123', 'B0001', '2011-12-06', 'Sumberrejo 2009', '', 0.002, 'Lubus Len Lembata'),
+('DB00124', 'B0008', '2011-12-06', 'Sumberrejo 2009', '', 0.001, 'Thomas D.Igon Lembata'),
+('DB00125', 'B0004', '2011-12-06', 'Bojonegoro 2007', '', 0.001, 'Dinas Perkebunan Lombok'),
+('DB00126', 'B0011', '2011-12-06', 'Sumberrejo 2010', '', 0.001, 'Dinas Perkebunan Lombok'),
+('DB00127', 'B0008', '2011-12-06', 'Sumberrejo 2009', '', 0.001, 'Dinas Perkebunan Lombok'),
+('DB00128', 'B0003', '2011-12-06', 'Sumberrejo 2009', '', 0.001, 'Dinas Perkebunan Lombok'),
+('DB00129', 'B0004', '2011-12-07', 'Bojonegoro 2007', '', 0.003, 'Sengaji Umar Lembata'),
+('DB00130', 'B0008', '2011-12-09', 'Sumberrejo 2009', '', 0.020, 'PT. Gudang Garam Pasuruan'),
+('DB00131', 'B0004', '2011-12-12', 'Pasirian 2002', '', 0.500, 'Ainul Yakin Malang'),
+('DB00132', 'B0005', '2011-12-12', 'Bojonegoro 2007', '', 0.500, 'Ainul Yakin Malang'),
+('DB00133', 'B0004', '2011-12-16', 'Pasirian 2002', '', 0.500, 'Heriyanto Probolinggo'),
+('DB00134', 'B0005', '2011-12-16', 'Bojonegoro 2007', '', 0.500, 'Heriyanto Probolinggo'),
+('DB00135', 'B0008', '2012-01-25', 'Pasirian 2002', '', 0.050, 'Jumain Malang'),
+('DB00136', 'B0009', '2012-01-25', 'Sumberrejo 2006', '', 0.050, ''),
+('DB00137', 'B0008', '2012-02-21', 'Sumberrejo 2006', '', 0.150, 'Dishutbun Pamekasan'),
+('DB00138', 'B0008', '2012-02-28', 'Sumberrejo 2006', '', 9.999, 'PT. Sadhana Surabaya'),
+('DB00139', 'B0008', '2012-02-28', 'Sumberrejo 2009', '', 3.000, ''),
+('DB00140', 'B0008', '2012-02-29', 'Sumberrejo 2006', '', 0.200, 'Dishutbun Sumenep'),
+('DB00141', 'B0008', '2012-03-02', 'Pasirian 2002', '', 4.000, 'Dishutbun Sampang'),
+('DB00142', 'B0009', '2012-03-09', 'Sumberrejo 2006', '', 9.999, 'Disbun Sumenep'),
+('DB00143', 'B0011', '2012-03-09', 'Sumberrejo 2010', '', 0.010, ''),
+('DB00144', 'B0001', '2012-03-22', 'Sumberrejo 2009', '', 0.050, 'PT. Mangli Djaya Raya Jember'),
+('DB00145', 'B0002', '2012-03-22', 'Sumberrejo 2009', '', 0.050, ''),
+('DB00146', 'B0003', '2012-03-22', 'Sumberrejo 2009', '', 0.050, ''),
+('DB00147', 'B0006', '2012-03-29', 'Sumberrejo 2006', '', 0.050, 'Bidang Hutbun Sleman'),
+('DB00148', 'B0012', '2012-03-30', 'Sumberrejo 2009', '', 0.500, 'Dishutbun Kab. Soppeng'),
+('DB00149', 'B0012', '2012-03-30', 'Sumberrejo 2010', '', 0.050, ''),
+('DB00150', 'B0005', '2012-04-10', 'Bojonegoro 2007', '', 0.010, 'Disbun Lumajang'),
+('DB00151', 'B0007', '2012-04-17', 'Bojonegoro 2006', '', 0.926, 'Dishutbun Bojonegoro'),
+('DB00152', 'B0007', '2012-04-17', 'Bojonegoro 2009', '', 6.210, ''),
+('DB00153', 'B0007', '2012-04-17', 'Bojonegoro 2010', '', 2.864, ''),
+('DB00154', 'B0009', '2012-04-18', 'Sumberrejo 2006', '', 6.000, 'Moh. Wardi Sumenep'),
+('DB00155', 'B0010', '2012-04-18', 'Sumberrejo 2009', '', 9.999, ''),
+('DB00156', 'B0008', '2012-04-18', 'Pasirian 2002', '', 1.000, ''),
+('DB00157', 'B0007', '2012-04-19', 'Bojonegoro 2010', '', 0.200, 'Sri Sayekti Sukoharjo'),
+('DB00158', 'B0009', '2012-04-19', 'Sumberrejo 2006', '', 0.003, 'Dr. Dadang BPTP Jatim'),
+('DB00159', 'B0010', '2012-04-19', 'Sumberrejo 2009', '', 0.003, ''),
+('DB00160', 'B0006', '2012-04-19', 'Sumberrejo 2006', '', 0.020, 'MH. Jamaludin Magelang'),
+('DB00161', 'B0003', '2012-04-20', 'Sumberrejo 2009', '', 0.100, 'CV. Jasa Karya Malang'),
+('DB00162', 'B0008', '2012-05-24', 'Sumberrejo 2009', '', 0.030, 'Kelompok Tani Waingapu'),
+('DB00163', 'B0002', '2012-06-06', 'Sumberrejo 2009', '', 2.000, 'PT. Gudang Garam Pasuruan'),
+('DB00164', 'B0008', '2012-06-06', 'Sumberrejo 2006', '', 0.010, ''),
+('DB00165', 'B0007', '2012-10-01', 'Sumberrejo 2010', '', 5.000, 'Bambang P Dishutbun Bojonegoro'),
+('DB00166', 'B0009', '2012-12-06', 'Sumberrejo 2012', '', 0.250, 'Farra BBP2TP Jombang'),
+('DB00167', 'B0011', '2012-12-06', 'Sumberrejo 2012', '', 0.250, ''),
+('DB00168', 'B0001', '2013-01-25', 'Sumberrejo 2009', '', 0.040, 'Dadi R Dishutbun Temanggung'),
+('DB00169', 'B0002', '2013-01-25', 'Sumberrejo 2009', '', 0.060, 'Dadi R Dishutbun Temanggung'),
+('DB00170', 'B0003', '2013-01-25', 'Sumberrejo 2009', '', 0.040, 'Dadi R Dishutbun Temanggung'),
+('DB00171', 'B0008', '2013-01-30', 'Sumberrejo 2009', '', 1.000, 'Y. Octavianus Kadisbun Sumba Barat Daya'),
+('DB00172', 'B0008', '2013-01-31', 'Sumberrejo 2009', '', 5.000, 'Fatik A PT. Sampoerna Pasuruan'),
+('DB00173', 'B0009', '2013-02-18', 'Sumberrejo 2006', '', 9.999, 'M. Fajar N Dishutbun Kab. Sumenep'),
+('DB00174', 'B0010', '2013-02-18', 'Sumberrejo 2009', '', 2.000, 'M. Fajar N Dishutbun Kab. Sumenep'),
+('DB00175', 'B0008', '2013-02-21', 'Sumberrejo 2009', '', 0.600, 'Bejo Budiono, SP Dishutbun Kab. Sumenep'),
+('DB00176', 'B0008', '2013-02-25', 'Sumberrejo 2009', '', 1.500, 'M. Nur Sobah PT. IDS Surabaya'),
+('DB00177', 'B0008', '2013-03-01', 'Sumberrejo 2009', '', 1.000, 'Fatik APT. HM. Sampoerna Pasuruan'),
+('DB00178', 'B0007', '2013-03-13', 'Sumberrejo 2010', '', 2.000, 'PT. Alliance One Indonesia Klaten'),
+('DB00179', 'B0007', '2013-03-19', 'Sumberrejo 2010', '', 0.010, 'Priyono K[. Bojonegoro'),
+('DB00180', 'B0011', '2013-03-19', 'Sumberrejo 2010', '', 0.030, 'Priyono K[. Bojonegoro'),
+('DB00181', 'B0009', '2013-03-19', 'Sumberrejo 2006', '', 0.450, 'Dr. Dadang BPTP Jatim'),
+('DB00182', 'B0010', '2013-03-19', 'Sumberrejo 2009', '', 0.450, 'Dr. Dadang BPTP Jatim'),
+('DB00183', 'B0008', '2013-03-21', 'Sumberrejo 2009', '', 0.100, 'Slamet S Dishutbun Pamekasan'),
+('DB00184', 'B0006', '2013-03-25', 'Sumberrejo 2006', '', 0.250, 'KPRI Budikarti u/ Sleman'),
+('DB00185', 'B0002', '2013-03-26', 'Sumberrejo 2009', '', 0.500, 'KPRI Budikarti u/ Sumbawa'),
+('DB00186', 'B0006', '2013-03-26', 'Sumberrejo 2006', '', 0.500, 'KPRI Budikarti u/ Sumbawa'),
+('DB00187', 'B0007', '2013-03-26', 'Sumberrejo 2010', '', 0.500, 'KPRI Budikarti u/ Sumbawa'),
+('DB00188', 'B0008', '2013-03-26', 'Sumberrejo 2009', '', 0.500, 'KPRI Budikarti u/ Sumbawa'),
+('DB00189', 'B0004', '2013-04-09', 'Sumberrejo 2007', '', 0.100, 'PT. Pandu Sata Pratama Jember'),
+('DB00190', 'B0005', '2013-04-09', 'Sumberrejo 2007', '', 0.100, 'PT. Pandu Sata Pratama Jember'),
+('DB00191', 'B0007', '2013-04-09', 'Sumberrejo 2010', '', 0.100, 'PT. Pandu Sata Pratama Jember'),
+('DB00192', 'B0001', '2013-04-30', 'Sumberrejo 2009', '', 0.005, 'R. Christiyogo Dishutbun Wonosobo'),
+('DB00193', 'B0002', '2013-04-30', 'Sumberrejo 2009', '', 0.005, 'R. Christiyogo Dishutbun Wonosobo'),
+('DB00194', 'B0003', '2013-04-30', 'Sumberrejo 2009', '', 0.005, 'R. Christiyogo Dishutbun Wonosobo'),
+('DB00195', 'B0005', '2013-05-16', 'Sumberrejo 2007', '', 0.040, 'Sasotyo KanBun Lumajang'),
+('DB00196', 'B0008', '2013-05-24', 'Sumberrejo 2009', '', 0.100, 'Slamet S Dishutbun Pamekasan'),
+('DB00197', 'B0001', '2013-06-12', 'Sumberrejo 2009', '', 0.080, 'Ir. Hamdani Nuntung Disbun Prov. Sulsel'),
+('DB00198', 'B0011', '2013-09-09', 'Sumberrejo 2010', '', 0.010, 'Fikri Alyandra PT. Nusa Palapa Surabaya'),
+('DB00199', 'B0003', '2013-09-20', 'Sumberrejo 2009', '', 0.050, 'Achmad Anshor BBP2TP Surabaya'),
+('DB00200', 'B0001', '2013-11-13', 'Sumberrejo 2009', '', 0.005, 'Khaerudin Cirebon'),
+('DB00201', 'B0005', '2013-11-13', 'Sumberrejo 2007', '', 0.010, ''),
+('DB00202', 'B0008', '2013-11-13', 'Sumberrejo 2009', '', 0.020, ''),
+('DB00203', 'B0001', '2013-11-13', 'Sumberrejo 2009', '', 0.010, 'Fifin S Bandung'),
+('DB00204', 'B0002', '2013-11-13', 'Sumberrejo 2009', '', 0.010, ''),
+('DB00205', 'B0003', '2013-11-13', 'Sumberrejo 2009', '', 0.010, ''),
+('DB00206', 'B0004', '2013-11-13', 'Sumberrejo 2007', '', 0.010, ''),
+('DB00207', 'B0005', '2013-11-13', 'Sumberrejo 2007', '', 0.010, ''),
+('DB00208', 'B0007', '2013-11-13', 'Sumberrejo 2010', '', 0.010, ''),
+('DB00209', 'B0008', '2013-11-13', 'Sumberrejo 2009', '', 0.020, ''),
+('DB00210', 'B0011', '2013-11-13', 'Sumberrejo 2010', '', 0.010, ''),
+('DB00211', 'B0004', '2013-11-13', 'Sumberrejo 2007', '', 0.005, 'Aceng Tatang Tasikmalaya'),
+('DB00212', 'B0008', '2013-11-13', 'Sumberrejo 2009', '', 0.005, ''),
+('DB00213', 'B0001', '2013-11-19', 'Sumberrejo 2009', '', 0.001, 'Sunyoto Malang'),
+('DB00214', 'B0008', '2014-01-01', 'Sumberrejo 2009', '', 0.001, 'Ir. Fatkhur Rohman Pemuliaan'),
+('DB00215', 'B0004', '2014-01-13', 'Sumberrejo 2007', '', 0.050, 'Slamet Hariadi'),
+('DB00216', 'B0009', '2014-01-13', 'Sumberrejo 2006', '', 0.001, 'Suhadi, SP Kp. Karangploso'),
+('DB00217', 'B0010', '2014-01-13', 'Sumberrejo 2009', '', 0.001, ''),
+('DB00218', 'B0001', '2014-01-16', 'Sumberrejo 2009', '', 0.100, 'Indriasari PT. Pandu Sata Utama Jember'),
+('DB00219', 'B0002', '2014-01-16', 'Sumberrejo 2009', '', 0.150, ''),
+('DB00220', 'B0003', '2014-01-16', 'Sumberrejo 2009', '', 0.170, ''),
+('DB00221', 'B0002', '2014-01-22', 'Sumberrejo 2009', '', 0.200, 'Arief Raharjo'),
+('DB00222', 'B0003', '2014-01-22', 'Sumberrejo 2009', '', 0.200, 'Arief Raharjo'),
+('DB00223', 'B0002', '2014-02-04', 'Sumberrejo 2009', '', 0.010, 'Dadi R Dishutbun Temanggung'),
+('DB00224', 'B0004', '2014-02-13', 'Sumberrejo 2007', '', 0.001, 'Ir. Fatkhur Rohman Pemuliaan'),
+('DB00225', 'B0005', '2014-02-13', 'Sumberrejo 2007', '', 0.001, ''),
+('DB00226', 'B0008', '2014-02-13', 'Sumberrejo 2013', '', 0.001, ''),
+('DB00227', 'B0001', '2014-02-18', 'Sumberrejo 2009', '', 0.001, 'Ir. Sesanti Basuki Pemuliaan'),
+('DB00228', 'B0004', '2014-02-18', 'Sumberrejo 2007', '', 0.001, ''),
+('DB00229', 'B0005', '2014-02-18', 'Sumberrejo 2007', '', 0.001, ''),
+('DB00230', 'B0006', '2014-02-18', 'Sumberrejo 2006', '', 0.001, ''),
+('DB00231', 'B0007', '2014-02-18', 'Sumberrejo 2010', '', 0.001, ''),
+('DB00232', 'B0011', '2014-02-18', 'Sumberrejo 2013', '', 0.001, ''),
+('DB00233', 'B0002', '2014-02-19', 'Sumberrejo 2009', '', 0.005, 'Ir. Anik H Pemuliaan'),
+('DB00234', 'B0003', '2014-02-19', 'Sumberrejo 2009', '', 0.005, ''),
+('DB00235', 'B0006', '2014-02-19', 'Sumberrejo 2006', '', 0.005, ''),
+('DB00236', 'B0007', '2014-02-19', 'Sumberrejo 2010', '', 0.005, ''),
+('DB00237', 'B0001', '2014-03-05', 'Sumberrejo 2009', '', 9.999, 'KPRI Budikarti Malang'),
+('DB00238', 'B0002', '2014-03-05', 'Sumberrejo 2009', '', 3.000, ''),
+('DB00239', 'B0003', '2014-03-05', 'Sumberrejo 2009', '', 8.000, ''),
+('DB00240', 'B0007', '2014-03-05', 'Sumberrejo 2013', '', 9.999, ''),
+('DB00241', 'B0008', '2014-03-10', 'Sumberrejo 2009', '', 0.100, 'Karolina Disbun Kab. Sumba Barat Daya'),
+('DB00242', 'B0009', '2014-03-10', 'Sumberrejo 2013', '', 0.100, ''),
+('DB00243', 'B0011', '2014-03-10', 'Sumberrejo 2010', '', 0.100, ''),
+('DB00244', 'B0006', '2014-03-10', 'Sumberrejo 2006', '', 0.100, ''),
+('DB00245', 'B0002', '2014-03-10', 'Sumberrejo 2009', '', 0.100, ''),
+('DB00246', 'B0003', '2014-03-10', 'Sumberrejo 2009', '', 0.100, ''),
+('DB00247', 'B0008', '2014-03-10', 'Sumberrejo 2009', '', 0.150, 'Slamet Disbun Pamekasan'),
+('DB00248', 'B0008', '2014-03-10', 'Sumberrejo 2009', '', 0.100, 'Disbun Kab. Sumba Barat Daya'),
+('DB00249', 'B0009', '2014-03-10', 'Sumberrejo 2013', '', 0.100, ''),
+('DB00250', 'B0011', '2014-03-10', 'Sumberrejo 2010', '', 0.100, ''),
+('DB00251', 'B0006', '2014-03-10', 'Sumberrejo 2006', '', 0.100, ''),
+('DB00252', 'B0002', '2014-03-10', 'Sumberrejo 2009', '', 0.100, ''),
+('DB00253', 'B0003', '2014-03-10', 'Sumberrejo 2009', '', 0.100, ''),
+('DB00254', 'B0003', '2014-03-17', 'Sumberrejo 2009', '', 0.100, 'Widiang Koentjoro Dishutbun Kab. Wonosobo'),
+('DB00255', 'B0009', '2014-03-19', 'Sumberrejo 2006', '', 0.010, 'Popy Dipertahut Kkota Sulawesi'),
+('DB00256', 'B0011', '2014-03-19', 'Sumberrejo 2010', '', 0.010, ''),
+('DB00257', 'B0008', '2014-03-26', 'Sumberrejo 2009', '', 0.025, 'Hadi Prayitno Sumenep'),
+('DB00258', 'B0009', '2014-03-26', 'Sumberrejo 2013', '', 0.025, ''),
+('DB00259', 'B0008', '2014-04-02', 'Sumberrejo 2009', '', 0.001, 'Dr. Suwarso Pemuliaan'),
+('DB00260', 'B0009', '2014-04-02', 'Sumberrejo 2013', '', 0.001, ''),
+('DB00261', 'B0010', '2014-04-02', 'Sumberrejo 2009', '', 0.001, ''),
+('DB00262', 'B0004', '2014-04-11', 'Sumberrejo 2007', '', 0.050, 'Untung Bondowoso'),
+('DB00263', 'B0005', '2014-04-11', 'Sumberrejo 2007', '', 0.050, ''),
+('DB00264', 'B0008', '2014-04-17', 'Sumberrejo 2009', '', 0.100, 'KPRI Budikarti u/ Jember'),
+('DB00265', 'B0009', '2014-04-17', 'Sumberrejo 2013', '', 0.100, ''),
+('DB00266', 'B0008', '2014-04-22', 'Sumberrejo 2009', '', 0.015, 'Dr. Dadang BPTP Jatim'),
+('DB00267', 'B0009', '2014-04-22', 'Sumberrejo 2013', '', 0.030, ''),
+('DB00268', 'B0010', '2014-04-22', 'Sumberrejo 2009', '', 0.030, ''),
+('DB00269', 'B0008', '2014-05-05', 'Sumberrejo 2013', '', 0.200, 'KPRI Budikarti Malang'),
+('DB00270', 'B0012', '2014-05-08', 'Sumberrejo 2013', '', 0.005, 'Agus Yulianto Pati Jawa Tengah'),
+('DB00271', 'B0011', '2014-05-08', 'Sumberrejo 2013', '', 0.005, ''),
+('DB00272', 'B0002', '2014-05-26', 'Sumberrejo 2009', '', 0.005, 'Abdul W. BPP Kab. Sinjay Sulsel'),
+('DB00273', 'B0003', '2014-05-26', 'Sumberrejo 2009', '', 0.005, ''),
+('DB00274', 'B0008', '2014-05-26', 'Sumberrejo 2009', '', 0.005, ''),
+('DB00275', 'B0009', '2014-05-26', 'Sumberrejo 2013', '', 0.005, ''),
+('DB00276', 'B0011', '2014-05-26', 'Sumberrejo 2009', '', 0.005, ''),
+('DB00277', 'B0004', '2014-05-30', 'Sumberrejo 2007', '', 0.005, 'Ir. Sesanti Basuki Pemuliaan'),
+('DB00278', 'B0005', '2014-05-30', 'Sumberrejo 2007', '', 0.005, ''),
+('DB00279', 'B0008', '2014-06-10', 'Sumberrejo 2013', '', 0.010, 'KPRI Budikarti Malang'),
+('DB00280', 'B0001', '2014-06-10', 'Sumberrejo 2009', '', 0.010, ''),
+('DB00281', 'B0011', '2014-10-23', 'Sumberrejo 2013', '', 0.020, 'Robertus Jando NTT'),
+('DB00282', 'B0011', '2014-10-23', 'Sumberrejo 2013', '', 0.010, 'Kletus Naru NTT'),
+('DB00283', 'B0001', '2014-11-19', 'Sumberrejo 2009', '', 0.005, 'KPRI Budikarti u/ Temanggung'),
+('DB00284', 'B0002', '2014-11-19', 'Sumberrejo 2009', '', 0.003, ''),
+('DB00285', 'B0003', '2014-11-19', 'Sumberrejo 2009', '', 0.005, ''),
+('DB00286', 'B0001', '2014-11-28', 'Sumberrejo 2009', '', 0.030, 'BBP2TP Surabaya'),
+('DB00287', 'B0003', '2014-11-28', 'Sumberrejo 2009', '', 0.280, ''),
+('DB00288', 'B0004', '2014-11-28', 'Sumberrejo 2007', '', 0.030, ''),
+('DB00289', 'B0005', '2014-11-28', 'Sumberrejo 2007', '', 0.030, ''),
+('DB00290', 'B0006', '2014-11-28', 'Sumberrejo 2006', '', 0.028, ''),
+('DB00291', 'B0007', '2014-11-28', 'Sumberrejo 2013', '', 0.030, ''),
+('DB00292', 'B0008', '2014-11-28', 'Sumberrejo 2009', '', 0.028, ''),
+('DB00293', 'B0008', '2014-11-28', 'Sumberrejo 2013', '', 0.030, ''),
+('DB00294', 'B0009', '2014-11-28', 'Sumberrejo 2013', '', 0.030, ''),
+('DB00295', 'B0011', '2014-11-28', 'Sumberrejo 2010', '', 0.030, ''),
+('DB00296', 'B0011', '2014-11-28', 'Sumberrejo 2013', '', 0.030, ''),
+('DB00297', 'B0012', '2014-11-28', 'Sumberrejo 2013', '', 0.030, ''),
+('DB00298', 'B0013', '2014-11-28', 'Sumberrejo 2013', '', 0.030, ''),
+('DB00299', 'B0002', '2014-11-28', 'Sumberrejo 2014', '', 0.030, ''),
+('DB00300', 'B0003', '2014-11-28', 'Sumberrejo 2014', '', 0.030, ''),
+('DB00301', 'B0006', '2014-11-28', 'Sumberrejo 2014', '', 0.030, ''),
+('DB00302', 'B0007', '2014-11-28', 'Sumberrejo 2014', '', 0.030, ''),
+('DB00303', 'B0014', '2014-11-28', 'Sumberrejo 2014', '', 0.030, ''),
+('DB00304', 'B0001', '2014-11-28', 'Sumberrejo 2009', '', 0.020, 'BBP2TP Surabaya'),
+('DB00305', 'B0003', '2014-11-28', 'Sumberrejo 2009', '', 0.018, ''),
+('DB00306', 'B0004', '2014-11-28', 'Sumberrejo 2007', '', 0.020, ''),
+('DB00307', 'B0005', '2014-11-28', 'Sumberrejo 2007', '', 0.020, ''),
+('DB00308', 'B0006', '2014-11-28', 'Sumberrejo 2006', '', 0.018, ''),
+('DB00309', 'B0007', '2014-11-28', 'Sumberrejo 2013', '', 0.020, ''),
+('DB00310', 'B0008', '2014-11-28', 'Sumberrejo 2009', '', 0.018, ''),
+('DB00311', 'B0008', '2014-11-28', 'Sumberrejo 2013', '', 0.020, ''),
+('DB00312', 'B0009', '2014-11-28', 'Sumberrejo 2013', '', 0.020, ''),
+('DB00313', 'B0011', '2014-11-28', 'Sumberrejo 2010', '', 0.020, ''),
+('DB00314', 'B0011', '2014-11-28', 'Sumberrejo 2013', '', 0.020, ''),
+('DB00315', 'B0012', '2014-11-28', 'Sumberrejo 2013', '', 0.020, ''),
+('DB00316', 'B0013', '2014-11-28', 'Sumberrejo 2013', '', 0.020, ''),
+('DB00317', 'B0002', '2014-11-28', 'Sumberrejo 2014', '', 0.020, ''),
+('DB00318', 'B0003', '2014-11-28', 'Sumberrejo 2014', '', 0.020, ''),
+('DB00319', 'B0006', '2014-11-28', 'Sumberrejo 2014', '', 0.020, ''),
+('DB00320', 'B0007', '2014-11-28', 'Sumberrejo 2014', '', 0.020, ''),
+('DB00321', 'B0014', '2014-11-28', 'Sumberrejo 2014', '', 0.020, ''),
+('DB00322', 'B0006', '2014-12-23', 'Sumberrejo 2014', '', 0.300, ''),
+('DB00323', 'B0002', '2015-01-14', 'Sumberrejo 2014', '', 1.000, 'Dewi S Disbun Magetan'),
+('DB00324', 'B0007', '2015-01-26', 'Sumberrejo 2014', '', 0.250, 'Ir. Siwi S Pemuliaan'),
+('DB00325', 'B0011', '2015-01-27', 'Sumberrejo 2010', '', 0.010, 'M. Ikbal Sholehudin Unbraw Malang'),
+('DB00326', 'B0007', '2015-02-03', 'Sumberrejo 2014', '', 0.010, 'Mukti Budi W Malang'),
+('DB00327', 'B0007', '2015-02-03', 'Sumberrejo 2014', '', 1.000, 'KPRI Budikarti u/ Jember'),
+('DB00328', 'B0002', '2015-02-09', 'Sumberrejo 2014', '', 0.001, 'M. Sohri KP. Karangploso'),
+('DB00329', 'B0003', '2015-02-09', 'Sumberrejo 2009', '', 0.001, ''),
+('DB00330', 'B0009', '2015-02-09', 'Sumberrejo 2013', '', 0.001, ''),
+('DB00331', 'B0010', '2015-02-09', 'Sumberrejo 2009', '', 0.001, ''),
+('DB00332', 'B0001', '2015-02-12', 'Sumberrejo 2009', '', 0.020, 'Distanhutbun Temanggung'),
+('DB00333', 'B0002', '2015-02-12', 'Sumberrejo 2014', '', 0.020, ''),
+('DB00334', 'B0003', '2015-02-12', 'Sumberrejo 2009', '', 0.020, ''),
+('DB00335', 'B0002', '2015-02-12', 'Sumberrejo 2014', '', 0.020, 'Indra Purnomoadji Temanggung'),
+('DB00336', 'B0003', '2015-02-12', 'Sumberrejo 2009', '', 0.020, ''),
+('DB00337', 'B0007', '2015-02-25', 'Sumberrejo 2014', '', 0.006, 'BPPKP Tuban'),
+('DB00338', 'B0006', '2015-02-25', 'Sumberrejo 2014', '', 0.006, ''),
+('DB00339', 'B0004', '2015-02-25', 'Sumberrejo 2007', '', 0.006, ''),
+('DB00340', 'B0005', '2015-02-25', 'Sumberrejo 2007', '', 0.006, ''),
+('DB00341', 'B0002', '2015-02-25', 'Sumberrejo 2014', '', 0.006, ''),
+('DB00342', 'B0003', '2015-02-25', 'Sumberrejo 2009', '', 0.006, ''),
+('DB00343', 'B0011', '2015-02-25', 'Sumberrejo 2010', '', 0.006, ''),
+('DB00344', 'B0011', '2015-03-04', 'Sumberrejo 2013', '', 1.246, 'KPRI Budikarti u/ NTT'),
+('DB00345', 'B0006', '2015-03-04', 'Sumberrejo 2014', '', 0.800, ''),
+('DB00346', 'B0002', '2015-03-04', 'Sumberrejo 2014', '', 1.000, 'kpri Budikarti u/ Jawa Tengah'),
+('DB00347', 'B0003', '2015-03-04', 'Sumberrejo 2014', '', 1.000, ''),
+('DB00348', 'B0008', '2015-03-04', 'Sumberrejo 2013', '', 0.100, 'Slamet S Dishutbun Pamekasan'),
+('DB00349', 'B0002', '2015-03-04', 'Sumberrejo 2014', '', 0.050, 'Samsuri Pemkab Sinjai Sulawesi Selatan'),
+('DB00350', 'B0009', '2015-03-04', 'Sumberrejo 2013', '', 0.050, ''),
+('DB00351', 'B0008', '2015-03-04', 'Sumberrejo 2013', '', 2.600, 'KPRI Budikarta u/ Madura'),
+('DB00352', 'B0007', '2015-03-04', 'Sumberrejo 2014', '', 2.000, ''),
+('DB00353', 'B0012', '2015-03-05', 'Sumberrejo 2013', '', 0.001, 'Hesty M STTP Malang'),
+('DB00354', 'B0008', '2015-03-12', 'Sumberrejo 2013', '', 0.200, 'Bejo Budiono Dishutbun Sumenep'),
+('DB00355', 'B0006', '2015-03-13', 'Sumberrejo 2014', '', 0.100, 'kpri Budikarti u/ Jawa Tengah'),
+('DB00356', 'B0001', '2015-03-17', 'Sumberrejo 2009', '', 0.001, 'Wanda Yunia ITS Surabaya'),
+('DB00357', 'B0002', '2015-03-17', 'Sumberrejo 2014', '', 0.001, ''),
+('DB00358', 'B0003', '2015-03-17', 'Sumberrejo 2014', '', 0.001, ''),
+('DB00359', 'B0004', '2015-03-17', 'Sumberrejo 2007', '', 0.001, ''),
+('DB00360', 'B0005', '2015-03-17', 'Sumberrejo 2007', '', 0.001, ''),
+('DB00361', 'B0006', '2015-03-17', 'Sumberrejo 2006', '', 0.001, ''),
+('DB00362', 'B0007', '2015-03-17', 'Sumberrejo 2013', '', 0.001, ''),
+('DB00363', 'B0008', '2015-03-17', 'Sumberrejo 2009', '', 0.001, ''),
+('DB00364', 'B0009', '2015-03-17', 'Sumberrejo 2013', '', 0.001, ''),
+('DB00365', 'B0011', '2015-03-17', 'Sumberrejo 2010', '', 0.001, ''),
+('DB00366', 'B0012', '2015-03-17', 'Sumberrejo 2013', '', 0.001, ''),
+('DB00367', 'B0013', '2015-03-17', 'Sumberrejo 2013', '', 0.001, ''),
+('DB00368', 'B0014', '2015-03-17', 'Sumberrejo 2014', '', 0.001, ''),
+('DB00369', 'B0006', '2015-03-24', 'Sumberrejo 2014', '', 0.500, 'Sri Rahayu BBP2TP Surabaya'),
+('DB00370', 'B0009', '2015-03-27', 'Sumberrejo 2013', '', 9.999, 'M. Fajar CV. Emanda Sumenep'),
+('DB00371', 'B0008', '2015-03-27', 'Sumberrejo 2013', '', 2.000, 'Joni P. Pamekasan'),
+('DB00372', 'B0007', '2015-03-30', 'Sumberrejo 2014', '', 0.500, 'Ainul Yakin Bondowoso'),
+('DB00373', 'B0011', '2015-03-30', 'Sumberrejo 2010', '', 0.500, ''),
+('DB00374', 'B0013', '2015-03-30', 'Sumberrejo 2013', '', 0.500, ''),
+('DB00375', 'B0012', '2015-03-30', 'Sumberrejo 2013', '', 0.500, ''),
+('DB00376', 'B0008', '2015-04-09', 'Sumberrejo 2013', '', 5.500, 'M. Sohri Sampang'),
+('DB00377', 'B0009', '2015-04-10', 'Sumberrejo 2013', '', 0.010, 'KPRI Budikarti Malang'),
+('DB00378', 'B0008', '2015-04-16', 'Sumberrejo 2013', '', 0.003, 'Suhardi KP. Karangploso'),
+('DB00379', 'B0008', '2015-04-16', 'Sumberrejo 2013', '', 0.300, 'PT. Gudang Garam Pasuruan'),
+('DB00380', 'B0009', '2015-04-16', 'Sumberrejo 2013', '', 0.300, ''),
+('DB00381', 'B0009', '2015-04-20', 'Sumberrejo 2013', '', 0.533, 'KPRI Budikarti u/ Kudus'),
+('DB00382', 'B0006', '2015-04-21', 'Sumberrejo 2014', '', 1.000, 'kpri Budikarti u/ Jawa Tengah'),
+('DB00383', 'B0002', '2015-04-21', 'Sumberrejo 2014', '', 0.150, 'Amir S. Malang'),
+('DB00384', 'B0009', '2015-04-21', 'Sumberrejo 2013', '', 0.150, ''),
+('DB00385', 'B0009', '2015-05-04', 'Sumberrejo 2013', '', 0.500, 'PT. Bentoel Prima Malang'),
+('DB00386', 'B0007', '2015-05-04', 'Sumberrejo 2014', '', 1.000, 'Garda Nusa Pahlevi Malang'),
+('DB00387', 'B0009', '2015-05-04', 'Sumberrejo 2013', '', 0.300, 'KPRI Budikarti Malang'),
+('DB00388', 'B0003', '2015-05-21', 'Sumberrejo 2013', '', 0.010, 'Pakumpul Bali'),
+('DB00389', 'B0003', '2015-05-21', 'Sumberrejo 2013', '', 0.010, 'Nyoman Badung Bali'),
+('DB00390', 'B0003', '2015-05-21', 'Sumberrejo 2013', '', 0.010, 'Yacob Flores'),
+('DB00391', 'B0003', '2015-05-27', 'Sumberrejo 2013', '', 0.200, 'Aji Hari Malang'),
+('DB00392', 'B0007', '2015-06-03', 'Sumberrejo 2013', '', 0.100, 'Kuswadi Tuban'),
+('DB00393', 'B0001', '2015-06-08', 'Sumberrejo 2009', '', 0.020, 'BBP2TP Surabaya'),
+('DB00394', 'B0002', '2015-06-08', 'Sumberrejo 2014', '', 0.030, ''),
+('DB00395', 'B0003', '2015-06-08', 'Sumberrejo 2014', '', 0.030, ''),
+('DB00396', 'B0004', '2015-06-08', 'Sumberrejo 2007', '', 0.030, ''),
+('DB00397', 'B0005', '2015-06-08', 'Sumberrejo 2007', '', 0.050, ''),
+('DB00398', 'B0006', '2015-06-08', 'Sumberrejo 2014', '', 0.030, ''),
+('DB00399', 'B0007', '2015-06-08', 'Sumberrejo 2014', '', 0.030, ''),
+('DB00400', 'B0007', '2015-06-08', 'Sumberrejo 2013', '', 0.040, ''),
+('DB00401', 'B0008', '2015-06-08', 'Sumberrejo 2009', '', 0.007, ''),
+('DB00402', 'B0009', '2015-06-08', 'Sumberrejo 2013', '', 0.121, ''),
+('DB00403', 'B0011', '2015-06-08', 'Sumberrejo 2010', '', 0.030, ''),
+('DB00404', 'B0011', '2015-06-08', 'Sumberrejo 2013', '', 0.060, ''),
+('DB00405', 'B0012', '2015-06-08', 'Sumberrejo 2013', '', 0.072, ''),
+('DB00406', 'B0013', '2015-06-08', 'Sumberrejo 2013', '', 0.030, ''),
+('DB00407', 'B0014', '2015-06-08', 'Sumberrejo 2014', '', 0.030, ''),
+('DB00408', 'B0001', '2015-06-08', 'Sumberrejo 2009', '', 0.020, 'Laboratorium Benih'),
+('DB00409', 'B0002', '2015-06-08', 'Sumberrejo 2014', '', 0.030, ''),
+('DB00410', 'B0003', '2015-06-08', 'Sumberrejo 2014', '', 0.030, ''),
+('DB00411', 'B0004', '2015-06-08', 'Sumberrejo 2007', '', 0.030, ''),
+('DB00412', 'B0005', '2015-06-08', 'Sumberrejo 2007', '', 0.030, ''),
+('DB00413', 'B0006', '2015-06-08', 'Sumberrejo 2014', '', 0.030, ''),
+('DB00414', 'B0007', '2015-06-08', 'Sumberrejo 2014', '', 0.030, ''),
+('DB00415', 'B0007', '2015-06-08', 'Sumberrejo 2013', '', 0.030, ''),
+('DB00416', 'B0008', '2015-06-08', 'Sumberrejo 2009', '', 0.007, ''),
+('DB00417', 'B0009', '2015-06-08', 'Sumberrejo 2013', '', 0.030, ''),
+('DB00418', 'B0011', '2015-06-08', 'Sumberrejo 2010', '', 0.030, ''),
+('DB00419', 'B0011', '2015-06-08', 'Sumberrejo 2013', '', 0.030, ''),
+('DB00420', 'B0012', '2015-06-08', 'Sumberrejo 2013', '', 0.030, ''),
+('DB00421', 'B0013', '2015-06-08', 'Sumberrejo 2013', '', 0.030, ''),
+('DB00422', 'B0014', '2015-06-08', 'Sumberrejo 2014', '', 0.030, ''),
+('DB00423', 'B0007', '2015-08-10', 'Sumberrejo 2014', '', 0.500, 'KPRI Budikarti u/ Cilacap'),
+('DB00424', 'B0007', '2015-08-19', 'Sumberrejo 2014', '', 0.025, 'Widoyo Boyolali'),
+('DB00425', 'B0007', '2015-08-19', 'Sumberrejo 2014', '', 0.025, 'Jumari Boyolali'),
+('DB00426', 'B0007', '2015-08-27', 'Sumberrejo 2014', '', 0.060, 'Suwarno Sleman'),
+('DB00427', 'B0006', '2015-08-27', 'Sumberrejo 2014', '', 0.015, ''),
+('DB00428', 'B0007', '2015-08-27', 'Sumberrejo 2013', '', 0.011, 'Distanhut Sleman'),
+('DB00429', 'B0007', '2015-08-27', 'Sumberrejo 2014', '', 0.009, ''),
+('DB00430', 'B0006', '2015-08-27', 'Sumberrejo 2014', '', 0.790, ''),
+('DB00431', 'B0008', '2015-09-02', 'Sumberrejo 2009', '', 0.020, 'Wifridus Kupang NTT'),
+('DB00432', 'B0002', '2015-09-21', 'Sumberrejo 2014', '', 0.010, 'Dadi Riswanto Temanggung'),
+('DB00433', 'B0003', '2015-09-21', 'Sumberrejo 2014', '', 0.010, ''),
+('DB00434', 'B0004', '2015-10-16', 'Sumberrejo 2007', '', 0.030, 'Saban Distanhut Kab. NTT'),
+('DB00435', 'B0002', '2015-11-13', 'Sumberrejo 2014', '', 3.000, 'Ahmad Dishutbun Sinjai'),
+('DB00436', 'B0011', '2015-11-24', 'Sumberrejo 2010', '', 0.001, 'Ir. Sadta Yoga KP. Sumberrejo'),
+('DB00437', 'B0007', '2015-11-24', 'Sumberrejo 2014', '', 0.001, ''),
+('DB00438', 'B0002', '2015-11-25', 'Sumberrejo 2014', '', 0.500, 'Jumari Wonosobo'),
+('DB00439', 'B0003', '2015-11-25', 'Sumberrejo 2014', '', 1.000, ''),
+('DB00440', 'B0009', '2015-12-22', 'Sumberrejo 2013', '', 0.001, 'Heri Istiana KP. Karangploso'),
+('DB00441', 'B0003', '2015-12-22', 'Sumberrejo 2010', '', 0.001, ''),
+('DB00442', 'B0011', '2015-12-22', 'Sumberrejo 2010', '', 0.001, ''),
+('DB00443', 'B0003', '2016-01-28', 'Sumberrejo 2014', '', 0.250, 'Agus S. Disbun Ungaran'),
+('DB00444', 'B0006', '2016-01-28', 'Sumberrejo 2014', '', 0.250, ''),
+('DB00445', 'B0001', '2016-01-29', 'Sumberrejo 2009', '', 0.040, 'BBP2TP Surabaya'),
+('DB00446', 'B0002', '2016-01-29', 'Sumberrejo 2014', '', 0.040, ''),
+('DB00447', 'B0003', '2016-01-29', 'Sumberrejo 2014', '', 0.040, ''),
+('DB00448', 'B0004', '2016-01-29', 'Sumberrejo 2007', '', 0.040, ''),
+('DB00449', 'B0005', '2016-01-29', 'Sumberrejo 2007', '', 0.040, ''),
+('DB00450', 'B0006', '2016-01-29', 'Sumberrejo 2014', '', 0.040, ''),
+('DB00451', 'B0007', '2016-01-29', 'Sumberrejo 2014', '', 0.040, ''),
+('DB00452', 'B0009', '2016-01-29', 'Sumberrejo 2013', '', 0.060, ''),
+('DB00453', 'B0011', '2016-01-29', 'Sumberrejo 2010', '', 0.040, ''),
+('DB00454', 'B0011', '2016-01-29', 'Sumberrejo 2013', '', 0.060, ''),
+('DB00455', 'B0012', '2016-01-29', 'Sumberrejo 2013', '', 0.040, ''),
+('DB00456', 'B0013', '2016-01-29', 'Sumberrejo 2013', '', 0.080, ''),
+('DB00457', 'B0014', '2016-01-29', 'Sumberrejo 2014', '', 0.040, ''),
+('DB00458', 'B0001', '2016-01-29', 'Sumberrejo 2009', '', 0.010, 'Laboratorium Benih'),
+('DB00459', 'B0002', '2016-01-29', 'Sumberrejo 2014', '', 0.010, ''),
+('DB00460', 'B0003', '2016-01-29', 'Sumberrejo 2014', '', 0.010, ''),
+('DB00461', 'B0004', '2016-01-29', 'Sumberrejo 2007', '', 0.010, ''),
+('DB00462', 'B0005', '2016-01-29', 'Sumberrejo 2007', '', 0.010, ''),
+('DB00463', 'B0006', '2016-01-29', 'Sumberrejo 2014', '', 0.010, ''),
+('DB00464', 'B0007', '2016-01-29', 'Sumberrejo 2014', '', 0.010, ''),
+('DB00465', 'B0009', '2016-01-29', 'Sumberrejo 2013', '', 0.010, ''),
+('DB00466', 'B0011', '2016-01-29', 'Sumberrejo 2010', '', 0.010, ''),
+('DB00467', 'B0011', '2016-01-29', 'Sumberrejo 2013', '', 0.010, ''),
+('DB00468', 'B0012', '2016-01-29', 'Sumberrejo 2013', '', 0.010, ''),
+('DB00469', 'B0013', '2016-01-29', 'Sumberrejo 2013', '', 0.010, ''),
+('DB00470', 'B0014', '2016-01-29', 'Sumberrejo 2014', '', 0.010, ''),
+('DB00471', 'B0006', '2016-02-15', 'Sumberrejo 2014', '', 0.500, 'KPRI Budikarti u/ PT.Bentoel'),
+('DB00472', 'B0007', '2016-02-18', 'Sumberrejo 2014', '', 1.000, 'PT. Pandu Sata Jember'),
+('DB00473', 'B0009', '2018-02-25', 'Sumberrejo 2013', '', 0.001, 'Miladiyatul Malang'),
+('DB00474', 'B0007', '2018-02-26', 'Sumberrejo 2014', '', 2.500, 'Rohimad PT. AOI Surabaya'),
+('DB00475', 'B0009', '2016-03-04', 'Sumberrejo 2013', '', 0.300, 'Dishutbun Sumenep'),
+('DB00476', 'B0009', '2016-03-07', 'Sumberrejo 2013', '', 0.100, 'PT. Bentoel Grup Malang'),
+('DB00477', 'B0011', '2016-03-24', 'Sumberrejo 2010', '', 0.317, 'KPRI Budikarti u/ PT.Bentoel'),
+('DB00478', 'B0011', '2016-03-24', 'Sumberrejo 2013', '', 1.063, ''),
+('DB00479', 'B0006', '2016-03-24', 'Sumberrejo 2006', '', 0.021, ''),
+('DB00480', 'B0006', '2016-03-24', 'Sumberrejo 2014', '', 0.669, ''),
+('DB00481', 'B0001', '2016-03-24', 'Sumberrejo 2009', '', 0.056, 'KPRI Budikarti u/ NTT'),
+('DB00482', 'B0011', '2016-03-24', 'Sumberrejo 2013', '', 3.200, ''),
+('DB00483', 'B0007', '2016-03-28', 'Sumberrejo 2014', '', 2.000, 'KPRI Budikarti u/ Tuban'),
+('DB00484', 'B0002', '2016-03-30', 'Sumberrejo 2014', '', 0.100, 'PT. Gudang Garam Pasuruan'),
+('DB00485', 'B0007', '2016-04-01', 'Sumberrejo 2014', '', 0.500, 'KPRI Budikarti u/ Tuban'),
+('DB00486', 'B0011', '2016-04-05', 'Sumberrejo 2013', '', 2.000, 'Ahmad Afandi Bojonegoro'),
+('DB00487', 'B0003', '2016-04-06', 'Sumberrejo 2014', '', 2.000, 'Jumari Wonosobo'),
+('DB00488', 'B0009', '2016-04-06', 'Sumberrejo 2013', '', 3.000, 'Hadi P. Dishutbun Sumenep'),
+('DB00489', 'B0007', '2016-04-06', 'Sumberrejo 2014', '', 0.001, 'Impron KP. Karangploso'),
+('DB00490', 'B0007', '2016-04-11', 'Sumberrejo 2014', '', 1.000, 'Suwandi Tuban'),
+('DB00491', 'B0003', '2016-04-13', 'Sumberrejo 2014', '', 0.030, 'Bagus Sungkono Slawi'),
+('DB00492', 'B0009', '2016-04-13', 'Sumberrejo 2013', '', 0.060, 'Supriyono Tuban'),
+('DB00493', 'B0012', '2016-04-19', 'Sumberrejo 2013', '', 1.000, 'CV. Megah Raya Lamongn'),
+('DB00494', 'B0007', '2016-04-21', 'Sumberrejo 2014', '', 3.000, 'KPRI Budikarti u/ Tuban'),
+('DB00495', 'B0012', '2016-04-21', 'Sumberrejo 2013', '', 0.100, 'Susyanto Lampung'),
+('DB00496', 'B0011', '2016-04-21', 'Sumberrejo 2013', '', 0.100, ''),
+('DB00497', 'B0002', '2016-05-13', 'Sumberrejo 2014', '', 0.020, 'Bappeda Temanggung'),
+('DB00498', 'B0004', '2016-05-16', 'Sumberrejo 2007', '', 0.750, 'Syamsul Bachri Malang'),
+('DB00499', 'B0005', '2016-05-16', 'Sumberrejo 2007', '', 0.750, ''),
+('DB00500', 'B0011', '2016-05-16', 'Sumberrejo 2013', '', 0.050, ''),
+('DB00501', 'B0007', '2016-05-19', 'Sumberrejo 2014', '', 2.000, 'KPRI Budikarta u/ Tuban'),
+('DB00502', 'B0007', '2016-05-27', 'Sumberrejo 2014', '', 2.000, 'KPRI Budikarta u/ Cilacap'),
+('DB00503', 'B0009', '2016-06-01', 'Sumberrejo 2013', '', 0.050, 'Kel. Tani Maysen'),
+('DB00504', 'B0006', '2016-06-02', 'Sumberrejo 2014', '', 0.030, 'Kel. Tani Mekar Sleman'),
+('DB00505', 'B0007', '2016-06-02', 'Sumberrejo 2014', '', 0.030, ''),
+('DB00506', 'B0012', '2016-07-27', 'Sumberrejo 2013', '', 0.030, 'Syaiful Malang'),
+('DB00507', 'B0007', '2016-08-01', 'Sumberrejo 2014', '', 0.400, 'BBP2TP Surabaya'),
+('DB00508', 'B0002', '2016-08-03', 'Sumberrejo 2014', '', 0.300, 'kpri Budikarti u/ Padang'),
+('DB00509', 'B0011', '2016-08-05', 'Sumberrejo 2013', '', 0.010, 'Andri Kurniawan Gresik'),
+('DB00510', 'B0009', '2016-08-05', 'Sumberrejo 2013', '', 0.010, ''),
+('DB00511', 'B0004', '2016-08-24', 'Sumberrejo 2007', '', 0.005, 'PT. KT & G Surabaya'),
+('DB00512', 'B0005', '2016-08-24', 'Sumberrejo 2007', '', 0.005, ''),
+('DB00513', 'B0003', '2016-08-26', 'Sumberrejo 2014', '', 1.000, 'BBP2TP Surabaya'),
+('DB00514', 'B0003', '2018-01-04', 'Sumberrejo 2014', 'Dasar', 0.010, 'Papua'),
+('DB00515', 'B0009', '2018-01-04', 'Sumberrejo 2014', 'Dasar', 0.010, ''),
+('DB00516', 'B0011', '2018-01-04', 'Sumberrejo 2012', 'Dasar', 0.100, 'PT. MUTB Medan'),
+('DB00517', 'B0014', '2018-01-04', 'Sumberrejo 2014', 'Dasar', 0.100, ''),
+('DB00518', 'B0002', '2018-01-16', 'Sumberrejo 2014', 'Dasar', 1.000, 'PT. Djarum Kudus'),
+('DB00519', 'B0004', '2018-01-26', 'Sumberrejo 2017', 'Dasar', 1.000, 'Lampung'),
+('DB00520', 'B0006', '2018-01-30', 'Sumberrejo 2014', 'Dasar', 2.000, 'Anderias Bulu SBD NTT'),
+('DB00521', 'B0013', '2018-01-30', 'Sumberrejo 2013', 'Dasar', 2.000, ''),
+('DB00522', 'B0009', '2018-02-12', 'Sumberrejo 2013', 'Dasar', 0.500, 'PT. AOI Lumajang'),
+('DB00523', 'B0005', '2018-02-12', 'Sumberrejo 2007', 'Dasar', 3.000, ''),
+('DB00524', 'B0007', '2018-02-12', 'Sumberrejo 2014', 'Dasar', 5.000, ''),
+('DB00525', 'B0014', '2018-02-12', 'Sumberrejo 2014', 'Dasar', 6.777, ''),
+('DB00526', 'B0007', '2018-02-14', 'Sumberrejo 2014', 'Dasar', 0.200, 'CV. Restu Sejati Semarang'),
+('DB00527', 'B0007', '2018-02-15', 'Sumberrejo 2014', 'Dasar', 1.400, 'PT. Pandu Sata Utama Jember'),
+('DB00528', 'B0002', '2018-02-19', 'Sumberrejo 2014', 'Dasar', 0.450, 'UD. Peni Yogyakarta'),
+('DB00529', 'B0002', '2018-02-19', 'Sumberrejo 2014', 'Dasar', 0.100, 'CV. Restu Sejati Semarang'),
+('DB00530', 'B0003', '2018-02-19', 'Sumberrejo 2014', 'Dasar', 0.100, ''),
+('DB00531', 'B0004', '2018-03-15', 'Sumberrejo 2007', 'Dasar', 0.100, 'Seno PT. Sampoerna Pasuruan'),
+('DB00532', 'B0005', '2018-03-15', 'Sumberrejo 2007', 'Dasar', 0.100, ''),
+('DB00533', 'B0013', '2018-03-18', 'Sumberrejo 2013', 'Dasar', 0.250, 'KPRI Budikarti Malang'),
+('DB00534', 'B0006', '2018-03-18', 'Sumberrejo 2014', 'Dasar', 0.500, ''),
+('DB00535', 'B0013', '2018-04-04', 'Sumberrejo 2013', 'Dasar', 0.182, 'Hariyanto Lumajang'),
+('DB00536', 'B0006', '2018-04-04', 'Sumberrejo 2014', 'Dasar', 0.750, ''),
+('DB00537', 'B0004', '2018-04-04', 'Sumberrejo 2007', 'Dasar', 0.935, ''),
+('DB00538', 'B0013', '2018-04-06', 'Sumberrejo 2013', 'Dasar', 3.500, 'PT. Sampoerna Pasuruan'),
+('DB00539', 'B0002', '2018-04-20', 'Sumberrejo 2014', 'Dasar', 0.250, 'Iskandar Bulukumba Sulses'),
+('DB00540', 'B0005', '2018-04-23', 'Sumberrejo 2007', 'Dasar', 1.000, 'PT. AOI Jember'),
+('DB00541', 'B0005', '2018-04-24', 'Sumberrejo 2007', 'Dasar', 0.200, 'Slamet Hidayat Disbun Jember'),
+('DB00542', 'B0009', '2018-05-09', 'Sumberrejo 2013', 'Dasar', 0.080, 'Eny Distan Gresik'),
+('DB00543', 'B0009', '2018-06-04', 'Sumberrejo 2013', 'Dasar', 0.350, 'Wahyudin Disbun Prov. Sulsel');
+
+-- --------------------------------------------------------
+
+--
+>>>>>>> 4873309b36ce0c6ac462d1e9cd078935572a67d2
 -- Table structure for table `gambar_leaflet`
 --
 
@@ -1530,13 +2207,19 @@ DELIMITER ;
 CREATE TABLE `teknologi_budidaya` (
   `id_teknologi_budidaya` char(7) NOT NULL,
   `jenis_teknologi_budidaya` varchar(255) NOT NULL,
+<<<<<<< HEAD
   `deskripsi` text NOT NULL
+=======
+  `deskripsi` text NOT NULL,
+  `gambar_tekno` varchar(100) NOT NULL
+>>>>>>> 4873309b36ce0c6ac462d1e9cd078935572a67d2
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `teknologi_budidaya`
 --
 
+<<<<<<< HEAD
 INSERT INTO `teknologi_budidaya` (`id_teknologi_budidaya`, `jenis_teknologi_budidaya`, `deskripsi`) VALUES
 ('TBD0001', 'Penangkaran benih', ''),
 ('TBD0002', 'Pesemaian', ''),
@@ -1547,6 +2230,18 @@ INSERT INTO `teknologi_budidaya` (`id_teknologi_budidaya`, `jenis_teknologi_budi
 ('TBD0007', 'Panen dan pasca panen', ''),
 ('TBD0008', 'Kesesuaian lahan', ''),
 ('TBD0009', 'Budidaya tembakau cerutu', '');
+=======
+INSERT INTO `teknologi_budidaya` (`id_teknologi_budidaya`, `jenis_teknologi_budidaya`, `deskripsi`, `gambar_tekno`) VALUES
+('TBD0001', 'Penangkaran benih', '', 'tembakau.jpg'),
+('TBD0002', 'Pesemaian', '', 'tembakau.jpg'),
+('TBD0003', 'Pemupukan', '', 'tembakau.jpg'),
+('TBD0004', 'Pemupukan bebas chlor', '', 'tembakau.jpg'),
+('TBD0005', 'Pengendalian penyakit', '', 'tembakau.jpg'),
+('TBD0006', 'Pengendalian hama', '', 'tembakau.jpg'),
+('TBD0007', 'Panen dan pasca panen', '', 'tembakau.jpg'),
+('TBD0008', 'Kesesuaian lahan', '', 'tembakau.jpg'),
+('TBD0009', 'Budidaya tembakau cerutu', '', 'tembakau.jpg');
+>>>>>>> 4873309b36ce0c6ac462d1e9cd078935572a67d2
 
 --
 -- Triggers `teknologi_budidaya`
@@ -1648,12 +2343,30 @@ DELIMITER ;
 --
 
 --
+<<<<<<< HEAD
+=======
+-- Indexes for table `agribisnis`
+--
+ALTER TABLE `agribisnis`
+  ADD PRIMARY KEY (`id_agribisnis`);
+
+--
+>>>>>>> 4873309b36ce0c6ac462d1e9cd078935572a67d2
 -- Indexes for table `atribut`
 --
 ALTER TABLE `atribut`
   ADD PRIMARY KEY (`id_atribut`);
 
 --
+<<<<<<< HEAD
+=======
+-- Indexes for table `benih`
+--
+ALTER TABLE `benih`
+  ADD PRIMARY KEY (`id_benih`);
+
+--
+>>>>>>> 4873309b36ce0c6ac462d1e9cd078935572a67d2
 -- Indexes for table `benih_varietas`
 --
 ALTER TABLE `benih_varietas`
@@ -1675,6 +2388,16 @@ ALTER TABLE `detail_deskripsi`
   ADD KEY `id_atribut` (`id_atribut`);
 
 --
+<<<<<<< HEAD
+=======
+-- Indexes for table `distribusi_benih`
+--
+ALTER TABLE `distribusi_benih`
+  ADD PRIMARY KEY (`id_distribusi`),
+  ADD KEY `id_benih` (`id_benih`);
+
+--
+>>>>>>> 4873309b36ce0c6ac462d1e9cd078935572a67d2
 -- Indexes for table `gambar_leaflet`
 --
 ALTER TABLE `gambar_leaflet`
@@ -1723,6 +2446,15 @@ ALTER TABLE `detail_deskripsi`
   ADD CONSTRAINT `detail_deskripsi_ibfk_2` FOREIGN KEY (`id_atribut`) REFERENCES `atribut` (`id_atribut`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
+<<<<<<< HEAD
+=======
+-- Constraints for table `distribusi_benih`
+--
+ALTER TABLE `distribusi_benih`
+  ADD CONSTRAINT `distribusi_benih_ibfk_1` FOREIGN KEY (`id_benih`) REFERENCES `benih` (`id_benih`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+>>>>>>> 4873309b36ce0c6ac462d1e9cd078935572a67d2
 -- Constraints for table `gambar_leaflet`
 --
 ALTER TABLE `gambar_leaflet`

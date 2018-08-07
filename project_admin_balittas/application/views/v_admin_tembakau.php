@@ -155,7 +155,7 @@
                                     $nama = $row['nama_varietas'];
                                     $gmbr = $row['file_gambar'];
                                     $sk = $row['file_SK'];
-                                    $tgl = $row['tanggal_diterbitkan'];
+                                    $tgl = $row['tanggal_pelepasan'];
                                     $nar = $row['narasi'];
 
                                                                                             
@@ -186,7 +186,7 @@
                                         <button class="btn btn-warning">Spesifikasi</button>
                                     </a>
                                 </td>       
-                                <td><?php echo "$row[tanggal_diterbitkan]"; ?></td>                         
+                                <td><?php echo "$row[tanggal_pelepasan]"; ?></td>                         
                                 <td><?php echo "$row[file_gambar]"; ?></td>
                                 <td><?php echo "$row[file_SK]"; ?></td>
                                 <td><?php echo "Tanggal Saiki"; ?></td>
@@ -531,7 +531,7 @@
                                       <td class="text-center"></td>
                                   </tr>
                               </tbody>
-                              <form method="post" action="<?php base_url('c_data/tambahVarietas') ?>"><input hidden name="temp" id="temp"></form>
+                              <form method="post" action="<?php base_url('c_data/tambahVarietas') ?>"><input hidden name="temp" id="temp" value="5"></form>
                               <tfoot>
                                 <tr>
                                   <td></td>

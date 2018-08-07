@@ -30,10 +30,11 @@ Class C_data extends CI_Controller{
 
 		date_default_timezone_set('Asia/Jakarta');
         $tgl = date('Y-m-d'); 
-        $wkt = date('H:i');		
+        $wkt = date('H:i:s');		
 
 		$namaVarietas = $this->input->post('namaVarietas');		
 		$deskripsi = $this->input->post('deskripsi');
+		$tglPelepasan = $this->input->post('tanggalPelepasan');
 
 		// upload gambar
 		$targetpathgmbr = "tembakau/varietas/";
@@ -42,7 +43,7 @@ Class C_data extends CI_Controller{
 		$targetpathsk = $targetpathsk.basename($_FILES['sk']['name']);
 
 		if(move_uploaded_file($_FILES['gambar']['tmp_name'],$targetpathgmbr)&&move_uploaded_file($_FILES['sk']['tmp_name'],$targetpathsk)) {      							
-			$this->m_tembakau->add_varietas($namaVarietas,$tgl,$_FILES['sk']['name'],$_FILES['gambar']['name']);
+			$this->m_tembakau->add_varietas($namaVarietas,$tglPelepasan,$tgl,$wkt,$_FILES['sk']['name'],$_FILES['gambar']['name']);
 		// 
 			$this->m_tembakau->add_deskripsi_varietas($deskripsi);
 			for ($i=0; $i <$this->input->post('temp') ; $i++) { 

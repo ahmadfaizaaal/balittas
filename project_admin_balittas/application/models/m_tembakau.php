@@ -3,7 +3,7 @@
 // VARIETAS
 		public function get_varietas(){
 			$db2 = $this->load->database('dB2',TRUE);
-			$sql = $db2->query("SELECT v.id_varietas,v.nama_varietas, dsv.narasi, v.tanggal_diterbitkan,v.file_SK, v.file_gambar
+			$sql = $db2->query("SELECT v.id_varietas,v.nama_varietas, dsv.narasi, v.tanggal_pelepasan,v.file_SK, v.file_gambar
 								FROM varietas v
 								JOIN deskripsi_varietas dsv ON v.id_varietas = dsv.id_varietas");
 			return $sql->result_array();
@@ -22,9 +22,9 @@
 			$sql = $db2->query("SELECT file_SK, file_gambar FROM varietas WHERE id_varietas = \"$id\"");
 			return $sql->result();
 		}
-		public function add_varietas($namaVarietas,$tgl,$sk,$gmbr){
+		public function add_varietas($namaVarietas,$tglPelepasan, $tglUpload, $wktUpload, $sk,$gmbr){
 			$db2 = $this->load->database('dB2',TRUE);
-			$db2->query("INSERT INTO varietas (id_varietas, nama_varietas, tanggal_diterbitkan, file_SK, file_gambar) VALUES (\"\",\"$namaVarietas\",\"$tgl\",\"$sk\",\"$gmbr\")");
+			$db2->query("INSERT INTO varietas (id_varietas, nama_varietas, tanggal_pelepasan, tanggal_upload, waktu_upload, file_SK, file_gambar) VALUES (\"\",\"$namaVarietas\",\"$tglPelepasan\",\"$tglUpload\",\"$wktUpload\",\"$sk\",\"$gmbr\")");
 		}
 		public function add_deskripsi_varietas($des){
 			$db2 = $this->load->database('dB2',TRUE);
@@ -41,20 +41,20 @@
 
 		public function updateVarietas($id,$namaVar,$tgl,$sk,$gmbr){
 			$db2 = $this->load->database('dB2',TRUE);
-			$db2->query("UPDATE varietas SET `nama_varietas`= \"$namaVar\",`tanggal_diterbitkan`= \"$tgl\",`file_SK`=\"$sk\",`file_gambar`= \"$gmbr\" WHERE `id_varietas` = \"$id\"");
+			$db2->query("UPDATE varietas SET `nama_varietas`= \"$namaVar\",`tanggal_pelepasan`= \"$tgl\",`file_SK`=\"$sk\",`file_gambar`= \"$gmbr\" WHERE `id_varietas` = \"$id\"");
 		}
 		// alternatif
 		public function updateVarietasKecGmbr($id,$namaVar,$tgl,$sk){
 			$db2 = $this->load->database('dB2',TRUE);
-			$db2->query("UPDATE varietas SET `nama_varietas`= \"$namaVar\",`tanggal_diterbitkan`= \"$tgl\",`file_SK`=\"$sk\" WHERE `id_varietas` = \"$id\"");
+			$db2->query("UPDATE varietas SET `nama_varietas`= \"$namaVar\",`tanggal_pelepasan`= \"$tgl\",`file_SK`=\"$sk\" WHERE `id_varietas` = \"$id\"");
 		}
 		public function updateVarietasKecSK($id,$namaVar,$tgl,$gmbr){
 			$db2 = $this->load->database('dB2',TRUE);
-			$db2->query("UPDATE varietas SET `nama_varietas`= \"$namaVar\",`tanggal_diterbitkan`= \"$tgl\",`file_gambar`= \"$gmbr\" WHERE `id_varietas` = \"$id\"");
+			$db2->query("UPDATE varietas SET `nama_varietas`= \"$namaVar\",`tanggal_pelepasan`= \"$tgl\",`file_gambar`= \"$gmbr\" WHERE `id_varietas` = \"$id\"");
 		}
 		public function updateVarietasTanpaFile($id,$namaVar,$tgl){
 			$db2 = $this->load->database('dB2',TRUE);
-			$db2->query("UPDATE varietas SET `nama_varietas`= \"$namaVar\",`tanggal_diterbitkan`= \"$tgl\" WHERE `id_varietas` = \"$id\"");
+			$db2->query("UPDATE varietas SET `nama_varietas`= \"$namaVar\",`tanggal_pelepasan`= \"$tgl\" WHERE `id_varietas` = \"$id\"");
 		}
 		//
 		public function updateDesVarietas($id,$des){

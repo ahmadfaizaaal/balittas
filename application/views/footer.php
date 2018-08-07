@@ -30,7 +30,8 @@
 										<p style="margin-left: 7px;margin-top: 5px;">Balai Penelitian Tanaman Pemanis dan Serat</p>
 									</div>
 								</div>-->
-								<img src="<?php echo base_url() ?>item img/logoBalittas2.png" style="width: 110%;margin:-27px 0px -8px -32px;">				
+								<!-- <img src="<?php //echo base_url() ?>item img/logoBalittas2.png" style="width: 110%;margin:-27px 0px -8px -32px;"> -->
+								<img src="<?php echo base_url() ?>item img/logobalittas.png" style="width: 110%;margin: -10px 0px 0px -32px;">				
 								<table>
 									<tbody>
 										<tr>
@@ -42,7 +43,7 @@
 											<td>balittas@litbang.pertanian.go.id</td>
 										</tr>
 										<tr>
-											<td class="glyphicon glyphicon-envelope">&nbsp</td>
+											<td>&nbsp</td>
 											<td>balittas.malang@gmail.com</td>
 										</tr>
 										<tr>
@@ -112,22 +113,22 @@
 									<hr style="margin-top: 0px; margin-bottom: 13px; border-color: #fece00;">
 									<div class="row">
 										<div class="col-xs-3 col-sm-3 col-lg-3" style="margin: 0px -7px 9px 0px;">
-											<a href="">
+											<a href="https://web.facebook.com/balittas.malang" target="blank">
 												<img src="<?php echo base_url() ?>item img/fbb.png" class="img-rounded" alt="Cinque Terre" width="50" height="50">
 											</a>
 										</div>
 										<div class="col-xs-3 col-sm-3 col-lg-3" style="margin: 0px -7px 9px 0px;">
-											<a href="">
+											<a href="https://twitter.com/BalittasMalang" target="blank">
 												<img src="<?php echo base_url() ?>item img/twitterBig.png" class="img-rounded" alt="Cinque Terre" width="50" height="50">
 											</a>
 										</div>
 										<div class="col-xs-3 col-sm-3 col-lg-3" style="margin: 0px -7px 9px 0px;">
-											<a href="">
+											<a href="https://www.youtube.com/channel/UCiYhtpYmb_SWaIJMarhejag/featured" target="blank">
 												<img src="<?php echo base_url() ?>item img/youtube.png" class="img-rounded" alt="Cinque Terre" width="50" height="50">
 											</a>
 										</div>
 										<div class="col-xs-3 col-sm-3 col-lg-3" style="margin: -3px -7px 9px 0px;">
-											<a href="">
+											<a href="https://www.instagram.com/balittas_malang/" target="blank">
 												<img src="<?php echo base_url() ?>item img/insta.png" class="img-rounded" alt="Cinque Terre" width="58" height="auto">
 											</a>
 										</div>

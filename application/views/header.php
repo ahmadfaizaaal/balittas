@@ -28,7 +28,8 @@
 			<nav class="navbar navbar-inverse navbar-fixed-top navbarHover">
 				<div class="container-fluid">
 				    <div class="navbar-header" style="margin-top: 5px; margin-bottom: 3px;">						    
-				      <a href="<?php echo base_url() ?>"><img src="<?php echo base_url() ?>item img/logoBalittas2.png" style="width:280px;margin-top: -18px;margin-bottom: -6px;margin-left: 5px;"></a>
+				      <!-- <a href="<?php //echo base_url() ?>"><img src="<?php //echo base_url() ?>item img/logoBalittas2.png" style="width:280px;margin-top: -18px;margin-bottom: -6px;margin-left: 5px;"></a> -->
+				      <a href="<?php echo base_url() ?>"><img src="<?php echo base_url() ?>item img/logobalittas.png" style="width:280px; margin-left: 5px;"></a>
 				      <button type="botton" class="navbar-toggle" data-toggle="collapse" data-target="#main" style="margin-top: 10px;">
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
@@ -42,15 +43,15 @@
 							  	<div class="dropbtnHeader" style="font-family: Minion Pro">Jenis Tembakau <span class="caret"></div>
 							  	<div class="dropdownHeader-content" style="margin: 0px 0px 0px -30px;">
 								  	<div class="container-fluid">
-								  		<a href="<?php echo base_url() ?>varietas/jenistembakau/asalusul" style="margin-top: 10px;">Menurut Asal Usul</a>
+								  		<a href="<?php echo base_url() ?>varietas/jenistembakau/asalusul" style="margin-top: 10px;">Berdasarkan Asal Usul</a>
 								  		<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
-							          	<a href="<?php echo base_url() ?>varietas/jenisKegunaan">Kegunaan</a>
+							          	<a href="<?php echo base_url() ?>varietas/jenisKegunaan">Berdasarkan Kegunaan</a>
 							          	<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
-							          	<a href="<?php echo base_url() ?>varietas/jenisWaktu">Waktu Tanam</a>
+							          	<a href="<?php echo base_url() ?>varietas/jenisWaktu">Berdasarkan Waktu Tanam</a>
 							          	<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
-							          	<a href="<?php echo base_url() ?>varietas/jenistembakau/daerahpengembangan">Daerah Pengembangan</a>
+							          	<a href="<?php echo base_url() ?>varietas/jenistembakau/daerahpengembangan">Berdasarkan Daerah Pengembangan</a>
 							          	<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
-							          	<a href="<?php echo base_url() ?>varietas/jenisProsesing" style="margin-bottom: 8px;">Prosesing</a>							          	
+							          	<a href="<?php echo base_url() ?>varietas/jenisProsesing" style="margin-bottom: 8px;">Berdasarkan Prosesing</a>							          	
 								  	</div>							  	
 							  	</div>
 							</div>
@@ -58,7 +59,7 @@
 							  	<div class="dropbtnHeader" style="font-family: Minion Pro">Produk <span class="caret"></div>
 							  	<div class="dropdownHeader-content" style="margin: 0px 0px 0px -178px;">
 								  	<div class="container-fluid">	  		
-							          	<a href="<?php echo base_url() ?>produk/benih" style="margin-top: 10px;">Bernih</a>
+							          	<a href="<?php echo base_url() ?>produk/benih" style="margin-top: 10px;">Benih</a>
 								  		<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
 							          	<a href="<?php echo base_url() ?>produk/produk2">Alat dan Mesin</a>
 							          	<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">

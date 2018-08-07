@@ -477,7 +477,17 @@
                         </div>
                          <div class="form-group">
                             <label>Tanggal Pelepasan</label>
-                            <input type="text" name="tanggalPelepasan" class="form-control" placeholder="ex : 2018/07/27" required>
+                            <!-- <div class="row">
+                                <div class="col-xs-2 col-sm-2 col-md-2"> -->
+                                    <input type="text" name="tanggalPelepasan" class="form-control" placeholder="ex : 2018/07/27" required>
+                                <!-- </div>
+                                <div class="col-xs-6 col-sm-6 col-md-6">
+                                    <input type="text" name="bulanPelepasan" class="form-control" placeholder="ex : 2018/07/27" required>
+                                </div>
+                                <div class="col-xs-4 col-sm-4 col-md-4">
+                                    <input type="text" name="tahunPelepasan" class="form-control" placeholder="ex : 2018/07/27" required>
+                                </div>
+                            </div> -->
                         </div>
                         <div class="form-group">
                             <label>Deskripsi</label>
@@ -701,7 +711,7 @@
                             <div class="text-center">                                
                                 <label>Spesifikasi</label>                            
                             </div>
-                            <table style="margin-left: 0px;">
+                            <table style="margin-left: 0px;" id="tableDetail">
                               <!-- <thead style="background-color: none;">
                                   <tr>
                                       <td style="font-weight: unset;">Atribut & Value</td>                                      
@@ -710,12 +720,12 @@
                                   </tr>
                               </thead> -->
                               <!--elemet sebagai target append-->
-                              <tbody>
-                                    <tr id="detail">
+                              <tbody id="detail">
+                                    <!-- <tr id="detail"> -->
                                         <!-- <td><input name="atribut0" type="text" style="border-radius: 0px;width: 224px; height: 35px;" disabled></td>
                                         <td><input name="value0" id="vl0" type="text" style="border-radius: 0px;margin:10px 10px 10px 10px;width: 224px;height: 35px;" disabled></td>
                                         <td><input type="button" value="&#x270E" style="height: 35px;width: 50px;"></td> -->
-                                    </tr> 
+                                    <!-- </tr>  -->
                                     <!-- <tr>
                                         <td><input name="atribut0" type="text" style="border-radius: 0px;width: 224px; height: 35px;" disabled></td>
                                         <td><input name="value0" id="vl0" type="text" style="border-radius: 0px;margin:10px 10px 10px 10px;width: 224px;height: 35px;" disabled></td>
@@ -749,16 +759,25 @@
         </div>
     </div>
     <script>
+        var jumlahTr = 0;
         function modal_detail(id,narasi,atr,ket)
         {
+            var itemlist = document.getElementById('tableDetail');
+            if (jumlahTr > 0) {
+                // for (var i = 0; i < jumlahTr; i++) {
+                //     itemlist.deleteRow(i);
+                // }
+                // itemlist.remove();
+                $("#tableDetail tr").remove();
+                jumlahTr = 0;
+            } 
           $('#spesifikasi').modal('show', {backdrop: 'static'});          
-          alert(atr.length);
+          // alert(atr.length);
           document.getElementById('idSpe').value = id;
-          document.getElementById('des').value = ket[46];
-
+          document.getElementById('des').value = narasi;
+            
             for (var i = 0; i <atr.length; i++) {              
 //                menentukan target append
-                var itemlist = document.getElementById('detail');
                 
 //                membuat element
                 var row = document.createElement('tr');
@@ -801,6 +820,7 @@
                 hapus.onclick = function () {
                     row.parentNode.removeChild(row);
                 }
+                jumlahTr++;
             }
         }
     </script>

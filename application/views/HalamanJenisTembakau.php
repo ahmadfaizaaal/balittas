@@ -30,9 +30,9 @@
 				<hr style="border-color: grey;margin-top: -8px;">
 					<table class="table table-hover">
 						<thead style="background-color: rgba(28,69,26,0.9);border-bottom: 3px solid white; color:#fece00;">
-							<th>No</th>
-							<th>Varietas</th>
-							<th><?php echo $kategori; ?></th>							
+							<th class="text-center">No</th>
+							<th class="text-center">Varietas</th>
+							<th class="text-center"><?php echo $kategori; ?></th>							
 						</thead>
 						<tbody>
 						<?php 

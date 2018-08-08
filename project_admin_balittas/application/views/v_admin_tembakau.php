@@ -101,6 +101,30 @@
         </nav>
     </header>
 
+    <script>
+        var listAtribut = [
+        <?php                                             
+            $i = count($listAtribut);
+            foreach ($listAtribut as $row) {
+                if ($i != 0) {
+                    echo '"'.$row->nama_atribut.'",';
+                } else {
+                    echo '"'.$row->nama_atribut.'"'; 
+                }
+            }
+        ?>                                    
+        ];                                                        
+    </script>
+
+    <datalist id="daftarAtribut">
+    <?php 
+        foreach ($listAtribut as $row) {
+            echo "<option value=\"$row->nama_atribut\">";
+        }
+    ?>
+    </datalist>
+
+
 <!-- DATA VARIETAS -->
     <section class="Welcome" id="Welcome" style="padding-top: 2px; margin-top: 100px;">
         <div class="container">
@@ -157,6 +181,7 @@
                                     $sk = $row['file_SK'];
                                     $tgl = $row['tanggal_pelepasan'];
                                     $nar = $row['narasi'];
+                                    $idDes = $row['id_deskripsi_varietas'];
 
                                                                                             
                                  ?>                                 
@@ -182,7 +207,7 @@
                                     ];
                                     
                                 </script>
-                                    <a href="#spesifikasi" style="font-weight: unset;" onclick="modal_detail('<?php echo "$id"; ?>','<?php echo "$nar"; ?>',window['atr' + <?php echo $no; ?>],window['val' + <?php echo $no; ?>])">                                    
+                                    <a href="#spesifikasi" style="font-weight: unset;" onclick="modal_detail('<?php echo "$id"; ?>','<?php echo "$nar"; ?>',window['atr' + <?php echo $no; ?>],window['val' + <?php echo $no; ?>], '<?php echo "$idDes"; ?>')">                                    
                                         <button class="btn btn-warning">Spesifikasi</button>
                                     </a>
                                 </td>       
@@ -446,7 +471,7 @@
                 <h4 class="modal-title">Tambah Data Varietas</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
               </div>
-                 <form enctype="multipart/form-data" action="<?php echo base_url('c_data/tambahVarietas'); ?>" method="post" class="form-horizontal">
+                 <form enctype="multipart/form-data" action="<?php echo base_url('c_data/tambahVarietas'); ?>" method="post" class="form-horizontal" autocomplete="off">
                     <div class="modal-body">
                         <div class="form-group">
                             <label>Nama Varietas</label>
@@ -506,27 +531,27 @@
                               <!--elemet sebagai target append-->
                               <tbody id="itemlist">
                                 <tr>
-                                  <td><input name="atribut0" class="" type="text" style="border-radius: 0px;width: 224px; height: 35px;"></td>
+                                  <td><input list="daftarAtribut" id="atribut0" name="atribut0" type="text" style="border-radius: 0px;width: 224px; height: 35px;"></td>
                                       <td><input name="value0" class="" type="text" style="border-radius: 0px;margin:0px 10px;width: 224px;height: 35px;"></td>
                                       <td></td>
                                 </tr> 
                                 <tr>
-                                      <td><input name="atribut1" class="" type="text" style="margin-top: 10px;width: 224px;height: 35px;"></td>
+                                      <td><input list="daftarAtribut" id="atribut1" name="atribut1" type="text" style="margin-top: 10px;width: 224px;height: 35px;"></td>
                                       <td><input name="value1" class="" type="text" style="margin:10px 10px 0px 10px;width:224px;height: 35px;"></td>
                                       <td></td>
                                   </tr>
                                   <tr>
-                                      <td><input name="atribut2" class="" type="text" style="margin-top: 10px;width: 224px;height: 35px;"></td>
+                                      <td><input list="daftarAtribut" id="atribut2" name="atribut2" type="text" style="margin-top: 10px;width: 224px;height: 35px;"></td>
                                       <td><input name="value2" class="" type="text" style="margin:10px 10px 0px 10px;width: 224px;height: 35px;"></td>
                                       <td></td>
                                   </tr>
                                   <tr>
-                                      <td><input name="atribut3" class="" type="text" style="margin-top: 10px;width: 224px;height: 35px;"></td>
+                                      <td><input list="daftarAtribut" id="atribut3" name="atribut3" type="text" style="margin-top: 10px;width: 224px;height: 35px;"></td>
                                       <td><input name="value3" class="" type="text" style="margin:10px 10px 0px 10px;width: 224px;height: 35px;"></td>
                                       <td></td>
                                   </tr>                               
                                   <tr>
-                                      <td><input name="atribut4" class="" type="text" style="margin-top: 10px; width: 224px;height: 35px;"></td>
+                                      <td><input list="daftarAtribut" id="atribut4" name="atribut4" type="text" style="margin-top: 10px; width: 224px;height: 35px;"></td>
                                       <td><input name="value4" class="" type="text" style="margin:10px 10px 0px 10px; width: 224px;height: 35px;"></td>
                                       <td class="text-center"></td>
                                   </tr>
@@ -551,9 +576,10 @@
         </div>
     </div>
 
+
     <script>
-            var i = 5;            
-            
+            var indeks = 5;            
+
             function additem() {
 //                menentukan target append
                 var itemlist = document.getElementById('itemlist');
@@ -573,12 +599,16 @@
 
 //                membuat element input
                 var jenis_input = document.createElement('input');
-                jenis_input.setAttribute('name', 'atribut'+ i);
+                jenis_input.setAttribute('list', 'daftarAtribut');
+                jenis_input.setAttribute('id', 'atribut'+ indeks);
+                jenis_input.setAttribute('name', 'atribut'+ indeks);
+                jenis_input.setAttribute('class', 'autocomplete')
                 jenis_input.setAttribute('type', 'text');
                 jenis_input.setAttribute('style', 'margin-top : 10px;width: 224px;height: 35px;');
+                // autocomplete(document.getElementById("atribut" + indeks), listAtribut);
 
                 var jumlah_input = document.createElement('input');
-                jumlah_input.setAttribute('name', 'value'+ i);
+                jumlah_input.setAttribute('name', 'value'+ indeks);
                 jumlah_input.setAttribute('type', 'text');
                 jumlah_input.setAttribute('style', 'margin : 10px 10px 0px 10px;width: 224px;height: 35px;');
 
@@ -596,9 +626,10 @@
                     row.parentNode.removeChild(row);
                 };
 
-                i++;
-                document.getElementById('temp').value = i;
+                indeks++;
+                document.getElementById('temp').value = indeks;
             }
+
       </script>
 
     <!-- Edit Modal HTML Tembakau-->
@@ -702,6 +733,8 @@
               </div>
                  <form action="<?php echo base_url('c_data/editDesVarietas'); ?>" method="post" class="form-horizontal">
                     <input hidden id="idSpe" name="idSpesifikasi">
+                    <input hidden id="jumlahAtr" name="jumlahAtr">
+                    <input hidden id="idDeskripsi" name="idDeskripsi">
                     <div class="modal-body">                                         
                         <div class="form-group">
                             <label>Deskripsi</label>
@@ -760,7 +793,7 @@
     </div>
     <script>
         var jumlahTr = 0;
-        function modal_detail(id,narasi,atr,ket)
+        function modal_detail(id,narasi,atr,ket, idDes)
         {
             var itemlist = document.getElementById('tableDetail');
             if (jumlahTr > 0) {
@@ -773,6 +806,8 @@
             } 
           $('#spesifikasi').modal('show', {backdrop: 'static'});          
           // alert(atr.length);
+          document.getElementById('jumlahAtr').value = atr.length;
+          document.getElementById('idDeskripsi').value = idDes;
           document.getElementById('idSpe').value = id;
           document.getElementById('des').value = narasi;
             
@@ -797,7 +832,7 @@
                 atrjs.setAttribute('value', atr[i]);
                 atrjs.setAttribute('type', 'text');
                 atrjs.setAttribute('placeholder', ' Atribut');
-                atrjs.setAttribute('disabled', 'disable');
+                atrjs.setAttribute('readonly', '');
                 atrjs.setAttribute('style', 'margin-top : 10px;width: 224px;height: 35px;');
 
                 var valjs = document.createElement('input');

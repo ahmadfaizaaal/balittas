@@ -10,6 +10,7 @@ Class C_data extends CI_Controller{
 		$this->load->model("m_tembakau");		
 		$data['varietas_tembakau'] = $this->m_tembakau->get_varietas();
 		$data['detail_varietas'] = $this->m_tembakau->get_all_detail_varietas();
+		$data['listAtribut'] = $this->m_tembakau->getAtribut();
 		$data['leaflet'] = $this->m_tembakau->get_leaflet();
 		$data['gambarleaflet'] = $this->m_tembakau->get_leaflet_img();		
 		$data['teknologi'] = $this->m_tembakau->get_tekbud();
@@ -46,8 +47,15 @@ Class C_data extends CI_Controller{
 			$this->m_tembakau->add_varietas($namaVarietas,$tglPelepasan,$tgl,$wkt,$_FILES['sk']['name'],$_FILES['gambar']['name']);
 		// 
 			$this->m_tembakau->add_deskripsi_varietas($deskripsi);
-			for ($i=0; $i <$this->input->post('temp') ; $i++) { 
-				$this->m_tembakau->add_detail_deskripsi($this->input->post('atribut'."$i"),$this->input->post('value'."$i"));
+			for ($i=0; $i < $this->input->post('temp') ; $i++) { 
+				$idAtribut = $this->m_tembakau->getIdAtribut($this->input->post('atribut'."$i"));
+				if (!empty($idAtribut)) {
+					$this->m_tembakau->add_detail_deskripsi($idAtribut,$this->input->post('value'."$i"));
+				} else {
+					$this->m_tembakau->addAtribut($this->input->post('atribut'."$i"));
+					$idAtribut = $this->m_tembakau->getIdAtribut($this->input->post('atribut'."$i"));
+					$this->m_tembakau->add_detail_deskripsi($idAtribut,$this->input->post('value'."$i"));
+				}
 			}				
 			redirect(base_url('c_data/tembakau'));	
 		} else{      
@@ -96,10 +104,19 @@ Class C_data extends CI_Controller{
 	public function editDesVarietas(){
 		$this->load->model("m_tembakau");
 
-		$idSpe = $this->input->post('idSpesifikasi');		
+		$idSpe = $this->input->post('idSpesifikasi');
+		$idDes = $this->input->post('idDeskripsi');		
 		$deskripsi = $this->input->post('deskripsi');
 
+		// for ($i=0; $i < $this->input->post('jumlahAtr'); $i++) { 
+			// echo $this->input->post('atribut0')." --> ".$this->input->post('value0')."<br>";
+		// }
 		$this->m_tembakau->updateDesvarietas($idSpe,$deskripsi);
+
+		for ($i=0; $i < $this->input->post('jumlahAtr') ; $i++) { 
+			$idAtribut = $this->m_tembakau->getIdAtribut($this->input->post('atribut'."$i"));
+			$this->m_tembakau->updateDetailDeskripsi($idDes, $idAtribut, $this->input->post('value'."$i"));
+		}
 		redirect(base_url('c_data/tembakau'));
 	}
 

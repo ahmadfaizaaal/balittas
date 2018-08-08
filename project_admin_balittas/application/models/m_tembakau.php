@@ -3,7 +3,7 @@
 // VARIETAS
 		public function get_varietas(){
 			$db2 = $this->load->database('dB2',TRUE);
-			$sql = $db2->query("SELECT v.id_varietas,v.nama_varietas, dsv.narasi, v.tanggal_pelepasan,v.file_SK, v.file_gambar
+			$sql = $db2->query("SELECT v.id_varietas,v.nama_varietas, dsv.narasi, v.tanggal_pelepasan,v.file_SK, v.file_gambar, dsv.id_deskripsi_varietas
 								FROM varietas v
 								JOIN deskripsi_varietas dsv ON v.id_varietas = dsv.id_varietas");
 			return $sql->result_array();
@@ -21,6 +21,21 @@
 			$db2 = $this->load->database('dB2',TRUE);
 			$sql = $db2->query("SELECT file_SK, file_gambar FROM varietas WHERE id_varietas = \"$id\"");
 			return $sql->result();
+		}
+		public function getAtribut() {
+			$db2 = $this->load->database('dB2',TRUE);
+			$sql = $db2->query("SELECT nama_atribut FROM atribut order by id_atribut asc");
+			return $sql->result();
+		}
+		public function getIdAtribut($namaAtribut) {
+			$db2 = $this->load->database('dB2',TRUE);
+			$sql = $db2->query("SELECT id_atribut FROM atribut WHERE nama_atribut = \"$namaAtribut\"");
+			$hasil = $sql->result();
+			return $hasil[0]->id_atribut;
+		}
+		public function addAtribut($namaAtribut) {
+			$db2 = $this->load->database('dB2',TRUE);
+			$db2->query("INSERT INTO atribut (id_atribut, nama_atribut) VALUES (\"\",\"$namaAtribut\")");
 		}
 		public function add_varietas($namaVarietas,$tglPelepasan, $tglUpload, $wktUpload, $sk,$gmbr){
 			$db2 = $this->load->database('dB2',TRUE);
@@ -61,6 +76,11 @@
 			$db2 = $this->load->database('dB2',TRUE);
 			$db2->query("UPDATE `deskripsi_varietas` SET `narasi`= \"$des\" WHERE `id_varietas` = \"$id\"");
 		}
+		public function updateDetailDeskripsi($idDes, $idAtr, $value) {
+			$db2 = $this->load->database('dB2',TRUE);
+			$db2->query("UPDATE `detail_deskripsi` SET `detail_value`= \"$value\" WHERE `id_deskripsi_varietas` = \"$idDes\" AND `id_atribut` = \"$idAtr\"");
+		}
+
 
 // LEAFLET
 		public function get_leaflet(){

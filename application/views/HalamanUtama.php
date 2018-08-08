@@ -46,7 +46,16 @@
 					<div class="col-xs-12 col-sm-4 col-lg-4"> 
 						<div class="thumbnail thumbku" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
 							<a href="<?php echo base_url('varietas/detailvarietas/').urlencode(strtolower($row->nama_varietas)) ?>" style="text-decoration-line: none;">
-								<img src="<?php echo base_url() ?>assets/varietas/<?php echo $row->file_gambar; ?>" alt="" style="width: 100%;">
+								<?php 
+									if (empty($row->file_gambar)) { ?>
+										<img src="<?php echo base_url() ?>assets/varietas/tembakau.jpg" alt="" style="width: 100%;">
+								<?php 
+									} else { ?>
+										<img src="<?php echo base_url() ?>assets/varietas/<?php echo $row->file_gambar; ?>" alt="" style="width: 100%;">
+								<?php 
+									}
+								 ?>
+								<!-- <img src="<?php //echo base_url() ?>assets/varietas/<?php //echo $row->file_gambar; ?>" alt="" style="width: 100%;"> -->
 								<span class="label label-success"><p class="glyphicon glyphicon-calendar"></p> <?php echo $row->tanggal_upload ?></span>
 								<span class="label label-warning"><p class="glyphicon glyphicon-time"></p> <?php echo $row->waktu_upload; ?></span>	
 								<h4 style="color:#fece00;" title="<?php echo $row->nama_varietas; ?>"><?php echo $namaVarietas; ?></h4>

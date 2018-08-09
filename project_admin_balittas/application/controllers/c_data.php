@@ -13,6 +13,9 @@ Class C_data extends CI_Controller{
 		$data['listAtribut'] = $this->m_tembakau->getAtribut();
 		$data['leaflet'] = $this->m_tembakau->get_leaflet();
 		$data['gambarleaflet'] = $this->m_tembakau->get_leaflet_img();		
+		$data['benih'] = $this->m_tembakau->get_benih();
+		$data['distribusiBenih'] = $this->m_tembakau->get_distribusi_benih();
+		$data['ListNamaBenih'] = $this->m_tembakau->get_nama_benih();
 		$data['teknologi'] = $this->m_tembakau->get_tekbud();
 		$data['agribisnis'] = $this->m_tembakau->get_agri();
 		$this->load->view("v_admin_tembakau",$data);
@@ -108,9 +111,6 @@ Class C_data extends CI_Controller{
 		$idDes = $this->input->post('idDeskripsi');		
 		$deskripsi = $this->input->post('deskripsi');
 
-		// for ($i=0; $i < $this->input->post('jumlahAtr'); $i++) { 
-			// echo $this->input->post('atribut0')." --> ".$this->input->post('value0')."<br>";
-		// }
 		$this->m_tembakau->updateDesvarietas($idSpe,$deskripsi);
 
 		for ($i=0; $i < $this->input->post('jumlahAtr') ; $i++) { 
@@ -146,9 +146,7 @@ Class C_data extends CI_Controller{
 		$idleaflet = $this->input->post('idleaflet');
 		$idgmbr1 = $this->input->post('idimg1');		
 		$idgmbr2 = $this->input->post('idimg2');	
-		$nama = $this->input->post('namaLeaflet');		
-		// $gmbr1 = $this->input->post('leaflet1');		
-		// $gmbr2 = $this->input->post('leaflet2');
+		$nama = $this->input->post('namaLeaflet');				
 
 		// echo "$idleaflet";
 		// echo "<br>";
@@ -202,6 +200,69 @@ Class C_data extends CI_Controller{
 		redirect(base_url('c_data/tembakau'));
 	}
 
+//==========================================PRODUK=========================================
+	// PRODUK BENIH
+	public function tambahBenih(){
+		$this->load->model("m_tembakau");
+
+		$namabenih = $this->input->post('namabenih');		
+		$stoksampai = $this->input->post('stoksampai');
+		$jumstok = $this->input->post('jumlahstok');		
+	
+		$this->m_tembakau->add_benih($namabenih,$stoksampai,$jumstok);
+		
+		redirect(base_url('c_data/tembakau'));
+	}
+	public function editBenih(){
+		$this->load->model("m_tembakau");	
+
+		$id = $this->input->post('idbenih');
+		$namabenih = $this->input->post('editnamabenih');		
+		$stoksampai = $this->input->post('editstoksampai');
+		$jumlahstok = $this->input->post('editjumlahstok');	
+
+		$this->m_tembakau->update_benih($id,$namabenih,$stoksampai,$jumlahstok);
+		redirect(base_url('c_data/tembakau'));
+
+	}
+	public function deleteBenih($id){			
+		$this->load->model("m_tembakau");		
+		$this->m_tembakau->delete_benih($id);
+		redirect(base_url('c_data/tembakau'));
+	}
+
+	// PRODUK DISTRIBUSI BENIH
+	public function tambahDistribusiBenih(){
+		$this->load->model("m_tembakau");
+		date_default_timezone_set('Asia/Jakarta');
+        $tglsekarang = date('Y-m-d'); 
+
+		$namadbenih = $this->input->post('namadistribusibenih');		
+		$tgl = $this->input->post('tgldistribusi');
+		$thn = $this->input->post('thnpanen');	
+		$kelas = $this->input->post('kelasbenih');
+		$jumlah = $this->input->post('jumlah');
+		$ket = $this->input->post('keterangan');	
+	
+		// $this->m_tembakau->add_benih($namabenih,$stoksampai,$jumstok);
+
+		$idBenih1 = $this->m_tembakau->get_id_nama_benih($namadbenih);
+		if (!empty($idBenih1)) {
+			$this->m_tembakau->add_distribusi_benih($idBenih1,$tgl,$thn,$kelas,$jumlah,$ket);			
+		} else {			
+			$this->m_tembakau->add_benih($namadbenih,$tglsekarang,0);
+			$idBenih2 = $this->m_tembakau->get_id_nama_benih($namadbenih);
+			$this->m_tembakau->add_distribusi_benih($idBenih2,$tgl,$thn,$kelas,$jumlah,$ket);
+		}
+		
+		redirect(base_url('c_data/tembakau'));
+	}
+	public function deleteDistribusiBenih($id){			
+		$this->load->model("m_tembakau");		
+		$this->m_tembakau->delete_distribusi_benih($id);
+		redirect(base_url('c_data/tembakau'));
+	}
+
 //========================================TEKNOLOGI========================================
 	public function tambahTeknologi(){
 		$this->load->model("m_tembakau");
@@ -227,8 +288,7 @@ Class C_data extends CI_Controller{
 
 		$id = $this->input->post('idtekno');
 		$jenis = $this->input->post('editjenistekno');		
-		$des = $this->input->post('editdestekno');		
-		// $gambartekno = $this->input->post('editgambartekno');
+		$des = $this->input->post('editdestekno');				
 
 		// echo "$id";
 		// echo "<br>";

@@ -3,7 +3,7 @@
 // VARIETAS
 		public function get_varietas(){
 			$db2 = $this->load->database('dB2',TRUE);
-			$sql = $db2->query("SELECT v.id_varietas,v.nama_varietas, dsv.narasi, v.tanggal_pelepasan,v.file_SK, v.file_gambar, dsv.id_deskripsi_varietas
+			$sql = $db2->query("SELECT *
 								FROM varietas v
 								JOIN deskripsi_varietas dsv ON v.id_varietas = dsv.id_varietas");
 			return $sql->result_array();
@@ -179,5 +179,51 @@
 			$db2 = $this->load->database('dB2',TRUE);
 			$sql = $db2->query("DELETE FROM agribisnis WHERE id_agribisnis = \"$id\" ");
 		}	
+
+// PRODUK BENIH
+		public function get_benih(){
+			$db2 = $this->load->database('dB2',TRUE);			
+			$sql = $db2->query("SELECT * FROM benih");
+			return $sql->result_array();
+		}
+		public function add_benih($nama,$stoksampai,$jumstok){
+			$db2 = $this->load->database('dB2',TRUE);			
+			$sql = $db2->query("INSERT INTO benih (id_benih,nama_benih,stok_sampai,jumlah_stok) VALUES (\"\",\"$nama\",\"$stoksampai\",\"$jumstok\")");			
+		}
+		public function update_benih($id,$namabenih,$stoksampai,$jumlahstok){
+			$db2 = $this->load->database('dB2',TRUE);			
+			$sql = $db2->query("UPDATE `benih` SET `nama_benih`= \"$namabenih\",`stok_sampai`= \"$stoksampai\",`jumlah_stok`= \"$jumlahstok\" WHERE `id_benih` = \"$id\"");		
+		}
+		public function delete_benih($id){
+			$db2 = $this->load->database('dB2',TRUE);
+			$sql = $db2->query("DELETE FROM benih WHERE id_benih = \"$id\" ");
+		}
+
+		// DISTRIBUSI BENIH
+		public function get_distribusi_benih(){
+			$db2 = $this->load->database('dB2',TRUE);			
+			$sql = $db2->query("SELECT db.id_distribusi,db.id_benih,b.nama_benih,db.tanggal,db.tahun_panen,db.kelas_benih,db.jumlah_kg,db.keterangan FROM benih b JOIN distribusi_benih db on b.id_benih = db.id_benih ORDER BY `db`.`id_distribusi` ASC");
+			return $sql->result_array();
+		}
+		public function get_nama_benih() {
+			$db2 = $this->load->database('dB2',TRUE);
+			$sql = $db2->query("SELECT nama_benih FROM benih ORDER BY id_benih ASC");
+			return $sql->result();
+		}
+		public function get_id_nama_benih($nama) {
+			$db2 = $this->load->database('dB2',TRUE);
+			$sql = $db2->query("SELECT id_benih FROM benih WHERE nama_benih = \"$nama\"");
+			$hasil = $sql->result();
+			return $hasil[0]->id_benih;
+		}
+		public function add_distribusi_benih($idbenih,$tgl,$thnpanen,$kelas,$jumlah,$ket){
+			$db2 = $this->load->database('dB2',TRUE);			
+			$sql = $db2->query("INSERT INTO distribusi_benih (id_distribusi,id_benih,tanggal,tahun_panen,kelas_benih,jumlah_kg,keterangan) VALUES (\"\",\"$idbenih\",\"$tgl\",\"$thnpanen\",\"$kelas\",\"$jumlah\",\"$ket\")");			
+		}
+		public function delete_distribusi_benih($id){
+			$db2 = $this->load->database('dB2',TRUE);
+			$sql = $db2->query("DELETE FROM distribusi_benih WHERE id_distribusi = \"$id\" ");
+		}
+
 	}
  ?>

@@ -223,7 +223,6 @@ Class C_data extends CI_Controller{
 
 		$this->m_tembakau->update_benih($id,$namabenih,$stoksampai,$jumlahstok);
 		redirect(base_url('c_data/tembakau'));
-
 	}
 	public function deleteBenih($id){			
 		$this->load->model("m_tembakau");		
@@ -255,6 +254,20 @@ Class C_data extends CI_Controller{
 			$this->m_tembakau->add_distribusi_benih($idBenih2,$tgl,$thn,$kelas,$jumlah,$ket);
 		}
 		
+		redirect(base_url('c_data/tembakau'));
+	}
+	public function editDistribusiBenih(){
+		$this->load->model("m_tembakau");	
+
+		$iddistribusi = $this->input->post('iddistribusi');
+		$idbenih = $this->input->post('iddistribusibenih');
+		$tgl = $this->input->post('edittgldistribusi');		
+		$thn = $this->input->post('editthnpanen');
+		$kls = $this->input->post('editkelasbenih');	
+		$jum = $this->input->post('editjumlah');
+		$ket = $this->input->post('editketerangan');		
+
+		$this->m_tembakau->update_distribusi_benih($iddistribusi,$tgl,$thn,$kls,$jum,$ket);
 		redirect(base_url('c_data/tembakau'));
 	}
 	public function deleteDistribusiBenih($id){			

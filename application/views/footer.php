@@ -159,7 +159,12 @@
 											<p style="margin-top: 2px;">Total Pengunjung</p>
 										</div>
 										<div class="col-xs-3 col-sm-3 col-lg-3">
-											<p style="margin-top: 2px;">10</p>
+											<p style="margin-top: 2px;">
+												<?php 
+									            include("counter.php"); 
+									            echo $kunjungan[0];
+								            	?>
+											</p>
 										</div>								
 									</div>		
 								</div>

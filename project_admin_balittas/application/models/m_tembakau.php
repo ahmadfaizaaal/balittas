@@ -220,6 +220,10 @@
 			$db2 = $this->load->database('dB2',TRUE);			
 			$sql = $db2->query("INSERT INTO distribusi_benih (id_distribusi,id_benih,tanggal,tahun_panen,kelas_benih,jumlah_kg,keterangan) VALUES (\"\",\"$idbenih\",\"$tgl\",\"$thnpanen\",\"$kelas\",\"$jumlah\",\"$ket\")");			
 		}
+		public function update_distribusi_benih($iddistribusi,$tgl,$thn,$kls,$jum,$ket){
+			$db2 = $this->load->database('dB2',TRUE);			
+			$sql = $db2->query("UPDATE `distribusi_benih` SET `tanggal`= \"$tgl\",`tahun_panen`= \"$thn\",`kelas_benih`= \"$kls\",`jumlah_kg`= \"$jum\",`keterangan`= \"$ket\" WHERE `id_distribusi` = \"$iddistribusi\"");		
+		}
 		public function delete_distribusi_benih($id){
 			$db2 = $this->load->database('dB2',TRUE);
 			$sql = $db2->query("DELETE FROM distribusi_benih WHERE id_distribusi = \"$id\" ");

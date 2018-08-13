@@ -11,24 +11,24 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="<?php echo base_url();?>/assets/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>/bootstrap/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link href="<?php echo base_url();?>/assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="<?php echo base_url();?>/assets/css/bootstrap.css" rel="stylesheet">
-    <link href="<?php echo base_url();?>/assets/css/style.css" rel="stylesheet">
-    <link href="<?php echo base_url();?>/assets/css/styleadmin.css" rel="stylesheet">
-    <link href="<?php echo base_url();?>/assets/css/simple-sidebar.css" rel="stylesheet">
-    <link href="<?php echo base_url() ?>/assets/img/Logo-Kementerian-Pertanian.png" rel="shortcut icon">
+    <!-- <link href="<?php echo base_url();?>/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="<?php echo base_url();?>/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>/bootstrap/css/style.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>/bootstrap/css/styleadmin.css" rel="stylesheet">
+    <!-- <link href="<?php echo base_url();?>/bootstrap/css/simple-sidebar.css" rel="stylesheet"> -->
+    <!-- <link href="<?php echo base_url() ?>/bootstrap/img/Logo-Kementerian-Pertanian.png" rel="shortcut icon"> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
 
 <body>
-    <header>
+    <!-- <header>
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container-fluid">
                 <div class="navbar-header">                   
                     <a href="#home" class="navbar-brand halaman">
-                        <img src="<?php echo base_url();?>/assets/img/balittaslitbang.png" width="270" style="margin-right:-90px; padding-right: 25px;">
+                        <img src="<?php echo base_url();?>/item img/logobalittas.png" width="270" style="margin-right:-90px; padding-right: 25px;">
                     </a>
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bar" aria-expanded="false" style="margin-top:25px; margin-right: -20px;">
                         <span class="sr-only">Toggle navigation</span>
@@ -45,7 +45,7 @@
                             <ul class="dropdown-menu" style="margin:-5px 0px 0px 0px; width:280px; background-color:#fece00;">
                                 <div class="container-fluid">
                                     <div class="col-sm-6 col-lg-6">
-                                        <li><a href="<?php echo base_url();?>c_data/tembakau" class="halaman">Tembakau</a></li>
+                                        <li><a href="<?php echo base_url();?>admin/tembakau" class="halaman">Tembakau</a></li>
                                         <hr style="margin-left:0px; margin: 1px 0px 1px 0px; text-align: left; width:95%;">
                                         <li><a href="#JarakPagar" class="halaman">Jarak Pagar</a></li>
                                         <hr style="margin-left:0px; margin: 1px 0px 1px 0px; text-align: left; width:95%;">
@@ -99,7 +99,7 @@
                 </div>
             </div>
         </nav>
-    </header>    
+    </header>     -->
 
 <!-- DATA VARIETAS -->
     <section class="Welcome" id="Welcome" style="padding-top: 2px; margin-top: 100px;">
@@ -577,7 +577,7 @@
                 <h4 class="modal-title">Tambah Data Varietas</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
               </div>
-                 <form enctype="multipart/form-data" action="<?php echo base_url('c_data/tambahVarietas'); ?>" method="post" class="form-horizontal" autocomplete="off">
+                 <form enctype="multipart/form-data" action="<?php echo base_url('admin/tambahVarietas'); ?>" method="post" class="form-horizontal" autocomplete="off">
                     <div class="modal-body">
                         <div class="form-group">
                             <label>Nama Varietas</label>
@@ -662,7 +662,7 @@
                                       <td class="text-center"></td>
                                   </tr>
                               </tbody>
-                              <form method="post" action="<?php base_url('c_data/tambahVarietas') ?>"><input hidden name="temp" id="temp" value="5"></form>
+                              <form method="post" action="<?php base_url('admin/tambahVarietas') ?>"><input hidden name="temp" id="temp" value="5"></form>
                               <tfoot>
                                 <tr>
                                   <td></td>
@@ -753,7 +753,7 @@
                     <h4 class="modal-title">Edit Data Varietas</h4>`
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 </div>
-                <form enctype="multipart/form-data" action="<?php echo base_url('c_data/editVarietas'); ?>" method="post" class="form-horizontal">
+                <form enctype="multipart/form-data" action="<?php echo base_url('admin/editVarietas'); ?>" method="post" class="form-horizontal">
                     <div class="modal-body">
                         <input hidden id="idvar" name="idVarietas">
                         <div class="form-group">
@@ -844,7 +844,7 @@
                 <h4 class="modal-title">Data Spesifikasi Varietas</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
               </div>
-                 <form action="<?php echo base_url('c_data/editDesVarietas'); ?>" method="post" class="form-horizontal">
+                 <form action="<?php echo base_url('admin/editDesVarietas'); ?>" method="post" class="form-horizontal">
                     <input hidden id="idSpe" name="idSpesifikasi">
                     <input hidden id="jumlahAtr" name="jumlahAtr">
                     <input hidden id="idDeskripsi" name="idDeskripsi">
@@ -981,7 +981,7 @@
                 <h4 class="modal-title">Tambah Data Leaflet</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
               </div>
-                 <form enctype="multipart/form-data" action="<?php echo base_url('c_data/tambahLeaflet');?>" method="post" class="form-horizontal">
+                 <form enctype="multipart/form-data" action="<?php echo base_url('admin/tambahLeaflet');?>" method="post" class="form-horizontal">
                     <div class="modal-body">
                         <div class="form-group">
                             <label>Nama Leaflet</label>
@@ -1021,7 +1021,7 @@
                     <h4 class="modal-title">Edit Data Leaflet</h4>`
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 </div>
-                <form enctype="multipart/form-data" action="<?php echo base_url('c_data/editleaflet'); ?>" method="post" class="form-horizontal">
+                <form enctype="multipart/form-data" action="<?php echo base_url('admin/editleaflet'); ?>" method="post" class="form-horizontal">
                     <div class="modal-body">
                         <input id="idleaflet" name="idleaflet" hidden>
                         <input id="idgambar1" name="idimg1" hidden>
@@ -1104,7 +1104,7 @@
                 <h4 class="modal-title">Tambah Data Teknologi Budidaya</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
               </div>
-                 <form enctype="multipart/form-data" action="<?php echo base_url('c_data/tambahTeknologi');?>" method="post" class="form-horizontal">
+                 <form enctype="multipart/form-data" action="<?php echo base_url('admin/tambahTeknologi');?>" method="post" class="form-horizontal">
                     <div class="modal-body">
                         <div class="form-group">
                             <label>Jenis Teknologi Budidaya</label>
@@ -1140,7 +1140,7 @@
                 <h4 class="modal-title">Edit Data Teknologi Budidaya</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
               </div>
-                 <form enctype="multipart/form-data" action="<?php echo base_url('c_data/editTeknologi');?>" method="post" class="form-horizontal">
+                 <form enctype="multipart/form-data" action="<?php echo base_url('admin/editTeknologi');?>" method="post" class="form-horizontal">
                     <div class="modal-body">
                         <input hidden id="idtekno" name="idtekno">
                         <div class="form-group">
@@ -1215,7 +1215,7 @@
                 <h4 class="modal-title">Tambah Data Agribisnis</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
               </div>
-                 <form enctype="multipart/form-data" action="<?php echo base_url('c_data/tambahAgribisnis');?>" method="post" class="form-horizontal">
+                 <form enctype="multipart/form-data" action="<?php echo base_url('admin/tambahAgribisnis');?>" method="post" class="form-horizontal">
                     <div class="modal-body">
                         <div class="form-group">
                             <label>Jenis Agribisnis</label>
@@ -1251,7 +1251,7 @@
                 <h4 class="modal-title">Edit Data Teknologi Budidaya</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
               </div>
-                 <form enctype="multipart/form-data" action="<?php echo base_url('c_data/editAgribisnis');?>" method="post" class="form-horizontal">
+                 <form enctype="multipart/form-data" action="<?php echo base_url('admin/editAgribisnis');?>" method="post" class="form-horizontal">
                     <div class="modal-body">
                         <input hidden id="idagri" name="idagri">
                         <div class="form-group">
@@ -1326,7 +1326,7 @@
                 <h4 class="modal-title">Tambah Data Benih</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
               </div>
-                 <form enctype="multipart/form-data" action="<?php echo base_url('c_data/tambahBenih');?>" method="post" class="form-horizontal">
+                 <form enctype="multipart/form-data" action="<?php echo base_url('admin/tambahBenih');?>" method="post" class="form-horizontal">
                     <div class="modal-body">
                         <div class="form-group">
                             <label>Nama Benih</label>
@@ -1358,7 +1358,7 @@
                 <h4 class="modal-title">Edit Data Benih</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
               </div>
-                 <form enctype="multipart/form-data" action="<?php echo base_url('c_data/editBenih');?>" method="post" class="form-horizontal">
+                 <form enctype="multipart/form-data" action="<?php echo base_url('admin/editBenih');?>" method="post" class="form-horizontal">
                     <div class="modal-body">
                         <input hidden id="idbenih" name="idbenih">
                         <div class="form-group">
@@ -1429,7 +1429,7 @@
                 <h4 class="modal-title">Tambah Data Distribusi Benih</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
               </div>
-                 <form enctype="multipart/form-data" action="<?php echo base_url('c_data/tambahDistribusiBenih');?>" method="post" class="form-horizontal" autocomplete="off">
+                 <form enctype="multipart/form-data" action="<?php echo base_url('admin/tambahDistribusiBenih');?>" method="post" class="form-horizontal" autocomplete="off">
                     <div class="modal-body">
                         <div class="form-group">
                             <label>Nama Benih</label>
@@ -1481,7 +1481,7 @@
                 <h4 class="modal-title">Edit Data Benih</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
               </div>
-                 <form enctype="multipart/form-data" action="<?php echo base_url('c_data/editDistribusiBenih');?>" method="post" class="form-horizontal">
+                 <form enctype="multipart/form-data" action="<?php echo base_url('admin/editDistribusiBenih');?>" method="post" class="form-horizontal">
                     <div class="modal-body">
                         <input hidden id="iddistribusi" name="iddistribusi">
                         <input hidden id="iddistribusibenih" name="iddistribusibenih">
@@ -1570,13 +1570,13 @@
     </footer>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="<?php echo base_url();?>/assets/js/jquery-3.3.1.min.js"></script>
-    <script src="<?php echo base_url();?>/assets/js/jquery.easing.1.3.js"></script>
+    <script src="<?php echo base_url();?>/bootstrap/js/jquery-3.3.1.min.js"></script>
+    <script src="<?php echo base_url();?>/bootstrap/js/jquery.easing.1.3.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="<?php echo base_url();?>/assets/js/bootstrap.min.js"></script>
+    <script src="<?php echo base_url();?>/bootstrap/js/bootstrap.min.js"></script>
 
-    <script src="<?php echo base_url();?>/assets/js/script.js"></script>
-    <script src="<?php echo base_url();?>/assets/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="<?php echo base_url();?>/bootstrap/js/script.js"></script>
+    <script src="<?php echo base_url();?>/bootstrap/perfect-scrollbar/perfect-scrollbar.min.js"></script>
 
 </body>
 

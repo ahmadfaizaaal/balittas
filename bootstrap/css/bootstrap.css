@@ -4714,7 +4714,8 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   color: #cccccc;
 }
 .breadcrumb > .active {
-  color: #777777;
+  color: #fece00;
+  background-color: white;
 }
 .pagination {
   display: inline-block;

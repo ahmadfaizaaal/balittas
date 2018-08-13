@@ -84,7 +84,7 @@
 										</table>
 									<br>
 									<p><b>Catatan:</b></p>
-									<p>Surat Keputusan Pelepasan <b><?php echo $rowA->nama_varietas; ?></b> dapat diunduh <a href="<?php echo base_url() ?>assets/SK/<?php echo $rowA->file_SK; ?>" class="hoverThumbnail" style="text-decoration-line: none"><b>di sini</b></a>.</p>
+									<p>Surat Keputusan Pelepasan <b><?php echo $rowA->nama_varietas; ?></b> dapat diunduh <a href="<?php echo base_url() ?>assets/SK/<?php echo $rowA->file_SK; ?>" target="blank" class="hoverThumbnail" style="text-decoration-line: none"><b>di sini</b></a>.</p>
 									</div>
 									<br>
 									<br>

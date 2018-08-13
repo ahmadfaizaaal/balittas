@@ -64,7 +64,7 @@
 							<!-- DESKRIPSI -->
 							<?php 
 								if (!empty($row->narasi)) {
-									$narasi = substr($row->narasi, 0, 25)." [..]";
+									$narasi = substr($row->narasi, 0, 25)." ...";
 									echo "<p>&nbsp $narasi</p>";
 								} else {
 									$narasi = "Belum ada deskripsi";
@@ -134,8 +134,8 @@
 			<div class="container-fluid" style="background-color: rgba(28,69,26,0.8);">
 				<div class="container">
 				<!-- Produk -->
-				<h3 class="text-center" style="color:white;font-family: Minion Pro;">Produk</h3>
-				<p class="text-center" style="color: white;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo aut magni perferendis repellat rerum assumenda, facere. Alias deserunt pariatur magnam rerum quod voluptates, quidem id labore quam. Illum nemo minus repellat veritatis aliquid, consequatur, dolorem, laborum magnam voluptatibus consequuntur voluptate tempora! Vel, odio. Corporis nam maiores nemo, dicta temporibus et.</p>
+				<h3 class="text-center" style="color:white;font-family: Minion Pro;"><strong>Produk</strong></h3>
+				<p class="text-center" style="color: white;"><span style="font-size: 20px; font-weight: bold; font-family: hobo std; color: #fece00;">I</span> novasi teknologi yang paling strategis untuk mendukung pengembangan komoditas adalah varietas unggul. Penggunaan varietas unggul suatu komoditas mempunyai dampak yang sangat luas, antara lain dapat berpengaruh terhadap efisiensi biaya dalam budi daya, peningkatan produksi dan mutu, serta pemanfaatan lahan-lahan marginal, sehingga dapat berdampak sosial dan ekonomi yang cukup nyata bagi petani. Selain itu, penggunaan varietas unggul merupakan teknologi yang relatif mudah diterima dan diterapkan oleh petani.</p>
 				<br><br>
 				<div class="row">
 				    <div class="col-xs-6 col-sm-3 col-lg-3">
@@ -186,30 +186,42 @@
 			<div class="container">
 			<div class="row">
 				<div class="col-sm-3 col-lg-3">
-					<h3 class="text-center" style="color:black;margin-top: 0px;font-family: Minion Pro;">Teknologi Budidaya</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, quae iure blanditiis veniam adipisci, facilis ab necessitatibus! Reiciendis, praesentium, accusamus.</p>
+					<h3 class="text-center" style="color:black;margin-top: 0px;font-family: Minion Pro;"><strong>Teknologi Budidaya</strong></h3>
+					<p class="text-center"><span style="font-size: 20px; font-weight: unset; font-family: hobo std; color: rgb(242,97,5);">T</span>eknologi budidaya pada tembakau dapat dikelompokkan menjadi beberapa jenis yang diantaranya adalah penangkaran benih, pesemaian, pemupukan, dan pemupukan bebas chlor. Selain itu, teknologi budidaya tembakau juga membahas mengenai penyakit-penyakit pada tembakau serta hama tembakau disertai cara pengendaliannya. Bagaimana proses panen, proses pasca panen, kesesuaian lahan, dan budidaya tembakau cerutu juga dibahas pada sub topik teknologi budidaya tembakau ini.</p>
 				</div>
 				<div class="col-sm-9 col-lg-9">
 					<div class="row">
+						<?php 
+							foreach ($teknologi as $row) {
+								$deskripsi_teknologi = "";
+								if (strlen($row->deskripsi) > 125) {
+									$deskripsi_teknologi = substr($row->deskripsi, 0, 125)." ...";
+								} else {
+									$deskripsi_teknologi = $row->nama_varietas;
+								}
+						?>
 						<div class="col-sm-4 col-lg-4">
-						 	<a href="<?php echo base_url('teknologibudidaya/penangkaranBenih'); ?>" style="text-decoration-line: none;" class="teknologiBudidaya">
+						 	<a href="<?php echo base_url('teknologibudidaya/').urlencode(strtolower($row->jenis_teknologi_budidaya)); ?>" title="Klik untuk lebih detil" style="text-decoration-line: none;" class="teknologiBudidaya">
 						 		<div class="thumbnail" style="background-color: white; border-style: none">
 							 		<div class="itemZoom" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
-										<img src="<?php echo base_url() ?>item img/tembakau2.jpg" class="imageZoom" >
+										<img src="<?php echo base_url() ?>assets/gambarTBD/<?php echo $row->gambar_tekno; ?>" class="imageZoom" >
 										<div class="itemZoom-overlay top"></div>
 									</div>
-									<h4 style="font-family: Minion Pro;">Penangkaran Benih </h4>
+									<h4 style="font-family: Minion Pro;"><?php echo $row->jenis_teknologi_budidaya; ?></h4>
 									<hr style="margin:-6px 0px 5px 0px; border-color: orange;">
 									<div class="overlayhr"></div>
-									<p style="color:black;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure inventore nisi quo, praesentium aspernatur deleniti.</p>
+									<p style="color:black;"><?php echo $deskripsi_teknologi; ?></p>
 						 		</div>
 						 	</a>
 						</div>
-						<div class="col-sm-4 col-lg-4">
+						<?php
+							}
+						?>
+						<!-- <div class="col-sm-4 col-lg-4">
 						 	<a href="" style="text-decoration-line: none;" class="teknologiBudidaya">
 						 		<div class="thumbnail" style="background-color: white; border-style: none">
 						 			<div class="itemZoom" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
-										<img src="<?php echo base_url() ?>item img/tembakau.jpg" class="imageZoom" >
+										<img src="<?php //echo base_url() ?>item img/tembakau.jpg" class="imageZoom" >
 										<div class="itemZoom-overlay top"></div>
 									</div>
 									<h4 style="font-family: Minion Pro;">Pesemaian</h4>
@@ -223,7 +235,7 @@
 						 	<a href="" style="text-decoration-line: none;" class="teknologiBudidaya">
 						 		<div class="thumbnail" style="background-color: white; border-style: none">
 						 			<div class="itemZoom" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
-										<img src="<?php echo base_url() ?>item img/tembakau2.jpg" class="imageZoom" >
+										<img src="<?php //echo base_url() ?>item img/tembakau2.jpg" class="imageZoom" >
 										<div class="itemZoom-overlay top"></div>
 									</div>
 									<h4 style="font-family: Minion Pro;">Pemupukan</h4>
@@ -237,7 +249,7 @@
 						 	<a href="" style="text-decoration-line: none;" class="teknologiBudidaya">
 						 		<div class="thumbnail" style="background-color: white; border-style: none">
 						 			<div class="itemZoom" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
-										<img src="<?php echo base_url() ?>item img/tembakau.jpg" class="imageZoom" >
+										<img src="<?php //echo base_url() ?>item img/tembakau.jpg" class="imageZoom" >
 										<div class="itemZoom-overlay top"></div>
 									</div>
 									<h4 style="font-family: Minion Pro;">Pemupukan Bebas Chlor</h4>
@@ -251,7 +263,7 @@
 						 	<a href="" style="text-decoration-line: none;" class="teknologiBudidaya">
 						 		<div class="thumbnail" style="background-color: white; border-style: none">
 						 			<div class="itemZoom" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
-										<img src="<?php echo base_url() ?>item img/tembakau2.jpg" class="imageZoom" >
+										<img src="<?php //echo base_url() ?>item img/tembakau2.jpg" class="imageZoom" >
 										<div class="itemZoom-overlay top"></div>
 									</div>
 									<h4 style="font-family: Minion Pro;">Pengendalian Penyakit </h4>
@@ -265,7 +277,7 @@
 						 	<a href="" style="text-decoration-line: none;" class="teknologiBudidaya">
 						 		<div class="thumbnail" style="background-color: white; border-style: none">
 						 			<div class="itemZoom" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
-										<img src="<?php echo base_url() ?>item img/tembakau.jpg" class="imageZoom" >
+										<img src="<?php //echo base_url() ?>item img/tembakau.jpg" class="imageZoom" >
 										<div class="itemZoom-overlay top"></div>
 									</div>
 									<h4 style="font-family: Minion Pro;">Pengendalian Hama </h4>
@@ -279,7 +291,7 @@
 						 	<a href="" style="text-decoration-line: none;" class="teknologiBudidaya">
 						 		<div class="thumbnail" style="background-color: white; border-style: none">
 						 			<div class="itemZoom" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
-										<img src="<?php echo base_url() ?>item img/tembakau2.jpg" class="imageZoom" >
+										<img src="<?php //echo base_url() ?>item img/tembakau2.jpg" class="imageZoom" >
 										<div class="itemZoom-overlay top"></div>
 									</div>
 									<h4 style="font-family: Minion Pro;">Panen dan Pasca Panen </h4>
@@ -293,7 +305,7 @@
 						 	<a href="" style="text-decoration-line: none;" class="teknologiBudidaya">
 						 		<div class="thumbnail" style="background-color: white; border-style: none">
 						 			<div class="itemZoom" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
-										<img src="<?php echo base_url() ?>item img/tembakau.jpg" class="imageZoom" >
+										<img src="<?php //echo base_url() ?>item img/tembakau.jpg" class="imageZoom" >
 										<div class="itemZoom-overlay top"></div>
 									</div>
 									<h4 style="font-family: Minion Pro;">Kesesuaian Lahan </h4>
@@ -307,7 +319,7 @@
 						 	<a href="" style="text-decoration-line: none;" class="teknologiBudidaya">
 						 		<div class="thumbnail" style="background-color: white; border-style: none">
 						 			<div class="itemZoom" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
-										<img src="<?php echo base_url() ?>item img/tembakau2.jpg" class="imageZoom" >
+										<img src="<?php //echo base_url() ?>item img/tembakau2.jpg" class="imageZoom" >
 										<div class="itemZoom-overlay top"></div>
 									</div>
 									<h4 style="font-family: Minion Pro;">Budidaya Tembakau Cerutu</h4>
@@ -316,14 +328,14 @@
 									<p style="color:black;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure inventore nisi quo, praesentium aspernatur deleniti.</p>
 						 		</div>
 						 	</a>
-						</div>
+						</div> -->
 					</div>
 				</div>				
 			</div>
 			<!-- <hr> -->
 			<hr style="border-color: grey">
-			<a href="" style="text-decoration-line:none;"><h3 class="text-center" style="color:black;font-family: Minion Pro;">Agribisnis</h3></a>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum perferendis, quas consectetur cum. Dolorum quae quam neque facere perspiciatis dignissimos. ipsum dolor sit amet, consectetur adipisicing elit. Distinctio accusantium perferendis eaque, aspernatur ex eos et ad dignissimos, voluptates beatae!</p>
+			<h3 class="text-center" style="color:black;font-family: Minion Pro; "><strong>Agribisnis Tembakau</strong></h3>
+			<p style="text-align: justify; text-indent: 0.5in;"><span style="font-size: 20px; font-weight: unset; font-family: hobo std; color: rgb(242,97,5);">A</span> gribisnis tembakau mempunyai peran yang strategis dalam perekonomian lokal dan nasional. Sebagai komoditas yang bernilai ekonomis tinggi, usaha tani tembakau dapat menyumbang pendapatan petani sekitar 40−80% dari total pendapatan. Sedangkan sebagai bahan baku utama rokok, peranan tembakau semakin menentukan dalam perkembangan industri rokok. Industri rokok telah ditetapkan pemerintah sebagai salah satu industri prioritas nasional (Anonim 2010a), yang perkembangannya akan sangat mempengaruhi perkembangan ekonomi nasional. Target penerimaan negara dari cukai yang telah ditetapkan untuk tahun 2010 sebesar Rp61 triliun dan tahun 2011 sebesar Rp71 triliun; sedangkan penerimaan devisa dari ekspor tembakau sebesar US$564 juta. Usaha tani tembakau dan industri yang terkait juga menyediakan lapangan kerja bagi kurang lebih 10 juta orang. Selain sebagai usaha tani primer, agribisnis tembakau sangat terkait dengan industri hulu dan industri hilir, yang semuanya bernilai ekonomi tinggi. Industri hulu yang sangat erat hubungannya antara lain adalah usaha pembibitan dan pembuatan pupuk kandang. Sedangkan industri hilir yang sangat menopang agribisnis tembakau antara lain adalah usaha kerajinan tikar, alas pengering tembakau rajangan, kerajinan tali, dan usaha tani cengkeh (Anonim 2010a). </p>
 			<br><br>
 			<div class="row">
 				<div class="col-sm-3 col-lg-3">

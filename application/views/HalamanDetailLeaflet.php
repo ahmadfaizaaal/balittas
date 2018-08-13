@@ -87,8 +87,8 @@
 					<?php 
 						foreach ($varietas as $varietasSide) {
 							$namaVarietas = ""; $narasi = "";
-							if (strlen($varietasSide->nama_varietas) > 18) {
-								$namaVarietas = substr($varietasSide->nama_varietas, 0, 18)." ...";
+							if (strlen($varietasSide->nama_varietas) > 30) {
+								$namaVarietas = substr($varietasSide->nama_varietas, 0, 30)." ...";
 							} else {
 								$namaVarietas = $varietasSide->nama_varietas;
 							}

@@ -23,7 +23,8 @@
 				<div class="col-sm-9 col-lg-9">
 				    <ul class="breadcrumb" style="margin: -6px 0px -10px -15px;">
 					  	<li><a href="<?php echo base_url() ?>">Beranda</a></li>
-						<li class="active">Produk</li> 
+					  	<li><a href="<?php echo base_url("produk/$url") ?>">Produk</a></li>
+						<li class="active">Benih</li> 
 					</ul>
 				<h3 class="text-left" style="color:black; font-family: Minion Pro"><?php echo $kategori; ?></h3>
 				<hr style="border-color: grey;margin-top: -8px;">

@@ -8,11 +8,13 @@
             $this->load->library('pagination');
             $this->load->model('M_leaflet');
             $this->load->model('m_varietas');
+            $this->load->model('m_teknologi');
 		}
 
 		public function index()
 		{
 			$data['subLeaflet'] = $this->M_leaflet->selectLeafletTerbaru();
+			$data['teknologi'] = $this->m_teknologi->selectTeknologi();
 
 			$jumlah = $this->m_varietas->getJumlahVarietas();
 			

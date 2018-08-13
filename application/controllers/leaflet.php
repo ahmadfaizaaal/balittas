@@ -11,7 +11,7 @@
 		}
 
 		public function index(){
-			$dataHeader['judul'] = "Detail Leaflet";
+			$dataHeader['judul'] = "Detil Leaflet";
 			$jumlah = $this->M_leaflet->getJumlahLeaflet();
 			
 			//set base_url untuk setiap link page

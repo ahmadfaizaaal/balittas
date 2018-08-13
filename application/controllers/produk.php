@@ -13,6 +13,7 @@
 		public function benih(){
 			$dataHeader['judul'] = "Produk";
 			$data['kategori'] = "Stok Benih";
+			$data['url'] = "benih";
 
 			$jumlah = $this->m_produk->getJumlahBenih();
 			

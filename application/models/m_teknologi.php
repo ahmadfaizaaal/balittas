@@ -11,6 +11,7 @@
 			$query = $this->db->select('*');
 			$query = $this->db->from('teknologi_budidaya');
 			$query = $this->db->where('id_teknologi_budidaya', $idTeknologi);
+			$query = $this->db->get();
 			return $query->result();
 		}
 
@@ -18,6 +19,7 @@
 			$query = $this->db->select('*');
 			$query = $this->db->from('file_teknologi');
 			$query = $this->db->where('id_teknologi_budidaya', $idTeknologi);
+			$query = $this->db->get();
 			return $query->result();
 		}
 
@@ -25,6 +27,7 @@
 			$query = $this->db->select('id_teknologi_budidaya');
 			$query = $this->db->from('teknologi_budidaya');
 			$query = $this->db->where('jenis_teknologi_budidaya', $jenis);
+			$query = $this->db->get();
 			$hasil = $query->result();
 			return $hasil[0]->id_teknologi_budidaya;
 		}

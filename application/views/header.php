@@ -75,26 +75,6 @@
 								  	<div class="container-fluid">
 								  		<div class="row">
 								  			<div class="col-sm-6 col-lg-6">
-<<<<<<< HEAD
-								  				<a href="<?php echo base_url() ?>teknologibudidaya/penangkaranBenih" style="margin-top: 10px;">Penangkaran Benih</a>	
-								  				<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
-								  				<a href="<?php echo base_url() ?>teknologibudidaya/pesemaian">Pesemaian</a>
-							          			<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
-							          			<a href="<?php echo base_url() ?>teknologibudidaya/pemupukan">Pemupukan</a>
-							          			<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
-							          			<a href="<?php echo base_url() ?>teknologibudidaya/bebasChlor">Pemupukan Bebas Chlor</a>
-							          			<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
-									          	<a href="<?php echo base_url() ?>teknologibudidaya/pengendalianPenyakit" style="margin-bottom: 8px;">Pengendalian Penyakit</a>
-								  			</div>
-								  			<div class="col-sm-6 col-lg-6">
-								  				<a href="<?php echo base_url() ?>teknologibudidaya/pengendalianHama" style="margin-top: 10px;">Pengendalian Hama</a>	
-								  				<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
-								  				<a href="<?php echo base_url() ?>teknologibudidaya/panen">Panen dan Pasca Panen</a>	
-								  				<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
-								  				<a href="<?php echo base_url() ?>teknologibudidaya/kesesuaian">Kesesuaian Lahan</a>	
-								  				<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
-								  				<a href="<?php echo base_url() ?>teknologibudidaya/budidaya">Budidaya Tembakau Cerutu</a>
-=======
 								  				<a href="<?php echo base_url('teknologibudidaya/index/').urlencode(strtolower('Pesemaian')); ?>" style="margin-top: 10px;">Pesemaian</a>	
 								  				<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
 								  				<a href="<?php echo base_url('teknologibudidaya/index/').urlencode(strtolower('Pemupukan')); ?>">Pemupukan</a>
@@ -113,7 +93,6 @@
 								  				<a href="<?php echo base_url('teknologibudidaya/index/').urlencode(strtolower('Sorting dan Grading')); ?>">Sorting dan Grading</a>	
 								  				<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
 								  				<a href="<?php echo base_url('teknologibudidaya/index/').urlencode(strtolower('Morfologi dan Biologi')); ?>">Morfologi dan Biologi</a>
->>>>>>> 529b8254114636a5ab469a8646afe9217e85f182
 								  			</div>
 								  		</div>							  		
 								  	</div>							  								          
@@ -147,17 +126,6 @@
 					      	<li class="dropdown">
 					        	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Teknologi Budidaya <span class="caret"></span></a>
 						        <ul class="dropdown-menu">
-<<<<<<< HEAD
-						        	<li><a href="<?php echo base_url() ?>teknologibudidaya/penangkaranBenih">Penangkaran Benih</a></li>
-						          	<li><a href="<?php echo base_url() ?>teknologibudidaya/pesemaian">Pesemaian</a></li>
-						          	<li><a href="<?php echo base_url() ?>teknologibudidaya/pemupukan">Pemupukan</a></li>
-						          	<li><a href="<?php echo base_url() ?>teknologibudidaya/bebasChlor">Pemupukan Bebas Chlor</a></li>
-						          	<li><a href="<?php echo base_url() ?>teknologibudidaya/pengendalianPenyakit">Pengendalian Penyakit</a></li>
-						          	<li><a href="<?php echo base_url() ?>teknologibudidaya/pengendalianHama">Pengendalian Hama</a></li>
-						          	<li><a href="<?php echo base_url() ?>teknologibudidaya/panen">Panen dan Pasca Panen</a></li>
-						          	<li><a href="<?php echo base_url() ?>teknologibudidaya/kesesuaian">Kesesuaian Lahan</a></li>
-						          	<li><a href="<?php echo base_url() ?>teknologibudidaya/budidaya">Budidaya Tembakau Cerutu</a></li>
-=======
 						        	<li><a href="<?php echo base_url('teknologibudidaya/index/').urlencode(strtolower('Pesemaian')); ?>">Pesemaian</a></li>
 						          	<li><a href="<?php echo base_url('teknologibudidaya/index/').urlencode(strtolower('Pemupukan')); ?>">Pemupukan</a></li>
 						          	<li><a href="<?php echo base_url('teknologibudidaya/index/').urlencode(strtolower('Pengendalian Penyakit')); ?>">Pengendalian Penyakit</a></li>
@@ -167,7 +135,6 @@
 						          	<li><a href="<?php echo base_url('teknologibudidaya/index/').urlencode(strtolower('Sorting dan Grading')); ?>">Sorting dan Grading</a></li>
 						          	<li><a href="<?php echo base_url('teknologibudidaya/index/').urlencode(strtolower('Morfologi dan Biologi')); ?>">Morfologi dan Biologi</a></li>
 						          	<!-- <li><a href="<?php echo base_url() ?>teknologibudidaya/budidaya">Budidaya Tembakau Cerutu</a></li> -->
->>>>>>> 529b8254114636a5ab469a8646afe9217e85f182
 						       	</ul>
 					      	</li>				      	
 					    </ul>				    

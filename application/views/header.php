@@ -43,15 +43,15 @@
 							  	<div class="dropbtnHeader" style="font-family: Minion Pro">Jenis Tembakau <span class="caret"></div>
 							  	<div class="dropdownHeader-content" style="margin: 0px 0px 0px -30px;">
 								  	<div class="container-fluid">
-								  		<a href="<?php echo base_url() ?>varietas/jenistembakau/asalusul" style="margin-top: 10px;">Berdasarkan Asal Usul</a>
+								  		<a href="<?php echo base_url() ?>varietas/jenistembakau/asalusul" style="margin-top: 10px;">Asal Usul</a>
 								  		<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
-							          	<a href="<?php echo base_url() ?>varietas/jenisKegunaan">Berdasarkan Kegunaan</a>
+							          	<a href="<?php echo base_url() ?>varietas/jenistembakau/kegunaan">Kegunaan</a>
 							          	<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
-							          	<a href="<?php echo base_url() ?>varietas/jenisWaktu">Berdasarkan Waktu Tanam</a>
+							          	<a href="<?php echo base_url() ?>varietas/jenistembakau/waktutanam">Waktu Tanam</a>
 							          	<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
-							          	<a href="<?php echo base_url() ?>varietas/jenistembakau/daerahpengembangan">Berdasarkan Daerah Pengembangan</a>
+							          	<a href="<?php echo base_url() ?>varietas/jenistembakau/daerahpengembangan">Daerah Pengembangan</a>
 							          	<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
-							          	<a href="<?php echo base_url() ?>varietas/jenisProsesing" style="margin-bottom: 8px;">Berdasarkan Prosesing</a>							          	
+							          	<a href="<?php echo base_url() ?>varietas/jenistembakau/daerahpenanaman" style="margin-bottom: 8px;">Daerah Penanaman</a>							          	
 								  	</div>							  	
 							  	</div>
 							</div>
@@ -107,11 +107,11 @@
 					      	<li class="dropdown">
 					        	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Jenis Tembakau <span class="caret"></span></a>
 						        <ul class="dropdown-menu">
-						        	<li><a href="<?php echo base_url() ?>varietas/asalusul">Manurut Asal Usul</a></li>
-						          	<li><a href="<?php echo base_url() ?>varietas/jenisKegunaan">Kegunaan</a></li>
-						          	<li><a href="<?php echo base_url() ?>varietas/jenisWaktu">Waktu Tanam</a></li>
-						          	<li><a href="<?php echo base_url() ?>varietas/daerahpengembangan">Daerah Pengaembangan</a></li>
-						          	<li><a href="<?php echo base_url() ?>varietas/jenisProsesing">Prosesing</a></li>
+						        	<li><a href="<?php echo base_url() ?>varietas/jenistembakau/asalusul">Asal Usul</a></li>
+						          	<li><a href="<?php echo base_url() ?>varietas/jenistembakau/kegunaan">Kegunaan</a></li>
+						          	<li><a href="<?php echo base_url() ?>varietas/jenistembakau/waktutanam">Waktu Tanam</a></li>
+						          	<li><a href="<?php echo base_url() ?>varietas/jenistembakau/daerahpengembangan">Daerah Pengaembangan</a></li>
+						          	<li><a href="<?php echo base_url() ?>varietas/jenistembakau/daerahpenanaman">Daerah Penanaman</a></li>
 						       	</ul>
 					      	</li>
 					      	<li class="dropdown">

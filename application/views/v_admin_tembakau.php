@@ -321,7 +321,7 @@
                 <div class="table-title">
                     <div class="row">
                         <div class="col-sm-6">
-                            <h2>Data <b>Teknologi Budidaya</b></h2>
+                            <h2>Data <b>Monograf Teknologi Budidaya</b></h2>
                         </div>
                         <div class="col-sm-6">
                             <a href="#tambahteknologi" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Tambah Data</span></a>
@@ -333,9 +333,10 @@
                         <thead>
                             <tr>                                
                                 <th>No</th>
-                                <th>Teknologi Budidaya</th>
+                                <th>Jenis Teknologi Budidaya</th>
+                                <th>Nama Monograf</th>
                                 <th>Deskripsi</th>                                                            
-                                <th>File Gambar</th>                                                            
+                                <th>File</th>                                                            
                             </tr>
                         </thead>
                         <tbody>
@@ -346,13 +347,14 @@
                             <tr>                                
                                 <td><?php echo $no++; ?></td>
                                 <td><?php echo "$tek[jenis_teknologi_budidaya]"; ?></td>
-                                <td><?php echo "$tek[deskripsi]"; ?></td>                                
-                                <td><?php echo "$tek[gambar_tekno]"; ?></td>                                
+                                <td><?php echo "$tek[nama_file]"; ?></td> 
+                                <td><?php echo "$tek[deskripsi_file]"; ?></td>                                
+                                <td><?php echo "$tek[file]"; ?></td>                                
                                 <td>
-                                    <a href="#editteknologi" class="edit" onclick="modal_edit_teknologi('<?php echo $tek['id_teknologi_budidaya']; ?>','<?php echo $tek['jenis_teknologi_budidaya']; ?>','<?php echo $tek['deskripsi']; ?>','<?php echo $tek['gambar_tekno']; ?>');">
+                                    <a href="#editteknologi" class="edit" onclick="modal_edit_teknologi('<?php echo $tek['id_file']; ?>','<?php echo $tek['jenis_teknologi_budidaya']; ?>','<?php echo $tek['nama_file']; ?>','<?php echo $tek['deskripsi_file']; ?>','<?php echo $tek['file']; ?>');">
                                         <i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i>
                                     </a>
-                                    <a href="" class="delete" data-toggle="modal" onclick="confirm_modal_teknologi('<?php echo $tek['id_teknologi_budidaya']; ?>');"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                                    <a href="" class="delete" data-toggle="modal" onclick="confirm_modal_teknologi('<?php echo $tek['id_file']; ?>');"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                                 </td>
                             </tr>
                         <?php } ?>
@@ -396,7 +398,8 @@
                             <tr>                                
                                 <th>No</th>
                                 <th>Jenis Agribisnsis</th>
-                                <th>Narasi</th>                                                              
+                                <th>Deskripsi</th>                                                              
+                                <th>File PDF</th>                                
                                 <th>File Gambar</th>                                
                             </tr>
                         </thead>
@@ -409,9 +412,10 @@
                                 <td><?php echo $no++; ?></td>
                                 <td><?php echo "$agr[jenis_agribisnis]"; ?></td>                                
                                 <td><?php echo "$agr[deskripsi_agribisnis]"; ?></td>
+                                <td><?php echo "$agr[file]"; ?></td>
                                 <td><?php echo "$agr[gambar_agribisnis]"; ?></td>
                                 <td>
-                                     <a href="#editagribisnis" class="edit" onclick="modal_edit_agribisnis('<?php echo $agr['id_agribisnis']; ?>','<?php echo $agr['jenis_agribisnis']; ?>','<?php echo $agr['deskripsi_agribisnis']; ?>','<?php echo $agr['gambar_agribisnis']; ?>');">
+                                     <a href="#editagribisnis" class="edit" onclick="modal_edit_agribisnis('<?php echo $agr['id_agribisnis']; ?>','<?php echo $agr['jenis_agribisnis']; ?>','<?php echo $agr['deskripsi_agribisnis']; ?>','<?php echo $agr['file']; ?>','<?php echo $agr['gambar_agribisnis']; ?>');">
                                         <i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i>
                                     </a>
                                     <a href="" class="delete" data-toggle="modal" onclick="confirm_modal_agribisnis('<?php echo $agr['id_agribisnis']; ?>');"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
@@ -857,14 +861,7 @@
                             <div class="text-center">                                
                                 <label>Spesifikasi</label>                            
                             </div>
-                            <table style="margin-left: 0px;" id="tableDetail">
-                              <!-- <thead style="background-color: none;">
-                                  <tr>
-                                      <td style="font-weight: unset;">Atribut & Value</td>                                      
-                                      <th style="font-weight: unset;padding-left: 10px;">Value</th>
-                                      <th>asda</th>
-                                  </tr>
-                              </thead> -->
+                            <table style="margin-left: 0px;" id="tableDetail">                              
                               <!--elemet sebagai target append-->
                               <tbody id="detail">
                                     <!-- <tr id="detail"> -->
@@ -909,11 +906,7 @@
         function modal_detail(id,narasi,atr,ket, idDes)
         {
             var itemlist = document.getElementById('tableDetail');
-            if (jumlahTr > 0) {
-                // for (var i = 0; i < jumlahTr; i++) {
-                //     itemlist.deleteRow(i);
-                // }
-                // itemlist.remove();
+            if (jumlahTr > 0) {               
                 $("#tableDetail tr").remove();
                 jumlahTr = 0;
             } 
@@ -946,14 +939,14 @@
                 atrjs.setAttribute('type', 'text');
                 atrjs.setAttribute('placeholder', ' Atribut');
                 atrjs.setAttribute('readonly', '');
-                atrjs.setAttribute('style', 'margin-top : 10px;width: 224px;height: 35px;');
+                atrjs.setAttribute('style', 'margin-top : 10px;width: 280px;height: 35px;');
 
                 var valjs = document.createElement('input');
                 valjs.setAttribute('name', 'value'+ i);
                 valjs.setAttribute('value', ket[i]);
                 valjs.setAttribute('type', 'text');
                 valjs.setAttribute('placeholder', ' Value');
-                valjs.setAttribute('style', 'margin : 10px 10px 0px 10px;width: 224px;height: 35px;');
+                valjs.setAttribute('style', 'margin : 10px 10px 0px 10px;width: 280px;height: 35px;');
 
 
                 var hapus = document.createElement('span');
@@ -961,7 +954,7 @@
 //                meng append element input
                 atributjs.appendChild(atrjs);                
                 valuejs.appendChild(valjs);
-                aksijs.appendChild(hapus);
+                // aksijs.appendChild(hapus);
 
                 hapus.innerHTML = '<button class="btn btn-small btn-warning" style="margin-top:10px;width: 5px;height: 35px;"><i class="fa fa-pencil 0"></i></button>';
 //                membuat aksi delete element
@@ -1101,27 +1094,40 @@
         <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <h4 class="modal-title">Tambah Data Teknologi Budidaya</h4>
+                <h4 class="modal-title">Tambah Data Monograf Teknologi Budidaya</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
               </div>
-                 <form enctype="multipart/form-data" action="<?php echo base_url('admin/tambahTeknologi');?>" method="post" class="form-horizontal">
+                 <form enctype="multipart/form-data" action="<?php echo base_url('admin/tambahMonografTeknologi');?>" method="post" class="form-horizontal">
                     <div class="modal-body">
                         <div class="form-group">
                             <label>Jenis Teknologi Budidaya</label>
-                            <input type="text" class="form-control" name="jenistekno" required>
+                            <select class="form-control" name="jenisteknologi">
+                                <option value="TBD0001">Pesemaian</option>
+                                <option value="TBD0002">Pemupukan</option>
+                                <option value="TBD0003">Pengendalian penyakit</option>
+                                <option value="TBD0004">Pengendalian hama</option>
+                                <option value="TBD0005">Panen dan pasca panen</option>
+                                <option value="TBD0006">Kesesuaian lahan</option>
+                                <option value="TBD0007">Sorting dan Grading</option>
+                                <option value="TBD0008">Morfologi dan Biologi</option>
+                            </select>                            
+                        </div>
+                        <div class="form-group">
+                            <label>Nama Monograf</label>
+                            <input type="text" class="form-control" name="namamonograf" required>
                         </div>
                         <div class="form-group">
                             <label>Deskripsi</label>
                             <textarea type="text" name="destekno" class="form-control" rows="8" required></textarea>
                         </div>
                         <div class="form-group" style="padding-bottom: 0px">
-                            <label>Upload Gambar</label>
-                            <div class="input-group">              
-                                <input type="file" id="gmbrtekno" name="gambartekno" style="display:none" onchange="document.getElementById('tekno').value=this.value" accept="image/png, image/jpeg, image/gif">
-                                <input type="text" id="tekno" style="width: 468px;height: 35px;" disabled="disable">
-                                <input type="button" value="Pilih File" onclick="document.getElementById('gmbrtekno').click()" style="height: 35px;margin-top: -2px;" class="btn btn-default">                                
+                            <label>Upload File</label>
+                            <div class="input-group">                                
+                                <input type="file" id="filepdf" name="pdf" style="display:none" onchange="document.getElementById('pdftext').value=this.value" accept="application/pdf" required>
+                                <input type="text" id="pdftext" style="width: 468px;height: 35px;" disabled="disable">
+                                <input type="button" value="Pilih File" onclick="document.getElementById('filepdf').click()" style="height: 35px;margin-top: -2px;" class="btn btn-default">                                
                             </div>
-                        </div>
+                        </div>                        
                     </div>
                     <div class="modal-footer">
                         <input type="button" class="btn btn-default" data-dismiss="modal" value="Batal">
@@ -1140,42 +1146,47 @@
                 <h4 class="modal-title">Edit Data Teknologi Budidaya</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
               </div>
-                 <form enctype="multipart/form-data" action="<?php echo base_url('admin/editTeknologi');?>" method="post" class="form-horizontal">
+                 <form enctype="multipart/form-data" action="<?php echo base_url('admin/editMonografTeknologi');?>" method="post" class="form-horizontal">
                     <div class="modal-body">
                         <input hidden id="idtekno" name="idtekno">
                         <div class="form-group">
-                            <label>Jenis Teknologi Budidaya</label>
-                            <input type="text" class="form-control" name="editjenistekno" id="editjenistekno" required>
+                            <label>Jenis Monograf Teknologi Budidaya</label>
+                            <input type="text" class="form-control" name="editjenistekno" id="editjenistekno" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label>Nama Monograf</label>
+                            <input type="text" class="form-control" name="editnamamonograf" id="editnamamonograf" required>
                         </div>
                         <div class="form-group">
                             <label>Deskripsi</label>
                             <textarea type="text" name="editdestekno" class="form-control" id="editdestekno" rows="8" required></textarea>
                         </div>
                         <div class="form-group" style="padding-bottom: 0px">
-                            <label>Upload Gambar</label>
-                            <div class="input-group">              
-                                <input type="file" id="editgmbrtekno" name="editgambartekno" style="display:none" onchange="document.getElementById('edittekno').value=this.value" accept="image/png, image/jpeg, image/gif">
-                                <input type="text" id="edittekno" style="width: 468px;height: 35px;" disabled="disable">
-                                <input type="button" value="Pilih File" onclick="document.getElementById('editgmbrtekno').click()" style="height: 35px;margin-top: -2px;" class="btn btn-default">                                
+                            <label>Upload File</label>
+                            <div class="input-group">                                
+                                <input type="file" id="editfilepdf" name="editpdf" style="display:none" onchange="document.getElementById('editpdftext').value=this.value" accept="application/pdf">
+                                <input type="text" id="editpdftext" style="width: 468px;height: 35px;" disabled="disable">
+                                <input type="button" value="Pilih File" onclick="document.getElementById('editfilepdf').click()" style="height: 35px;margin-top: -2px;" class="btn btn-default">                                
                             </div>
-                        </div>
+                        </div>                         
                     </div>
                     <div class="modal-footer">
                         <input type="button" class="btn btn-default" data-dismiss="modal" value="Batal">
-                        <input type="submit" class="btn btn-success" value="Tambah">
+                        <input type="submit" class="btn btn-success" value="Simpan">
                     </div>
                 </form>              
             </div>
         </div>
     </div>
     <script>
-        function modal_edit_teknologi(idtekno,jenis,des,gmbr)
+        function modal_edit_teknologi(id,jenis,nama,des,file)
         {
           $('#editteknologi').modal('show', {backdrop: 'static'});          
-          document.getElementById('idtekno').value = idtekno;
-          document.getElementById('editjenistekno').value = jenis;         
+          document.getElementById('idtekno').value = id;
+          document.getElementById('editjenistekno').value = jenis;
+          document.getElementById('editnamamonograf').value = nama;         
           document.getElementById('editdestekno').value = des;    
-          document.getElementById('edittekno').value = gmbr;    
+          document.getElementById('editpdftext').value = file;    
         }
     </script>
 
@@ -1201,9 +1212,9 @@
     </div>   
     <script>
         function confirm_modal_teknologi(delete_url)
-        {
+        {        
           $('#hapusteknologi').modal('show', {backdrop: 'static'});
-          document.getElementById('hapustekno').setAttribute('href' ,"deleteTeknologi/"+delete_url);
+          document.getElementById('hapustekno').setAttribute('href' ,"deleteMonografTeknologi/"+delete_url);
         }
     </script>
     
@@ -1226,6 +1237,14 @@
                             <textarea type="text" name="desagri" class="form-control" rows="8" required></textarea>
                         </div>
                         <div class="form-group" style="padding-bottom: 0px">
+                            <label>Upload File</label>
+                            <div class="input-group">                                
+                                <input type="file" id="pdfagri" name="pdfagri" style="display:none" onchange="document.getElementById('pdftextagri').value=this.value" accept="application/pdf" required>
+                                <input type="text" id="pdftextagri" style="width: 468px;height: 35px;" disabled="disable">
+                                <input type="button" value="Pilih File" onclick="document.getElementById('pdfagri').click()" style="height: 35px;margin-top: -2px;" class="btn btn-default">                                
+                            </div>
+                        </div>
+                        <div class="form-group" style="padding-bottom: 0px">
                             <label>Upload Gambar</label>
                             <div class="input-group">              
                                 <input type="file" id="gmbragri" name="gambaragri" style="display:none" onchange="document.getElementById('agri').value=this.value" accept="image/png, image/jpeg, image/gif">
@@ -1243,24 +1262,32 @@
         </div>
     </div>
         
-    <!-- Edit Modal HTML teknologi-->
+    <!-- Edit Modal HTML Agt\ribisnis-->
     <div id="editagribisnis" class="modal fade">
         <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <h4 class="modal-title">Edit Data Teknologi Budidaya</h4>
+                <h4 class="modal-title">Edit Data Agribisnis</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
               </div>
                  <form enctype="multipart/form-data" action="<?php echo base_url('admin/editAgribisnis');?>" method="post" class="form-horizontal">
                     <div class="modal-body">
                         <input hidden id="idagri" name="idagri">
                         <div class="form-group">
-                            <label>Jenis Teknologi Budidaya</label>
+                            <label>Jenis Agribisnis</label>
                             <input type="text" class="form-control" name="editjenisagri" id="editjenisagri" required>
                         </div>
                         <div class="form-group">
                             <label>Deskripsi</label>
                             <textarea type="text" name="editdesagri" class="form-control" id="editdesagri" rows="8" required></textarea>
+                        </div>
+                        <div class="form-group" style="padding-bottom: 0px">
+                            <label>Upload File</label>
+                            <div class="input-group">                                
+                                <input type="file" id="editpdfagri" name="editpdfagri" style="display:none" onchange="document.getElementById('editpdftextagri').value=this.value" accept="application/pdf">
+                                <input type="text" id="editpdftextagri" style="width: 468px;height: 35px;" disabled="disable">
+                                <input type="button" value="Pilih File" onclick="document.getElementById('editpdfagri').click()" style="height: 35px;margin-top: -2px;" class="btn btn-default">                                
+                            </div>
                         </div>
                         <div class="form-group" style="padding-bottom: 0px">
                             <label>Upload Gambar</label>
@@ -1273,24 +1300,25 @@
                     </div>
                     <div class="modal-footer">
                         <input type="button" class="btn btn-default" data-dismiss="modal" value="Batal">
-                        <input type="submit" class="btn btn-success" value="Tambah">
+                        <input type="submit" class="btn btn-success" value="Simpan">
                     </div>
                 </form>              
             </div>
         </div>
     </div>
     <script>
-        function modal_edit_agribisnis(idagri,jenisagri,desagri,gmbragri)
+        function modal_edit_agribisnis(idagri,jenisagri,desagri,file,gmbragri)
         {
           $('#editagribisnis').modal('show', {backdrop: 'static'});          
           document.getElementById('idagri').value = idagri;
           document.getElementById('editjenisagri').value = jenisagri;         
-          document.getElementById('editdesagri').value = desagri;    
+          document.getElementById('editdesagri').value = desagri;
+          document.getElementById('editpdftextagri').value = file;    
           document.getElementById('editagri').value = gmbragri;    
         }
     </script>
 
-    <!-- Delete Modal HTML Teknologi-->
+    <!-- Delete Modal HTML Agribisnis-->
     <div id="hapusagribisnis" class="modal fade">
         <div class="modal-dialog">
             <div class="modal-content">                
@@ -1376,7 +1404,7 @@
                     </div>
                     <div class="modal-footer">
                         <input type="button" class="btn btn-default" data-dismiss="modal" value="Batal">
-                        <input type="submit" class="btn btn-success" value="Tambah">
+                        <input type="submit" class="btn btn-success" value="Simpan">
                     </div>
                 </form>              
             </div>
@@ -1512,7 +1540,7 @@
                     </div>
                     <div class="modal-footer">
                         <input type="button" class="btn btn-default" data-dismiss="modal" value="Batal">
-                        <input type="submit" class="btn btn-success" value="Tambah">
+                        <input type="submit" class="btn btn-success" value="Simpan">
                     </div>
                 </form>              
             </div>

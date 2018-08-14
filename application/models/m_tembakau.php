@@ -102,27 +102,27 @@
 
 // TEKNOLOGI BUDIDAYA
 		public function get_tekbud(){					
-			$sql = $this->db->query("SELECT * FROM teknologi_budidaya");
+			$sql = $this->db->query("SELECT t.id_teknologi_budidaya,t.jenis_teknologi_budidaya,f.id_file,f.nama_file,f.deskripsi_file,f.file FROM file_teknologi f join teknologi_budidaya t on f.id_teknologi_budidaya = t.id_teknologi_budidaya");
 			return $sql->result_array();
 		}
 		public function get_tekbud_byId($id){						
-			$sql = $this->db->query("SELECT * FROM teknologi_budidaya WHERE id_teknologi_budidaya = \"$id\"");
+			$sql = $this->db->query("SELECT * FROM file_teknologi WHERE id_file = \"$id\"");
 			return $sql->result();
 		}
-		public function add_teknologi($jenis,$des,$gambar){						
-			$sql = $this->db->query("INSERT INTO teknologi_budidaya (id_teknologi_budidaya,jenis_teknologi_budidaya,deskripsi,gambar_tekno) VALUES (\"\",\"$jenis\",\"$des\",\"$gambar\")");			
+		public function add_teknologi($id,$nama,$des,$file){						
+			$sql = $this->db->query("INSERT INTO file_teknologi (id_teknologi_budidaya,id_file,nama_file,deskripsi_file,file) VALUES (\"$id\",\"\",\"$nama\",\"$des\",\"$file\")");			
 		}		
-		public function update_tekbud($id,$jenis,$deskripsi,$gambar){					
-			$sql = $this->db->query("UPDATE `teknologi_budidaya` SET `jenis_teknologi_budidaya`= \"$jenis\",`deskripsi`= \"$deskripsi\",`gambar_tekno`= \"$gambar\" WHERE `id_teknologi_budidaya` = \"$id\"");		
-		}
-		public function update_tekbud_noimg($id,$jenis,$deskripsi){						
-			$sql = $this->db->query("UPDATE `teknologi_budidaya` SET `jenis_teknologi_budidaya`= \"$jenis\",`deskripsi`= \"$deskripsi\" WHERE `id_teknologi_budidaya` = \"$id\"");			
+		public function update_tekbud($id,$nama,$des,$file){					
+			$sql = $this->db->query("UPDATE file_teknologi SET `nama_file`= \"$nama\",`deskripsi_file`= \"$des\",`file`= \"$file\" WHERE `id_file` = \"$id\"");		
+		}	
+		public function update_tekbud_nofile($id,$nama,$des){					
+			$sql = $this->db->query("UPDATE file_teknologi SET `nama_file`= \"$nama\",`deskripsi_file`= \"$des\" WHERE `id_file` = \"$id\"");		
 		}	
 		public function delete_tekbud($id){			
-			$sql = $this->db->query("DELETE FROM teknologi_budidaya WHERE id_teknologi_budidaya = \"$id\" ");
+			$sql = $this->db->query("DELETE FROM file_teknologi WHERE id_file = \"$id\" ");
 		}
 		
-// TEKNOLOGI BUDIDAYA
+// AGRIBISNIS
 		public function get_agri(){						
 			$sql = $this->db->query("SELECT * FROM agribisnis");
 			return $sql->result_array();
@@ -131,13 +131,19 @@
 			$sql = $this->db->query("SELECT * FROM agribisnis WHERE id_agribisnis = \"$id\"");
 			return $sql->result();
 		}
-		public function add_agribisnis($jenis,$des,$gambar){						
-			$sql = $this->db->query("INSERT INTO agribisnis (id_agribisnis,jenis_agribisnis,deskripsi_agribisnis,gambar_agribisnis) VALUES (\"\",\"$jenis\",\"$des\",\"$gambar\")");			
+		public function add_agribisnis($jenis,$des,$pdf,$gambar){						
+			$sql = $this->db->query("INSERT INTO agribisnis (id_agribisnis,jenis_agribisnis,deskripsi_agribisnis,file,gambar_agribisnis) VALUES (\"\",\"$jenis\",\"$des\",\"$pdf\",\"$gambar\")");			
 		}
-		public function update_agribisnis($id,$jenis,$deskripsi,$gambar){						
+		public function update_agribisnis($id,$jenis,$deskripsi,$pdf,$gambar){						
+			$sql = $this->db->query("UPDATE `agribisnis` SET `jenis_agribisnis`= \"$jenis\",`deskripsi_agribisnis`= \"$deskripsi\",`file`= \"$pdf\",`gambar_agribisnis`= \"$gambar\" WHERE `id_agribisnis` = \"$id\"");		
+		}
+		public function update_agribisnis_noimg($id,$jenis,$deskripsi,$pdf){						
+			$sql = $this->db->query("UPDATE `agribisnis` SET `jenis_agribisnis`= \"$jenis\",`deskripsi_agribisnis`= \"$deskripsi\",`file`= \"$pdf\" WHERE `id_agribisnis` = \"$id\"");		
+		}
+		public function update_agribisnis_nofile($id,$jenis,$deskripsi,$gambar){						
 			$sql = $this->db->query("UPDATE `agribisnis` SET `jenis_agribisnis`= \"$jenis\",`deskripsi_agribisnis`= \"$deskripsi\",`gambar_agribisnis`= \"$gambar\" WHERE `id_agribisnis` = \"$id\"");		
 		}
-		public function update_agribisnis_noimg($id,$jenis,$deskripsi){						
+		public function update_agribisnis_noimgpdf($id,$jenis,$deskripsi){						
 			$sql = $this->db->query("UPDATE `agribisnis` SET `jenis_agribisnis`= \"$jenis\",`deskripsi_agribisnis`= \"$deskripsi\" WHERE `id_agribisnis` = \"$id\"");		
 		}	
 		public function delete_agribisnis($id){			

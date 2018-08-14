@@ -267,50 +267,60 @@
 		}
 
 	//========================================TEKNOLOGI========================================
-		public function tambahTeknologi(){
+		public function tambahMonografTeknologi(){
 			$this->load->model("m_tembakau");
 
-			$jenis = $this->input->post('jenistekno');		
-			$des = $this->input->post('destekno');					
 
-			$targetpathtekno = "assets/teknologi/";		
+			$id = $this->input->post('jenisteknologi');
+			$nama = $this->input->post('namamonograf');		
+			$des = $this->input->post('destekno');
+
+			$targetpathtekno = "assets/fileTBD/";		
 			
-			if (empty($_FILES['gambartekno']['name'])) {
-				$gambartekno = "noImg.jpg";
-				$this->m_tembakau->add_teknologi($jenis,$des,$gambartekno);
-			}else{
-				$targetpathteknologi = $targetpathtekno.basename($_FILES['gambartekno']['name']);
-				move_uploaded_file($_FILES['gambartekno']['tmp_name'],$targetpathteknologi);
-				$this->m_tembakau->add_teknologi($jenis,$des,$_FILES['gambartekno']['name']);
-			}
+			$targetpathteknologi = $targetpathtekno.basename($_FILES['pdf']['name']);
+			move_uploaded_file($_FILES['pdf']['tmp_name'],$targetpathteknologi);
+			$this->m_tembakau->add_teknologi($id,$nama,$des,$_FILES['pdf']['name']);
+			
 			redirect(base_url('admin/tembakau'));
 		}
-		public function editTeknologi(){
+		public function editMonografTeknologi(){
 			$this->load->model("m_tembakau");
 
 			$id = $this->input->post('idtekno');
 			$jenis = $this->input->post('editjenistekno');		
-			$des = $this->input->post('editdestekno');				
-			
-			$targetpathtekno = "assets/teknologi/";	
+			$nama = $this->input->post('editnamamonograf');
+			$des = $this->input->post('editdestekno');	
 
-			if (empty($_FILES['editgambartekno']['name'])) {			
-				$this->m_tembakau->update_tekbud_noimg($id,$jenis,$des);
+			// echo "$id";
+			// echo "<br>";
+			// echo "$jenis";
+			// echo "<br>";
+			// echo "$nama";
+			// echo "<br>";
+			// echo "$des";
+			// echo "<br>";
+			// echo $_FILES['editpdf']['name'];						
+			
+			$targetpathtekno = "assets/fileTBD/";	
+			$datatekno = $this->m_tembakau->get_tekbud_byId($id);
+			
+			if (empty($_FILES['editpdf']['name'])) {
+				$this->m_tembakau->update_tekbud_nofile($id,$nama,$des);
 			}else{
-				$datatekno = $this->m_tembakau->get_tekbud_byId($id);
-				unlink($targetpathtekno.$datatekno[0]->gambar_tekno);
-				$targetpathteknologi = $targetpathtekno.basename($_FILES['editgambartekno']['name']);
-				move_uploaded_file($_FILES['editgambartekno']['tmp_name'],$targetpathteknologi);
-				$this->m_tembakau->update_tekbud($id,$jenis,$des,$_FILES['editgambartekno']['name']);
-			}		
+				unlink($targetpathtekno.$datatekno[0]->file);
+				$targetpathteknologi = $targetpathtekno.basename($_FILES['editpdf']['name']);
+				move_uploaded_file($_FILES['editpdf']['tmp_name'],$targetpathteknologi);
+				$this->m_tembakau->update_tekbud($id,$nama,$des,$_FILES['editpdf']['name']);
+			}
+
 			redirect(base_url('admin/tembakau'));
 			
 		}
-		public function deleteTeknologi($id){			
+		public function deleteMonografTeknologi($id){						
 			$this->load->model("m_tembakau");
-			$targetpathtekno = "assets/teknologi/";
+			$targetpathtekno = "assets/fileTBD/";
 			$datatekno = $this->m_tembakau->get_tekbud_byId($id);
-			unlink($targetpathtekno.$datatekno[0]->gambar_tekno);
+			unlink($targetpathtekno.$datatekno[0]->file);
 			$this->m_tembakau->delete_tekbud($id);
 			redirect(base_url('admin/tembakau'));
 		}
@@ -322,15 +332,20 @@
 			$jenis = $this->input->post('jenisagri');		
 			$des = $this->input->post('desagri');		
 			
-			$targetpathagri = "assets/agribisnis/";		
+			$targetpathagrigmbr = "assets/gambarAgribisnis/";
+			$targetpathagrifile = "assets/fileAgribisnis/";		
 			
 			if (empty($_FILES['gambaragri']['name'])) {
-				$gambaragri = "noImg.jpg";
-				$this->m_tembakau->add_agribisnis($jenis,$des,$gambaragri);
+				$gambaragri = "tembakau.jpg";
+				$targetpathagribisnisgmbr = $targetpathagrigmbr.basename($_FILES['pdfagri']['name']);
+				move_uploaded_file($_FILES['pdfagri']['tmp_name'],$targetpathagribisnisgmbr);
+				$this->m_tembakau->add_agribisnis($jenis,$des,$_FILES['pdfagri']['name'],$gambaragri);
 			}else{
-				$targetpathagribisnis = $targetpathagri.basename($_FILES['gambaragri']['name']);
-				move_uploaded_file($_FILES['gambaragri']['tmp_name'],$targetpathagribisnis);
-				$this->m_tembakau->add_agribisnis($jenis,$des,$_FILES['gambaragri']['name']);
+				$targetpathagribisnisgmbr = $targetpathagrigmbr.basename($_FILES['gambaragri']['name']);
+				move_uploaded_file($_FILES['gambaragri']['tmp_name'],$targetpathagribisnisgmbr);
+				$targetpathagribisnisfile = $targetpathagrifile.basename($_FILES['pdfagri']['name']);
+				move_uploaded_file($_FILES['pdfagri']['tmp_name'],$targetpathagribisnisfile);
+				$this->m_tembakau->add_agribisnis($jenis,$des,$_FILES['pdfagri']['name'],$_FILES['gambaragri']['name']);
 			}
 			redirect(base_url('admin/tembakau'));
 		}
@@ -341,24 +356,40 @@
 			$jenis = $this->input->post('editjenisagri');		
 			$des = $this->input->post('editdesagri');		
 			
-			$targetpathagri = "assets/agribisnis/";	
+			$targetpathagrifile = "assets/fileAgribisnis/";		
+			$targetpathagrigmbr = "assets/gambarAgribisnis/";
+			$dataagri = $this->m_tembakau->get_agri_byId($id);
 
-			if (empty($_FILES['editgambaragri']['name'])) {			
-				$this->m_tembakau->update_agribisnis_noimg($id,$jenis,$des);
-			}else{
-				$dataagri = $this->m_tembakau->get_agri_byId($id);
-				unlink($targetpathagri.$dataagri[0]->gambar_agribisnis);
-				$targetpathagribisnis = $targetpathagri.basename($_FILES['editgambaragri']['name']);
-				move_uploaded_file($_FILES['editgambaragri']['tmp_name'],$targetpathagribisnis);
-				$this->m_tembakau->update_agribisnis($id,$jenis,$des,$_FILES['editgambaragri']['name']);
+			if (!empty($_FILES['editgambaragri']['name'])&&!empty($_FILES['editpdfagri']['name'])) {
+				unlink($targetpathagrifile.$dataagri[0]->file);
+				$targetpathagribisnisfile = $targetpathagrifile.basename($_FILES['editpdfagri']['name']);
+				move_uploaded_file($_FILES['editpdfagri']['tmp_name'],$targetpathagribisnisfile);			
+				unlink($targetpathagrigmbr.$dataagri[0]->gambar_agribisnis);
+				$targetpathagribisnisgmbr = $targetpathagrigmbr.basename($_FILES['editgambaragri']['name']);
+				move_uploaded_file($_FILES['editgambaragri']['tmp_name'],$targetpathagribisnisgmbr);
+				$this->m_tembakau->update_agribisnis($id,$jenis,$des,$_FILES['editpdfagri']['name'],$_FILES['editgambaragri']['name']);
+			}elseif(empty($_FILES['editgambaragri']['name'])&&empty($_FILES['editpdfagri']['name'])){				
+				$this->m_tembakau->update_agribisnis_noimgpdf($id,$jenis,$des);
+			}elseif (empty($_FILES['editpdfagri']['name'])) {
+				unlink($targetpathagrigmbr.$dataagri[0]->gambar_agribisnis);
+				$targetpathagribisnisgmbr = $targetpathagrigmbr.basename($_FILES['editgambaragri']['name']);
+				move_uploaded_file($_FILES['editgambaragri']['tmp_name'],$targetpathagribisnisgmbr);
+				$this->m_tembakau->update_agribisnis_nofile($id,$jenis,$des,$_FILES['editgambaragri']['name']);
+			}elseif (empty($_FILES['editgambaragri']['name'])) {
+				unlink($targetpathagrifile.$dataagri[0]->file);
+				$targetpathagribisnisfile = $targetpathagrifile.basename($_FILES['editpdfagri']['name']);
+				move_uploaded_file($_FILES['editpdfagri']['tmp_name'],$targetpathagribisnisfile);			
+				$this->m_tembakau->update_agribisnis_noimg($id,$jenis,$des,$_FILES['editpdfagri']['name']);
 			}		
 			redirect(base_url('admin/tembakau'));
 		}
 		public function deleteAgribisnis($id){			
 			$this->load->model("m_tembakau");
-			$targetpathagri = "assets/agribisnis/";
-			$dataagri = $this->m_tembakau->get_agri_byId($id);
-			unlink($targetpathagri.$dataagri[0]->gambar_agribisnis);
+			$targetpathagrigmbr = "assets/gambarAgribisnis/";
+			$targetpathagrifile = "assets/fileAgribisnis/";
+			$dataagri = $this->m_tembakau->get_agri_byId($id);			
+			unlink($targetpathagrigmbr.$dataagri[0]->gambar_agribisnis);
+			unlink($targetpathagrifile.$dataagri[0]->file);
 			$this->m_tembakau->delete_agribisnis($id);
 			redirect(base_url('admin/tembakau'));
 		}

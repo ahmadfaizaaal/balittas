@@ -201,7 +201,7 @@
 								}
 						?>
 						<div class="col-sm-4 col-lg-4">
-						 	<a href="<?php echo base_url('teknologibudidaya/').urlencode(strtolower($row->jenis_teknologi_budidaya)); ?>" title="Klik untuk lebih detil" style="text-decoration-line: none;" class="teknologiBudidaya">
+						 	<a href="<?php echo base_url('teknologibudidaya/index/').urlencode(strtolower($row->jenis_teknologi_budidaya)); ?>" title="Klik untuk lebih detil" style="text-decoration-line: none;" class="teknologiBudidaya">
 						 		<div class="thumbnail" style="background-color: white; border-style: none">
 							 		<div class="itemZoom" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
 										<img src="<?php echo base_url() ?>assets/gambarTBD/<?php echo $row->gambar_tekno; ?>" class="imageZoom" >

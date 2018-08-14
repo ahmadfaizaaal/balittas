@@ -20,7 +20,7 @@
 			$data['subLeaflet'] = $this->M_leaflet->selectLeafletTerbaru();
 
 			$this->load->view('header', $dataHeader);
-			$this->load->view('HalamanDetailVarietas', $data);
+			$this->load->view('HalamanDetailTeknologi', $data);
 			$this->load->view('footer');
 		}
 				

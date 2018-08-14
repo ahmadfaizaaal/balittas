@@ -9,12 +9,14 @@
             $this->load->model('M_leaflet');
             $this->load->model('m_varietas');
             $this->load->model('m_teknologi');
+            $this->load->model('m_agribisnis');
 		}
 
 		public function index()
 		{
 			$data['subLeaflet'] = $this->M_leaflet->selectLeafletTerbaru();
 			$data['teknologi'] = $this->m_teknologi->selectTeknologi();
+			$data['agribisnis'] = $this->m_agribisnis->selectAgribisnisTop3();
 
 			$jumlah = $this->m_varietas->getJumlahVarietas();
 			
@@ -63,10 +65,5 @@
 			$this->load->view('HalamanUtama', $data);
 			$this->load->view('footer');
 		}	
-		
-
-		public function agribisnis() {
-			$this->load->view('HalamanDetailAgribisnis');
-		}
 	} 
 ?>

@@ -10,7 +10,7 @@ class M_leaflet extends CI_Model{
         }
 
         function selectLeafletTerbaru() {
-        	$query = $this->db->limit(12);
+        	$query = $this->db->limit(8);
         	$query = $this->db->join('gambar_leaflet', 'leaflet.id_leaflet = gambar_leaflet.id_leaflet');
 	        $query = $this->db->from('leaflet');
 	        $query = $this->db->select('leaflet.nama_leaflet, gambar_leaflet.file');

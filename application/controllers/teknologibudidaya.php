@@ -7,7 +7,6 @@
             // $this->load->database();
             $this->load->library('pagination');
             $this->load->model('M_leaflet');
-            $this->load->model('m_varietas');
             $this->load->model('m_teknologi');
 		}
 
@@ -22,42 +21,6 @@
 			$this->load->view('header', $dataHeader);
 			$this->load->view('HalamanDetailTeknologi', $data);
 			$this->load->view('footer');
-		}
-				
-		public function penangkaranBenih(){
-			$this->load->view('HalamanDetailTeknologi');
-		}
-
-		public function pesemaian(){
-			$this->load->view('HalamanDetailTeknologi');
-		}
-
-		public function pemupukan(){
-			$this->load->view('HalamanDetailTeknologi');
-		}
-
-		public function bebasChlor(){
-			$this->load->view('HalamanDetailTeknologi');
-		}
-
-		public function pengendalianPenyakit(){
-			$this->load->view('HalamanDetailTeknologi');
-		}
-
-		public function pengendalianHama(){
-			$this->load->view('HalamanDetailTeknologi');
-		}
-
-		public function panen(){
-			$this->load->view('HalamanDetailTeknologi');
-		}
-
-		public function kesesuaian(){
-			$this->load->view('HalamanDetailTeknologi');
-		}
-
-		public function budidaya(){
-			$this->load->view('HalamanDetailTeknologi');
 		}
 
 	}

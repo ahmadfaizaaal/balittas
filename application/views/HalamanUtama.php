@@ -217,150 +217,42 @@
 						<?php
 							}
 						?>
-						<!-- <div class="col-sm-4 col-lg-4">
-						 	<a href="" style="text-decoration-line: none;" class="teknologiBudidaya">
-						 		<div class="thumbnail" style="background-color: white; border-style: none">
-						 			<div class="itemZoom" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
-										<img src="<?php //echo base_url() ?>item img/tembakau.jpg" class="imageZoom" >
-										<div class="itemZoom-overlay top"></div>
-									</div>
-									<h4 style="font-family: Minion Pro;">Pesemaian</h4>
-									<hr style="margin:-6px 0px 5px 0px; border-color: orange;">
-									<div class="overlayhr"></div>
-									<p style="color:black;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure inventore nisi quo, praesentium aspernatur deleniti.</p>
-						 		</div>
-						 	</a>
-						</div>
-						<div class="col-sm-4 col-lg-4">
-						 	<a href="" style="text-decoration-line: none;" class="teknologiBudidaya">
-						 		<div class="thumbnail" style="background-color: white; border-style: none">
-						 			<div class="itemZoom" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
-										<img src="<?php //echo base_url() ?>item img/tembakau2.jpg" class="imageZoom" >
-										<div class="itemZoom-overlay top"></div>
-									</div>
-									<h4 style="font-family: Minion Pro;">Pemupukan</h4>
-									<hr style="margin:-6px 0px 5px 0px; border-color: orange;">
-									<div class="overlayhr"></div>
-									<p style="color:black;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure inventore nisi quo, praesentium aspernatur deleniti.</p>
-						 		</div>
-						 	</a>
-						</div>
-						<div class="col-sm-4 col-lg-4">
-						 	<a href="" style="text-decoration-line: none;" class="teknologiBudidaya">
-						 		<div class="thumbnail" style="background-color: white; border-style: none">
-						 			<div class="itemZoom" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
-										<img src="<?php //echo base_url() ?>item img/tembakau.jpg" class="imageZoom" >
-										<div class="itemZoom-overlay top"></div>
-									</div>
-									<h4 style="font-family: Minion Pro;">Pemupukan Bebas Chlor</h4>
-									<hr style="margin:-6px 0px 5px 0px; border-color: orange;">
-									<div class="overlayhr"></div>
-									<p style="color:black;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure inventore nisi quo, praesentium aspernatur deleniti.</p>
-						 		</div>
-						 	</a>
-						</div>
-						<div class="col-sm-4 col-lg-4">
-						 	<a href="" style="text-decoration-line: none;" class="teknologiBudidaya">
-						 		<div class="thumbnail" style="background-color: white; border-style: none">
-						 			<div class="itemZoom" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
-										<img src="<?php //echo base_url() ?>item img/tembakau2.jpg" class="imageZoom" >
-										<div class="itemZoom-overlay top"></div>
-									</div>
-									<h4 style="font-family: Minion Pro;">Pengendalian Penyakit </h4>
-									<hr style="margin:-6px 0px 5px 0px; border-color: orange;">
-									<div class="overlayhr"></div>
-									<p style="color:black;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure inventore nisi quo, praesentium aspernatur deleniti.</p>
-						 		</div>
-						 	</a>
-						</div>
-						<div class="col-sm-4 col-lg-4">
-						 	<a href="" style="text-decoration-line: none;" class="teknologiBudidaya">
-						 		<div class="thumbnail" style="background-color: white; border-style: none">
-						 			<div class="itemZoom" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
-										<img src="<?php //echo base_url() ?>item img/tembakau.jpg" class="imageZoom" >
-										<div class="itemZoom-overlay top"></div>
-									</div>
-									<h4 style="font-family: Minion Pro;">Pengendalian Hama </h4>
-									<hr style="margin:-6px 0px 5px 0px; border-color: orange;">
-									<div class="overlayhr"></div>
-									<p style="color:black;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure inventore nisi quo, praesentium aspernatur deleniti.</p>
-						 		</div>
-						 	</a>
-						</div>
-						<div class="col-sm-4 col-lg-4">
-						 	<a href="" style="text-decoration-line: none;" class="teknologiBudidaya">
-						 		<div class="thumbnail" style="background-color: white; border-style: none">
-						 			<div class="itemZoom" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
-										<img src="<?php //echo base_url() ?>item img/tembakau2.jpg" class="imageZoom" >
-										<div class="itemZoom-overlay top"></div>
-									</div>
-									<h4 style="font-family: Minion Pro;">Panen dan Pasca Panen </h4>
-									<hr style="margin:-6px 0px 5px 0px; border-color: orange;">
-									<div class="overlayhr"></div>
-									<p style="color:black;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure inventore nisi quo, praesentium aspernatur deleniti.</p>
-						 		</div>
-						 	</a>
-						</div>
-						<div class="col-sm-4 col-lg-4">
-						 	<a href="" style="text-decoration-line: none;" class="teknologiBudidaya">
-						 		<div class="thumbnail" style="background-color: white; border-style: none">
-						 			<div class="itemZoom" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
-										<img src="<?php //echo base_url() ?>item img/tembakau.jpg" class="imageZoom" >
-										<div class="itemZoom-overlay top"></div>
-									</div>
-									<h4 style="font-family: Minion Pro;">Kesesuaian Lahan </h4>
-									<hr style="margin:-6px 0px 5px 0px; border-color: orange;">
-									<div class="overlayhr"></div>
-									<p style="color:black;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure inventore nisi quo, praesentium aspernatur deleniti.</p>
-						 		</div>
-						 	</a>
-						</div>
-						<div class="col-sm-4 col-lg-4">
-						 	<a href="" style="text-decoration-line: none;" class="teknologiBudidaya">
-						 		<div class="thumbnail" style="background-color: white; border-style: none">
-						 			<div class="itemZoom" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
-										<img src="<?php //echo base_url() ?>item img/tembakau2.jpg" class="imageZoom" >
-										<div class="itemZoom-overlay top"></div>
-									</div>
-									<h4 style="font-family: Minion Pro;">Budidaya Tembakau Cerutu</h4>
-									<hr style="margin:-6px 0px 5px 0px; border-color: orange;">
-									<div class="overlayhr"></div>
-									<p style="color:black;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure inventore nisi quo, praesentium aspernatur deleniti.</p>
-						 		</div>
-						 	</a>
-						</div> -->
 					</div>
 				</div>				
 			</div>
 			<!-- <hr> -->
 			<hr style="border-color: grey">
-			<h3 class="text-center" style="color:black;font-family: Minion Pro; "><strong>Agribisnis Tembakau</strong></h3>
+			<a href="<?php echo base_url('agribisnis') ?>" style="text-decoration-line:none;" title="Klik untuk menuju halaman Agribisnis"><h3 class="text-center" style="color:black;font-family: Minion Pro; "><strong>Agribisnis Tembakau</strong></h3></a>
 			<p style="text-align: justify; text-indent: 0.5in;"><span style="font-size: 20px; font-weight: unset; font-family: hobo std; color: rgb(242,97,5);">A</span> gribisnis tembakau mempunyai peran yang strategis dalam perekonomian lokal dan nasional. Sebagai komoditas yang bernilai ekonomis tinggi, usaha tani tembakau dapat menyumbang pendapatan petani sekitar 40−80% dari total pendapatan. Sedangkan sebagai bahan baku utama rokok, peranan tembakau semakin menentukan dalam perkembangan industri rokok. Industri rokok telah ditetapkan pemerintah sebagai salah satu industri prioritas nasional (Anonim 2010a), yang perkembangannya akan sangat mempengaruhi perkembangan ekonomi nasional. Target penerimaan negara dari cukai yang telah ditetapkan untuk tahun 2010 sebesar Rp61 triliun dan tahun 2011 sebesar Rp71 triliun; sedangkan penerimaan devisa dari ekspor tembakau sebesar US$564 juta. Usaha tani tembakau dan industri yang terkait juga menyediakan lapangan kerja bagi kurang lebih 10 juta orang. Selain sebagai usaha tani primer, agribisnis tembakau sangat terkait dengan industri hulu dan industri hilir, yang semuanya bernilai ekonomi tinggi. Industri hulu yang sangat erat hubungannya antara lain adalah usaha pembibitan dan pembuatan pupuk kandang. Sedangkan industri hilir yang sangat menopang agribisnis tembakau antara lain adalah usaha kerajinan tikar, alas pengering tembakau rajangan, kerajinan tali, dan usaha tani cengkeh (Anonim 2010a). </p>
 			<br><br>
+			<?php 
+				foreach ($agribisnis as $row) {
+				
+			?>
 			<div class="row">
 				<div class="col-sm-3 col-lg-3">
-					<img src="<?php echo base_url() ?>item img/tembakau.jpg" class="image img-rounded" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
+					<img src="<?php echo base_url() ?>assets/gambarAgribisnis/<?php echo $row->gambar_agribisnis; ?>" class="image img-rounded" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
 				</div>
 				<div class="col-sm-8 col-lg-8">
-					<p style="font-size: 20px;color:rgb(242,97,5); font-family: Minion Pro;">Budidaya tembakau madura</p>
-					<!-- <br> -->
-					<p>Lorem ipsum dolor sit amet. ipsum dolor sit amet, consectetur adipisicing elit. Provident quod, quisquam fugiat maiores ipsam. Deserunt molestiae reiciendis, eius natus iure? ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati repudiandae tenetur illo vitae impedit eum culpa esse vero, hic repellendus.</p>	
-					<!-- <br> -->
+					<p style="font-size: 20px;color:rgb(242,97,5); font-family: Minion Pro;"><?php echo $row->jenis_agribisnis; ?></p>
+					<p><?php echo $row->deskripsi_agribisnis; ?></p>	
 					<div class="text-right">						
-						<a href="<?php echo base_url('Home/agribisnis'); ?>">
+						<a href="<?php echo base_url('agribisnis/jenis/').urlencode(strtolower($row->jenis_agribisnis)); ?>">
 							<button class="btn btn-success" style="height: 30px;"><p style="font-size: 12px;padding-top: -12px;"><i>Selengkapnya</i></p></button>
 						</a>
 					</div>
 				</div>
 			</div>
 			<hr>
-			<div class="row">
+			<?php 
+				}
+			?>
+			<!-- <div class="row">
 				<div class="col-sm-3 col-lg-3">
-					<img src="<?php echo base_url() ?>item img/tembakau.jpg" class="image img-rounded" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
+					<img src="<?php //echo base_url() ?>item img/tembakau.jpg" class="image img-rounded" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
 				</div>
 				<div class="col-sm-8 col-lg-8">
 					<p style="font-size: 20px;color:rgb(242,97,5); font-family: Minion Pro;">Budidaya tembakau madura</p>
-					<!-- <br> -->
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident quod, quisquam fugiat maiores ipsam. Deserunt molestiae reiciendis, eius natus iure? ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati repudiandae tenetur illo vitae impedit eum culpa esse vero, hic repellendus.</p>
 					<div class="text-right">						
 						<a href="">
@@ -372,11 +264,10 @@
 			<hr>
 			<div class="row">
 				<div class="col-sm-3 col-lg-3">
-					<img src="<?php echo base_url() ?>item img/tembakau.jpg" class="image img-rounded" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
+					<img src="<?php //echo base_url() ?>item img/tembakau.jpg" class="image img-rounded" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
 				</div>
 				<div class="col-sm-8 col-lg-8">
 					<p style="font-size: 20px;color:rgb(242,97,5); font-family: Minion Pro;">Budidaya tembakau madura</p>
-					<!-- <br> -->
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident quod, quisquam fugiat maiores ipsam. Deserunt molestiae reiciendis, eius natus iure? ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati repudiandae tenetur illo vitae impedit eum culpa esse vero, hic repellendus.</p>
 					<div class="text-right">						
 						<a href="">
@@ -384,7 +275,7 @@
 						</a>
 					</div>
 				</div>
-			</div>
+			</div> -->
 		</div>
 		<!-- MODALS -->
 		<div id="myModal" class="modalLeaflet">

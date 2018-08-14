@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>Balai Penelitian Tanaman Pemanis dan Serat</title>
+	<head>	
+		<title>Admin</title>
 		<meta charset="utf-8">
 		<!-- <link href="gambar/logo.png" rel="shortcut icon"> -->
 		<meta name="description" content="A Tuts+ course">
-		<meta name="author" content="Gusna Ikhsan">
-		<!-- <link rel="stylesheet" href="webdesa.css"> -->
+		<meta name="author" content="Gusna Ikhsan">		
 		<link rel="stylesheet" href="<?php echo base_url() ?>bootstrap/css/bootstrap.css">
 		<link rel="stylesheet" href="<?php echo base_url() ?>bootstrap/css/balittas.css">
 		<link href="<?php echo base_url() ?>item img/Logo-Kementerian-Pertanian.png" rel="shortcut icon">
@@ -20,15 +19,14 @@
 	<body>
 		<div class="thetop"></div>
 		<header>
-			<?php
+			<?php			
 				if (!empty($judul)) { ?>
 					<div class="hidden-md hidden-lg" style="background-color: rgb(28,69,26); height: 70px;"></div>			
 			<?php 
 				} ?>		
 			<nav class="navbar navbar-inverse navbar-fixed-top navbarHover">
 				<div class="container-fluid">
-				    <div class="navbar-header" style="margin-top: 5px; margin-bottom: 3px;">						    
-				      <!-- <a href="<?php //echo base_url() ?>"><img src="<?php //echo base_url() ?>item img/logoBalittas2.png" style="width:280px;margin-top: -18px;margin-bottom: -6px;margin-left: 5px;"></a> -->
+				    <div class="navbar-header" style="margin-top: 5px; margin-bottom: 3px;">
 				      <a href="<?php echo base_url() ?>"><img src="<?php echo base_url() ?>item img/logobalittas.png" style="width:280px; margin-left: 5px;"></a>
 				      <button type="botton" class="navbar-toggle" data-toggle="collapse" data-target="#main" style="margin-top: 10px;">
 							<span class="icon-bar"></span>

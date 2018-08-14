@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- <link href="<?php echo base_url();?>/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
     <link href="<?php echo base_url();?>/bootstrap/css/bootstrap.css" rel="stylesheet">
-    <link href="<?php echo base_url();?>/bootstrap/css/style.css" rel="stylesheet">
+    <!-- <link href="<?php echo base_url();?>/bootstrap/css/style.css" rel="stylesheet"> -->
     <link href="<?php echo base_url();?>/bootstrap/css/styleadmin.css" rel="stylesheet">
     <!-- <link href="<?php echo base_url();?>/bootstrap/css/simple-sidebar.css" rel="stylesheet"> -->
     <!-- <link href="<?php echo base_url() ?>/bootstrap/img/Logo-Kementerian-Pertanian.png" rel="shortcut icon"> -->
@@ -134,7 +134,7 @@
                             $no = 1;                                          
                             foreach ($varietas_tembakau as $row) {                                
                          ?>
-                            <tr>                                
+                            <tr>                                 
                                 <?php 
                                     $atr = array();
                                     $ket = array();
@@ -1517,7 +1517,7 @@
                 </form>              
             </div>
         </div>
-    </div>
+    </div>    
     <script>
         function modal_edit_distribusibenih(iddistribusi,idbenih,namabenih,tgl,thn,kelas,jumlah,keterangan)
         {
@@ -1568,7 +1568,7 @@
             </div>
         </div>
     </footer>
-
+    
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="<?php echo base_url();?>/bootstrap/js/jquery-3.3.1.min.js"></script>
     <script src="<?php echo base_url();?>/bootstrap/js/jquery.easing.1.3.js"></script>

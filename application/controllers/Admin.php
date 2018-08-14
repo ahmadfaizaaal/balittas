@@ -27,8 +27,8 @@
 			$data['ListNamaBenih'] = $this->m_tembakau->get_nama_benih();
 			$data['teknologi'] = $this->m_tembakau->get_tekbud();
 			$data['agribisnis'] = $this->m_tembakau->get_agri();
-			// $dataHeader['judul'] = "Admin";
-			// $this->load->view("header",$dataHeader);
+			$dataHeader['judul'] = "Admin";
+			$this->load->view("headerAdmin",$dataHeader);
 			$this->load->view("v_admin_tembakau",$data);
 		}
 	//========================================VARIETAS========================================

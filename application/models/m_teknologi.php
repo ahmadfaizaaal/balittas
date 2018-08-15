@@ -33,7 +33,7 @@
 		}
 
 		public function pencarianTeknologi($cari){
-			$sql = $this->db->query("SELECT t.id_teknologi_budidaya,t.jenis_teknologi_budidaya,f.id_file,f.nama_file,f.deskripsi_file,f.file FROM file_teknologi f join teknologi_budidaya t on f.id_teknologi_budidaya = t.id_teknologi_budidaya where jenis_teknologi_budidaya = \"$cari\"");
+			$sql = $this->db->query("SELECT DISTINCT t.id_teknologi_budidaya,t.jenis_teknologi_budidaya, t.deskripsi FROM file_teknologi f join teknologi_budidaya t on f.id_teknologi_budidaya = t.id_teknologi_budidaya WHERE t.jenis_teknologi_budidaya LIKE \"%$cari%\" OR t.deskripsi LIKE \"%$cari%\" OR f.nama_file LIKE \"%$cari%\" OR f.deskripsi_file LIKE \"%$cari%\"");
 			return $sql->result_array();
 		}
 

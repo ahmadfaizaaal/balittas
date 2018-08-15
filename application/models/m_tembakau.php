@@ -120,7 +120,7 @@
 		}	
 		public function delete_tekbud($id){			
 			$sql = $this->db->query("DELETE FROM file_teknologi WHERE id_file = \"$id\" ");
-		}
+		}		
 		
 // AGRIBISNIS
 		public function get_agri(){						

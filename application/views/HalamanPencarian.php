@@ -28,9 +28,9 @@
 					<!-- <h3 class="text-left" style="color:black;font-family: Minion Pro">Pencarian</h3>
 					<hr style="border-color: grey;margin-top: -8px;"> -->
 				<div class="container-fluid" style="background-color:rgba(28,69,26,0.9);border-radius: 5px; width: 60%;">
-					<form method="get" action="<?php echo base_url('pencarian')?>" style="margin-top: 15px; margin-bottom: 15px;">
+					<form method="post" action="<?php echo base_url('pencarian/cari')?>" style="margin-top: 15px; margin-bottom: 15px;">
 						<div class="input-group">
-							<input type="text" class="form-control" placeholder="Cari" required>
+							<input type="text" name="keyword" class="form-control" placeholder="Cari" required>
 							<div class="input-group-btn">
 							    <button class="btn btn-success" type="submit">
 							    	<i class="glyphicon glyphicon-search"></i>
@@ -40,21 +40,24 @@
 					</form>						
 				</div>
 				<br><br>
+				<?php 
+					foreach ($pencarianTekno as $tekno) {											
+				 ?>
 				<div>					
 						<a href="" style="text-decoration-line: none;" class="teknologiBudidaya">						
-							<h3><span style="background-color: rgba(255,203,13,0.4);">Tembakau</span></h3>
+							<h3><span style="background-color: rgba(255,203,13,0.4);"><?php echo "$tekno[jenis_teknologi_budidaya]"; ?></span></h3>
 						</a>					
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates tenetur eum molestiae alias, incidunt vitae, beatae ratione adipisci repellendus iusto, ut! Magnam dignissimos unde autem nihil minus, reiciendis eius sunt vitae sequi possimus suscipit quibusdam maxime totam est repudiandae provident illum sit quaerat excepturi, sapiente. Minima, ad quis voluptatibus debitis.</p>
+						<p><?php echo "$tekno[deskripsi]"; ?></p>
 						<hr>
 				</div>	
-				<div>
+				<?php } ?>
+				<!-- <div>
 						<a href="" style="text-decoration-line: none;" class="teknologiBudidaya">						
 							<h3>Tembakau</h3>
 						</a>	
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates tenetur eum molestiae alias, incidunt vitae, beatae ratione adipisci repellendus iusto, ut! Magnam dignissimos unde autem nihil minus, reiciendis eius sunt vitae sequi possimus suscipit quibusdam maxime totam est repudiandae provident illum sit quaerat excepturi, sapiente. Minima, ad quis voluptatibus debitis.</p>					
 						<hr>
-				</div>																
-			<!-- </div>								 -->
+				</div>		 -->																	
 		</div>
 		<script>
 			$(selector).highlight('', {

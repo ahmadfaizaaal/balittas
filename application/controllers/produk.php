@@ -52,9 +52,9 @@
  			
 
             //ambil data buku dari database
-			$data['dataBenih'] = $this->m_produk->selectBenihAll($config['per_page'],$dari);
+		$data['dataBenih'] = $this->m_produk->selectBenihAll($config['per_page'],$dari);
             $data['subLeaflet'] = $this->M_leaflet->selectLeafletTerbaru();
-			$data['dataDistribusiBenih'] = $this->m_produk->selectDistribusiBenih();
+		$data['dataDistribusiBenih'] = $this->m_produk->selectDistribusiBenih();
  
             //Membuat link
             $str_links = $this->pagination->create_links();
@@ -75,7 +75,11 @@
 		}
 
 		public function produk2(){
-			$this->load->view('HalamanProduk2');
+                  $data['subLeaflet'] = $this->M_leaflet->selectLeafletTerbaru();
+                  $dataHeader['judul'] = "Alat dan Mesin";
+                  $this->load->view('header', $dataHeader);
+			$this->load->view('HalamanProduk2',$data);
+                  $this->load->view('footer');
 		}
 	}
  ?>

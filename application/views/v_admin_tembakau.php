@@ -12,95 +12,18 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="<?php echo base_url();?>/bootstrap/font-awesome-4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <!-- <link href="<?php echo base_url();?>/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
-    <link href="<?php echo base_url();?>/bootstrap/css/bootstrap.css" rel="stylesheet">
-    <!-- <link href="<?php echo base_url();?>/bootstrap/css/style.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">    
+    <link href="<?php echo base_url();?>/bootstrap/css/bootstrap.css" rel="stylesheet">    
     <link href="<?php echo base_url();?>/bootstrap/css/styleadmin.css" rel="stylesheet">
-    <!-- <link href="<?php echo base_url();?>/bootstrap/css/simple-sidebar.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="<?php echo base_url();?>/bootstrap/css/croppie.css">
+    
     <!-- <link href="<?php echo base_url() ?>/bootstrap/img/Logo-Kementerian-Pertanian.png" rel="shortcut icon"> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="<?php echo base_url();?>/bootstrap/js/croppie.js"></script>
+    <script src="<?php echo base_url();?>/bootstrap/js/bootstrap.min.js"></script>
+
 </head>
-
 <body>
-    <!-- <header>
-        <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container-fluid">
-                <div class="navbar-header">                   
-                    <a href="#home" class="navbar-brand halaman">
-                        <img src="<?php echo base_url();?>/item img/logobalittas.png" width="270" style="margin-right:-90px; padding-right: 25px;">
-                    </a>
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bar" aria-expanded="false" style="margin-top:25px; margin-right: -20px;">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Varietas <span class="caret"></span></a>
-                            <ul class="dropdown-menu" style="margin:-5px 0px 0px 0px; width:280px; background-color:#fece00;">
-                                <div class="container-fluid">
-                                    <div class="col-sm-6 col-lg-6">
-                                        <li><a href="<?php echo base_url();?>admin/tembakau" class="halaman">Tembakau</a></li>
-                                        <hr style="margin-left:0px; margin: 1px 0px 1px 0px; text-align: left; width:95%;">
-                                        <li><a href="#JarakPagar" class="halaman">Jarak Pagar</a></li>
-                                        <hr style="margin-left:0px; margin: 1px 0px 1px 0px; text-align: left; width:95%;">
-                                        <li><a href="#JarakKepyar" class="halaman">Jarak Kepyar</a></li>
-                                        <hr style="margin-left:0px; margin: 1px 0px 1px 0px; text-align: left; width:95%;">
-                                        <li><a href="#Kapas" class="halaman">Kapas</a></li>
-                                        <hr style="margin-left:0px; margin: 1px 0px 1px 0px; text-align: left; width:95%;">
-                                        <li><a href="#Kapuk" class="halaman">Kapuk</a></li>
-                                        <hr style="margin-left:0px; margin: 1px 0px 1px 0px; text-align: left; width:95%;">
-                                    </div>
-                                    <div class="col-sm-6 col-lg-6">
-                                        <li><a href="#Kenaf" class="halaman">Kenaf</a></li>
-                                        <hr style="margin-left:0px; margin: 1px 0px 1px 0px; text-align: left; width:95%;">
-                                        <li><a href="#Rami" class="halaman">Rami</a></li>
-                                        <hr style="margin-left:0px; margin: 1px 0px 1px 0px; text-align: left; width:95%;">
-                                        <li><a href="#Rosela" class="halaman">Rosela</a></li>
-                                        <hr style="margin-left:0px; margin: 1px 0px 1px 0px; text-align: left; width:95%;">
-                                        <li><a href="#Tebu" class="halaman">Tebu</a></li>
-                                        <hr style="margin-left:0px; margin: 1px 0px 1px 0px; text-align: left; width:95%;">
-                                        <li><a href="#Wijen" class="halaman">Wijen</a></li>
-                                        <hr style="margin-left:0px; margin: 1px 0px 1px 0px; text-align: left; width:95%;">
-                                    </div>
-                                </div>
-                            </ul>
-                        </li>
-                        <li> <a href="#login" data-toggle="modal" data-target="#login-modal" class="halaman">Welcome Admin</a></li>
-                        <li> <a href="index.html#layanan" class="halaman">Logout</a></li>
-                    </ul>
-                </div>
-
-                <div class="collapse navbar-collapse" id="bar" style="margin-top:5px; margin-left: -60px; margin-right: -60px; border:0;">
-                    <ul class="nav navbar-nav navbar-right hidden-md hidden-lg" style="background-color:#57bb82;">
-                        <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Varietas <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#Welcome" class="halaman">Tembakau</a></li>
-                                <li><a href="#JarakPagar" class="halaman">Jarak Pagar</a></li>
-                                <li><a href="#JarakKepyar" class="halaman">Jarak Kepyar</a></li>
-                                <li><a href="#Kapas" class="halaman">Kapas</a></li>
-                                <li><a href="#Kapuk" class="halaman">Kapuk</a></li>
-                                <li><a href="#Kenaf" class="halaman">Kenaf</a></li>
-                                <li><a href="#Rami" class="halaman">Rami</a></li>
-                                <li><a href="#Rosela" class="halaman">Rosela</a></li>
-                                <li><a href="#Tebu" class="halaman">Tebu</a></li>
-                                <li><a href="#Wijen" class="halaman">Wijen</a></li>
-                            </ul>
-                        </li>
-                        <li> <a href="#login" data-toggle="modal" data-target="#login-modal" class="halaman">Welcome Admin</a></li>
-                        <li> <a href="index.html#layanan" class="halaman">Logout</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>     -->
-
 <!-- DATA VARIETAS -->
     <section class="Welcome" id="Welcome" style="padding-top: 2px; margin-top: 100px;">
         <div class="container">
@@ -1118,7 +1041,13 @@
                         </div>
                         <div class="form-group">
                             <label>Deskripsi</label>
-                            <textarea type="text" name="destekno" class="form-control" rows="8" required></textarea>
+                            <textarea type="text" name="destekno0" class="form-control" rows="8" placeholder="Paragraf Pertama"></textarea>
+                            <br>
+                            <div id="tambaharea"></div>
+                            <div class="text-right">
+                                <button class="btn btn-small btn-default" onclick="addareatekno(); return false" style="margin-top: 10px;height: 35px;"><i class="fa fa-plus" style="margin-top: -25px;"></i></button>
+                            </div>
+                            <br>
                         </div>
                         <div class="form-group" style="padding-bottom: 0px">
                             <label>Upload File</label>
@@ -1127,8 +1056,9 @@
                                 <input type="text" id="pdftext" style="width: 468px;height: 35px;" disabled="disable">
                                 <input type="button" value="Pilih File" onclick="document.getElementById('filepdf').click()" style="height: 35px;margin-top: -2px;" class="btn btn-default">                                
                             </div>
-                        </div>                        
-                    </div>
+                        </div> 
+                        <input hidden name="tempTekno" id="tempTekno" value="1">                       
+                    </div>                    
                     <div class="modal-footer">
                         <input type="button" class="btn btn-default" data-dismiss="modal" value="Batal">
                         <input type="submit" class="btn btn-success" value="Tambah">
@@ -1138,6 +1068,43 @@
         </div>
     </div>
     
+     <script>
+            var indeks = 1;            
+
+            function addareatekno() {
+//                menentukan target append
+                var itemlist = document.getElementById('tambaharea');
+                
+//                membuat element
+                var area = document.createElement('textarea');
+                var aksi = document.createElement('button');
+
+//                membuat element input 
+                area.setAttribute('type','text');
+                area.setAttribute('name','destekno'+indeks);
+                area.setAttribute('class','form-control');
+                area.setAttribute('rows','8');
+                // area.setAttribute('required','');
+                area.setAttribute('placeholder','Paragraf Selanjutnya');
+
+                aksi.setAttribute('class','btn btn-small btn-default fa fa-trash 0');
+                aksi.setAttribute('style','margin-top:10px; margin-bottom:10px ;width: 5px;height: 35px;');              
+             
+//                meng append element
+                itemlist.appendChild(area);
+                itemlist.appendChild(aksi);
+               
+                aksi.onclick = function () {
+                    area.parentNode.removeChild(area);
+                    aksi.parentNode.removeChild(aksi);
+                    indeks--;
+                };
+
+                indeks++;
+                document.getElementById('tempTekno').value = indeks;
+            }
+      </script>
+
     <!-- Edit Modal HTML teknologi-->
     <div id="editteknologi" class="modal fade">
         <div class="modal-dialog">
@@ -1227,14 +1194,25 @@
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
               </div>
                  <form enctype="multipart/form-data" action="<?php echo base_url('admin/tambahAgribisnis');?>" method="post" class="form-horizontal">
+                 <input hidden name="tempAgri" id="tempAgri" value="1">
                     <div class="modal-body">
                         <div class="form-group">
                             <label>Jenis Agribisnis</label>
                             <input type="text" class="form-control" name="jenisagri" required>
                         </div>
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <label>Deskripsi</label>
                             <textarea type="text" name="desagri" class="form-control" rows="8" required></textarea>
+                        </div> -->
+                        <div class="form-group">
+                            <label>Deskripsi</label>
+                            <textarea type="text" name="desagri0" class="form-control" rows="8" placeholder="Paragraf Pertama"></textarea>
+                            <br>
+                            <div id="tambahareaagri"></div>
+                            <div class="text-right">
+                                <button class="btn btn-small btn-default" onclick="addareaagri(); return false" style="margin-top: 10px;height: 35px;"><i class="fa fa-plus" style="margin-top: -25px;"></i></button>
+                            </div>
+                            <br>
                         </div>
                         <div class="form-group" style="padding-bottom: 0px">
                             <label>Upload File</label>
@@ -1261,6 +1239,42 @@
             </div>
         </div>
     </div>
+    <script>
+            var indeks = 1;            
+
+            function addareaagri() {
+//                menentukan target append
+                var itemlist = document.getElementById('tambahareaagri');
+                
+//                membuat element
+                var area = document.createElement('textarea');
+                var aksi = document.createElement('button');
+
+//                membuat element input 
+                area.setAttribute('type','text');
+                area.setAttribute('name','desagri'+indeks);
+                area.setAttribute('class','form-control');
+                area.setAttribute('rows','8');
+                // area.setAttribute('required','');
+                area.setAttribute('placeholder','Paragraf Selajutnya');
+
+                aksi.setAttribute('class','btn btn-small btn-default fa fa-trash 0');
+                aksi.setAttribute('style','margin-top:10px; margin-bottom:10px ;width: 5px;height: 35px;');              
+             
+//                meng append element
+                itemlist.appendChild(area);
+                itemlist.appendChild(aksi);
+               
+                aksi.onclick = function () {
+                    area.parentNode.removeChild(area);
+                    aksi.parentNode.removeChild(aksi);
+                    indeks--;
+                };
+
+                indeks++;
+                document.getElementById('tempAgri').value = indeks;
+            }
+      </script>
         
     <!-- Edit Modal HTML Agt\ribisnis-->
     <div id="editagribisnis" class="modal fade">
@@ -1588,6 +1602,98 @@
           document.getElementById('hapusdben').setAttribute('href' ,"deleteDistribusiBenih/"+delete_url);
         }
     </script>
+    
+    <!-- <div class="container">
+        <br>
+        <h3 align="center">Image Crop & Upload using JQuery with PHP Ajax</h3>
+        <br>
+        <br>
+        <div class="">
+            <div class="panel-heading">Select Profile Image</div>
+            <div class="panel-body" align="center">
+                <input type="file" name="upload_image" id="upload_image" />
+                <br>
+                <div id="uploaded_image"></div>
+            </div>
+        </div>
+    </div>
+    <div id="uploadimageModal" class="modal" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Upload & Crop Image</h4>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                    <div class="col-md-8 text-center">
+                          <div id="image_demo" style="width:350px; margin-top:30px"></div>
+                    </div>
+                    <div class="col-md-4" style="padding-top:30px;">
+                        <br>
+                        <br>
+                        <br>
+                          <button class="btn btn-success crop_image">Crop & Upload Image</button>
+                      </div>
+                  </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+        </div>
+    </div>
+</div> -->
+
+<script>  
+// $(document).ready(function(){
+
+//     $image_crop = $('#image_demo').croppie({
+//     enableExif: true,
+//     viewport: {
+//       width:250,
+//       height:150,
+//       type:'square' //circle
+//     },
+//     boundary:{
+//       width:300,
+//       height:300
+//     }
+//   });
+
+//   $('#upload_image').on('change', function(){
+//     var reader = new FileReader();
+//     reader.onload = function (event) {
+//       $image_crop.croppie('bind', {
+//         url: event.target.result
+//       }).then(function(){
+//         console.log('jQuery bind complete');
+//       });
+//     }
+//     reader.readAsDataURL(this.files[0]);
+//     $('#uploadimageModal').modal('show');
+//   });
+
+//   $('.crop_image').click(function(event){
+//     $image_crop.croppie('result', {
+//       type: 'canvas',
+//       size: 'viewport'
+//     }).then(function(response){
+//       $.ajax({
+//         url:"upload.php",
+//         type: "POST",
+//         data:{"image": response},
+//         success:function(data)
+//         {
+//           $('#uploadimageModal').modal('hide');
+//           $('#uploaded_image').html(data);
+//         }
+//       });
+//     })
+//   });
+
+// });  
+</script>
+
 
     <footer>
         <div class="container-fluid text-center" style="color:white;background-color: black;">

@@ -54,8 +54,7 @@
 										<img src="<?php echo base_url() ?>assets/varietas/<?php echo $row->file_gambar; ?>" alt="" style="width: 100%;">
 								<?php 
 									}
-								 ?>
-								<!-- <img src="<?php //echo base_url() ?>assets/varietas/<?php //echo $row->file_gambar; ?>" alt="" style="width: 100%;"> -->
+								 ?>								
 								<span class="label label-success"><p class="glyphicon glyphicon-calendar"></p> <?php echo $row->tanggal_upload ?></span>
 								<span class="label label-warning"><p class="glyphicon glyphicon-time"></p> <?php echo $row->waktu_upload; ?></span>	
 								<h4 style="color:#fece00;" title="<?php echo $row->nama_varietas; ?>"><?php echo $namaVarietas; ?></h4>
@@ -69,6 +68,7 @@
 								} else {
 									$narasi = "Belum ada deskripsi";
 									echo "<p style=\"font-style: italic; color:lightgrey;\">&nbsp $narasi</p>";
+									// echo "<br><br>";
 								}
 							 ?>
 							
@@ -123,8 +123,7 @@
 							<img class="leafletImg" src="<?php echo base_url() ?>assets/leaflet/<?php echo $leafletSide->file; ?>" class="image" style="width: 110%;border-radius: 3px; margin-left: -10px;">
 						</div>						
 					</div>
-					<?php $ganjil = true; } } ?>					
-						
+					<?php $ganjil = true; } } ?>											
 				</div>
 			</div>
 			</div> <!-- akhir div container atas -->
@@ -134,54 +133,54 @@
 			<div class="container-fluid" style="background-color: rgba(28,69,26,0.8);">
 				<div class="container">
 				<!-- Produk -->
-				<h3 class="text-center" style="color:white;font-family: Minion Pro;"><strong>Produk</strong></h3>
-				<p class="text-center" style="color: white;"><span style="font-size: 20px; font-weight: bold; font-family: hobo std; color: #fece00;">I</span> novasi teknologi yang paling strategis untuk mendukung pengembangan komoditas adalah varietas unggul. Penggunaan varietas unggul suatu komoditas mempunyai dampak yang sangat luas, antara lain dapat berpengaruh terhadap efisiensi biaya dalam budi daya, peningkatan produksi dan mutu, serta pemanfaatan lahan-lahan marginal, sehingga dapat berdampak sosial dan ekonomi yang cukup nyata bagi petani. Selain itu, penggunaan varietas unggul merupakan teknologi yang relatif mudah diterima dan diterapkan oleh petani.</p>
-				<br><br>
-				<div class="row">
-				    <div class="col-xs-6 col-sm-3 col-lg-3">
-					    <a href="<?php echo base_url() ?>produk/benih" style="text-decoration-line: none;" onmouseover="hvr(this, 'in')" onmouseleave="hvr(this, 'out')">
-					    	<div class="thumbnail text-center produk" style="background-color: rgba(28,69,26,0); border-style: none;" >
-					    		<img src="<?php echo base_url() ?>item img/hazelnutWh.png" style="width: 40%" col="g">
-					    		<img src="<?php echo base_url() ?>item img/hazelnutY.png" style="width: 40%; display:none;" col="b">
-					    		<br>
-								<h4>Benih</h4>
-					    	</div>
-					    </a>
-				    </div>
-				    <div class="col-xs-6 col-sm-3 col-lg-3">
-					    <a href="<?php echo base_url() ?>produk/produk2" style="text-decoration-line: none;" onmouseover="hvr(this, 'in')" onmouseleave="hvr(this, 'out')">
-					    	<div class="thumbnail text-center produk" style="background-color: rgba(28,69,26,0); border-style: none">
-					    		<img src="<?php echo base_url() ?>item img/toolsWh.png" style="width: 40%" col="g">
-					    		<img src="<?php echo base_url() ?>item img/toolsY.png" style="width: 40%; display:none;" col="b">
-					    		<br>
-								<h4>Alat & Mesin</h4>
-					    	</div>
-					    </a>
-				    </div>
-				    <div class="col-xs-6 col-sm-3 col-lg-3">
-					    <a href="<?php echo base_url() ?>produk/produk1" style="text-decoration-line: none;" onmouseover="hvr(this, 'in')" onmouseleave="hvr(this, 'out')">
-					    	<div class="thumbnail text-center produk" style="background-color: rgba(28,69,26,0); border-style: none">
-					    		<img src="<?php echo base_url() ?>item img/flaskWh.png" style="width: 40%" col="g">
-					    		<img src="<?php echo base_url() ?>item img/flaskY.png" style="width: 40%; display:none;" col="b">
-					    		<br>
-								<h4>Formula</h4>
-					    	</div>
-					    </a>
-				    </div>
-				    <div class="col-xs-6 col-sm-3 col-lg-3">
-					    <a href="<?php echo base_url() ?>produk/produk2" style="text-decoration-line: none;" onmouseover="hvr(this, 'in')" onmouseleave="hvr(this, 'out')">
-					    	<div class="thumbnail text-center produk" style="background-color: rgba(28,69,26,0); border-style: none">
-					    		<img src="<?php echo base_url() ?>item img/pipeWh.png" style="width: 40%" col="g">
-					    		<img src="<?php echo base_url() ?>item img/pipeY.png" style="width: 40%; display:none;" col="b">
-					    		<br>
-								<h4>Produk Hilir</h4>
-					    	</div>
-					    </a>
-				    </div>
+					<h3 class="text-center" style="color:white;font-family: Minion Pro;"><strong>Produk</strong></h3>
+					<p class="text-center" style="color: white;"><span style="font-size: 20px; font-weight: bold; font-family: hobo std; color: #fece00;">I</span> novasi teknologi yang paling strategis untuk mendukung pengembangan komoditas adalah varietas unggul. Penggunaan varietas unggul suatu komoditas mempunyai dampak yang sangat luas, antara lain dapat berpengaruh terhadap efisiensi biaya dalam budi daya, peningkatan produksi dan mutu, serta pemanfaatan lahan-lahan marginal, sehingga dapat berdampak sosial dan ekonomi yang cukup nyata bagi petani. Selain itu, penggunaan varietas unggul merupakan teknologi yang relatif mudah diterima dan diterapkan oleh petani.</p>
+					<br><br>
+					<div class="row">
+					    <div class="col-xs-6 col-sm-3 col-lg-3">
+						    <a href="<?php echo base_url() ?>produk/benih" style="text-decoration-line: none;" onmouseover="hvr(this, 'in')" onmouseleave="hvr(this, 'out')">
+						    	<div class="thumbnail text-center produk" style="background-color: rgba(28,69,26,0); border-style: none;" >
+						    		<img src="<?php echo base_url() ?>item img/hazelnutWh.png" style="width: 40%" col="g">
+						    		<img src="<?php echo base_url() ?>item img/hazelnutY.png" style="width: 40%; display:none;" col="b">
+						    		<br>
+									<h4>Benih</h4>
+						    	</div>
+						    </a>
+					    </div>
+					    <div class="col-xs-6 col-sm-3 col-lg-3">
+						    <a href="<?php echo base_url() ?>produk/produk2" style="text-decoration-line: none;" onmouseover="hvr(this, 'in')" onmouseleave="hvr(this, 'out')">
+						    	<div class="thumbnail text-center produk" style="background-color: rgba(28,69,26,0); border-style: none">
+						    		<img src="<?php echo base_url() ?>item img/toolsWh.png" style="width: 40%" col="g">
+						    		<img src="<?php echo base_url() ?>item img/toolsY.png" style="width: 40%; display:none;" col="b">
+						    		<br>
+									<h4>Alat & Mesin</h4>
+						    	</div>
+						    </a>
+					    </div>
+					    <div class="col-xs-6 col-sm-3 col-lg-3">
+						    <a href="<?php echo base_url() ?>produk/produk1" style="text-decoration-line: none;" onmouseover="hvr(this, 'in')" onmouseleave="hvr(this, 'out')">
+						    	<div class="thumbnail text-center produk" style="background-color: rgba(28,69,26,0); border-style: none">
+						    		<img src="<?php echo base_url() ?>item img/flaskWh.png" style="width: 40%" col="g">
+						    		<img src="<?php echo base_url() ?>item img/flaskY.png" style="width: 40%; display:none;" col="b">
+						    		<br>
+									<h4>Formula</h4>
+						    	</div>
+						    </a>
+					    </div>
+					    <div class="col-xs-6 col-sm-3 col-lg-3">
+						    <a href="<?php echo base_url() ?>produk/produk2" style="text-decoration-line: none;" onmouseover="hvr(this, 'in')" onmouseleave="hvr(this, 'out')">
+						    	<div class="thumbnail text-center produk" style="background-color: rgba(28,69,26,0); border-style: none">
+						    		<img src="<?php echo base_url() ?>item img/pipeWh.png" style="width: 40%" col="g">
+						    		<img src="<?php echo base_url() ?>item img/pipeY.png" style="width: 40%; display:none;" col="b">
+						    		<br>
+									<h4>Produk Hilir</h4>
+						    	</div>
+						    </a>
+					    </div>
+					</div>
+				<!-- <br> -->
 				</div>
-				<br></div>
 			</div>
-
 			<br><br>
 			<div class="container">
 			<div class="row">
@@ -226,8 +225,7 @@
 			<p style="text-align: justify; text-indent: 0.5in;"><span style="font-size: 20px; font-weight: unset; font-family: hobo std; color: rgb(242,97,5);">A</span> gribisnis tembakau mempunyai peran yang strategis dalam perekonomian lokal dan nasional. Sebagai komoditas yang bernilai ekonomis tinggi, usaha tani tembakau dapat menyumbang pendapatan petani sekitar 40−80% dari total pendapatan. Sedangkan sebagai bahan baku utama rokok, peranan tembakau semakin menentukan dalam perkembangan industri rokok. Industri rokok telah ditetapkan pemerintah sebagai salah satu industri prioritas nasional (Anonim 2010a), yang perkembangannya akan sangat mempengaruhi perkembangan ekonomi nasional. Target penerimaan negara dari cukai yang telah ditetapkan untuk tahun 2010 sebesar Rp61 triliun dan tahun 2011 sebesar Rp71 triliun; sedangkan penerimaan devisa dari ekspor tembakau sebesar US$564 juta. Usaha tani tembakau dan industri yang terkait juga menyediakan lapangan kerja bagi kurang lebih 10 juta orang. Selain sebagai usaha tani primer, agribisnis tembakau sangat terkait dengan industri hulu dan industri hilir, yang semuanya bernilai ekonomi tinggi. Industri hulu yang sangat erat hubungannya antara lain adalah usaha pembibitan dan pembuatan pupuk kandang. Sedangkan industri hilir yang sangat menopang agribisnis tembakau antara lain adalah usaha kerajinan tikar, alas pengering tembakau rajangan, kerajinan tali, dan usaha tani cengkeh (Anonim 2010a). </p>
 			<br><br>
 			<?php 
-				foreach ($agribisnis as $row) {
-				
+				foreach ($agribisnis as $row) {				
 			?>
 			<div class="row">
 				<div class="col-sm-3 col-lg-3">
@@ -260,22 +258,7 @@
 						</a>
 					</div>
 				</div>
-			</div>
-			<hr>
-			<div class="row">
-				<div class="col-sm-3 col-lg-3">
-					<img src="<?php //echo base_url() ?>item img/tembakau.jpg" class="image img-rounded" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
-				</div>
-				<div class="col-sm-8 col-lg-8">
-					<p style="font-size: 20px;color:rgb(242,97,5); font-family: Minion Pro;">Budidaya tembakau madura</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident quod, quisquam fugiat maiores ipsam. Deserunt molestiae reiciendis, eius natus iure? ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati repudiandae tenetur illo vitae impedit eum culpa esse vero, hic repellendus.</p>
-					<div class="text-right">						
-						<a href="">
-							<button class="btn btn-success" style="height: 30px;"><p style="font-size: 12px;padding-top: -12px;"><i>Selengkapnya</i></p></button>
-						</a>
-					</div>
-				</div>
-			</div> -->
+			</div>	 -->					
 		</div>
 		<!-- MODALS -->
 		<div id="myModal" class="modalLeaflet">

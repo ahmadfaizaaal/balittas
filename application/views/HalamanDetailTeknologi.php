@@ -55,11 +55,16 @@
 													echo "<button class=\"accordion\" style=\"border-bottom: 2px solid white;\"><strong>$rowB->nama_file</strong></button>
 														<div class=\"container-fluid panel\">";
 												}
+											$temParagraf = explode('</p>',$rowB->deskripsi_file);
 										?>
 												<!-- <button class="accordion" style="border-bottom: 2px solid white;"><strong><?php //echo $rowB->nama_file; ?></strong></button>
 												<div class="container-fluid panel"> -->
 													<br>
-													<p style="text-indent: 0.5in;"><?php echo $rowB->deskripsi_file; ?></p>
+													<?php
+														for ($i=0; $i < count($temParagraf); $i++) { 
+															echo "<p style=\"text-indent: 0.5in;text-align:justify;\">".$temParagraf[$i]."</p>";	
+														}
+													 ?>													
 													<br>
 													<p style="color: #5cb85c;"><b>Catatan:</b></p>
 													<p>Pembahasan lebih lanjut monograf <b><?php echo $rowB->nama_file; ?></b> dapat diunduh <a href="<?php echo base_url() ?>assets/fileTBD/<?php echo $rowB->file; ?>" target="blank" class="hoverThumbnail" style="text-decoration-line: none"><b>di sini</b></a>.</p>

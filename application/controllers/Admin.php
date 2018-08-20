@@ -272,8 +272,14 @@
 
 
 			$id = $this->input->post('jenisteknologi');
-			$nama = $this->input->post('namamonograf');		
-			$des = $this->input->post('destekno');
+			$nama = $this->input->post('namamonograf');	
+			$des ="";
+			for ($i=0; $i < $this->input->post('tempTekno') ; $i++) { 					
+				$des .= $this->input->post('destekno'."$i")."</p>";
+			}		
+
+			// echo "$des";
+			// echo $this->input->post('tempTekno');
 
 			$targetpathtekno = "assets/fileTBD/";		
 			
@@ -289,17 +295,7 @@
 			$id = $this->input->post('idtekno');
 			$jenis = $this->input->post('editjenistekno');		
 			$nama = $this->input->post('editnamamonograf');
-			$des = $this->input->post('editdestekno');	
-
-			// echo "$id";
-			// echo "<br>";
-			// echo "$jenis";
-			// echo "<br>";
-			// echo "$nama";
-			// echo "<br>";
-			// echo "$des";
-			// echo "<br>";
-			// echo $_FILES['editpdf']['name'];						
+			$des = $this->input->post('editdestekno');								
 			
 			$targetpathtekno = "assets/fileTBD/";	
 			$datatekno = $this->m_tembakau->get_tekbud_byId($id);
@@ -330,10 +326,16 @@
 			$this->load->model("m_tembakau");
 
 			$jenis = $this->input->post('jenisagri');		
-			$des = $this->input->post('desagri');		
+			// $des = $this->input->post('desagri');		
 			
+			$des ="";
+			for ($i=0; $i < $this->input->post('tempAgri') ; $i++) { 					
+				$des .=$this->input->post('desagri'."$i")."</p>";
+			}	
+
 			$targetpathagrigmbr = "assets/gambarAgribisnis/";
-			$targetpathagrifile = "assets/fileAgribisnis/";		
+			$targetpathagrifile = "assets/fileAgribisnis/";	
+
 			
 			if (empty($_FILES['gambaragri']['name'])) {
 				$gambaragri = "tembakau.jpg";

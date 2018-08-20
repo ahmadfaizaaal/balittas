@@ -32,7 +32,7 @@
 					<hr style="border-color: grey;margin-top: 3px;">
 					<?php 
 						foreach ($agribisnis as $rowA) {
-						
+						$temParagraf = explode('</p>',$rowA->deskripsi_agribisnis);
 					 ?>
 					<div class="row" style="margin-bottom: 20px;">
 						<div class="col-xs-12 col-sm-12 col-lg-12">
@@ -40,8 +40,12 @@
 									<img src="<?php echo base_url() ?>assets/gambarAgribisnis/<?php echo $rowA->gambar_agribisnis; ?>" alt="" style="width: 100%;border-radius: 3px;">
 									<br>
 									<div class="container-fluid">									
-										<h4 style="color:rgb(242,97,5); font-size: 24px; font-family: Minion Pro;"><strong><?php echo $rowA->jenis_agribisnis; ?></strong></h4>									
-										<p style="text-indent: 0.5in; text-align: justify;"><?php echo $rowA->deskripsi_agribisnis; ?></p>
+										<h4 style="color:rgb(242,97,5); font-size: 24px; font-family: Minion Pro;"><strong><?php echo $rowA->jenis_agribisnis; ?></strong></h4>
+										<?php 
+											for ($i=0; $i < count($temParagraf) ; $i++) { 
+												echo "<p style=\"text-indent: 0.5in;text-align:justify;\">".$temParagraf[$i]."</p>";
+											}
+										 ?>																			
 
 										<br>
 										<p style="color: #5cb85c;"><b>Catatan:</b></p>

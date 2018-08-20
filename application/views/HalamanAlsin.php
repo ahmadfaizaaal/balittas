@@ -5,6 +5,7 @@
 		<meta charset="utf-8">
 		<!-- <link href="gambar/logo.png" rel="shortcut icon"> -->
 		<meta name="description" content="A Tuts+ course">
+		<meta name="author" content="Gusna Ikhsan">
 		<!-- <link rel="stylesheet" href="webdesa.css"> -->
 		<link rel="stylesheet" href="<?php echo base_url() ?>bootstrap/css/bootstrap.css">
 		<link rel="stylesheet" href="<?php echo base_url() ?>bootstrap/css/balittas.css">
@@ -18,37 +19,40 @@
 	</head>	
 	<body>
 		
-
+		<br>
 		<!-- CONTENT -->
 		<div class="container">
-			<ul class="breadcrumb" style="margin-bottom: 0px;margin-top: 15px;">
-				<li><a href="<?php echo base_url() ?>">Beranda</a></li>
-				<li class="active">Leaflet</li>
-			</ul>
 			<div class="row">
 				<div class="col-sm-9 col-lg-9">
-					<hr style="border-color: grey;margin-top: 10px;">
+					<ul class="breadcrumb" style="margin: -6px 0px -10px -15px;">
+					  	<li><a href="<?php echo base_url() ?>">Beranda</a></li>
+					  	<li><a href="<?php echo base_url("produk/$url") ?>">Produk</a></li>
+						<li class="active">Alat dan Mesin</li> 
+					</ul>
+					<h3 class="text-left" style="color:black; font-family: Minion Pro"><?php echo $kategori; ?></h3>
+					<hr style="border-color: grey;margin-top: -8px;">
+					<!-- <hr style="border-color: grey;margin-top: 10px;"> -->
 					<div class="row">
 						<?php
-							$ganjil = true; $namaLeaflet = "";						
-							foreach ($dataLeaflet as $leaflet) { 
-								if (strlen($leaflet->nama_leaflet) > 15) {
-									$namaLeaflet = substr($leaflet->nama_leaflet, 0, 15)." ...";
+							$ganjil = true; $namaAlsin = "";						
+							foreach ($dataAlsin as $alsin) { 
+								if (strlen($alsin->nama_leaflet) > 15) {
+									$namaAlsin = substr($alsin->nama_leaflet, 0, 15)." ...";
 								} else {
-									$namaLeaflet = $leaflet->nama_leaflet;
+									$namaAlsin = $alsin->nama_leaflet;
 								}
 								if ($ganjil) {
 								
 						?>
 						<div class="col-xs-12 col-sm-4 col-lg-4"> 
 							<div class="thumbnailLeaflet text-center" style="box-shadow: 5px 5px 7px 0px rgba(0,0,0,0.2);">
-								<img class="leafletImg" src="<?php echo base_url() ?>assets/leaflet/<?php echo $leaflet->file; ?>" alt="" style="width:100%;border-radius: 3px;">
+								<img class="leafletImg" src="<?php echo base_url() ?>assets/leaflet/<?php echo $alsin->file; ?>" alt="" style="width:100%;border-radius: 3px;">
 						<?php 	
 									$ganjil = false; 
 								} else { 
 						?>
-								<img class="leafletImg" src="<?php echo base_url() ?>assets/leaflet/<?php echo $leaflet->file; ?>" alt="" style="width: 100%;border-radius: 3px; margin-top: 5px;">
-								<h4 style="color:rgb(242,97,5);" title="<?php echo $leaflet->nama_leaflet; ?>"><?php echo strtoupper($namaLeaflet); ?></h4>
+								<img class="leafletImg" src="<?php echo base_url() ?>assets/leaflet/<?php echo $alsin->file; ?>" alt="" style="width: 100%;border-radius: 3px; margin-top: 5px;">
+								<h4 style="color:rgb(242,97,5);" title="<?php echo $alsin->nama_leaflet; ?>"><?php echo strtoupper($namaAlsin); ?></h4>
 							</div>						
 						</div>
 						<?php 	
@@ -67,8 +71,9 @@
 				</div>
 
 				<div class="col-sm-3 col-lg-3">
-					<h3 class="text-left" style="color:black; margin-top: -21px;font-family: Monion pro">Pencarian</h3>
-					<hr style="border-color: grey;margin-top: -5px;">
+					<br>
+					<h3 class="text-left" style="color:black;font-family: Minion Pro">Pencarian</h3>
+					<hr style="border-color: grey;margin-top: -8px;">
 					<div class="container-fluid" style="background-color:rgba(28,69,26,0.9); border-radius: 5px;">
 						<form method="get" action="<?php echo base_url('pencarian'); ?>" style="margin-top: 15px; margin-bottom: 15px;">
 							<div class="input-group" style="z-index: 0">

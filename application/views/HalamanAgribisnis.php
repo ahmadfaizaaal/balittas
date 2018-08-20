@@ -5,7 +5,6 @@
 		<meta charset="utf-8">
 		<!-- <link href="gambar/logo.png" rel="shortcut icon"> -->
 		<meta name="description" content="A Tuts+ course">
-		<meta name="author" content="Gusna Ikhsan">
 		<!-- <link rel="stylesheet" href="webdesa.css"> -->
 		<link rel="stylesheet" href="<?php echo base_url() ?>bootstrap/css/bootstrap.css">
 		<link rel="stylesheet" href="<?php echo base_url() ?>bootstrap/css/balittas.css">
@@ -39,10 +38,10 @@
 							}
 					?>
 							<div class="row">
-								<div class="col-sm-5 col-lg-5">
+								<div class="col-sm-4 col-lg-4">
 									<img src="<?php echo base_url() ?>assets/gambarAgribisnis/<?php echo $row->gambar_agribisnis; ?>" class="image img-rounded" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
 								</div>
-								<div class="col-sm-7 col-lg-7">
+								<div class="col-sm-8 col-lg-8">
 									<p style="font-size: 20px;color:rgb(242,97,5); font-family: Minion Pro;"><?php echo $row->jenis_agribisnis; ?></p>
 									<p><?php echo $deskripsiAgribisnis; ?></p>	
 									<div class="text-right">						
@@ -63,9 +62,9 @@
 					<h3 class="text-left" style="color:black; margin-top: -25px; font-family: Minion Pro">Pencarian</h3>
 					<hr style="border-color: grey;margin-top: -8px;">
 					<div class="container-fluid" style="background-color:rgba(28,69,26,0.9);border-radius: 5px;">
-						<form method="get" action="<?php echo base_url('pencarian')?>" style="margin-top: 15px; margin-bottom: 15px;">
+						<form method="get" action="<?php echo base_url('pencarian'); ?>" style="margin-top: 15px; margin-bottom: 15px;">
 							<div class="input-group" style="z-index: 0">
-							    <input type="text" class="form-control" placeholder="Cari" required>
+							    <input type="text" class="form-control" placeholder="Cari" name="keyword" required>
 							    <div class="input-group-btn">
 							      <button class="btn btn-success" type="submit">
 							        <i class="glyphicon glyphicon-search"></i>

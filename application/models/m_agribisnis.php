@@ -32,5 +32,16 @@
 			return $hasil[0]->id_agribisnis;
 		}
 
+		public function pencarianAgribisnis($cari){
+			if ($cari == "#agribisnis") {
+				$cari = "";
+			}
+			$query = $this->db->select('*');
+            $query = $this->db->from('agribisnis');
+            $query = $this->db->where('jenis_agribisnis like', "%$cari%")->or_where('deskripsi_agribisnis like', "%$cari%");
+            $query = $this->db->get();
+            return $query->result();
+		}
+
 	} 
 ?>

@@ -5,7 +5,6 @@
 		<meta charset="utf-8">
 		<!-- <link href="gambar/logo.png" rel="shortcut icon"> -->
 		<meta name="description" content="A Tuts+ course">
-		<meta name="author" content="Gusna Ikhsan">
 		<!-- <link rel="stylesheet" href="webdesa.css"> -->
 		<link rel="stylesheet" href="<?php echo base_url() ?>bootstrap/css/bootstrap.css">
 		<link rel="stylesheet" href="<?php echo base_url() ?>bootstrap/css/balittas.css">
@@ -94,7 +93,7 @@
 					<h3 class="text-left" style="color:black;font-family: Minion Pro">Pencarian</h3>
 					<hr style="border-color: grey;margin-top: -8px;">
 					<div class="container-fluid" style="background-color:rgba(28,69,26,0.9);border-radius: 5px;">
-						<form method="post" action="<?php echo base_url('pencarian/cari'); ?>" style="margin-top: 15px; margin-bottom: 15px;">
+						<form method="get" action="<?php echo base_url('pencarian'); ?>" style="margin-top: 15px; margin-bottom: 15px;">
 							<div class="input-group" style="z-index: 0;">
 							    <input type="text" name="keyword" class="form-control" placeholder="Cari" required>
 							    <div class="input-group-btn">
@@ -133,6 +132,7 @@
 			<div class="container-fluid" style="background-color: rgba(28,69,26,0.8);">
 				<div class="container">
 				<!-- Produk -->
+<<<<<<< HEAD
 					<h3 class="text-center" style="color:white;font-family: Minion Pro;"><strong>Produk</strong></h3>
 					<p class="text-center" style="color: white;"><span style="font-size: 20px; font-weight: bold; font-family: hobo std; color: #fece00;">I</span> novasi teknologi yang paling strategis untuk mendukung pengembangan komoditas adalah varietas unggul. Penggunaan varietas unggul suatu komoditas mempunyai dampak yang sangat luas, antara lain dapat berpengaruh terhadap efisiensi biaya dalam budi daya, peningkatan produksi dan mutu, serta pemanfaatan lahan-lahan marginal, sehingga dapat berdampak sosial dan ekonomi yang cukup nyata bagi petani. Selain itu, penggunaan varietas unggul merupakan teknologi yang relatif mudah diterima dan diterapkan oleh petani.</p>
 					<br><br>
@@ -179,6 +179,52 @@
 					    </div>
 					</div>
 				<!-- <br> -->
+=======
+				<h3 class="text-center" style="color:white;font-family: Minion Pro;"><strong>Produk</strong></h3>
+				<p class="text-center" style="color: white;"><span style="font-size: 20px; font-weight: bold; font-family: hobo std; color: #fece00;">I</span> novasi teknologi yang paling strategis untuk mendukung pengembangan komoditas adalah varietas unggul. Penggunaan varietas unggul suatu komoditas mempunyai dampak yang sangat luas, antara lain dapat berpengaruh terhadap efisiensi biaya dalam budi daya, peningkatan produksi dan mutu, serta pemanfaatan lahan-lahan marginal, sehingga dapat berdampak sosial dan ekonomi yang cukup nyata bagi petani. Selain itu, penggunaan varietas unggul merupakan teknologi yang relatif mudah diterima dan diterapkan oleh petani.</p>
+				<br><br>
+				<div class="row">
+				    <div class="col-xs-6 col-sm-3 col-lg-3">
+					    <a href="<?php echo base_url() ?>produk/benih" style="text-decoration-line: none;" onmouseover="hvr(this, 'in')" onmouseleave="hvr(this, 'out')">
+					    	<div class="thumbnail text-center produk" style="background-color: rgba(28,69,26,0); border-style: none;" >
+					    		<img src="<?php echo base_url() ?>item img/hazelnutWh.png" style="width: 40%" col="g">
+					    		<img src="<?php echo base_url() ?>item img/hazelnutY.png" style="width: 40%; display:none;" col="b">
+					    		<br>
+								<h4>Benih</h4>
+					    	</div>
+					    </a>
+				    </div>
+				    <div class="col-xs-6 col-sm-3 col-lg-3">
+					    <a href="<?php echo base_url() ?>produk/alsin" style="text-decoration-line: none;" onmouseover="hvr(this, 'in')" onmouseleave="hvr(this, 'out')">
+					    	<div class="thumbnail text-center produk" style="background-color: rgba(28,69,26,0); border-style: none">
+					    		<img src="<?php echo base_url() ?>item img/toolsWh.png" style="width: 40%" col="g">
+					    		<img src="<?php echo base_url() ?>item img/toolsY.png" style="width: 40%; display:none;" col="b">
+					    		<br>
+								<h4>Alat & Mesin</h4>
+					    	</div>
+					    </a>
+				    </div>
+				    <div class="col-xs-6 col-sm-3 col-lg-3">
+					    <a href="<?php echo base_url() ?>produk/formula" style="text-decoration-line: none;" onmouseover="hvr(this, 'in')" onmouseleave="hvr(this, 'out')">
+					    	<div class="thumbnail text-center produk" style="background-color: rgba(28,69,26,0); border-style: none">
+					    		<img src="<?php echo base_url() ?>item img/flaskWh.png" style="width: 40%" col="g">
+					    		<img src="<?php echo base_url() ?>item img/flaskY.png" style="width: 40%; display:none;" col="b">
+					    		<br>
+								<h4>Formula</h4>
+					    	</div>
+					    </a>
+				    </div>
+				    <div class="col-xs-6 col-sm-3 col-lg-3">
+					    <a href="<?php echo base_url() ?>produk/produkhilir" style="text-decoration-line: none;" onmouseover="hvr(this, 'in')" onmouseleave="hvr(this, 'out')">
+					    	<div class="thumbnail text-center produk" style="background-color: rgba(28,69,26,0); border-style: none">
+					    		<img src="<?php echo base_url() ?>item img/pipeWh.png" style="width: 40%" col="g">
+					    		<img src="<?php echo base_url() ?>item img/pipeY.png" style="width: 40%; display:none;" col="b">
+					    		<br>
+								<h4>Produk Hilir</h4>
+					    	</div>
+					    </a>
+				    </div>
+>>>>>>> d14662d6cd93330899813c3b0dd096cc50b8e856
 				</div>
 			</div>
 			<br><br>

@@ -3,8 +3,7 @@
 	<head>
 		<title>Balittas</title>
 		<meta charset="utf-8">		
-		<meta name="description" content="A Tuts+ course">
-		<meta name="author" content="Gusna Ikhsan">		
+		<meta name="description" content="A Tuts+ course">		
 		<link rel="stylesheet" href="<?php echo base_url() ?>bootstrap/css/bootstrap.css">
 		<link rel="stylesheet" href="<?php echo base_url() ?>bootstrap/css/balittas.css">
 		<link href="<?php echo base_url() ?>item img/Logo-Kementerian-Pertanian.png" rel="shortcut icon">
@@ -26,8 +25,8 @@
 					  	<li><a href="<?php echo base_url("produk/$url") ?>">Produk</a></li>
 						<li class="active">Benih</li> 
 					</ul>
-				<h3 class="text-left" style="color:black; font-family: Minion Pro"><?php echo $kategori; ?></h3>
-				<hr style="border-color: grey;margin-top: -8px;">
+					<h3 class="text-left" style="color:black; font-family: Minion Pro"><?php echo $kategori; ?></h3>
+					<hr style="border-color: grey;margin-top: -8px;">
 					<table class="table table-hover" >
 						<thead style="background-color: rgba(28,69,26,0.9);border-bottom: 3px solid white; color:#fece00;">
 							<th>No</th>
@@ -164,9 +163,9 @@
 					<h3 class="text-left" style="color:black;font-family: Minion Pro">Pencarian</h3>
 					<hr style="border-color: grey;margin-top: -8px;">
 					<div class="container-fluid" style="background-color:rgba(28,69,26,0.9);border-radius: 5px;">
-						<form method="get" action="<?php echo base_url('pencarian')?>" style="margin-top: 15px; margin-bottom: 15px;">
+						<form method="get" action="<?php echo base_url('pencarian'); ?>" style="margin-top: 15px; margin-bottom: 15px;">
 							<div class="input-group" style="z-index: 0;">
-							    <input type="text" class="form-control" placeholder="Cari" required>
+							    <input type="text" class="form-control" placeholder="Cari" name="keyword" required>
 							    <div class="input-group-btn">
 							      <button class="btn btn-success" type="submit">
 							        <i class="glyphicon glyphicon-search"></i>

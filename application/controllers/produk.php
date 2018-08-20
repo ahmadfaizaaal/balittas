@@ -75,14 +75,6 @@
 			$this->load->view('FilterTable', $data);
 		}
 
-<<<<<<< HEAD
-		public function produk2(){
-                  $data['subLeaflet'] = $this->M_leaflet->selectLeafletTerbaru();
-                  $dataHeader['judul'] = "Alat dan Mesin";
-                  $this->load->view('header', $dataHeader);
-			$this->load->view('HalamanProduk2',$data);
-                  $this->load->view('footer');
-=======
 		public function alsin() {
 			$dataHeader['judul'] = "Produk";
 			$data['kategori'] = "Alat dan Mesin";
@@ -150,7 +142,6 @@
 			$this->load->view('header', $dataHeader);
 			$this->load->view('HalamanProduk2', $data);
 			$this->load->view('footer');
->>>>>>> d14662d6cd93330899813c3b0dd096cc50b8e856
 		}
 	}
  ?>

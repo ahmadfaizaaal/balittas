@@ -9,11 +9,14 @@
 		<link href="<?php echo base_url() ?>item img/Logo-Kementerian-Pertanian.png" rel="shortcut icon">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-		<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-		<script type="text/javascript" src="<?php echo base_url() ?>bootstrap/js/jQuery.highlight.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js"></script>
+		<script type="text/javascript" src="<?php echo base_url() ?>bootstrap/js/jQuery.highlight.js"></script>
 	</head>
 	<body>
 		
@@ -159,7 +162,7 @@
 							$narasi = $row->deskripsi_agribisnis;
 						}											
 				 ?>
-						<div >					
+						<div class="searchAgribisnis">					
 							<a href="<?php echo base_url('agribisnis/jenis/').urlencode(strtolower($row->jenis_agribisnis)); ?>" style="text-decoration-line: none;" class="teknologiBudidaya">						
 								<h3><span><?php echo "$row->jenis_agribisnis"; ?></span></h3>
 							</a>
@@ -179,6 +182,23 @@
 					}
 				?>																
 		</div>
+
+		<script>
+			var searchCnt = 0;
+
+			var option = {
+				color: "black",
+				background: "yellow",
+				bold: true,
+				class: "high",
+				ignoreCase: true,
+				wholeWord: false
+			}
+			$(function(){
+				var originalContent = document.getElementsByClassName('searchAgribisnis')[0].html();
+				searchCnt = document.getElementsByClassName('searchAgribisnis')[0].highlight('tembakau', option);
+			});
+		</script>
 
 		<!-- BAGIAN MODAL UNTUK PENCARIAN LEAFLET -->
 		<!-- <div id="modalKu" class="modalSlider">

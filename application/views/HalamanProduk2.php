@@ -13,12 +13,8 @@
 		<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	</head>
-<<<<<<< HEAD
-	<body>		
-=======
 	<body>
-		
->>>>>>> d14662d6cd93330899813c3b0dd096cc50b8e856
+	
 		<br>
 		<!-- content -->
 		<div class="container">
@@ -90,15 +86,9 @@
 					<h3 class="text-left" style="color:black;font-family: Minion Pro">Pencarian</h3>
 					<hr style="border-color: grey;margin-top: -8px;">
 					<div class="container-fluid" style="background-color:rgba(28,69,26,0.9);border-radius: 5px;">
-<<<<<<< HEAD
-						<form method="get" action="<?php echo base_url('pencarian/cari')?>" style="margin-top: 15px; margin-bottom: 15px;">
-							<div class="input-group" style="z-index: 0;">
-							    <input type="text" name="keyword" class="form-control" placeholder="Cari" required>
-=======
 						<form method="get" action="<?php echo base_url('pencarian'); ?>" style="margin-top: 15px; margin-bottom: 15px;">
 							<div class="input-group" style="z-index: 0;">
 							    <input type="text" class="form-control" placeholder="Cari" name="keyword" required>
->>>>>>> d14662d6cd93330899813c3b0dd096cc50b8e856
 							    <div class="input-group-btn">
 							      <button class="btn btn-success" type="submit">
 							        <i class="glyphicon glyphicon-search"></i>
@@ -107,13 +97,8 @@
 							 </div>
 						</form>						
 					</div>
-<<<<<<< HEAD
-					<a href="<?php echo base_url('leaflet') ?>" style="text-decoration-line:none;" title="Klik untuk menuju halaman leaflet"><h3 class="text-left" style="color:black;font-family: Minion Pro">Leaflet</h3></a>
-					<hr style="border-color: grey;margin-top: -8px;">
-=======
 					<a href="<?php echo base_url() ?>leaflet" style="text-decoration-line:none;" title="Klik untuk menuju halaman leaflet"><h3 class="text-left" style="color:black;font-family: Minion Pro">Leaflet</h3></a>
 					<hr style="border-color: grey;margin-top: -8px;">					
->>>>>>> d14662d6cd93330899813c3b0dd096cc50b8e856
 					<?php 
 						$ganjil = true;
 						foreach ($subLeaflet as $leafletSide) {
@@ -164,10 +149,6 @@
 		</script>
 		<!-- END OF MODALS -->
 	</body>	
-<<<<<<< HEAD
-	<br><br><br>	
-=======
 	<br><br><br>
 	
->>>>>>> d14662d6cd93330899813c3b0dd096cc50b8e856
 </html>

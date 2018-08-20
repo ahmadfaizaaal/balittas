@@ -132,54 +132,6 @@
 			<div class="container-fluid" style="background-color: rgba(28,69,26,0.8);">
 				<div class="container">
 				<!-- Produk -->
-<<<<<<< HEAD
-					<h3 class="text-center" style="color:white;font-family: Minion Pro;"><strong>Produk</strong></h3>
-					<p class="text-center" style="color: white;"><span style="font-size: 20px; font-weight: bold; font-family: hobo std; color: #fece00;">I</span> novasi teknologi yang paling strategis untuk mendukung pengembangan komoditas adalah varietas unggul. Penggunaan varietas unggul suatu komoditas mempunyai dampak yang sangat luas, antara lain dapat berpengaruh terhadap efisiensi biaya dalam budi daya, peningkatan produksi dan mutu, serta pemanfaatan lahan-lahan marginal, sehingga dapat berdampak sosial dan ekonomi yang cukup nyata bagi petani. Selain itu, penggunaan varietas unggul merupakan teknologi yang relatif mudah diterima dan diterapkan oleh petani.</p>
-					<br><br>
-					<div class="row">
-					    <div class="col-xs-6 col-sm-3 col-lg-3">
-						    <a href="<?php echo base_url() ?>produk/benih" style="text-decoration-line: none;" onmouseover="hvr(this, 'in')" onmouseleave="hvr(this, 'out')">
-						    	<div class="thumbnail text-center produk" style="background-color: rgba(28,69,26,0); border-style: none;" >
-						    		<img src="<?php echo base_url() ?>item img/hazelnutWh.png" style="width: 40%" col="g">
-						    		<img src="<?php echo base_url() ?>item img/hazelnutY.png" style="width: 40%; display:none;" col="b">
-						    		<br>
-									<h4>Benih</h4>
-						    	</div>
-						    </a>
-					    </div>
-					    <div class="col-xs-6 col-sm-3 col-lg-3">
-						    <a href="<?php echo base_url() ?>produk/produk2" style="text-decoration-line: none;" onmouseover="hvr(this, 'in')" onmouseleave="hvr(this, 'out')">
-						    	<div class="thumbnail text-center produk" style="background-color: rgba(28,69,26,0); border-style: none">
-						    		<img src="<?php echo base_url() ?>item img/toolsWh.png" style="width: 40%" col="g">
-						    		<img src="<?php echo base_url() ?>item img/toolsY.png" style="width: 40%; display:none;" col="b">
-						    		<br>
-									<h4>Alat & Mesin</h4>
-						    	</div>
-						    </a>
-					    </div>
-					    <div class="col-xs-6 col-sm-3 col-lg-3">
-						    <a href="<?php echo base_url() ?>produk/produk1" style="text-decoration-line: none;" onmouseover="hvr(this, 'in')" onmouseleave="hvr(this, 'out')">
-						    	<div class="thumbnail text-center produk" style="background-color: rgba(28,69,26,0); border-style: none">
-						    		<img src="<?php echo base_url() ?>item img/flaskWh.png" style="width: 40%" col="g">
-						    		<img src="<?php echo base_url() ?>item img/flaskY.png" style="width: 40%; display:none;" col="b">
-						    		<br>
-									<h4>Formula</h4>
-						    	</div>
-						    </a>
-					    </div>
-					    <div class="col-xs-6 col-sm-3 col-lg-3">
-						    <a href="<?php echo base_url() ?>produk/produk2" style="text-decoration-line: none;" onmouseover="hvr(this, 'in')" onmouseleave="hvr(this, 'out')">
-						    	<div class="thumbnail text-center produk" style="background-color: rgba(28,69,26,0); border-style: none">
-						    		<img src="<?php echo base_url() ?>item img/pipeWh.png" style="width: 40%" col="g">
-						    		<img src="<?php echo base_url() ?>item img/pipeY.png" style="width: 40%; display:none;" col="b">
-						    		<br>
-									<h4>Produk Hilir</h4>
-						    	</div>
-						    </a>
-					    </div>
-					</div>
-				<!-- <br> -->
-=======
 				<h3 class="text-center" style="color:white;font-family: Minion Pro;"><strong>Produk</strong></h3>
 				<p class="text-center" style="color: white;"><span style="font-size: 20px; font-weight: bold; font-family: hobo std; color: #fece00;">I</span> novasi teknologi yang paling strategis untuk mendukung pengembangan komoditas adalah varietas unggul. Penggunaan varietas unggul suatu komoditas mempunyai dampak yang sangat luas, antara lain dapat berpengaruh terhadap efisiensi biaya dalam budi daya, peningkatan produksi dan mutu, serta pemanfaatan lahan-lahan marginal, sehingga dapat berdampak sosial dan ekonomi yang cukup nyata bagi petani. Selain itu, penggunaan varietas unggul merupakan teknologi yang relatif mudah diterima dan diterapkan oleh petani.</p>
 				<br><br>
@@ -224,8 +176,8 @@
 					    	</div>
 					    </a>
 				    </div>
->>>>>>> d14662d6cd93330899813c3b0dd096cc50b8e856
 				</div>
+			</div>
 			</div>
 			<br><br>
 			<div class="container">

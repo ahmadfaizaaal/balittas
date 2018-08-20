@@ -5,7 +5,6 @@
 		<meta charset="utf-8">
 		<!-- <link href="gambar/logo.png" rel="shortcut icon"> -->
 		<meta name="description" content="A Tuts+ course">
-		<meta name="author" content="Gusna Ikhsan">
 		<!-- <link rel="stylesheet" href="webdesa.css"> -->
 		<link rel="stylesheet" href="<?php echo base_url() ?>bootstrap/css/bootstrap.css">
 		<link rel="stylesheet" href="<?php echo base_url() ?>bootstrap/css/balittas.css">
@@ -61,11 +60,11 @@
 								  	<div class="container-fluid">	  		
 							          	<a href="<?php echo base_url() ?>produk/benih" style="margin-top: 10px;">Benih</a>
 								  		<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
-							          	<a href="<?php echo base_url() ?>produk/produk2">Alat dan Mesin</a>
+							          	<a href="<?php echo base_url() ?>produk/alsin">Alat dan Mesin</a>
 							          	<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
-							          	<a href="<?php echo base_url() ?>produk/produk1">Formula</a>
+							          	<a href="<?php echo base_url() ?>produk/formula">Formula</a>
 							          	<hr style="margin: 4px 0px 5px 0px; border-color: rgba(28,69,26,1);">
-							          	<a href="<?php echo base_url() ?>produk/produk2" style="margin-bottom: 8px;">Produk Hilir</a>					    
+							          	<a href="<?php echo base_url() ?>produk/produkhilir" style="margin-bottom: 8px;">Produk Hilir</a>					    
 								  	</div>
 							  	</div>
 							</div>
@@ -118,9 +117,9 @@
 					        	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Produk <span class="caret"></span></a>
 						        <ul class="dropdown-menu">
 						        	<li><a href="<?php echo base_url() ?>produk/benih">Benih</a></li>
-						          	<li><a href="<?php echo base_url() ?>produk/produk2">Alat dan Mesin</a></li>
-						          	<li><a href="<?php echo base_url() ?>produk/produk1">Formula</a></li>
-						          	<li><a href="<?php echo base_url() ?>produk/produk2">Produk Hilir</a></li>
+						          	<li><a href="<?php echo base_url() ?>produk/alsin">Alat dan Mesin</a></li>
+						          	<li><a href="<?php echo base_url() ?>produk/formula">Formula</a></li>
+						          	<li><a href="<?php echo base_url() ?>produk/produkhilir">Produk Hilir</a></li>
 						       	</ul>
 					      	</li>
 					      	<li class="dropdown">

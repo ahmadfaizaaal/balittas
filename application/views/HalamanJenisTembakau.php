@@ -3,8 +3,7 @@
 	<head>
 		<title>Balittas</title>
 		<meta charset="utf-8">		
-		<meta name="description" content="A Tuts+ course">
-		<meta name="author" content="Gusna Ikhsan">		
+		<meta name="description" content="A Tuts+ course">		
 		<link rel="stylesheet" href="<?php echo base_url() ?>bootstrap/css/bootstrap.css">
 		<link rel="stylesheet" href="<?php echo base_url() ?>bootstrap/css/balittas.css">
 		<link href="<?php echo base_url() ?>item img/Logo-Kementerian-Pertanian.png" rel="shortcut icon">
@@ -32,6 +31,7 @@
 
 				
 					<?php 
+// JENIS TEMBAKAU BERDASARKAN KEGUNAAN DAN DAERAH PENANAMAN	-------------------------------------------------------------------------------------
 						if ($kategori == "Kegunaan" || $kategori == "Daerah Penanaman") { ?>
 							<table class="table table-hover">
 								<thead style="background-color: rgba(28,69,26,0.9);border-bottom: 3px solid white; color:#fece00;">
@@ -40,17 +40,24 @@
 									<th class="text-center"><?php echo $kategori; ?></th>							
 								</thead>
 								<tbody>
-								<?php 
-									for ($i = 0; $i < count($jenisVarietas); $i++) {
+								<?php
+									$value = ""; $indeks = 0;
+									foreach ($jenistembakau as $row) {
+										if ($kategori == "Kegunaan") {
+											$value = $row->kegunaan;
+										} else if ($kategori == "Daerah Penanaman") {
+											$value = $row->daerah_penanaman;
+										}
 								 ?>
 									<tr>
-										<td><?php echo $i + 1; ?></td>
-										<td style="color:rgb(242,97,5);"><b><?php echo $jenisVarietas[$i]; ?></b></td>
-										<td><?php echo $value[$i]; ?></td>								
+										<td><?php echo $indeks + 1; ?></td>
+										<td style="color:rgb(242,97,5);"><b><?php echo $row->jenis_tembakau; ?></b></td>
+										<td><?php echo $value; ?></td>								
 									</tr>
-								<?php 
+								<?php
+										$indeks++; 
 									}
-								 ?>
+								?>
 								</tbody>
 							</table>
 					<?php 
@@ -60,6 +67,8 @@
 									<p><b>*Shag</b> = tembakau rajangan halus untuk rokok tingwe (linting dewe).</p>";
 							}
 
+// JENIS TEMBAKAU BERDASARKAN ASAL-USUL DAN DAERAH PENGEMBANGAN	-------------------------------------------------------------------------------------
+							
 						} else if ($kategori == "Asal-usul" || $kategori == "Daerah Pengembangan") { ?>
 							<table class="table table-hover">
 								<thead style="background-color: rgba(28,69,26,0.9);border-bottom: 3px solid white; color:#fece00;">
@@ -98,83 +107,37 @@
 									} ?>
 								</ul>
 							</div>
-					<?php
-						} else if ($kategori == "Waktu Tanam") { ?>
-							<button class="accordion actived" style="border-bottom: 2px solid white;"><strong>Perencanaan Waktu Tanam Tembakau Virginia</strong></button>
-							<div class="container-fluid panel" style="display: block;">
-								<br>
-								 <p style="text-indent: 0.5in;">Periode kering digunakan untuk menentukan waktu tanam tembakau virginia. Umur
-										tanaman tembakau virginia sekitar 120 hari (12 dasarian) dan dibutuhkan periode kering
-										sekitar 2 bulan terakhir. Periode kering pada daerah pengembangan tembakau virginia lebih
-										dari 12 dasarian dan cukup panjang untuk kebutuhan pemasakan daun dan panen.
-										Waktu tanam dapat dimulai awal musim kemarau untuk menghindari genangan air dan
-										paling lambat 12 dasarian sebelum akhir musim kemarau. Awal waktu tanam sama dengan
-										awal musim kemarau (Tabe1 1). Oleh karena masa tanam tembakau pada periode
-										kering, sehingga diperlukan air irigasi untuk memenuhi kebutuhan air tanaman. Anjuran
-										waktu tanam tembakau virginia di atas bersifat patokan umum yang didasarkan peluang
-										dan rata-rata curah hujan dan bersifat normal.</p>
-								<p style="text-indent: 0.5in;">Dalam skala operasional pengelolaan tanaman diperlukan informasi prakiraan cuaca
-										untuk musim tanam bersangkutan, apakah awal musim kemarau maju atau mundur
-										ataukah lebih kering atau lebih basah dari keadaan normal. Informasi prakiraan cuaca dapat
-										diperoleh di www.bmkg.go.id untuk seluruh wilayah tembakau virginia di Indonesia
-										dan khusus di Jawa Timur dapat mengakses di <a href="http://www.staklimkarangploso.net" target="blank" style="font-style: italic; color: #5cb85c; text-decoration-line: none;">http://www.staklimkarangploso.net</a>, Informasi
-										tersebut diharapkan telah diketahui sebelum menebar benih tembakau sampai saat
-										menjelang panen. Contoh informasi hasil prakiraan awal musim kemarau tahun 2011 dari
-										BMKG yang telah di upload pada hari Kamis, 25 Maret 2011, pukul 14:06 administrator
-										Publikasi–Klimatologi (Gambar 5). Dari gambar 5 diketahui bahwa Kabupaten Bojonegoro
-										(Zona 88) berwarna hijau artinya prakiraan awal musim kemarau mundur 2 dasarian/
-										dekade dari rata-ratanya April II/III, yaitu Mei I/II. Lamongan (Zona 90) berwarna putih/
-										abu-abu artinya prakiraan awal musim kemarau mundur 1 dasarian dari rata-ratanya
-										April I/II (Utara) dan Mei II (Selatan), yaitu April II/III (Utara) dan Mei III (Selatan).
-										Ngawi (Zona 87) berwarna kuning artinya prakiraan awal musim kemarau sama dengan
-										rata-ratanya yaitu Mei I/II.</p>
-								<br>
-								<p style="color: #5cb85c;"><b>Catatan:</b></p>
-								<p>File monograf <b>Perencanaan Waktu Tanam Tembakau Virginia</b> dapat diunduh <a href="<?php echo base_url() ?>assets/SK/file.pdf" target="blank" class="hoverThumbnail" style="text-decoration-line: none"><b>di sini</b></a>.</p>
-								<br>
-							</div>
 
-							<button class="accordion" style="border-bottom: 2px solid white;"><strong>Waktu Tanam Tembakau Temanggung</strong></button>
-							<div class="container-fluid panel">
-								<br>
-								<p style="text-indent: 0.5in;">Musim kemarau digunakan sebagai patokan dalam menentukan waktu tanam tembakau temanggung. Umur tanaman tembakau temanggung termasuk prosesing sekitar 140-150 hari (14-15 dasarian) dan dibutuhkan periode kering sekitar 7-8 dasarian terakhir. Periode kering pada daerah pengembangan tembakau temanggung sekitar 9-15 dasarian(tabel 1) dan cukup waktu untuk kebutuhan pemasakan daun, panen, dan prosesing. Waktu tanam paling awal dihitung minimal 6 dasarian dari awal musim kemarau. Waktu tanam paling lambat dihitung 15 dasarian sebelum akhir musim kemarau. Oleh karena periode kering terbatas, waktu tanam dilaksanakan pada musim hujan. Waktu tanam paling awal sckitar Maret III-April II dan paling lambat April II-Mei II</p>
-								<br>
-								<p style="color: #5cb85c;"><b>Catatan:</b></p>
-								<p>File monograf <b>Waktu Tanam Tembakau Temanggung</b> dapat diunduh <a href="<?php echo base_url() ?>assets/SK/file.pdf" target="blank" class="hoverThumbnail" style="text-decoration-line: none"><b>di sini</b></a>.</p>
-								<br>
-							</div>
-
-							<button class="accordion" style="border-bottom: 2px solid white;"><strong>Implikasi Penentuan Waktu Tanam Tembakau Madura</strong></button>
-							<div class="container-fluid panel">
-								<br>
-							  	<p style="text-indent: 0.5in;">Penentuan waktu tanam tembakau madura tersebut bersifat patokan yang didasarkan peluang
-										dan rata-rata curah hujan normal. Pengaturan waktu tanam tembakau madura sangat penting untuk
-										mencapai hasil yang tinggi dengan mutu yang dikehendaki konsumen. Dalam skala operasional dapat
-										dipadukan dengan hasil penelitian pemberian air pada tanaman tembakau madura terutama untuk
-										menghindari kekeringan. Informasi ini diharapkan telah diketahui oleh pengguna sebelum
-										kegiatan menebar benih dan saat menjelang panen.</p>
-								<p style="text-indent: 0.5in;">Tembakau gunung ditanam pada musim penghujan dan kebutuhan aimya hanya dipenuhi dari
-										curah hujan selama fase vegetatif. Waktu tanamnya dianjurkan tanam mengikuti seri I dimana
-										peluang 75% diharapkan akan lebih pasti mendapat hujan dibanding normalnya. Tembakau tegal
-										dan sawah yang mendapat tambahan air siraman dianjurkan mengikuti lanam seri II. Tembakau
-										sawah dengan permukaan air tanah dangkal sekitar 2 meter dianjurkan mengikuti tanam seri III.</p>
-								<p style="text-indent: 0.5in;">Anjuran pemberian air tanaman tembakau madura pada tanah tegal adalah 0,5 l/tanaman/pemberian
-										dengan pemberian tiap hari sampai umur 20 hari, dan diikuti penyiraman 2,0 l/tanaman/pemberian/
-										yang diberikan pada periode 21-40 hari (tiap dua hari), 41-50 hari (tiap hari). 51-54 hari (tiap
-										2 hari), dan 50-60 hari (tiap 3 hari) atau total pemberian air sebesar 174 mm (Rachman et al.,
-										1993).</p>
-								<p style="text-indent: 0.5in;">Anjuran pemberian air tanaman tembakau madura pada tanah sawah adalah 0,25 l/tanaman/pemberian
-										dengan pernberian tiap hari sampai umur 20 hari, dan diikuti penyiraman 0,66 l/tanaman/
-										pemberian yang diberikan pada periode 21-40 hari (tiap 2 hari). 41-50 hari (tiap hari), 51-
-										54 hari (tiap 2 hari), dan 50-60 hari (tiap 3 hari) atau total pemberian air sebesar 63 mm (Ilyas, 1993).
-										</p>
-								<br>
-								<p style="color: #5cb85c;"><b>Catatan:</b></p>
-								<p>File monograf <b>Implikasi Penentuan Waktu Tanam Tembakau Madura</b> dapat diunduh <a href="<?php echo base_url() ?>assets/SK/file.pdf" target="blank" class="hoverThumbnail" style="text-decoration-line: none"><b>di sini</b></a>.</p>
-								<br>
-							</div>
 					<?php
+// JENIS TEMBAKAU BERDASARKAN WAKTU TANAM ------------------------------------------------------------------------------------------------------------
+						} else if ($kategori == "Waktu Tanam") {
+							$indeks = 0;
+							foreach ($waktutanam as $row) {
+								if ($indeks == 0) {
+									echo "<button class=\"accordion actived\" style=\"border-bottom: 2px solid white;\"><strong>$row->nama_file</strong></button>
+										<div class=\"container-fluid panel\" style=\"display: block;\">";
+								} else {
+									echo "<button class=\"accordion\" style=\"border-bottom: 2px solid white;\"><strong>$row->nama_file</strong></button>
+										<div class=\"container-fluid panel\">";
+								}
+								$deskripsiWaktuTanam = explode("</p>", $row->deskripsi);
+					?>
+								<br>
+									<?php 
+										for ($i = 0; $i < count($deskripsiWaktuTanam); $i++) { 
+											echo "<p style=\"text-indent: 0.5in;\">".$deskripsiWaktuTanam[$i]."</p>";
+										}
+									?>
+									<br>
+									<p style="color: #5cb85c;"><b>Catatan:</b></p>
+									<p>Pembahasan lebih lanjut monograf <b><?php echo $row->nama_file; ?></b> dapat diunduh <a href="<?php echo base_url() ?>assets/waktutanam/<?php echo $row->file; ?>" target="blank" class="hoverThumbnail" style="text-decoration-line: none"><b>di sini</b></a>.</p>
+									<br>
+								</div>
+					<?php
+								$indeks++;
+							}
 						}
+// --------------------------------------------------------------------------------------------------------------------------------------------------
 					?>				
 				</div>				
 				<div class="col-sm-3 col-lg-3">
@@ -182,9 +145,9 @@
 					<h3 class="text-left" style="color:black;font-family: Minion Pro">Pencarian</h3>
 					<hr style="border-color: grey;margin-top: -8px;">
 					<div class="container-fluid" style="background-color:rgba(28,69,26,0.9);border-radius: 5px;">
-						<form method="get" action="<?php echo base_url('pencarian')?>" style="margin-top: 15px; margin-bottom: 15px;">
+						<form method="get" action="<?php echo base_url('pencarian'); ?>" style="margin-top: 15px; margin-bottom: 15px;">
 							<div class="input-group" style="z-index: 0;">
-							    <input type="text" class="form-control" placeholder="Cari" required>
+							    <input type="text" class="form-control" placeholder="Cari" name="keyword" required>
 							    <div class="input-group-btn">
 							      <button class="btn btn-success" type="submit">
 							        <i class="glyphicon glyphicon-search"></i>

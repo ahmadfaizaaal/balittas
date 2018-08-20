@@ -81,5 +81,44 @@
 	        $query = $this->db->get();
 	        return $query->result();
 		}
+
+		public function selectWaktuTanam() {
+			$query = $this->db->get('waktu_tanam');
+   			return $query->result();
+		}
+
+		public function selectJenisTembakau() {
+			$query = $this->db->get('jenis_tembakau');
+   			return $query->result();
+		}
+
+		public function pencarianVarietas($cari){
+			if ($cari == "#varietas") {
+				$cari = "";
+			}
+			$query = $this->db->distinct();
+			$query = $this->db->select("v.id_varietas, v.nama_varietas, des.id_deskripsi_varietas, des.narasi, atr.nama_atribut, 
+									det.detail_value");
+            $query = $this->db->from("detail_deskripsi det");
+            $query = $this->db->join("atribut atr", "det.id_atribut = atr.id_atribut");
+			$query = $this->db->join("deskripsi_varietas des", "det.id_deskripsi_varietas = des.id_deskripsi_varietas");
+			$query = $this->db->join("varietas v", "des.id_varietas = v.id_varietas");
+            $query = $this->db->group_start()
+            					->where('v.nama_varietas like', "%$cari%")
+            					->or_where('des.narasi like', "%$cari%")
+            					->or_where('atr.nama_atribut like', "%$cari%")
+            					->or_where('det.detail_value like', "%$cari%")
+            					->group_end();
+            $query = $this->db->get();
+            return $query->result();
+		}
+
+		public function pencarianWaktuTanam($cari){
+			$query = $this->db->select('*');
+            $query = $this->db->from('waktu_tanam');
+            $query = $this->db->where('nama_file like', "%$cari%")->or_where('deskripsi like', "%$cari%");
+            $query = $this->db->get();
+            return $query->result();
+		}
 	}
  ?>

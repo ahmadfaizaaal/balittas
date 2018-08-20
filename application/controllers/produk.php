@@ -8,6 +8,7 @@
             $this->load->library('pagination');
 			$this->load->model('m_produk');
 			$this->load->model('M_leaflet');
+			$this->load->model('m_varietas');
 		}
 
 		public function benih(){
@@ -74,8 +75,73 @@
 			$this->load->view('FilterTable', $data);
 		}
 
-		public function produk2(){
-			$this->load->view('HalamanProduk2');
+		public function alsin() {
+			$dataHeader['judul'] = "Produk";
+			$data['kategori'] = "Alat dan Mesin";
+			$data['url'] = "alsin";
+
+			$jumlah = $this->M_leaflet->getJumlahAlsin();
+
+            $config['base_url'] = base_url()."produk/alsin/";
+
+            $config['total_rows'] = $jumlah;
+
+            $config['per_page'] = 12;
+
+            $config['num_links'] = $jumlah;
+
+            $config['num_tag_open'] = '<li>';
+            $config['num_tag_close'] = '</li>';
+            $config['next_tag_open'] = "<li>";
+            $config['next_tagl_close'] = "</li>";
+            $config['prev_tag_open'] = "<li>";
+            $config['prev_tagl_close'] = "</li>";
+            $config['first_tag_open'] = "<li>";
+            $config['first_tagl_close'] = "</li>";
+            $config['last_tag_open'] = "<li>";
+            $config['last_tagl_close'] = "</li>";
+            $config['cur_tag_open'] = '&nbsp;<a class="current">';
+            $config['cur_tag_close'] = '</a>';
+            $config['next_link'] = '>>';
+            $config['prev_link'] = '<<';
+
+            $this->pagination->initialize($config);           
+            $dari = $this->uri->segment('3');
+ 
+            $data['dataAlsin'] = $this->M_leaflet->selectAlsinPerPage($config['per_page'],$dari);
+ 
+            $str_links = $this->pagination->create_links();
+            $data['links'] = explode('&nbsp;',$str_links );
+
+			$data['varietas'] = $this->m_varietas->selectVarietasTerbaru();
+
+			$this->load->view('header', $dataHeader);
+			$this->load->view('HalamanAlsin', $data);
+			$this->load->view('footer');
+		}
+
+		public function formula(){
+			$dataHeader['judul'] = "Produk";
+			$data['kategori'] = "Formula";
+			$data['url'] = "formula";
+
+			$data['subLeaflet'] = $this->M_leaflet->selectLeafletTerbaru();
+
+			$this->load->view('header', $dataHeader);
+			$this->load->view('HalamanProduk2', $data);
+			$this->load->view('footer');
+		}
+
+		public function produkhilir() {
+			$dataHeader['judul'] = "Produk";
+			$data['kategori'] = "Produk Hilir";
+			$data['url'] = "produkhilir";
+
+			$data['subLeaflet'] = $this->M_leaflet->selectLeafletTerbaru();
+
+			$this->load->view('header', $dataHeader);
+			$this->load->view('HalamanProduk2', $data);
+			$this->load->view('footer');
 		}
 	}
  ?>

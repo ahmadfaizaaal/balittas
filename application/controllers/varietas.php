@@ -12,7 +12,7 @@
 
 		public function jenistembakau($kategori) {
 			$dataHeader['judul'] = "Jenis Tembakau";
- 			$data['jenisVarietas'] = array("Madura", "Virginia", "Temanggung", "Kasturi", "Paiton", "Maesan", "Ploso", "Demak", "Kendal", "Burley", "Bahan Cerutu", "Boyolali", "Kalituri", "Selopuro", "Mole", "Jamak", "Payakumbuh");
+ 			// $data['jenisVarietas'] = array("Madura", "Virginia", "Temanggung", "Kasturi", "Paiton", "Maesan", "Ploso", "Demak", "Kendal", "Burley", "Bahan Cerutu", "Boyolali", "Kalituri", "Selopuro", "Mole", "Jamak", "Payakumbuh");
 			$jenis = ""; $namaAtribut = "";
 
  			if ($kategori == "asalusul") {
@@ -20,15 +20,16 @@
  				$namaAtribut = "Asal";
  			} else if ($kategori == "kegunaan") {
  				$jenis = "Kegunaan";
- 				$data['value'] = array("Kretek", "Kretek, Rokok putih, Ekspor", "Kretek", "Kretek, ekspor", "Kretek", "Kretek", "Kretek", "Kretek", "Kretek", "Kretek", "Cerutu/ekspor", "Asepan/ekspor", "Kretek/shag*", "Kretek/shag*", "Shag*", "Kretek", "Shag*");
+ 				$data['jenistembakau'] = $this->m_varietas->selectJenisTembakau();
  			} else if ($kategori == "waktutanam") {
  				$jenis = "Waktu Tanam";
+ 				$data['waktutanam'] = $this->m_varietas->selectWaktuTanam();
  			} else if ($kategori == "daerahpengembangan") {
  				$jenis = "Daerah Pengembangan";
  				$namaAtribut = "Daerah pengembangan";
  			} else if ($kategori == "daerahpenanaman") {
  				$jenis = "Daerah Penanaman";
- 				$data['value'] = array("Sumenep, Pamekasan, Sampang", "Lombok, Bojonegoro, Lamongan", "Temanggung", "Jember, Bondowoso, Banyuwangi", "Probolinggo, Situbondo", "Bondowoso", "Jombang, Lamongan", "Demak", "Kendal", "Lumajang, Jember, Banyuwangi", "Jember, Klaten, Deli", "Boyolali", "Tulungagung", "Blitar", "Garut, Sumedang, Majalengka", "Lombok", "Payakumbuh, Tanah Datar, Limapuluh Kota, Kerinci");
+ 				$data['jenistembakau'] = $this->m_varietas->selectJenisTembakau();
  			}
 
  			if (!empty($namaAtribut)) {
@@ -79,44 +80,6 @@
 			$this->load->view('header', $dataHeader);
 			$this->load->view('HalamanJenisTembakau', $data);
 			$this->load->view('footer');
-		}
-
-		public function asalUsul(){
-			$dataHeader['judul'] = "Jenis Tembakau";
-			$data['kategori'] = "Asal-usul";
-			$data['dataJenisTembakau'] = $this->m_varietas->selectVarietasBy("Asal");
-
-			$this->load->view('header', $dataHeader);
-			$this->load->view('HalamanJenisTembakau', $data);
-			$this->load->view('footer');
-		}
-
-		public function kegunaan(){
-			$dataHeader['judul'] = "Jenis Tembakau";
-			$data['kategori'] = "Asal-usul";
-			$data['dataJenisTembakau'] = $this->m_varietas->selectVarietasBy("Asal");
-
-			$this->load->view('header', $dataHeader);
-			$this->load->view('HalamanJenisTembakau', $data);
-			$this->load->view('footer');
-		}
-
-		public function jenisWaktu(){
-			$this->load->view('HalamanJenisTembakau');
-		}
-
-		public function daerahPengembangan(){
-			$dataHeader['judul'] = "Jenis Tembakau";
-			$data['kategori'] = "Daerah Pengembangan";
-			$data['dataJenisTembakau'] = $this->m_varietas->selectVarietasBy("Daerah pengembangan");
-			
-			$this->load->view('header', $dataHeader);
-			$this->load->view('HalamanJenisTembakau', $data);
-			$this->load->view('footer');
-		}
-
-		public function jenisProsesing(){
-			$this->load->view('HalamanJenisTembakau');
 		}
 
 		public function detailVarietas($namaVarietas){

@@ -5,7 +5,6 @@
 		<meta charset="utf-8">
 		<!-- <link href="gambar/logo.png" rel="shortcut icon"> -->
 		<meta name="description" content="A Tuts+ course">
-		<meta name="author" content="Gusna Ikhsan">
 		<!-- <link rel="stylesheet" href="webdesa.css"> -->
 		<link rel="stylesheet" href="<?php echo base_url() ?>bootstrap/css/bootstrap.css">
 		<link rel="stylesheet" href="<?php echo base_url() ?>bootstrap/css/balittas.css">
@@ -94,7 +93,7 @@
 					<h3 class="text-left" style="color:black;font-family: Minion Pro">Pencarian</h3>
 					<hr style="border-color: grey;margin-top: -8px;">
 					<div class="container-fluid" style="background-color:rgba(28,69,26,0.9);border-radius: 5px;">
-						<form method="post" action="<?php echo base_url('pencarian/cari'); ?>" style="margin-top: 15px; margin-bottom: 15px;">
+						<form method="get" action="<?php echo base_url('pencarian'); ?>" style="margin-top: 15px; margin-bottom: 15px;">
 							<div class="input-group" style="z-index: 0;">
 							    <input type="text" name="keyword" class="form-control" placeholder="Cari" required>
 							    <div class="input-group-btn">
@@ -149,7 +148,7 @@
 					    </a>
 				    </div>
 				    <div class="col-xs-6 col-sm-3 col-lg-3">
-					    <a href="<?php echo base_url() ?>produk/produk2" style="text-decoration-line: none;" onmouseover="hvr(this, 'in')" onmouseleave="hvr(this, 'out')">
+					    <a href="<?php echo base_url() ?>produk/alsin" style="text-decoration-line: none;" onmouseover="hvr(this, 'in')" onmouseleave="hvr(this, 'out')">
 					    	<div class="thumbnail text-center produk" style="background-color: rgba(28,69,26,0); border-style: none">
 					    		<img src="<?php echo base_url() ?>item img/toolsWh.png" style="width: 40%" col="g">
 					    		<img src="<?php echo base_url() ?>item img/toolsY.png" style="width: 40%; display:none;" col="b">
@@ -159,7 +158,7 @@
 					    </a>
 				    </div>
 				    <div class="col-xs-6 col-sm-3 col-lg-3">
-					    <a href="<?php echo base_url() ?>produk/produk1" style="text-decoration-line: none;" onmouseover="hvr(this, 'in')" onmouseleave="hvr(this, 'out')">
+					    <a href="<?php echo base_url() ?>produk/formula" style="text-decoration-line: none;" onmouseover="hvr(this, 'in')" onmouseleave="hvr(this, 'out')">
 					    	<div class="thumbnail text-center produk" style="background-color: rgba(28,69,26,0); border-style: none">
 					    		<img src="<?php echo base_url() ?>item img/flaskWh.png" style="width: 40%" col="g">
 					    		<img src="<?php echo base_url() ?>item img/flaskY.png" style="width: 40%; display:none;" col="b">
@@ -169,7 +168,7 @@
 					    </a>
 				    </div>
 				    <div class="col-xs-6 col-sm-3 col-lg-3">
-					    <a href="<?php echo base_url() ?>produk/produk2" style="text-decoration-line: none;" onmouseover="hvr(this, 'in')" onmouseleave="hvr(this, 'out')">
+					    <a href="<?php echo base_url() ?>produk/produkhilir" style="text-decoration-line: none;" onmouseover="hvr(this, 'in')" onmouseleave="hvr(this, 'out')">
 					    	<div class="thumbnail text-center produk" style="background-color: rgba(28,69,26,0); border-style: none">
 					    		<img src="<?php echo base_url() ?>item img/pipeWh.png" style="width: 40%" col="g">
 					    		<img src="<?php echo base_url() ?>item img/pipeY.png" style="width: 40%; display:none;" col="b">

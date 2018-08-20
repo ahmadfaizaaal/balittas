@@ -1,23 +1,35 @@
 <?php 
 	class pencarian extends CI_Controller{
 
-		public function index(){
-			$dataHeader['judul'] = "Pencarian";
-			
-			$this->load->view('header', $dataHeader);			
-			$this->load->view('HalamanPencarian');
-			$this->load->view('footer');
+		function __construct() {
+			parent::__construct();
+            $this->CI = & get_instance();
+            // $this->load->database();
+
+            $this->load->library('pagination');
+            $this->load->model('m_varietas');
+            $this->load->model('M_leaflet');
+			$this->load->model("m_teknologi");
+			$this->load->model("m_agribisnis");									
 		}
 
-		public function cari(){
-			$this->load->model("m_teknologi");						
-			$cari = $this->input->post('keyword');		
+		// public function index(){
+		// 	$dataHeader['judul'] = "Pencarian";
+			
+		// 	$this->load->view('header', $dataHeader);			
+		// 	$this->load->view('HalamanPencarian');
+		// 	$this->load->view('footer');
+		// }
+
+		public function index(){
+			$cari = $this->input->get('keyword');
+			$datapencarian['keyword'] = $cari;	
+			$datapencarian['pencarianVarietas'] = $this->m_varietas->pencarianVarietas($cari);
+			$datapencarian['pencarianWaktuTanam'] = $this->m_varietas->pencarianWaktuTanam($cari);
+			$datapencarian['pencarianLeaflet'] = $this->M_leaflet->pencarianLeaflet($cari);
 			$datapencarian['pencarianTekno'] = $this->m_teknologi->pencarianTeknologi($cari);
-			// if (empty($this->m_teknologi->pencarianTeknologi($cari))) {
-			// 	echo "gusna";
-			// }else{
-			// 	echo "ikhsan";
-			// }
+			$datapencarian['pencarianAgribisnis'] = $this->m_agribisnis->pencarianAgribisnis($cari);
+			
 			$dataHeader['judul'] = "Pencarian";
 			$this->load->view('header', $dataHeader);			
 			$this->load->view('HalamanPencarian',$datapencarian);

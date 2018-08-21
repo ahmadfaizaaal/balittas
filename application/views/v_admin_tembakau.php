@@ -23,9 +23,20 @@
     <script src="<?php echo base_url();?>/bootstrap/js/bootstrap.min.js"></script>
 
 </head>
-<body>
+<body>    
+    <div class="sidenav" style="padding-top: 10px;">        
+        <a href="#tabelVarietas"><i class="glyphicon glyphicon-chevron-right"></i> Varietas</a>
+        <!-- <hr style="border-color: grey;"> -->
+        <a href="#tabelLeaflet"><i class="glyphicon glyphicon-chevron-right"></i> Leaflet</a>
+        <a href="#tabelTeknologi"><i class="glyphicon glyphicon-chevron-right"></i> Teknologi Budidaya</a>
+        <a href="#tabelAgribisnis"><i class="glyphicon glyphicon-chevron-right"></i> Agribisnis</a>
+        <a href="#tabelBenih"><i class="glyphicon glyphicon-chevron-right"></i> Benih</a>
+        <a href="#tabelDistribusibenih"><i class="glyphicon glyphicon-chevron-right"></i> Distribusi Benih</a>        
+    </div>
+    
+    <div class="admin">
 <!-- DATA VARIETAS -->
-    <section class="Welcome" id="Welcome" style="padding-top: 2px; margin-top: 100px;">
+    <section id="tabelVarietas" style="padding-top: 50px;">
         <div class="container">
             <div class="table table-wrapper">
                 <div class="table-title">
@@ -121,40 +132,19 @@
                                 </td>
                             </tr>
                             <?php                                 
-
                                 $no++;
-
                                 }
-
-                                date_default_timezone_set('Asia/Jakarta');
-                                // $tgl = date('d/m/Y'); $wkt = date('H:i');
-                                // echo "$tgl";
-                                // echo "<br>";
-                                // echo "$wkt";
-
+                                date_default_timezone_set('Asia/Jakarta');                                
                             ?>
                         </tbody>
                     </table>
-                </div>
-
-                <div class="clearfix">
-                    <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
-                    <ul class="pagination">
-                        <li class="page-item disabled"><a href="#">Previous</a></li>
-                        <li class="page-item"><a href="#" class="page-link">1</a></li>
-                        <li class="page-item"><a href="#" class="page-link">2</a></li>
-                        <li class="page-item active"><a href="#" class="page-link">3</a></li>
-                        <li class="page-item"><a href="#" class="page-link">4</a></li>
-                        <li class="page-item"><a href="#" class="page-link">5</a></li>
-                        <li class="page-item"><a href="#" class="page-link">Next</a></li>
-                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-<!-- DATA LEAFLET -->
-    <section class="Welcome" id="Welcome" style="padding-top: 2px">
+<!-- DATA LEAFLET -->    
+    <section id="tabelLeaflet" style="padding-top: 50px;">
         <div class="container">
             <div class="table table-wrapper">
                 <div class="table-title">
@@ -220,25 +210,12 @@
                         </tbody>
                     </table>
                 </div>
-
-                <div class="clearfix">
-                    <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
-                    <ul class="pagination">
-                        <li class="page-item disabled"><a href="#">Previous</a></li>
-                        <li class="page-item"><a href="#" class="page-link">1</a></li>
-                        <li class="page-item"><a href="#" class="page-link">2</a></li>
-                        <li class="page-item active"><a href="#" class="page-link">3</a></li>
-                        <li class="page-item"><a href="#" class="page-link">4</a></li>
-                        <li class="page-item"><a href="#" class="page-link">5</a></li>
-                        <li class="page-item"><a href="#" class="page-link">Next</a></li>
-                    </ul>
-                </div>
             </div>
         </div>
     </section>
 
 <!-- DATA TEKNOLOGI BUDIDAYA -->
-    <section class="Welcome" id="Welcome" style="padding-top: 2px">
+    <section id="tabelTeknologi" style="padding-top: 50px">
         <div class="container">
             <div class="table table-wrapper">
                 <div class="table-title">
@@ -284,25 +261,12 @@
                         </tbody>
                     </table>
                 </div>
-
-                <div class="clearfix">
-                    <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
-                    <ul class="pagination">
-                        <li class="page-item disabled"><a href="#">Previous</a></li>
-                        <li class="page-item"><a href="#" class="page-link">1</a></li>
-                        <li class="page-item"><a href="#" class="page-link">2</a></li>
-                        <li class="page-item active"><a href="#" class="page-link">3</a></li>
-                        <li class="page-item"><a href="#" class="page-link">4</a></li>
-                        <li class="page-item"><a href="#" class="page-link">5</a></li>
-                        <li class="page-item"><a href="#" class="page-link">Next</a></li>
-                    </ul>
-                </div>
             </div>
         </div>
     </section>
 
 <!-- DATA AGRIBISNIS -->
-    <section class="Welcome" id="Welcome" style="padding-top: 2px">
+    <section id="tabelAgribisnis" style="padding-top: 50px">
         <div class="container">
             <div class="table table-wrapper">
                 <div class="table-title">
@@ -348,25 +312,12 @@
                         </tbody>
                     </table>
                 </div>
-
-                <div class="clearfix">
-                    <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
-                    <ul class="pagination">
-                        <li class="page-item disabled"><a href="#">Previous</a></li>
-                        <li class="page-item"><a href="#" class="page-link">1</a></li>
-                        <li class="page-item"><a href="#" class="page-link">2</a></li>
-                        <li class="page-item active"><a href="#" class="page-link">3</a></li>
-                        <li class="page-item"><a href="#" class="page-link">4</a></li>
-                        <li class="page-item"><a href="#" class="page-link">5</a></li>
-                        <li class="page-item"><a href="#" class="page-link">Next</a></li>
-                    </ul>
-                </div>
             </div>
         </div>
     </section>
 
     <!-- DATA BENIH -->
-    <section class="Welcome" id="Welcome" style="padding-top: 2px">
+    <section id="tabelBenih" style="padding-top: 50px">
         <div class="container">
             <div class="table table-wrapper">
                 <div class="table-title">
@@ -410,25 +361,12 @@
                         </tbody>
                     </table>
                 </div>
-
-                <div class="clearfix">
-                    <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
-                    <ul class="pagination">
-                        <li class="page-item disabled"><a href="#">Previous</a></li>
-                        <li class="page-item"><a href="#" class="page-link">1</a></li>
-                        <li class="page-item"><a href="#" class="page-link">2</a></li>
-                        <li class="page-item active"><a href="#" class="page-link">3</a></li>
-                        <li class="page-item"><a href="#" class="page-link">4</a></li>
-                        <li class="page-item"><a href="#" class="page-link">5</a></li>
-                        <li class="page-item"><a href="#" class="page-link">Next</a></li>
-                    </ul>
-                </div>
             </div>
         </div>
     </section>
 
     <!-- DATA DISTIBUSI BENIH -->
-    <section class="Welcome" id="Welcome" style="padding-top: 2px">
+    <section id="tabelDistribusibenih" style="padding-top: 50px">
         <div class="container">
             <div class="table table-wrapper">
                 <div class="table-title">
@@ -478,23 +416,10 @@
                         </tbody>
                     </table>
                 </div>
-
-                <div class="clearfix">
-                    <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
-                    <ul class="pagination">
-                        <li class="page-item disabled"><a href="#">Previous</a></li>
-                        <li class="page-item"><a href="#" class="page-link">1</a></li>
-                        <li class="page-item"><a href="#" class="page-link">2</a></li>
-                        <li class="page-item active"><a href="#" class="page-link">3</a></li>
-                        <li class="page-item"><a href="#" class="page-link">4</a></li>
-                        <li class="page-item"><a href="#" class="page-link">5</a></li>
-                        <li class="page-item"><a href="#" class="page-link">Next</a></li>
-                    </ul>
-                </div>
             </div>
         </div>
     </section>
-
+    </div>
 <!-- =====================================================MODAL-MODAL================================================ -->
     <!-- Tambah Modal HTML Tembakau-->
     <div id="tambahtembakau" class="modal fade">
@@ -1601,100 +1526,7 @@
           $('#hapusdistribusibenih').modal('show', {backdrop: 'static'});
           document.getElementById('hapusdben').setAttribute('href' ,"deleteDistribusiBenih/"+delete_url);
         }
-    </script>
-    
-    <!-- <div class="container">
-        <br>
-        <h3 align="center">Image Crop & Upload using JQuery with PHP Ajax</h3>
-        <br>
-        <br>
-        <div class="">
-            <div class="panel-heading">Select Profile Image</div>
-            <div class="panel-body" align="center">
-                <input type="file" name="upload_image" id="upload_image" />
-                <br>
-                <div id="uploaded_image"></div>
-            </div>
-        </div>
-    </div>
-    <div id="uploadimageModal" class="modal" role="dialog">
-    <div class="modal-dialog">
-        <div class="modal-content">
-        <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Upload & Crop Image</h4>
-        </div>
-        <div class="modal-body">
-            <div class="row">
-                    <div class="col-md-8 text-center">
-                          <div id="image_demo" style="width:350px; margin-top:30px"></div>
-                    </div>
-                    <div class="col-md-4" style="padding-top:30px;">
-                        <br>
-                        <br>
-                        <br>
-                          <button class="btn btn-success crop_image">Crop & Upload Image</button>
-                      </div>
-                  </div>
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-        </div>
-    </div>
-</div> -->
-
-<script>  
-// $(document).ready(function(){
-
-//     $image_crop = $('#image_demo').croppie({
-//     enableExif: true,
-//     viewport: {
-//       width:250,
-//       height:150,
-//       type:'square' //circle
-//     },
-//     boundary:{
-//       width:300,
-//       height:300
-//     }
-//   });
-
-//   $('#upload_image').on('change', function(){
-//     var reader = new FileReader();
-//     reader.onload = function (event) {
-//       $image_crop.croppie('bind', {
-//         url: event.target.result
-//       }).then(function(){
-//         console.log('jQuery bind complete');
-//       });
-//     }
-//     reader.readAsDataURL(this.files[0]);
-//     $('#uploadimageModal').modal('show');
-//   });
-
-//   $('.crop_image').click(function(event){
-//     $image_crop.croppie('result', {
-//       type: 'canvas',
-//       size: 'viewport'
-//     }).then(function(response){
-//       $.ajax({
-//         url:"upload.php",
-//         type: "POST",
-//         data:{"image": response},
-//         success:function(data)
-//         {
-//           $('#uploadimageModal').modal('hide');
-//           $('#uploaded_image').html(data);
-//         }
-//       });
-//     })
-//   });
-
-// });  
-</script>
-
-
+    </script>    
     <footer>
         <div class="container-fluid text-center" style="color:white;background-color: black;">
             <div style=" margin-top: 10px;">

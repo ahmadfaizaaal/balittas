@@ -30,10 +30,10 @@
 				    	<img src="<?php echo base_url() ?>item img/logobalittas.png" style="width:280px; margin-left: 5px;">
 				    </div>			
 				    <div class="collapse navbar-collapse">			    
-					    <ul class="nav navbar-nav navbar-right" style="margin-top: 10px;margin-right: 75px;">
+					    <ul class="nav navbar-nav navbar-right" style="margin-top: 10px;margin-right: 0px;">
 					      	<!-- <a href="<?php echo base_url() ?>" class="glyphicon glyphicon-home dropbtnHeader" style="text-decoration-line: none;font-size: 14px;"></a> -->
 					      	<div class="dropdownHeader">
-							  	<div class="dropbtnHeader" style="font-family: Minion Pro">Logout</div>	
+							  	<div class="dropbtnHeader" style="font-family: Minion Pro">Logout &nbsp<i class="glyphicon glyphicon-log-out"></i></div>	
 							</div>																			      		     
 					    </ul>				    
 				    </div>				    
@@ -49,13 +49,13 @@
 					</div>							
 			<?php
 				} else { ?>
-					<div class="containerImg">
+					<!-- <div class="containerImg">
 						<img src="<?php echo base_url() ?>item img/tembakauHeader.jpg" alt="" style="width: 100%;">
 					 	<div class="contentImg text-center">
 						    <h1 class="hidden-xs hidden-sm" style="margin-top:12%;font-size:5vw; font-family: futura md bt;"><?php echo $judul; ?></h1>
 						    <h1 class="hidden-md hidden-lg" style="margin-top:6vw;font-size:5vw; font-family: futura md bt;"><?php echo $judul; ?></h1>
 					  	</div>
-					</div>
+					</div> -->
 			<?php
 				} ?>
 		</header>

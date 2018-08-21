@@ -26,11 +26,15 @@
 <body>    
     <div class="sidenav" style="padding-top: 10px;">        
         <a href="#tabelVarietas"><i class="glyphicon glyphicon-chevron-right"></i> Varietas</a>
-        <!-- <hr style="border-color: grey;"> -->
+        <hr style="border-color: grey;margin:0px 13px 5px 13px;">
         <a href="#tabelLeaflet"><i class="glyphicon glyphicon-chevron-right"></i> Leaflet</a>
+        <hr style="border-color: grey;margin:0px 13px 5px 13px;">
         <a href="#tabelTeknologi"><i class="glyphicon glyphicon-chevron-right"></i> Teknologi Budidaya</a>
+        <hr style="border-color: grey;margin:0px 13px 5px 13px;">
         <a href="#tabelAgribisnis"><i class="glyphicon glyphicon-chevron-right"></i> Agribisnis</a>
+        <hr style="border-color: grey;margin:0px 13px 5px 13px;">
         <a href="#tabelBenih"><i class="glyphicon glyphicon-chevron-right"></i> Benih</a>
+        <hr style="border-color: grey;margin:0px 13px 5px 13px;">
         <a href="#tabelDistribusibenih"><i class="glyphicon glyphicon-chevron-right"></i> Distribusi Benih</a>        
     </div>
     

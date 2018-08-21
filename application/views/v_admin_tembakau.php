@@ -787,7 +787,7 @@
 //                membuat element input
                 var atrjs = document.createElement('input');
                 atrjs.setAttribute('name', 'atribut'+ i);
-                atrjs.setAttribute('value', atr[i]);
+                atrjs.setAttribute('value', ' '+atr[i]);
                 atrjs.setAttribute('type', 'text');
                 atrjs.setAttribute('placeholder', ' Atribut');
                 atrjs.setAttribute('readonly', '');
@@ -795,7 +795,7 @@
 
                 var valjs = document.createElement('input');
                 valjs.setAttribute('name', 'value'+ i);
-                valjs.setAttribute('value', ket[i]);
+                valjs.setAttribute('value', ' '+ket[i]);
                 valjs.setAttribute('type', 'text');
                 valjs.setAttribute('placeholder', ' Value');
                 valjs.setAttribute('style', 'margin : 10px 10px 0px 10px;width: 280px;height: 35px;');

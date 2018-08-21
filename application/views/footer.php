@@ -18,9 +18,10 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	</head>
 	<body>
-		<footer>
+		<footer>			
 				<div class="container-fluid" style="background-color: rgba(28,69,26,1);">
 						<div class="container" style="margin-top: 20px; color:white;">
+						<br>
 							<div class="col-sm-3 col-lg-3">
 								<!-- <div class="row">
 									<div class="col-xs-2 col-sm-2 col-lg-2">
@@ -60,8 +61,8 @@
 							</div>
 							<div class="col-sm-9 col-lg-9">
 								<div class="col-sm-4 col-lg-4 batasfooter">
-									<h3 style="margin-top: 0px; font-family: Minion Pro;">Link Terkait</h3>
-									<hr style="margin-top: 0px; margin-bottom: 10px; border-color: #fece00;">							
+									<h3 style="margin-top: 4px; font-family: Minion Pro;">Link Terkait</h3>
+									<hr style="margin-top: -5px; margin-bottom: 10px; border-color: #fece00;">		
 									<table>
 										<tbody>
 											<a href="http://pertanian.go.id/">
@@ -109,8 +110,8 @@
 									<br>														
 								</div>
 								<div class="col-sm-4 col-lg-4 batasfooter">
-									<h3 style="margin-top: 0px; font-family: Minion Pro;">Sosial Media</h3>
-									<hr style="margin-top: 0px; margin-bottom: 13px; border-color: #fece00;">
+									<h3 style="margin-top: 4px; font-family: Minion Pro;">Sosial Media</h3>
+									<hr style="margin-top: -5px; margin-bottom: 13px; border-color: #fece00;">
 									<div class="row">
 										<div class="col-xs-3 col-sm-3 col-lg-3" style="margin: 0px -7px 9px 0px;">
 											<a href="https://web.facebook.com/balittas.malang" target="blank">
@@ -136,7 +137,7 @@
 									<br>
 								</div>						
 								<div class="col-sm-4 col-lg-4 batasfooter">
-									<div class="row">
+									<div class="row" style="margin-top: -1px;">
 										<div class="col-xs-9 col-sm-9 col-lg-9">
 											<p style="margin-top: 5px;">Pengunjung Hari Ini</p>
 										</div>

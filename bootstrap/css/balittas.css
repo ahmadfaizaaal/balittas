@@ -340,6 +340,8 @@
 .pagerCustom li > span {
   display: inline-block;
   border-radius: 100%;
+  width: 40px;
+  height: 40px;
 }
 
 
@@ -350,10 +352,10 @@ ul.paginationKu li
 
 ul.paginationKu li a
 {
-    color:rgba(28, 69, 26);
+    color:rgba(28, 69, 26);    
     text-align: center;
     text-decoration:none;
-    padding:7px 10px 7px 10px;
+    padding:9px 10px 10px 10px;
     background-color: rgba(36,112,101,0.1);
     box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);
 }

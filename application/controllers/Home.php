@@ -45,8 +45,8 @@
             $config['last_tagl_close'] = "</li>";
             $config['cur_tag_open'] = '&nbsp;<a class="current">';
             $config['cur_tag_close'] = '</a>';
-            $config['next_link'] = '>>';
-            $config['prev_link'] = '<<';
+            $config['next_link'] = '>';
+            $config['prev_link'] = '<';
 
             //inisialisasi array 'config' dan set ke pagination library
             $this->pagination->initialize($config);

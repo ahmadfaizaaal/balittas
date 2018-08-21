@@ -30,7 +30,7 @@
 					</ul>
 				<h3 class="text-left" style="color:black; font-family: Minion Pro">Varietas Terbaru</h3>
 				<hr style="border-color: grey; margin-top: -8px;">
-				<div class="row">
+				<div class="row" style="margin-top: -7px;">
 					<?php 
 						foreach ($varietas as $row) {
 							$namaVarietas = ""; $narasi = "";
@@ -92,7 +92,7 @@
 					<br>
 					<h3 class="text-left" style="color:black;font-family: Minion Pro">Pencarian</h3>
 					<hr style="border-color: grey;margin-top: -8px;">
-					<div class="container-fluid" style="background-color:rgba(28,69,26,0.9);border-radius: 5px;">
+					<div class="container-fluid" style="background-color:rgba(28,69,26,0.9);border-radius: 5px;margin-top: -7px;margin-bottom: -5px;">
 						<form method="get" action="<?php echo base_url('pencarian'); ?>" style="margin-top: 15px; margin-bottom: 15px;">
 							<div class="input-group" style="z-index: 0;">
 							    <input type="text" name="keyword" class="form-control" placeholder="Cari" required>
@@ -105,7 +105,7 @@
 						</form>						
 					</div>
 					<a href="<?php echo base_url('leaflet') ?>" style="text-decoration-line:none;" title="Klik untuk menuju halaman leaflet"><h3 class="text-left" style="color:black;font-family: Minion Pro">Leaflet</h3></a>
-					<hr style="border-color: grey;margin-top: -8px;">
+					<hr style="border-color: grey;margin-top: -8px; margin-bottom: 0px;">
 					<?php 
 						$ganjil = true;
 						foreach ($subLeaflet as $leafletSide) {

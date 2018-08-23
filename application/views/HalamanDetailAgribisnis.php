@@ -15,6 +15,11 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js"></script>
+		<script type="text/javascript" src="<?php echo base_url() ?>bootstrap/js/jQuery.highlight.js"></script>
 	</head>
 	<body>
 		
@@ -29,6 +34,7 @@
 			<div class="row">
 				<div class="col-sm-9 col-lg-9">
 					<hr style="border-color: grey;margin-top: 3px;">
+					<input hidden id="keyword" value="<?php echo $keyword; ?>">
 					<?php 
 						foreach ($agribisnis as $rowA) {
 						$temParagraf = explode('</p>',$rowA->deskripsi_agribisnis);
@@ -39,25 +45,34 @@
 									<img src="<?php echo base_url() ?>assets/gambarAgribisnis/<?php echo $rowA->gambar_agribisnis; ?>" alt="" style="width: 100%;border-radius: 3px;">
 									<br>
 									<div class="container-fluid">									
-										<h4 style="color:rgb(242,97,5); font-size: 24px; font-family: Minion Pro;"><strong><?php echo $rowA->jenis_agribisnis; ?></strong></h4>
+										<h4 style="color:rgb(242,97,5); font-size: 24px; font-family: Minion Pro;"><strong class="pencarian"><?php echo $rowA->jenis_agribisnis; ?></strong></h4>
 										<?php 
 											for ($i=0; $i < count($temParagraf) ; $i++) { 
-												echo "<p style=\"text-indent: 0.5in;text-align:justify;\">".$temParagraf[$i]."</p>";
+												echo "<p style=\"text-indent: 0.5in;text-align:justify;\" class=\"pencarian\">".$temParagraf[$i]."</p>";
 											}
 										 ?>																			
 
 										<br>
 										<p style="color: #5cb85c;"><b>Catatan:</b></p>
-										<p>Pembahasan lebih lanjut monograf <b><?php echo $rowA->jenis_agribisnis; ?></b> dapat diunduh <a href="<?php echo base_url() ?>assets/fileAgribisnis/<?php echo $rowA->file; ?>" target="blank" class="hoverThumbnail" style="text-decoration-line: none"><b>di sini</b></a>.</p>
+										<p>Pembahasan lebih lanjut monograf <b class="pencarian"><?php echo $rowA->jenis_agribisnis; ?></b> dapat diunduh <a href="<?php echo base_url() ?>assets/fileAgribisnis/<?php echo $rowA->file; ?>" target="blank" class="hoverThumbnail" style="text-decoration-line: none"><b>di sini</b></a>.</p>
 										<br>
 									</div>
 									<br>
 									<br>
 									<div style="text-align: right; margin-bottom: 10px;margin-right: 10px;">
 									    <span style="font-size: 12px;">Bagikan &nbsp</span>
-										<a href=""><span><img src="<?php echo base_url() ?>item img/fb.png" alt=""></span></a>
-										<a href=""><span><img src="<?php echo base_url() ?>item img/twitter.png" alt=""></span></a>
-										<a href=""><span><img src="<?php echo base_url() ?>item img/gplus.png" alt=""></span></a>
+										<!-- SHARE LINK UNTUK FACEBOOK -->
+										<a id="button" onclick="window.open('http://www.facebook.com/sharer.php?s=100&amp;p[title]=<?php echo $rowA->jenis_agribisnis; ?>&amp;p[summary]=<?php echo substr($rowA->deskripsi_agribisnis, 0, 25);?>&amp;p[url]=<?php echo base_url(); ?>&amp;&p[images][0]=<?php echo base_url(); ?>assets/gambarAgribisnis/<?php echo $rowA->gambar_agribisnis;?>', 'sharer', 'toolbar=0,status=0,width=550,height=400');" target="_parent" href="javascript: void(0)">
+                        					<span><img src="<?php echo base_url() ?>item img/fb.png" /></span>
+                        				</a>
+										<!-- SHARE LINK UNTUK TWITTER -->
+										<a class="twitter popup" href="http://twitter.com/share?source=sharethiscom&text=<?php echo "Agribisnis Tembakau : ".$rowA->jenis_agribisnis;?>&url=<?php echo base_url(); ?>&via=berbagiyuks" target="blank">
+											<span><img src="<?php echo base_url() ?>item img/twitter.png" /></span>
+										</a>
+										<!-- SHARE LINK UNTUK GOOGLE PLUS -->
+										<a href="javascript:void(0);" onclick="popUp=window.open('https://plus.google.com/share?url=<?php echo base_url('agribisnis/jenis/').urlencode(strtolower($rowA->jenis_agribisnis)); ?> ','popupwindow','scrollbars=yes,width=800,height=400');popUp.focus();return false">
+											<span><img src="<?php echo base_url() ?>item img/gplus.png" /></span>
+										</a>
 									</div>									
 								</div>
 						</div>							
@@ -151,6 +166,20 @@
 			        }
 			    });
 			}
+
+			var searchCnt = 0;
+
+			var option = {
+				color: "rgb(28,69,26)",
+				background: "rgba(92,184,92,0.5)",
+				bold: false,
+				class: "high",
+				ignoreCase: true,
+				wholeWord: false
+			}
+			$(function(){
+				searchCnt = $(".pencarian").highlight($('#keyword').val(), option);
+			});
 		</script>
 		<!-- END OF MODALS -->
 	</body>

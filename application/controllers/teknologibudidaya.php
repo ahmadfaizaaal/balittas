@@ -12,8 +12,14 @@
 
 		public function index($jenis) {
 			$dataHeader['judul'] = "Teknologi Budidaya Tembakau";
-			$idTeknologi = $this->m_teknologi->selectIdTeknologiByJenis(urldecode($jenis));
+			$jenisTeknologi = explode('%23keyword%3D', $jenis);
+			$idTeknologi = $this->m_teknologi->selectIdTeknologiByJenis(urldecode($jenisTeknologi[0]));
 			
+			if (count($jenisTeknologi) == 1) {
+				$data['keyword'] = "";
+			} else {
+				$data['keyword'] = urldecode($jenisTeknologi[1]);
+			}
 			$data['teknologi'] = $this->m_teknologi->selectTeknologiById($idTeknologi);
 			$data['listFileTeknologi'] = $this->m_teknologi->selectFileByIdTeknologi($idTeknologi);
 			$data['subLeaflet'] = $this->M_leaflet->selectLeafletTerbaru();

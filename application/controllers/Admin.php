@@ -1,35 +1,55 @@
 <?php 
 	class admin extends CI_Controller{
 		public function index(){
-			$data['judul'] = "Balittas";
+			$data['judul'] = "Masuk - Balai Penelitian Tanaman Pemanis dan Serat";
 			$this->load->view('login', $data);
 		}
 		public function login(){			
-			$username = $_POST['username']; 
-			$password = $_POST['password'];			
-			if ($username=="balittas"&&$password=="magang") {
-				redirect(base_url('Admin/tembakau'));
+			$username = $this->input->post('username'); 
+			$password = $this->input->post('password');			
+			if ($username == "balittas" && $password == "admin") {
+				$this->load->model("m_tembakau");
+				$this->session->set_userdata(array(
+						'akunAktif'=>"Administrator",
+						'varietas_tembakau'=>$this->m_tembakau->get_varietas(),
+						'detail_varietas'=>$this->m_tembakau->get_all_detail_varietas(),
+						'listAtribut' =>$this->m_tembakau->getAtribut(),
+						'leaflet'=>$this->m_tembakau->get_leaflet(),
+						'gambarleaflet'=>$this->m_tembakau->get_leaflet_img(),
+
+						'benih' =>$this->m_tembakau->get_benih(),
+						'distribusiBenih'=>$this->m_tembakau->get_distribusi_benih(),
+						'ListNamaBenih'=>$this->m_tembakau->get_nama_benih(),
+						'teknologi' =>$this->m_tembakau->get_tekbud(),
+						'agribisnis'=>$this->m_tembakau->get_agri()),
+				true);
+				redirect(base_url('admin/tembakau'));
 			}else{
-				$data['coba']="gusna";
-				$data['judul'] = "Balittas";
+				$data['coba'] = "salah";
+				$data['judul'] = "Admin - Balai Penelitian Tanaman Pemanis dan Serat";
+				// redirect(base_url('admin'), 'refresh');
 				$this->load->view('login', $data);
 			}			
 		}
+		public function logout() {
+			$this->session->sess_destroy();
+			redirect(base_url('admin'));
+		}
 		public function tembakau(){		
-			$this->load->model("m_tembakau");		
-			$data['varietas_tembakau'] = $this->m_tembakau->get_varietas();
-			$data['detail_varietas'] = $this->m_tembakau->get_all_detail_varietas();
-			$data['listAtribut'] = $this->m_tembakau->getAtribut();
-			$data['leaflet'] = $this->m_tembakau->get_leaflet();
-			$data['gambarleaflet'] = $this->m_tembakau->get_leaflet_img();		
-			$data['benih'] = $this->m_tembakau->get_benih();
-			$data['distribusiBenih'] = $this->m_tembakau->get_distribusi_benih();
-			$data['ListNamaBenih'] = $this->m_tembakau->get_nama_benih();
-			$data['teknologi'] = $this->m_tembakau->get_tekbud();
-			$data['agribisnis'] = $this->m_tembakau->get_agri();
+			// $this->load->model("m_tembakau");		
+			// $data['varietas_tembakau'] = $this->m_tembakau->get_varietas();
+			// $data['detail_varietas'] = $this->m_tembakau->get_all_detail_varietas();
+			// $data['listAtribut'] = $this->m_tembakau->getAtribut();
+			// $data['leaflet'] = $this->m_tembakau->get_leaflet();
+			// $data['gambarleaflet'] = $this->m_tembakau->get_leaflet_img();		
+			// $data['benih'] = $this->m_tembakau->get_benih();
+			// $data['distribusiBenih'] = $this->m_tembakau->get_distribusi_benih();
+			// $data['ListNamaBenih'] = $this->m_tembakau->get_nama_benih();
+			// $data['teknologi'] = $this->m_tembakau->get_tekbud();
+			// $data['agribisnis'] = $this->m_tembakau->get_agri();
 			$dataHeader['judul'] = "Admin";
 			$this->load->view("headerAdmin",$dataHeader);
-			$this->load->view("v_admin_tembakau",$data);
+			$this->load->view("v_admin_tembakau");
 		}
 	//========================================VARIETAS========================================
 		public function deleteVarietas($id){			

@@ -9,11 +9,14 @@
 			$password = $_POST['password'];			
 			if ($username=="balittas"&&$password=="magang") {
 				redirect(base_url('Admin/tembakau'));
-			}else{
-				$data['coba']="gusna";
+			}else{				
 				$data['judul'] = "Balittas";
 				$this->load->view('login', $data);
 			}			
+		}
+		public function logout(){
+			$data['judul'] = "Balittas";
+			$this->load->view('login', $data);
 		}
 		public function tembakau(){		
 			$this->load->model("m_tembakau");		

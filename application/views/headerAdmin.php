@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>	
-		<title>Admin</title>
+		<title>Admin - Balai Penelitian Tanaman Pemanis dan Serat</title>
 		<meta charset="utf-8">
 		<!-- <link href="gambar/logo.png" rel="shortcut icon"> -->
 		<meta name="description" content="A Tuts+ course">
@@ -27,7 +27,8 @@
 			<nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: rgba(28,69,26,1)">
 				<div class="container-fluid">
 				    <div class="navbar-header" style="margin-top: 5px; margin-bottom: 3px;">
-				    	<img src="<?php echo base_url() ?>item img/logobalittas.png" style="width:280px; margin-left: 5px;">
+				    	<!-- <img src="<?php //echo base_url() ?>item img/logobalittas.png" style="width:280px; margin-left: 5px;"> -->
+				    	<img src="<?php echo base_url() ?>item img/logobalittasadmin.png" style="width:422px; margin-left: 5px;">
 				    </div>			
 				    <div class="collapse navbar-collapse">			    
 					    <ul class="nav navbar-nav navbar-right" style="margin-top: 10px;margin-right: 0px;">

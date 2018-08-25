@@ -28,5 +28,12 @@
 			$this->load->view('footer');
 		}
 
+		public function tesHighlight() {
+			$dataHeader['judul'] = "Pencarian";
+			$this->load->view('header', $dataHeader);
+			$this->load->view('tesHighlight');	
+			$this->load->view('footer');
+		}
+
 	}
  ?>

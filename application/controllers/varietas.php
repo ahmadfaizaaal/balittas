@@ -21,9 +21,14 @@
  			} else if ($kategori == "kegunaan") {
  				$jenis = "Kegunaan";
  				$data['jenistembakau'] = $this->m_varietas->selectJenisTembakau();
- 			} else if ($kategori == "waktutanam") {
+ 			} else if (substr($kategori, 0, 10) == "waktutanam") {
  				$jenis = "Waktu Tanam";
  				$data['waktutanam'] = $this->m_varietas->selectWaktuTanam();
+ 				if (strlen($kategori) == 10) {
+ 					$data['value'] = "";	
+ 				} else {
+ 					$data['value'] = substr($kategori, 13, (strlen($kategori)-1));
+ 				}
  			} else if ($kategori == "daerahpengembangan") {
  				$jenis = "Daerah Pengembangan";
  				$namaAtribut = "Daerah pengembangan";
@@ -82,10 +87,16 @@
 			$this->load->view('footer');
 		}
 
-		public function detailVarietas($namaVarietas){
+		public function detailVarietas($nama){
 			$dataHeader['judul'] = "Detil Varietas";
-			$idVarietas = $this->m_varietas->selectIdByNamaVarietas(urldecode($namaVarietas));
-			
+			$namaVarietas = explode('%23keyword%3D', $nama);
+			$idVarietas = $this->m_varietas->selectIdByNamaVarietas(urldecode($namaVarietas[0]));
+
+			if (count($namaVarietas) == 1) {
+				$data['keyword'] = "";
+			} else {
+				$data['keyword'] = urldecode($namaVarietas[1]);
+			}
 			$data['varietas'] = $this->m_varietas->selectVarietasById($idVarietas);
 			$data['detailVarietas'] = $this->m_varietas->selectDetailVarietas($idVarietas);
 			$data['subLeaflet'] = $this->M_leaflet->selectLeafletTerbaru();

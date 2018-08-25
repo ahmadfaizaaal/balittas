@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>	
-		<title>Admin</title>
+		<title>Admin - Balai Penelitian Tanaman Pemanis dan Serat</title>
 		<meta charset="utf-8">
 		<!-- <link href="gambar/logo.png" rel="shortcut icon"> -->
 		<meta name="description" content="A Tuts+ course">
@@ -27,13 +27,18 @@
 			<nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: rgba(28,69,26,1)">
 				<div class="container-fluid">
 				    <div class="navbar-header" style="margin-top: 5px; margin-bottom: 3px;">
-				    	<img src="<?php echo base_url() ?>item img/logobalittas.png" style="width:280px; margin-left: 5px;">
+				    	<!-- <img src="<?php //echo base_url() ?>item img/logobalittas.png" style="width:280px; margin-left: 5px;"> -->
+				    	<img src="<?php echo base_url() ?>item img/logobalittasadmin.png" style="width:422px; margin-left: 5px;">
 				    </div>			
 				    <div class="collapse navbar-collapse">			    
 					    <ul class="nav navbar-nav navbar-right" style="margin-top: 10px;margin-right: 0px;">
 					      	<!-- <a href="<?php echo base_url() ?>" class="glyphicon glyphicon-home dropbtnHeader" style="text-decoration-line: none;font-size: 14px;"></a> -->
 					      	<div class="dropdownHeader">
+<<<<<<< HEAD
 							  	<a href="<?php echo base_url('admin/logout/')?>"><div class="dropbtnHeader" style="font-family: century;font-size: 14px;">Logout &nbsp<i class="glyphicon glyphicon-log-out"></i></div></a>
+=======
+							  	<a href="<?php echo base_url('admin/logout'); ?>"><div class="dropbtnHeader" style="font-family: Minion Pro; cursor: pointer;">Logout &nbsp<i class="glyphicon glyphicon-log-out"></i></div></a>
+>>>>>>> a65917b22114e8ad924ea99f2544f02b8be6c91e
 							</div>																			      		     
 					    </ul>				    
 				    </div>				    

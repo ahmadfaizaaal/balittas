@@ -7,6 +7,7 @@
 		<link rel="stylesheet" href="<?php echo base_url() ?>bootstrap/css/bootstrap.css">
 		<link rel="stylesheet" href="<?php echo base_url() ?>bootstrap/css/balittas.css">
 		<link href="<?php echo base_url() ?>item img/Logo-Kementerian-Pertanian.png" rel="shortcut icon">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -31,7 +32,7 @@
 				<div class="container-fluid" style="background-color:rgba(28,69,26,0.9);border-radius: 5px; width: 60%;">
 					<form method="get" action="<?php echo base_url('pencarian')?>" style="margin-top: 15px; margin-bottom: 15px;">
 						<div class="input-group" style="z-index: 0;">
-							<input type="text" name="keyword" class="form-control" placeholder="Cari" id="fieldCari" required>
+							<input type="text" name="keyword" class="form-control" placeholder="Cari" id="fieldCari" value="<?php echo $keyword; ?>" required>
 							<div class="input-group-btn">
 							    <button class="btn btn-success" type="submit">
 							    	<i class="glyphicon glyphicon-search"></i>
@@ -43,6 +44,8 @@
 				<br>
 				<h3 style=" font-style: italic;">Hasil pencarian<span class="matche-cnt"><span id="jumlahTerkait"></span> terkait</span></h3>
 				<hr style="margin-top: -6px;">
+				<input hidden id="keyword" value="<?php echo $keyword; ?>">
+
 
 				<!-- PENCARIAN VARIETAS -->
 				<?php
@@ -58,10 +61,10 @@
 						if ($tempNamaVarietas != $row->nama_varietas) {										
 				 ?>
 							<div>					
-								<a href="<?php echo base_url('varietas/detailvarietas/').urlencode(strtolower($row->nama_varietas)) ?>" style="text-decoration-line: none;" class="teknologiBudidaya">						
-									<h3><span><?php echo "$row->nama_varietas"; ?></span></h3>
+								<a href="<?php echo base_url('varietas/detailvarietas/').urlencode(strtolower($row->nama_varietas))."%23keyword%3D$keyword"; ?>" style="text-decoration-line: none;" class="teknologiBudidaya">						
+									<h3 class="pencarian"><span><?php echo "$row->nama_varietas"; ?></span></h3>
 								</a>
-								<p style="text-indent: 0.5in;"><?php echo "$narasi"; ?></p>
+								<p style="text-indent: 0.5in;" class="pencarian"><?php echo "$narasi"; ?></p>
 								<a href="<?php echo base_url('pencarian')?>?keyword=%23varietas" style="text-decoration-line: none;"><span style="color: #fece00; font-style: italic;"><p class="glyphicon glyphicon-tags small"></p>&nbsp;&nbsp;varietas</span></a>	
 								<hr style="margin-top: -2px;">
 							</div>	
@@ -83,10 +86,10 @@
 						}											
 				 ?>
 						<div >					
-							<a href="<?php echo base_url('varietas/jenistembakau/waktutanam'); ?>" style="text-decoration-line: none;" class="teknologiBudidaya">						
-								<h3><span><?php echo "$row->nama_file"; ?></span></h3>
+							<a href="<?php echo base_url('varietas/jenistembakau/waktutanam')."%23$row->id_waktu_tanam%23keyword%3D$keyword"; ?>" style="text-decoration-line: none;" class="teknologiBudidaya">						
+								<h3 class="pencarian"><span><?php echo "$row->nama_file"; ?></span></h3>
 							</a>
-							<p style="text-indent: 0.5in;"><?php echo "$narasi"; ?></p>
+							<p style="text-indent: 0.5in;" class="pencarian"><?php echo "$narasi"; ?></p>
 							<a href="<?php echo base_url('pencarian')?>?keyword=%23varietas" style="text-decoration-line: none;"><span style="color: #fece00; font-style: italic;"><p class="glyphicon glyphicon-tags small"></p>&nbsp;&nbsp;varietas</span></a>					
 							<hr style="margin-top: -2px;">
 						</div>	
@@ -104,7 +107,7 @@
 				 ?>
 							<div>					
 								<a href="#" style="text-decoration-line: none;" class="teknologiBudidaya indeksGambar" >						
-									<h3><span><?php echo "$row->nama_leaflet"; ?></span></h3>
+									<h3 class="pencarian"><span><?php echo "$row->nama_leaflet"; ?></span></h3>
 								</a>
 								<a href="<?php echo base_url('pencarian')?>?keyword=%23leaflet" style="text-decoration-line: none;"><span style="color: #fece00; font-style: italic;"><p class="glyphicon glyphicon-tags small"></p>&nbsp;&nbsp;leaflet</span></a>		
 								<hr style="margin-top: -2px;">
@@ -142,10 +145,10 @@
 						}											
 				 ?>
 						<div>					
-							<a href="<?php echo base_url('teknologibudidaya/index/').urlencode(strtolower($row->jenis_teknologi_budidaya)); ?>" style="text-decoration-line: none;" class="teknologiBudidaya">						
-								<h3><?php echo "$row->jenis_teknologi_budidaya"; ?></h3>
+							<a href="<?php echo base_url('teknologibudidaya/index/').urlencode(strtolower($row->jenis_teknologi_budidaya))."%23keyword%3D$keyword"; ?>" style="text-decoration-line: none;" class="teknologiBudidaya">						
+								<h3 class="pencarian"><?php echo "$row->jenis_teknologi_budidaya"; ?></h3>
 							</a>
-							<p style="text-indent: 0.5in;"><?php echo "$narasi"; ?></p>
+							<p style="text-indent: 0.5in;" class="pencarian"><?php echo "$narasi"; ?></p>
 							<a href="<?php echo base_url('pencarian')?>?keyword=%23teknologibudidaya" style="text-decoration-line: none;"><span style="color: #fece00; font-style: italic;"><p class="glyphicon glyphicon-tags small"></p>&nbsp;&nbsp;teknologibudidaya</span></a>
 							<hr style="margin-top: -2px;">
 						</div>	
@@ -162,11 +165,11 @@
 							$narasi = $row->deskripsi_agribisnis;
 						}											
 				 ?>
-						<div class="searchAgribisnis">					
-							<a href="<?php echo base_url('agribisnis/jenis/').urlencode(strtolower($row->jenis_agribisnis)); ?>" style="text-decoration-line: none;" class="teknologiBudidaya">						
-								<h3><span><?php echo "$row->jenis_agribisnis"; ?></span></h3>
+						<div>					
+							<a href="<?php echo base_url('agribisnis/jenis/').urlencode(strtolower($row->jenis_agribisnis))."%23keyword%3D$keyword"; ?>" style="text-decoration-line: none;" class="teknologiBudidaya">						
+								<h3 class="pencarian"><span><?php echo "$row->jenis_agribisnis"; ?></span></h3>
 							</a>
-							<p style="text-indent: 0.5in;"><?php echo "$narasi"; ?></p>
+							<p style="text-indent: 0.5in;" class="pencarian"><?php echo "$narasi"; ?></p>
 							<a href="<?php echo base_url('pencarian')?>?keyword=%23agribisnis" style="text-decoration-line: none;"><span style="color: #fece00; font-style: italic;"><p class="glyphicon glyphicon-tags small"></p>&nbsp;&nbsp;agribisnis</span></a>					
 							<hr style="margin-top: -2px;">
 						</div>	
@@ -178,49 +181,15 @@
 						echo "<script>$(\"#jumlahTerkait\").text(\"$jumlahHasilPencarian\");</script>";
 						echo "<h3 class=\"text-center\" style=\"font-family: futura md bt;\">Hasil untuk <b style=\"color: rgb(242,97,5);\">$keyword</b> tidak ditemukan!</h3>"; 	
 					} else {
-						echo "<script>$(\"#jumlahTerkait\").text(\"$jumlahHasilPencarian\");</script>";
+						echo "<script>
+									$(\"#jumlahTerkait\").text(\"$jumlahHasilPencarian\");
+							  </script>";
 					}
 				?>																
 		</div>
-
-		<script>
-			var searchCnt = 0;
-
-			var option = {
-				color: "black",
-				background: "yellow",
-				bold: true,
-				class: "high",
-				ignoreCase: true,
-				wholeWord: false
-			}
-			$(function(){
-				var originalContent = document.getElementsByClassName('searchAgribisnis')[0].html();
-				searchCnt = document.getElementsByClassName('searchAgribisnis')[0].highlight('tembakau', option);
-			});
-		</script>
+		
 
 		<!-- BAGIAN MODAL UNTUK PENCARIAN LEAFLET -->
-		<!-- <div id="modalKu" class="modalSlider">
-			<span class="closeSlider cursor" onclick="closeModal()">&times;</span>
-			<div class="modalSlider-content">
-			<?php
-				// $jumlahImg = 1;
-				// foreach ($pencarianLeaflet as $row) {
-			?>
-					<div class="mySlidesSlider">
-						<div class="numbertextSlider"><?php //echo $jumlahImg; ?> / 2</div>
-						<img src="<?php //echo base_url() ?>assets/leaflet/<?php //echo $row->file; ?>" style="width:100%">
-					</div>
-			<?php
-				// 	$jumlahImg++; 
-				// }
-			?>
-				<a class="prevSlider" onclick="plusSlides(-1)" style="text-decoration-line: none;">&#10094;</a>
-				<a class="nextSlider" onclick="plusSlides(1)" style="text-decoration-line: none;">&#10095;</a>
-			</div>
-		</div> -->
-
 		<div id="modalKu" class="modalSlider">
 			<span class="closeSlider cursor" onclick="closeModal()">&times;</span>
 			<div class="modalSlider-content">
@@ -240,29 +209,30 @@
 			</div>
 		</div>
 		<!-- PENUTUP BAGIAN MODAL -->
-		
-
 
 		<script>
-			// var src_str = $("#hasilCari").html();
-			// var term = "yang";
-			// term = term.replace(/(\s+)/,"(<[^>]+>)*$1(<[^>]+>)*");
-			// var pattern = new RegExp("("+term+")", "gi");
+			var searchCnt = 0;
 
-			// src_str = src_str.replace(pattern, "<strong style='background-color:#fece00;'>$1</strong>");
-			// src_str = src_str.replace(/(<mark>[^<>]*)((<[^>]+>)+)([^<>]*<\/strong>)/,"$1</strong>$2<strong style='background-color:#fece00;'>$4");
-
-			// $("#hasilCari").html(src_str);
+			var option = {
+				color: "rgb(28,69,26)",
+				background: "rgba(92,184,92,0.5)",
+				bold: false,
+				class: "high",
+				ignoreCase: true,
+				wholeWord: false
+			}
+			$(function(){
+				searchCnt = $(".pencarian").highlight($('#keyword').val(), option);
+			});
 
 			function gambarLeaflet(value1, value2, nama1, nama2) {
-				//onclick="document.getElementById('modalKu').style.display='block'"
 				document.getElementsByClassName('imgLeaflet')[0].src = "http://localhost/balittas/assets/leaflet/" + value1;
 				document.getElementsByClassName('imgLeaflet')[1].src = "http://localhost/balittas/assets/leaflet/" + value2;
 				document.getElementsByClassName('imgLeaflet')[0].alt = nama1;
 				document.getElementsByClassName('imgLeaflet')[1].alt = nama2;
 
 				document.getElementById('modalKu').style.display='block';
-			showSlides(slideIndex);
+				showSlides(slideIndex);
 			}
 
 			//SCRIPT UNTUK MODAL PENCARIAN
@@ -296,7 +266,6 @@
 			  }
 			  
 			  slides[slideIndex-1].style.display = "block";
-			  // dots[slideIndex-1].className += " active";
 			  captionText.innerHTML = dots[slideIndex-1].alt;
 			}
 

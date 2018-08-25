@@ -29,6 +29,7 @@
 			<div class="row">
 				<div class="col-sm-9 col-lg-9">
 					<hr style="border-color: grey;margin-top: 3px;">
+					<input hidden id="keyword" value="<?php echo $keyword; ?>">
 					<?php 
 						foreach ($varietas as $rowA) {
 						
@@ -41,8 +42,8 @@
 									<div class="container-fluid">
 									<span class="label label-success"><p class="glyphicon glyphicon-calendar"></p> <?php echo $rowA->tanggal_upload ?></span>
 									<span class="label label-warning"><p class="glyphicon glyphicon-time"></p> <?php echo $rowA->waktu_upload; ?></span>										
-									<h4 style="color:rgb(242,97,5);font-size: 24px; font-family: Minion Pro;"><?php echo $rowA->nama_varietas; ?></h4>									
-									<p style="text-indent: 0.5in; text-align: justify;"><?php echo $rowA->narasi; ?></p>
+									<h4 style="color:rgb(242,97,5);font-size: 24px; font-family: Minion Pro;" class="pencarian"><?php echo $rowA->nama_varietas; ?></h4>									
+									<p style="text-indent: 0.5in; text-align: justify;" class="pencarian"><?php echo $rowA->narasi; ?></p>
 
 									<br>
 									<p><b>Spesifikasi Varietas :</b></p>
@@ -63,12 +64,12 @@
 														if (empty($rowDetail->detail_value)) {
 															$count-=1;
 															echo "<td></td>";
-															echo "<td style=\"font-weight: bold; font-style: italic;\">".$rowDetail->nama_atribut."</td>";
-															echo "<td>".$rowDetail->detail_value."</td>";
+															echo "<td style=\"font-weight: bold; font-style: italic;\" class=\"pencarian\">".$rowDetail->nama_atribut."</td>";
+															echo "<td class=\"pencarian\">".$rowDetail->detail_value."</td>";
 														} else {
 															echo "<td>".$count."</td>";
-															echo "<td>".$rowDetail->nama_atribut."</td>";
-															echo "<td>".$rowDetail->detail_value."</td>";
+															echo "<td class=\"pencarian\">".$rowDetail->nama_atribut."</td>";
+															echo "<td class=\"pencarian\">".$rowDetail->detail_value."</td>";
 														}
 													 ?>
 													<!-- <td><?php //echo $count; ?></td>
@@ -76,22 +77,32 @@
 													<td><?php //echo $rowDetail->detail_value; ?></td> -->
 												</tr>
 											<?php 
-											$count++;
-											}
+													$count++;
+												}
 											 ?>
 											</tbody>
 										</table>
 									<br>
 									<p><b>Catatan:</b></p>
-									<p>Surat Keputusan Pelepasan <b><?php echo $rowA->nama_varietas; ?></b> dapat diunduh <a href="<?php echo base_url() ?>assets/SK/<?php echo $rowA->file_SK; ?>" target="blank" class="hoverThumbnail" style="text-decoration-line: none"><b>di sini</b></a>.</p>
+									<p>Surat Keputusan Pelepasan <b class="pencarian"><?php echo $rowA->nama_varietas; ?></b> dapat diunduh <a href="<?php echo base_url() ?>assets/SK/<?php echo $rowA->file_SK; ?>" target="blank" class="hoverThumbnail" style="text-decoration-line: none"><b>di sini</b></a>.</p>
 									</div>
 									<br>
 									<br>
 									<div style="text-align: right; margin-bottom: 10px;margin-right: 10px;">
 									    <span style="font-size: 12px;">Bagikan &nbsp</span>
-										<a href=""><span><img src="<?php echo base_url() ?>item img/fb.png" alt=""></span></a>
-										<a href=""><span><img src="<?php echo base_url() ?>item img/twitter.png" alt=""></span></a>
-										<a href=""><span><img src="<?php echo base_url() ?>item img/gplus.png" alt=""></span></a>
+										<!-- SHARE LINK UNTUK FACEBOOK -->
+										<a id="button" onclick="window.open('http://www.facebook.com/sharer.php?s=100&amp;p[title]=<?php echo $rowA->nama_varietas; ?>&amp;p[summary]=<?php echo substr($rowA->narasi, 0, 25);?>&amp;p[url]=<?php echo base_url(); ?>&amp;&p[images][0]=<?php echo base_url(); ?>assets/varietas/<?php echo $rowA->file_gambar;?>', 'sharer', 'toolbar=0,status=0,width=550,height=400');" target="_parent" href="javascript: void(0)">
+                        					<span><img src="<?php echo base_url() ?>item img/fb.png" /></span>
+                        				</a>
+										<!-- SHARE LINK UNTUK TWITTER -->
+										<a class="twitter popup" href="http://twitter.com/share?source=sharethiscom&text=<?php echo "Varietas Tembakau : ".$rowA->nama_varietas;?>&url=<?php echo base_url(); ?>&via=berbagiyuks" target="blank">
+											<span><img src="<?php echo base_url() ?>item img/twitter.png" /></span>
+										</a>
+										<!-- SHARE LINK UNTUK GOOGLE PLUS -->
+										<a href="javascript:void(0);" onclick="popUp=window.open('https://plus.google.com/share?url=<?php echo base_url('varietas/detailvarietas/').$rowA->nama_varietas; ?> ','popupwindow','scrollbars=yes,width=800,height=400');popUp.focus();return false">
+											<span><img src="<?php echo base_url() ?>item img/gplus.png" /></span>
+										</a>
+
 									</div>									
 								</div>
 						</div>							
@@ -148,27 +159,41 @@
 		  <img class="modalLeaflet-content" id="imgModal">
 		</div>
 		<script>
-		// Get the modal
-		var modal = document.getElementById('myModal');
+			// Get the modal
+			var modal = document.getElementById('myModal');
 
-		// Get the image and insert it inside the modal - use its "alt" text as a caption
-		var max = document.getElementsByClassName("leafletImg");
-		for (var i = 0; i < max.length; i++) {
-			var img = document.getElementsByClassName("leafletImg")[i];
-			var modalImg = document.getElementById("imgModal");
-			img.onclick = function(){
-			    modal.style.display = "block";
-			    modalImg.src = this.src;
+			// Get the image and insert it inside the modal - use its "alt" text as a caption
+			var max = document.getElementsByClassName("leafletImg");
+			for (var i = 0; i < max.length; i++) {
+				var img = document.getElementsByClassName("leafletImg")[i];
+				var modalImg = document.getElementById("imgModal");
+				img.onclick = function(){
+				    modal.style.display = "block";
+				    modalImg.src = this.src;
+				}
 			}
-		}
 
-		// Get the <span> element that closes the modal
-		var span = document.getElementsByClassName("closeModal")[0];
+			// Get the <span> element that closes the modal
+			var span = document.getElementsByClassName("closeModal")[0];
 
-		// When the user clicks on <span> (x), close the modal
-		span.onclick = function() { 
-		    modal.style.display = "none";
-		}
+			// When the user clicks on <span> (x), close the modal
+			span.onclick = function() { 
+			    modal.style.display = "none";
+			}
+
+			var searchCnt = 0;
+
+			var option = {
+				color: "rgb(28,69,26)",
+				background: "rgba(92,184,92,0.5)",
+				bold: false,
+				class: "high",
+				ignoreCase: true,
+				wholeWord: false
+			}
+			$(function(){
+				searchCnt = $(".pencarian").highlight($('#keyword').val(), option);
+			});
 		</script>
 		<!-- END OF MODALS -->
 	</body>

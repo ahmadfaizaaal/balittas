@@ -22,8 +22,14 @@
 
 		public function jenis($jenis) {
 			$dataHeader['judul'] = "Detil Agribisnis";
-			$idTeknologi = $this->m_agribisnis->selectIdAgribisnisByJenis(urldecode($jenis));
+			$jenisAgribisnis = explode('%23keyword%3D', $jenis);
+			$idTeknologi = $this->m_agribisnis->selectIdAgribisnisByJenis(urldecode($jenisAgribisnis[0]));
 			
+			if (count($jenisAgribisnis) == 1) {
+				$data['keyword'] = "";
+			} else {
+				$data['keyword'] = urldecode($jenisAgribisnis[1]);
+			}
 			$data['agribisnis'] = $this->m_agribisnis->selectAgribisnisById($idTeknologi);
 			$data['subLeaflet'] = $this->M_leaflet->selectLeafletTerbaru();
 

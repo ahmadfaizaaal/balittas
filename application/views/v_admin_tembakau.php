@@ -1,8 +1,18 @@
+<<<<<<< HEAD
 <?php 
     // if (isset()) {
         
     // }
  ?>
+=======
+<?php
+    $isLogin = $this->session->userdata( 'akunAktif' );
+    if($isLogin==""){
+        redirect(base_url('admin/index'));
+    }
+?>
+
+>>>>>>> a65917b22114e8ad924ea99f2544f02b8be6c91e
 <!DOCTYPE html>
 <html lang="en" id="home">
 <head>
@@ -74,7 +84,7 @@
                         <tbody>
                         <?php 
                             $no = 1;                                          
-                            foreach ($varietas_tembakau as $row) {                                
+                            foreach ($this->session->userdata('varietas_tembakau') as $row) {                                
                          ?>
                             <tr>                                 
                                 <?php 
@@ -82,7 +92,7 @@
                                     $ket = array();
                                     $count1 = 0;   
                                     $count2 = 0;                                                                    
-                                    foreach ($detail_varietas as $value) {  
+                                    foreach ($this->session->userdata('detail_varietas') as $value) {  
                                         if ($row['id_varietas']==$value['id_varietas']) {
                                             $atr[$count1] = $value['nama_atribut'];
                                             $ket[$count2] = $value['detail_value'];                             
@@ -178,31 +188,31 @@
                         <tbody>
                         <?php 
                             $no = 1;                                                    
-                            foreach ($leaflet as $row) {
+                            foreach ($this->session->userdata('leaflet') as $row) {
                          ?>
                             <tr>                                
                                 <td><?php echo $no;?></td>
                                 <td><?php echo "$row[nama_leaflet]"; ?></td>
                                 <!-- <td><?php echo "$row[file]"; ?></td> -->
                                 <?php 
-                                    for ($i=($no-1); $i <(count($leaflet)); $i++) { 
+                                    for ($i=($no-1); $i <(count($this->session->userdata('leaflet'))); $i++) { 
                                         if ($i==0) {
-                                            echo "<td>".$gambarleaflet[$i]->file."</td>";
-                                            echo "<td>".$gambarleaflet[$i+1]->file."</td>";
+                                            echo "<td>".$this->session->userdata('gambarleaflet')[$i]->file."</td>";
+                                            echo "<td>".$this->session->userdata('gambarleaflet')[$i+1]->file."</td>";
 
-                                            $idimg1 = $gambarleaflet[$i]->id_gambar;
-                                            $idimg2 = $gambarleaflet[$i+1]->id_gambar;
-                                            $leaflet1 = $gambarleaflet[$i]->file;
-                                            $leaflet2 = $gambarleaflet[$i+1]->file;
+                                            $idimg1 = $this->session->userdata('gambarleaflet')[$i]->id_gambar;
+                                            $idimg2 = $this->session->userdata('gambarleaflet')[$i+1]->id_gambar;
+                                            $leaflet1 = $this->session->userdata('gambarleaflet')[$i]->file;
+                                            $leaflet2 = $this->session->userdata('gambarleaflet')[$i+1]->file;
                                             break;
                                         }else{                                            
-                                            echo "<td>".$gambarleaflet[$i*2]->file."</td>";
-                                            echo "<td>".$gambarleaflet[($i*2)+1]->file."</td>";
+                                            echo "<td>".$this->session->userdata('gambarleaflet')[$i*2]->file."</td>";
+                                            echo "<td>".$this->session->userdata('gambarleaflet')[($i*2)+1]->file."</td>";
 
-                                            $idimg1 = $gambarleaflet[$i*2]->id_gambar;
-                                            $idimg2 = $gambarleaflet[($i*2)+1]->id_gambar;
-                                            $leaflet1 = $gambarleaflet[$i*2]->file;
-                                            $leaflet2 = $gambarleaflet[($i*2)+1]->file;
+                                            $idimg1 = $this->session->userdata('gambarleaflet')[$i*2]->id_gambar;
+                                            $idimg2 = $this->session->userdata('gambarleaflet')[($i*2)+1]->id_gambar;
+                                            $leaflet1 = $this->session->userdata('gambarleaflet')[$i*2]->file;
+                                            $leaflet2 = $this->session->userdata('gambarleaflet')[($i*2)+1]->file;
                                             break;                               
                                         }
                                     }
@@ -250,7 +260,7 @@
                         <tbody>
                         <?php 
                             $no = 1;
-                            foreach ($teknologi as $tek) {       
+                            foreach ($this->session->userdata('teknologi') as $tek) {       
                          ?>
                             <tr>                                
                                 <td><?php echo $no++; ?></td>
@@ -301,7 +311,7 @@
                         <tbody>
                         <?php 
                             $no = 1;                            
-                            foreach ($agribisnis as $agr) {                                               
+                            foreach ($this->session->userdata('agribisnis') as $agr) {                                               
                          ?>
                             <tr>                                
                                 <td><?php echo $no++; ?></td>
@@ -351,7 +361,7 @@
                         <tbody>
                         <?php 
                             $no = 1;
-                            foreach ($benih as $ben) {       
+                            foreach ($this->session->userdata('benih') as $ben) {       
                          ?>
                             <tr>                                
                                 <td><?php echo $no++; ?></td>
@@ -403,7 +413,7 @@
                         <tbody>
                         <?php 
                             $no = 1;
-                            foreach ($distribusiBenih as $db) {       
+                            foreach ($this->session->userdata('distribusiBenih') as $db) {       
                          ?>
                             <tr>                                
                                 <td><?php echo $no++; ?></td>
@@ -544,7 +554,7 @@
 
     <datalist id="daftarAtribut">
     <?php 
-        foreach ($listAtribut as $row) {
+        foreach ($this->session->userdata('listAtribut') as $row) {
             echo "<option value=\"$row->nama_atribut\">";
         }
     ?>
@@ -1442,7 +1452,7 @@
     
     <datalist id="daftarNamaBenih">
     <?php 
-        foreach ($ListNamaBenih as $row) {
+        foreach ($this->session->userdata('ListNamaBenih') as $row) {
             echo "<option value=\"$row->nama_benih\">";
         }
     ?>

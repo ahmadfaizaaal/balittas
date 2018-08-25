@@ -112,12 +112,14 @@
 // JENIS TEMBAKAU BERDASARKAN WAKTU TANAM ------------------------------------------------------------------------------------------------------------
 						} else if ($kategori == "Waktu Tanam") {
 							$indeks = 0;
+							$indeksTerpilih = explode('%23keyword%3D', $value);
 							foreach ($waktutanam as $row) {
-								if ($indeks == 0) {
-									echo "<button class=\"accordion actived\" style=\"border-bottom: 2px solid white;\"><strong>$row->nama_file</strong></button>
+								if ($indeksTerpilih[0] == $row->id_waktu_tanam) {
+									echo "<input hidden id=\"keyword\" value=\"".urldecode($indeksTerpilih[1])."\">";
+									echo "<button class=\"accordion actived\" style=\"border-bottom: 2px solid white;\"><strong class=\"pencarian\">$row->nama_file</strong></button>
 										<div class=\"container-fluid panel\" style=\"display: block;\">";
 								} else {
-									echo "<button class=\"accordion\" style=\"border-bottom: 2px solid white;\"><strong>$row->nama_file</strong></button>
+									echo "<button class=\"accordion\" style=\"border-bottom: 2px solid white;\"><strong class=\"pencarian\">$row->nama_file</strong></button>
 										<div class=\"container-fluid panel\">";
 								}
 								$deskripsiWaktuTanam = explode("</p>", $row->deskripsi);
@@ -125,12 +127,12 @@
 								<br>
 									<?php 
 										for ($i = 0; $i < count($deskripsiWaktuTanam); $i++) { 
-											echo "<p style=\"text-indent: 0.5in;\">".$deskripsiWaktuTanam[$i]."</p>";
+											echo "<p style=\"text-indent: 0.5in;\" class=\"pencarian\">".$deskripsiWaktuTanam[$i]."</p>";
 										}
 									?>
 									<br>
 									<p style="color: #5cb85c;"><b>Catatan:</b></p>
-									<p>Pembahasan lebih lanjut monograf <b><?php echo $row->nama_file; ?></b> dapat diunduh <a href="<?php echo base_url() ?>assets/waktutanam/<?php echo $row->file; ?>" target="blank" class="hoverThumbnail" style="text-decoration-line: none"><b>di sini</b></a>.</p>
+									<p>Pembahasan lebih lanjut monograf <b class="pencarian"><?php echo $row->nama_file; ?></b> dapat diunduh <a href="<?php echo base_url() ?>assets/waktutanam/<?php echo $row->file; ?>" target="blank" class="hoverThumbnail" style="text-decoration-line: none"><b>di sini</b></a>.</p>
 									<br>
 								</div>
 					<?php
@@ -215,7 +217,18 @@
 			        }
 			    });
 			}
-
+			//---------------------------------------SCRIPT HIGHLIGHT-----------------------------------------------
+			var option = {
+				color: "rgb(28,69,26)",
+				background: "rgba(92,184,92,0.5)",
+				bold: false,
+				class: "high",
+				ignoreCase: true,
+				wholeWord: false
+			}
+			$(function(){
+				searchCnt = $(".pencarian").highlight($('#keyword').val(), option);
+			});
 		</script>
 	<!-- END OF MODALS -->
 	</body>	

@@ -1,18 +1,9 @@
-<<<<<<< HEAD
-<?php 
-    // if (isset()) {
-        
-    // }
- ?>
-=======
 <?php
     $isLogin = $this->session->userdata( 'akunAktif' );
     if($isLogin==""){
         redirect(base_url('admin/index'));
     }
 ?>
-
->>>>>>> a65917b22114e8ad924ea99f2544f02b8be6c91e
 <!DOCTYPE html>
 <html lang="en" id="home">
 <head>

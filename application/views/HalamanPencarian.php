@@ -32,7 +32,7 @@
 				<div class="container-fluid" style="background-color:rgba(28,69,26,0.9);border-radius: 5px; width: 60%;">
 					<form method="get" action="<?php echo base_url('pencarian')?>" style="margin-top: 15px; margin-bottom: 15px;">
 						<div class="input-group" style="z-index: 0;">
-							<input type="text" name="keyword" class="form-control" placeholder="Cari" id="fieldCari" required>
+							<input type="text" name="keyword" class="form-control" placeholder="Cari" id="fieldCari" value="<?php echo $keyword; ?>" required>
 							<div class="input-group-btn">
 							    <button class="btn btn-success" type="submit">
 							    	<i class="glyphicon glyphicon-search"></i>

@@ -5,21 +5,6 @@
 			$this->load->view('login', $data);
 		}
 		public function login(){			
-<<<<<<< HEAD
-<<<<<<< HEAD
-			$username = $_POST['username']; 
-			$password = $_POST['password'];			
-			if ($username=="balittas"&&$password=="magang") {
-				redirect(base_url('Admin/tembakau'));
-			}else{				
-				$data['judul'] = "Balittas";
-				$this->load->view('login', $data);
-			}			
-		}
-		public function logout(){
-			$data['judul'] = "Balittas";
-			$this->load->view('login', $data);
-=======
 			$username = $this->input->post('username'); 
 			$password = $this->input->post('password');			
 			if ($username == "balittas" && $password == "admin") {
@@ -45,42 +30,10 @@
 				// redirect(base_url('admin'), 'refresh');
 				$this->load->view('login', $data);
 			}			
-		}
+		}		
 		public function logout() {
 			$this->session->sess_destroy();
 			redirect(base_url('admin'));
->>>>>>> a65917b22114e8ad924ea99f2544f02b8be6c91e
-=======
-			$username = $this->input->post('username'); 
-			$password = $this->input->post('password');			
-			if ($username == "balittas" && $password == "admin") {
-				$this->load->model("m_tembakau");
-				$this->session->set_userdata(array(
-						'akunAktif'=>"Administrator",
-						'varietas_tembakau'=>$this->m_tembakau->get_varietas(),
-						'detail_varietas'=>$this->m_tembakau->get_all_detail_varietas(),
-						'listAtribut' =>$this->m_tembakau->getAtribut(),
-						'leaflet'=>$this->m_tembakau->get_leaflet(),
-						'gambarleaflet'=>$this->m_tembakau->get_leaflet_img(),
-
-						'benih' =>$this->m_tembakau->get_benih(),
-						'distribusiBenih'=>$this->m_tembakau->get_distribusi_benih(),
-						'ListNamaBenih'=>$this->m_tembakau->get_nama_benih(),
-						'teknologi' =>$this->m_tembakau->get_tekbud(),
-						'agribisnis'=>$this->m_tembakau->get_agri()),
-				true);
-				redirect(base_url('admin/tembakau'));
-			}else{
-				$data['coba'] = "salah";
-				$data['judul'] = "Admin - Balai Penelitian Tanaman Pemanis dan Serat";
-				// redirect(base_url('admin'), 'refresh');
-				$this->load->view('login', $data);
-			}			
-		}
-		public function logout() {
-			$this->session->sess_destroy();
-			redirect(base_url('admin'));
->>>>>>> a65917b22114e8ad924ea99f2544f02b8be6c91e
 		}
 		public function tembakau(){		
 			// $this->load->model("m_tembakau");		

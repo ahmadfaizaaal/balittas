@@ -75,7 +75,7 @@
                         <tbody>
                         <?php 
                             $no = 1;                                          
-                            foreach ($this->session->userdata('varietas_tembakau') as $row) {                                
+                            foreach ($varietas_tembakau as $row) {                                
                          ?>
                             <tr>                                 
                                 <?php 
@@ -83,7 +83,7 @@
                                     $ket = array();
                                     $count1 = 0;   
                                     $count2 = 0;                                                                    
-                                    foreach ($this->session->userdata('detail_varietas') as $value) {  
+                                    foreach ($detail_varietas as $value) {  
                                         if ($row['id_varietas']==$value['id_varietas']) {
                                             $atr[$count1] = $value['nama_atribut'];
                                             $ket[$count2] = $value['detail_value'];                             
@@ -105,7 +105,7 @@
                                                                                             
                                  ?>                                 
                                 <td><?php echo $no; ?></td>                                
-                                <td><?php echo "$row[nama_varietas]"; ?></td>                              
+                                <td><?php echo $row['nama_varietas']; ?></td>                              
                                 <td>
                                 <script>                                   
                                     window['atr' + <?php echo $no; ?>] = [
@@ -130,18 +130,18 @@
                                         <button class="btn btn-warning">Spesifikasi</button>
                                     </a>
                                 </td>       
-                                <td><?php echo "$row[tanggal_pelepasan]"; ?></td>                         
-                                <td><?php echo "$row[file_gambar]"; ?></td>
-                                <td><?php echo "$row[file_SK]"; ?></td>
-                                <td><?php echo "$row[tanggal_upload]"; ?></td>
-                                <td><?php echo "$row[waktu_upload]"; ?></td>
+                                <td><?php echo $row['tanggal_pelepasan']; ?></td>                         
+                                <td><?php echo $row['file_gambar']; ?></td>
+                                <td><?php echo $row['file_SK']; ?></td>
+                                <td><?php echo $row['tanggal_upload']; ?></td>
+                                <td><?php echo $row['waktu_upload']; ?></td>
                                 <td>                                                                   
                                     <a href="#edittembakau" class="edit" onclick="modal_edit_varietas('<?php echo "$id"; ?>','<?php echo "$nama"; ?>','<?php echo "$gmbr"; ?>','<?php echo "$sk"; ?>','<?php echo "$tgl"; ?>','<?php echo "$nar"; ?>');"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>                                                                     
                                     <a href="" class="delete" data-toggle="modal" onclick="confirm_modal('<?php echo "$id"; ?>');"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                                 </td>
                             </tr>
                             <?php                                 
-                                $no++;
+                                    $no++;
                                 }
                                 date_default_timezone_set('Asia/Jakarta');                                
                             ?>
@@ -179,31 +179,31 @@
                         <tbody>
                         <?php 
                             $no = 1;                                                    
-                            foreach ($this->session->userdata('leaflet') as $row) {
+                            foreach ($leaflet as $row) {
                          ?>
                             <tr>                                
                                 <td><?php echo $no;?></td>
                                 <td><?php echo "$row[nama_leaflet]"; ?></td>
                                 <!-- <td><?php echo "$row[file]"; ?></td> -->
                                 <?php 
-                                    for ($i=($no-1); $i <(count($this->session->userdata('leaflet'))); $i++) { 
+                                    for ($i=($no-1); $i <(count($leaflet)); $i++) { 
                                         if ($i==0) {
-                                            echo "<td>".$this->session->userdata('gambarleaflet')[$i]->file."</td>";
-                                            echo "<td>".$this->session->userdata('gambarleaflet')[$i+1]->file."</td>";
+                                            echo "<td>".$gambarleaflet[$i]->file."</td>";
+                                            echo "<td>".$gambarleaflet[$i+1]->file."</td>";
 
-                                            $idimg1 = $this->session->userdata('gambarleaflet')[$i]->id_gambar;
-                                            $idimg2 = $this->session->userdata('gambarleaflet')[$i+1]->id_gambar;
-                                            $leaflet1 = $this->session->userdata('gambarleaflet')[$i]->file;
-                                            $leaflet2 = $this->session->userdata('gambarleaflet')[$i+1]->file;
+                                            $idimg1 = $gambarleaflet[$i]->id_gambar;
+                                            $idimg2 = $gambarleaflet[$i+1]->id_gambar;
+                                            $leaflet1 = $gambarleaflet[$i]->file;
+                                            $leaflet2 = $gambarleaflet[$i+1]->file;
                                             break;
                                         }else{                                            
-                                            echo "<td>".$this->session->userdata('gambarleaflet')[$i*2]->file."</td>";
-                                            echo "<td>".$this->session->userdata('gambarleaflet')[($i*2)+1]->file."</td>";
+                                            echo "<td>".$gambarleaflet[$i*2]->file."</td>";
+                                            echo "<td>".$gambarleaflet[($i*2)+1]->file."</td>";
 
-                                            $idimg1 = $this->session->userdata('gambarleaflet')[$i*2]->id_gambar;
-                                            $idimg2 = $this->session->userdata('gambarleaflet')[($i*2)+1]->id_gambar;
-                                            $leaflet1 = $this->session->userdata('gambarleaflet')[$i*2]->file;
-                                            $leaflet2 = $this->session->userdata('gambarleaflet')[($i*2)+1]->file;
+                                            $idimg1 = $gambarleaflet[$i*2]->id_gambar;
+                                            $idimg2 = $gambarleaflet[($i*2)+1]->id_gambar;
+                                            $leaflet1 = $gambarleaflet[$i*2]->file;
+                                            $leaflet2 = $gambarleaflet[($i*2)+1]->file;
                                             break;                               
                                         }
                                     }
@@ -251,7 +251,7 @@
                         <tbody>
                         <?php 
                             $no = 1;
-                            foreach ($this->session->userdata('teknologi') as $tek) {       
+                            foreach ($teknologi as $tek) {       
                          ?>
                             <tr>                                
                                 <td><?php echo $no++; ?></td>
@@ -302,7 +302,7 @@
                         <tbody>
                         <?php 
                             $no = 1;                            
-                            foreach ($this->session->userdata('agribisnis') as $agr) {                                               
+                            foreach ($agribisnis as $agr) {                                               
                          ?>
                             <tr>                                
                                 <td><?php echo $no++; ?></td>
@@ -352,7 +352,7 @@
                         <tbody>
                         <?php 
                             $no = 1;
-                            foreach ($this->session->userdata('benih') as $ben) {       
+                            foreach ($benih as $ben) {       
                          ?>
                             <tr>                                
                                 <td><?php echo $no++; ?></td>
@@ -404,7 +404,7 @@
                         <tbody>
                         <?php 
                             $no = 1;
-                            foreach ($this->session->userdata('distribusiBenih') as $db) {       
+                            foreach ($distribusiBenih as $db) {       
                          ?>
                             <tr>                                
                                 <td><?php echo $no++; ?></td>
@@ -502,7 +502,7 @@
                                       <td><input name="value0" class="" type="text" style="border-radius: 0px;margin:0px 10px;width: 224px;height: 35px;"></td>
                                       <td></td>
                                 </tr> 
-                                <tr>
+                                <!-- <tr>
                                       <td><input list="daftarAtribut" id="atribut1" name="atribut1" type="text" style="margin-top: 10px;width: 224px;height: 35px;"></td>
                                       <td><input name="value1" class="" type="text" style="margin:10px 10px 0px 10px;width:224px;height: 35px;"></td>
                                       <td></td>
@@ -521,9 +521,9 @@
                                       <td><input list="daftarAtribut" id="atribut4" name="atribut4" type="text" style="margin-top: 10px; width: 224px;height: 35px;"></td>
                                       <td><input name="value4" class="" type="text" style="margin:10px 10px 0px 10px; width: 224px;height: 35px;"></td>
                                       <td class="text-center"></td>
-                                  </tr>
+                                  </tr> -->
                               </tbody>
-                              <form method="post" action="<?php base_url('admin/tambahVarietas') ?>"><input hidden name="temp" id="temp" value="5"></form>
+                              <form method="post" action="<?php base_url('admin/tambahVarietas') ?>"><input hidden name="temp" id="temp" value="1"></form>
                               <tfoot>
                                 <tr>
                                   <td></td>
@@ -545,14 +545,14 @@
 
     <datalist id="daftarAtribut">
     <?php 
-        foreach ($this->session->userdata('listAtribut') as $row) {
+        foreach ($listAtribut as $row) {
             echo "<option value=\"$row->nama_atribut\">";
         }
     ?>
     </datalist>
 
     <script>
-            var indeks = 5;            
+            var indeks = 1;            
 
             function additem() {
 //                menentukan target append
@@ -596,12 +596,15 @@
 
                 hapus.innerHTML = '<button class="btn btn-small btn-default" style="margin-top:10px;width: 5px;height: 35px;"><i class="fa fa-trash 0"></i></button>';
 //                membuat aksi delete element
-                hapus.onclick = function () {
-                    row.parentNode.removeChild(row);
-                };
-
                 indeks++;
                 document.getElementById('temp').value = indeks;
+                
+                hapus.onclick = function () {
+                    row.parentNode.removeChild(row);
+                    // indeks--;
+                    document.getElementById('temp').value = indeks;
+                };
+
             }
 
       </script>
@@ -1443,7 +1446,7 @@
     
     <datalist id="daftarNamaBenih">
     <?php 
-        foreach ($this->session->userdata('ListNamaBenih') as $row) {
+        foreach ($ListNamaBenih as $row) {
             echo "<option value=\"$row->nama_benih\">";
         }
     ?>

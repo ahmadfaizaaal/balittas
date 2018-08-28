@@ -8,20 +8,20 @@
 			$username = $this->input->post('username'); 
 			$password = $this->input->post('password');			
 			if ($username == "balittas" && $password == "admin") {
-				$this->load->model("m_tembakau");
+				// $this->load->model("m_tembakau");
 				$this->session->set_userdata(array(
-						'akunAktif'=>"Administrator",
-						'varietas_tembakau'=>$this->m_tembakau->get_varietas(),
-						'detail_varietas'=>$this->m_tembakau->get_all_detail_varietas(),
-						'listAtribut' =>$this->m_tembakau->getAtribut(),
-						'leaflet'=>$this->m_tembakau->get_leaflet(),
-						'gambarleaflet'=>$this->m_tembakau->get_leaflet_img(),
+						'akunAktif'=>"Administrator"),
+						// 'varietas_tembakau'=>$this->m_tembakau->get_varietas(),
+						// 'detail_varietas'=>$this->m_tembakau->get_all_detail_varietas(),
+						// 'listAtribut' =>$this->m_tembakau->getAtribut(),
+						// 'leaflet'=>$this->m_tembakau->get_leaflet(),
+						// 'gambarleaflet'=>$this->m_tembakau->get_leaflet_img(),
 
-						'benih' =>$this->m_tembakau->get_benih(),
-						'distribusiBenih'=>$this->m_tembakau->get_distribusi_benih(),
-						'ListNamaBenih'=>$this->m_tembakau->get_nama_benih(),
-						'teknologi' =>$this->m_tembakau->get_tekbud(),
-						'agribisnis'=>$this->m_tembakau->get_agri()),
+						// 'benih' =>$this->m_tembakau->get_benih(),
+						// 'distribusiBenih'=>$this->m_tembakau->get_distribusi_benih(),
+						// 'ListNamaBenih'=>$this->m_tembakau->get_nama_benih(),
+						// 'teknologi' =>$this->m_tembakau->get_tekbud(),
+						// 'agribisnis'=>$this->m_tembakau->get_agri()),
 				true);
 				redirect(base_url('admin/tembakau'));
 			}else{
@@ -36,20 +36,20 @@
 			redirect(base_url('admin'));
 		}
 		public function tembakau(){		
-			// $this->load->model("m_tembakau");		
-			// $data['varietas_tembakau'] = $this->m_tembakau->get_varietas();
-			// $data['detail_varietas'] = $this->m_tembakau->get_all_detail_varietas();
-			// $data['listAtribut'] = $this->m_tembakau->getAtribut();
-			// $data['leaflet'] = $this->m_tembakau->get_leaflet();
-			// $data['gambarleaflet'] = $this->m_tembakau->get_leaflet_img();		
-			// $data['benih'] = $this->m_tembakau->get_benih();
-			// $data['distribusiBenih'] = $this->m_tembakau->get_distribusi_benih();
-			// $data['ListNamaBenih'] = $this->m_tembakau->get_nama_benih();
-			// $data['teknologi'] = $this->m_tembakau->get_tekbud();
-			// $data['agribisnis'] = $this->m_tembakau->get_agri();
+			$this->load->model("m_tembakau");		
+			$data['varietas_tembakau'] = $this->m_tembakau->get_varietas();
+			$data['detail_varietas'] = $this->m_tembakau->get_all_detail_varietas();
+			$data['listAtribut'] = $this->m_tembakau->getAtribut();
+			$data['leaflet'] = $this->m_tembakau->get_leaflet();
+			$data['gambarleaflet'] = $this->m_tembakau->get_leaflet_img();		
+			$data['benih'] = $this->m_tembakau->get_benih();
+			$data['distribusiBenih'] = $this->m_tembakau->get_distribusi_benih();
+			$data['ListNamaBenih'] = $this->m_tembakau->get_nama_benih();
+			$data['teknologi'] = $this->m_tembakau->get_tekbud();
+			$data['agribisnis'] = $this->m_tembakau->get_agri();
 			$dataHeader['judul'] = "Admin";
 			$this->load->view("headerAdmin",$dataHeader);
-			$this->load->view("v_admin_tembakau");
+			$this->load->view("v_admin_tembakau", $data);
 		}
 	//========================================VARIETAS========================================
 		public function deleteVarietas($id){			
@@ -80,14 +80,21 @@
 			if(move_uploaded_file($_FILES['gambar']['tmp_name'],$targetpathgmbr)&&move_uploaded_file($_FILES['sk']['tmp_name'],$targetpathsk)) {      							
 				$this->m_tembakau->add_varietas($namaVarietas,$tglPelepasan,$tgl,$wkt,$_FILES['sk']['name'],$_FILES['gambar']['name']);			
 				$this->m_tembakau->add_deskripsi_varietas($deskripsi);
+				// echo $this->input->post('temp')."<br>";
 				for ($i=0; $i < $this->input->post('temp') ; $i++) { 
-					$idAtribut = $this->m_tembakau->getIdAtribut($this->input->post('atribut'."$i"));
-					if (!empty($idAtribut)) {
-						$this->m_tembakau->add_detail_deskripsi($idAtribut,$this->input->post('value'."$i"));
-					} else {
-						$this->m_tembakau->addAtribut($this->input->post('atribut'."$i"));
+					$tesAtribut = $this->input->post('atribut'."$i");
+					if (!is_null($tesAtribut)) {
 						$idAtribut = $this->m_tembakau->getIdAtribut($this->input->post('atribut'."$i"));
-						$this->m_tembakau->add_detail_deskripsi($idAtribut,$this->input->post('value'."$i"));
+						if (!empty($idAtribut)) {
+							$this->m_tembakau->add_detail_deskripsi($idAtribut,$this->input->post('value'."$i"));
+							// echo "->".$this->input->post('value'."$i")."<br>";
+							// echo "->".$this->input->post('value0')."<br>";
+							// echo "->".$this->input->post('value2')."<br>";
+						} else {
+							$this->m_tembakau->addAtribut($this->input->post('atribut'."$i"));
+							$idAtribut = $this->m_tembakau->getIdAtribut($this->input->post('atribut'."$i"));
+							$this->m_tembakau->add_detail_deskripsi($idAtribut,$this->input->post('value'."$i"));
+						}
 					}
 				}				
 				redirect(base_url('admin/tembakau'));	
@@ -138,9 +145,18 @@
 			$deskripsi = $this->input->post('deskripsi');
 
 			$this->m_tembakau->updateDesvarietas($idSpe,$deskripsi);
-
+			// echo "jumlah atribut : ".$this->input->post('jumlahAtr');
+			// echo "bismillah";
 			for ($i=0; $i < $this->input->post('jumlahAtr') ; $i++) { 
-				$idAtribut = $this->m_tembakau->getIdAtribut($this->input->post('atribut'."$i"));
+				// $namaAtribut = $this->input->post('atribut0');
+				// echo $namaAtribut;
+				// echo "<br>";
+
+				// if ($namaAtribut == " Asal") {
+					$idAtribut = $this->m_tembakau->getIdAtribut(substr($this->input->post('atribut'."$i"), 1));
+					// echo $idAtribut."<br>";
+				// }
+				// $idAtribut = $this->m_tembakau->getIdAtribut("asal");
 				$this->m_tembakau->updateDetailDeskripsi($idDes, $idAtribut, $this->input->post('value'."$i"));
 			}
 			redirect(base_url('admin/tembakau'));

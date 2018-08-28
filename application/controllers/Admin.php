@@ -414,6 +414,6 @@
 			unlink($targetpathagrifile.$dataagri[0]->file);
 			$this->m_tembakau->delete_agribisnis($id);
 			redirect(base_url('admin/tembakau'));
-		}		
+		}
 	}
  ?>

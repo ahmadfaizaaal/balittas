@@ -146,8 +146,10 @@
 										<div class="col-xs-9 col-sm-9 col-lg-9">
 											<p style="margin-top: 5px;">Pengunjung Hari Ini</p>
 										</div>
-										<div class="col-xs-3 col-sm-3 col-lg-3">
-											<p style="margin-top: 5px;">10</p>
+										<div class="col-xs-3 col-sm-3 col-lg-3" style="padding-top: 6px;">										
+											<?php 									            
+									            echo $pengunjungHariIni[0]->totalHariIni;
+								            ?>
 										</div>								
 									</div>
 									<hr style="border-style: dashed; margin-top: 1px;margin-bottom: 10px; border-color: #fece00;">
@@ -155,8 +157,10 @@
 										<div class="col-xs-9 col-sm-9 col-lg-9">
 											<p style="margin-top: 2px;">Pengunjung Bulan Ini</p>
 										</div>
-										<div class="col-xs-3 col-sm-3 col-lg-3">
-											<p style="margin-top: 2px;">10</p>
+										<div class="col-xs-3 col-sm-3 col-lg-3" style="padding-top: 2px;">
+											<?php 									            
+									            echo $pengunjungBulanIni[0]->totalBulanIni;
+								            ?>
 										</div>								
 									</div>															
 									<hr style="border-style: dashed; margin-top: 0px;margin-bottom: 10px; border-color: #fece00;">
@@ -164,12 +168,11 @@
 										<div class="col-xs-9 col-sm-9 col-lg-9">
 											<p style="margin-top: 2px;">Total Pengunjung</p>
 										</div>
-										<div class="col-xs-3 col-sm-3 col-lg-3">
+										<div class="col-xs-3 col-sm-3 col-lg-3" style="padding-top: 2px;">
 											<p style="margin-top: 2px;">
-												<!-- <?php 
-									            // include("counter.php"); 
-									            // echo $kunjungan[0];
-								            	?> -->
+												<?php 									            
+									            	echo $pengunjungTotal[0]->total;
+								            	?>
 											</p>
 										</div>								
 									</div>		
@@ -186,3 +189,15 @@
 			</footer>
 	</body>
 </html>
+<?php 
+	// date_default_timezone_set('Asia/Jakarta');
+	// $ip      = $_SERVER['REMOTE_ADDR']; // Mendapatkan IP komputer user
+ //    $tanggal = date("Y-m-d"); // Mendapatkan tanggal sekarang
+ //    $waktu   = date('H:i');
+ //    echo "$waktu";
+ //    echo "<br>";
+ //    echo "$tanggal";
+ //    echo "<br>";
+ //    echo "$ip";
+
+ ?>

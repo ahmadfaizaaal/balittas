@@ -45,8 +45,8 @@
             $config['last_tagl_close'] = "</li>";
             $config['cur_tag_open'] = '&nbsp;<a class="current">';
             $config['cur_tag_close'] = '</a>';
-            $config['next_link'] = '>';
-            $config['prev_link'] = '<';
+            $config['next_link'] = '<i class="glyphicon glyphicon-chevron-right"></i>';
+            $config['prev_link'] = '<i class="glyphicon glyphicon-chevron-left"></i>';
 
             //inisialisasi array 'config' dan set ke pagination library
             $this->pagination->initialize($config);
@@ -60,10 +60,27 @@
             $str_links = $this->pagination->create_links();
             $data['links'] = explode('&nbsp;',$str_links );
 
+            //counter pengunjung 
+            date_default_timezone_set('Asia/Jakarta');
+            $ip      = $_SERVER['REMOTE_ADDR']; // Mendapatkan IP komputer user
+            $tanggal = date("Y-m-d");
+            $bulanIni = date("m");
+            $waktu   = date('H:i');
+            $this->load->model("m_tembakau");
+                        
+            if(empty($this->session->userdata('pengunjung'))){
+                  $this->m_tembakau->addUser($ip,$tanggal,$waktu);
+                  $this->session->set_userdata('pengunjung','aktif');                  
+            }
+            $counter['pengunjungTotal'] = $this->m_tembakau->getTotalVisitor();
+            $counter['pengunjungHariIni'] = $this->m_tembakau->getTotalToday($tanggal); 
+            $counter['pengunjungBulanIni'] = $this->m_tembakau->getTotalByMonth($bulanIni); 
+            
+            // echo $this->session->userdata('pengunjung');
             $dataHeader['judul'] = "";
             $this->load->view('header', $dataHeader);
-			$this->load->view('HalamanUtama', $data);
-			$this->load->view('footer');
+            $this->load->view('HalamanUtama', $data);
+            $this->load->view('footer',$counter);
 		}	
 	} 
 ?>

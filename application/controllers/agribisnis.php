@@ -15,9 +15,25 @@
 			$data['agribisnis'] = $this->m_agribisnis->selectAgribisnis();
 			$data['subLeaflet'] = $this->M_leaflet->selectLeafletTerbaru();
 
+			 //counter pengunjung 
+            date_default_timezone_set('Asia/Jakarta');
+            $ip      = $_SERVER['REMOTE_ADDR']; // Mendapatkan IP komputer user
+            $tanggal = date("Y-m-d");
+            $bulanIni = date("m");
+            $waktu   = date('H:i');
+            $this->load->model("m_tembakau");
+                        
+            if(empty($this->session->userdata('pengunjung'))){
+                  $this->m_tembakau->addUser($ip,$tanggal,$waktu);
+                  $this->session->set_userdata('pengunjung','aktif');                  
+            }
+            $counter['pengunjungTotal'] = $this->m_tembakau->getTotalVisitor();
+            $counter['pengunjungHariIni'] = $this->m_tembakau->getTotalToday($tanggal); 
+            $counter['pengunjungBulanIni'] = $this->m_tembakau->getTotalByMonth($bulanIni); 
+
 			$this->load->view('header', $dataHeader);
 			$this->load->view('HalamanAgribisnis', $data);
-			$this->load->view('footer');
+			$this->load->view('footer',$counter);
 		}
 
 		public function jenis($jenis) {
@@ -33,9 +49,25 @@
 			$data['agribisnis'] = $this->m_agribisnis->selectAgribisnisById($idTeknologi);
 			$data['subLeaflet'] = $this->M_leaflet->selectLeafletTerbaru();
 
+			 //counter pengunjung 
+            date_default_timezone_set('Asia/Jakarta');
+            $ip      = $_SERVER['REMOTE_ADDR']; // Mendapatkan IP komputer user
+            $tanggal = date("Y-m-d");
+            $bulanIni = date("m");
+            $waktu   = date('H:i');
+            $this->load->model("m_tembakau");
+                        
+            if(empty($this->session->userdata('pengunjung'))){
+                  $this->m_tembakau->addUser($ip,$tanggal,$waktu);
+                  $this->session->set_userdata('pengunjung','aktif');                  
+            }
+            $counter['pengunjungTotal'] = $this->m_tembakau->getTotalVisitor();
+            $counter['pengunjungHariIni'] = $this->m_tembakau->getTotalToday($tanggal); 
+            $counter['pengunjungBulanIni'] = $this->m_tembakau->getTotalByMonth($bulanIni); 
+
 			$this->load->view('header', $dataHeader);
 			$this->load->view('HalamanDetailAgribisnis', $data);
-			$this->load->view('footer');
+			$this->load->view('footer',$counter);
 		}
 
 	}

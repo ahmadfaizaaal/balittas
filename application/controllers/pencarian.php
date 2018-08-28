@@ -15,7 +15,8 @@
 
 		public function index(){
 			$cari = $this->input->get('keyword');
-			$datapencarian['keyword'] = $cari;	
+			$datapencarian['keyword'] = $cari;
+
 			$datapencarian['pencarianVarietas'] = $this->m_varietas->pencarianVarietas($cari);
 			$datapencarian['pencarianWaktuTanam'] = $this->m_varietas->pencarianWaktuTanam($cari);
 			$datapencarian['pencarianLeaflet'] = $this->M_leaflet->pencarianLeaflet($cari);

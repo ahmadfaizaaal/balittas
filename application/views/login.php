@@ -28,7 +28,7 @@
 		</div>
 		<div style="background-color: none;" align="center">			
 			<div style="background-color:orange; width: 350px;border-radius: 5px;" class="text-center">
-				<form method="post" action="<?php echo base_url('Admin/login')?>" style="margin:15px 30px;padding-top: 30px;padding-bottom: 30px;">
+				<form method="post" action="<?php echo base_url('admin/login')?>" style="margin:15px 30px;padding-top: 30px;padding-bottom: 30px;">
 					<div class="input-group">
 	    				<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
 	    				<input id="email" type="text" class="form-control" name="username" placeholder="Username" required="">

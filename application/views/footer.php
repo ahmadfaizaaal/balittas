@@ -146,7 +146,7 @@
 										<div class="col-xs-9 col-sm-9 col-lg-9">
 											<p style="margin-top: 5px;">Pengunjung Hari Ini</p>
 										</div>
-										<div class="col-xs-3 col-sm-3 col-lg-3" style="padding-top: 6px;">										
+										<div class="col-xs-3 col-sm-3 col-lg-3" style="padding-top: 6px;">				
 											<?php 									            
 									            echo $pengunjungHariIni[0]->totalHariIni;
 								            ?>
@@ -189,15 +189,3 @@
 			</footer>
 	</body>
 </html>
-<?php 
-	// date_default_timezone_set('Asia/Jakarta');
-	// $ip      = $_SERVER['REMOTE_ADDR']; // Mendapatkan IP komputer user
- //    $tanggal = date("Y-m-d"); // Mendapatkan tanggal sekarang
- //    $waktu   = date('H:i');
- //    echo "$waktu";
- //    echo "<br>";
- //    echo "$tanggal";
- //    echo "<br>";
- //    echo "$ip";
-
- ?>

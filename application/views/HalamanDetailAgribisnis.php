@@ -33,7 +33,7 @@
 			</ul>
 			<div class="row">
 				<div class="col-sm-9 col-lg-9">
-					<hr style="border-color: grey;margin-top: 3px;">
+					<hr style="border-color: grey;margin-top: 1px;margin-bottom: 8px;">
 					<input hidden id="keyword" value="<?php echo $keyword; ?>">
 					<?php 
 						foreach ($agribisnis as $rowA) {
@@ -86,22 +86,21 @@
 				<div class="col-sm-3 col-lg-3">
 					
 					<h3 class="text-left" style="color:black; margin-top: -25px; font-family: Minion Pro">Pencarian</h3>
-					<hr style="border-color: grey;margin-top: -8px;">
-					<div class="container-fluid" style="background-color:rgba(28,69,26,0.9);border-radius: 5px;">
+					<hr style="border-color: grey;margin-top: -10px;">
+					<div class="container-fluid" style="background-color:rgba(28,69,26,0.9);border-radius: 5px;margin-top: -7px;margin-bottom: -10px;">
 						<form method="get" action="<?php echo base_url('pencarian'); ?>" style="margin-top: 15px; margin-bottom: 15px;">
 							<div class="input-group" style="z-index: 0">
 							    <input type="text" class="form-control" placeholder="Cari" name="keyword" required>
 							    <div class="input-group-btn">
 							      <button class="btn btn-success" type="submit">
 							        <i class="glyphicon glyphicon-search"></i>
-
 							      </button>
 							    </div>
 							 </div>
 						</form>						
 					</div>
 					<a href="<?php echo base_url('leaflet') ?>" style="text-decoration-line:none;" title="Klik untuk menuju halaman leaflet"><h3 class="text-left" style="color:black;font-family: Minion Pro">Leaflet</h3></a>
-					<hr style="border-color: grey;margin-top: -8px;">	
+					<hr style="border-color: grey;margin-top: -10px;margin-bottom: 0px;">	
 					<?php 
 						$ganjil = true;
 						foreach ($subLeaflet as $leafletSide) {
@@ -109,7 +108,7 @@
 							
 					?>	
 					<h5 style="color:black;"><?php echo $leafletSide->nama_leaflet; ?></h5>
-					<div class="row">
+					<div class="row" style="margin-top: -5px;">
 						<div class="col-xs-6 col-sm-6 col-lg-6">													 
 							<img class="leafletImg" src="<?php echo base_url() ?>assets/leaflet/<?php echo $leafletSide->file; ?>" class="image" style="width: 110%;border-radius: 3px;">						
 						</div>

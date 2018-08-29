@@ -30,9 +30,9 @@
 						<li class="active">Alat dan Mesin</li> 
 					</ul>
 					<h3 class="text-left" style="color:black; font-family: Minion Pro"><?php echo $kategori; ?></h3>
-					<hr style="border-color: grey;margin-top: -8px;">
+					<hr style="border-color: grey;margin-top: -10px;">
 					<!-- <hr style="border-color: grey;margin-top: 10px;"> -->
-					<div class="row">
+					<div class="row" style="margin-top: -7px;">
 						<?php
 							$ganjil = true; $namaAlsin = "";						
 							foreach ($dataAlsin as $alsin) { 
@@ -73,8 +73,8 @@
 				<div class="col-sm-3 col-lg-3">
 					<br>
 					<h3 class="text-left" style="color:black;font-family: Minion Pro">Pencarian</h3>
-					<hr style="border-color: grey;margin-top: -8px;">
-					<div class="container-fluid" style="background-color:rgba(28,69,26,0.9); border-radius: 5px;">
+					<hr style="border-color: grey;margin-top: -10px;">
+					<div class="container-fluid" style="background-color:rgba(28,69,26,0.9); border-radius: 5px;margin-top: -7px;margin-bottom: -8px;">
 						<form method="get" action="<?php echo base_url('pencarian'); ?>" style="margin-top: 15px; margin-bottom: 15px;">
 							<div class="input-group" style="z-index: 0">
 							    <input type="text" class="form-control" placeholder="Cari" name="keyword" required>
@@ -87,7 +87,7 @@
 						</form>						
 					</div>
 					<h3 class="text-left" style="color:black;font-family: Monion pro">Varietas Terbaru</h3>
-					<hr style="border-color: grey;margin-top: -5px;">
+					<hr style="border-color: grey;margin-top:  -10px; margin-bottom: 13px;">
 					<?php 
 						foreach ($varietas as $varietasSide) {
 							$namaVarietas = ""; $narasi = "";

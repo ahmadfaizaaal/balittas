@@ -24,49 +24,26 @@
 			$datapencarian['pencarianAgribisnis'] = $this->m_agribisnis->pencarianAgribisnis($cari);
 
 			 //counter pengunjung 
-            date_default_timezone_set('Asia/Jakarta');
-            $ip      = $_SERVER['REMOTE_ADDR']; // Mendapatkan IP komputer user
-            $tanggal = date("Y-m-d");
-            $bulanIni = date("m");
-            $waktu   = date('H:i');
-            $this->load->model("m_tembakau");
-                        
-            if(empty($this->session->userdata('pengunjung'))){
-                  $this->m_tembakau->addUser($ip,$tanggal,$waktu);
-                  $this->session->set_userdata('pengunjung','aktif');                  
-            }
-            $counter['pengunjungTotal'] = $this->m_tembakau->getTotalVisitor();
-            $counter['pengunjungHariIni'] = $this->m_tembakau->getTotalToday($tanggal); 
-            $counter['pengunjungBulanIni'] = $this->m_tembakau->getTotalByMonth($bulanIni); 
+                  date_default_timezone_set('Asia/Jakarta');
+                  $ip      = $_SERVER['REMOTE_ADDR']; // Mendapatkan IP komputer user
+                  $tanggal = date("Y-m-d");
+                  $bulanIni = date("m");
+                  $waktu   = date('H:i');
+                  $this->load->model("m_tembakau");
+                              
+                  if(empty($this->session->userdata('pengunjung'))){
+                        $this->m_tembakau->addUser($ip,$tanggal,$waktu);
+                        $this->session->set_userdata('pengunjung','aktif');                  
+                  }
+                  $counter['pengunjungTotal'] = $this->m_tembakau->getTotalVisitor();
+                  $counter['pengunjungHariIni'] = $this->m_tembakau->getTotalToday($tanggal); 
+                  $counter['pengunjungBulanIni'] = $this->m_tembakau->getTotalByMonth($bulanIni); 
 			
 			$dataHeader['judul'] = "Pencarian";
 			$this->load->view('header', $dataHeader);			
 			$this->load->view('HalamanPencarian',$datapencarian);
 			$this->load->view('footer',$counter);
-		}
-
-		public function tesHighlight() {
-			 //counter pengunjung 
-            date_default_timezone_set('Asia/Jakarta');
-            $ip      = $_SERVER['REMOTE_ADDR']; // Mendapatkan IP komputer user
-            $tanggal = date("Y-m-d");
-            $bulanIni = date("m");
-            $waktu   = date('H:i');
-            $this->load->model("m_tembakau");
-                        
-            if(empty($this->session->userdata('pengunjung'))){
-                  $this->m_tembakau->addUser($ip,$tanggal,$waktu);
-                  $this->session->set_userdata('pengunjung','aktif');                  
-            }
-            $counter['pengunjungTotal'] = $this->m_tembakau->getTotalVisitor();
-            $counter['pengunjungHariIni'] = $this->m_tembakau->getTotalToday($tanggal); 
-            $counter['pengunjungBulanIni'] = $this->m_tembakau->getTotalByMonth($bulanIni); 
-
-			$dataHeader['judul'] = "Pencarian";
-			$this->load->view('header', $dataHeader);
-			$this->load->view('tesHighlight');	
-			$this->load->view('footer',$counter);
-		}
+		}		
 
 	}
  ?>

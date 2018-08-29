@@ -43,8 +43,8 @@
             $config['last_tagl_close'] = "</li>";
             $config['cur_tag_open'] = '&nbsp;<a class="current">';
             $config['cur_tag_close'] = '</a>';
-            $config['next_link'] = '>';
-            $config['prev_link'] = '<';
+            $config['next_link'] = '<i class="glyphicon glyphicon-chevron-right"></i>';
+            $config['prev_link'] = '<i class="glyphicon glyphicon-chevron-left"></i>';
 
             //inisialisasi array 'config' dan set ke pagination library
             $this->pagination->initialize($config);
@@ -119,8 +119,8 @@
             $config['last_tagl_close'] = "</li>";
             $config['cur_tag_open'] = '&nbsp;<a class="current">';
             $config['cur_tag_close'] = '</a>';
-            $config['next_link'] = '>>';
-            $config['prev_link'] = '<<';
+            $config['next_link'] = '<i class="glyphicon glyphicon-chevron-right"></i>';
+            $config['prev_link'] = '<i class="glyphicon glyphicon-chevron-left"></i>';
 
             $this->pagination->initialize($config);           
             $dari = $this->uri->segment('3');

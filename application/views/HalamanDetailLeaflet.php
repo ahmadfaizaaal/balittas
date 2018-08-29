@@ -27,8 +27,8 @@
 			</ul>
 			<div class="row">
 				<div class="col-sm-9 col-lg-9">
-					<hr style="border-color: grey;margin-top: 10px;">
-					<div class="row">
+					<hr style="border-color: grey;margin-top: 5px;">
+					<div class="row" style="margin-top: -7px;">
 						<?php
 							$ganjil = true; $namaLeaflet = "";						
 							foreach ($dataLeaflet as $leaflet) { 
@@ -68,8 +68,8 @@
 
 				<div class="col-sm-3 col-lg-3">
 					<h3 class="text-left" style="color:black; margin-top: -21px;font-family: Monion pro">Pencarian</h3>
-					<hr style="border-color: grey;margin-top: -5px;">
-					<div class="container-fluid" style="background-color:rgba(28,69,26,0.9); border-radius: 5px;">
+					<hr style="border-color: grey;margin-top: -10px;">
+					<div class="container-fluid" style="background-color:rgba(28,69,26,0.9); border-radius: 5px;margin-top: -7px;margin-bottom: -8px;">
 						<form method="get" action="<?php echo base_url('pencarian'); ?>" style="margin-top: 15px; margin-bottom: 15px;">
 							<div class="input-group" style="z-index: 0">
 							    <input type="text" class="form-control" placeholder="Cari" name="keyword" required>
@@ -82,7 +82,7 @@
 						</form>						
 					</div>
 					<h3 class="text-left" style="color:black;font-family: Monion pro">Varietas Terbaru</h3>
-					<hr style="border-color: grey;margin-top: -5px;">
+					<hr style="border-color: grey;margin-top: -10px;margin-bottom: 13px;">
 					<?php 
 						foreach ($varietas as $varietasSide) {
 							$namaVarietas = ""; $narasi = "";

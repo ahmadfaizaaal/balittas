@@ -1,20 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Balittas</title>
-		<meta charset="utf-8">
-		<!-- <link href="gambar/logo.png" rel="shortcut icon"> -->
-		<meta name="description" content="A Tuts+ course">
-		<!-- <link rel="stylesheet" href="webdesa.css"> -->
-		<link rel="stylesheet" href="<?php echo base_url() ?>bootstrap/css/bootstrap.css">
-		<link rel="stylesheet" href="<?php echo base_url() ?>bootstrap/css/balittas.css">
-		<!-- <link href="<?php //echo base_url() ?>item img/Logo-Kementerian-Pertanian.png" rel="shortcut icon"> -->
+		<!-- <title>Balittas</title>
+		<meta charset="utf-8">		
+		<meta name="description" content="A Tuts+ course">		 -->
+		<!-- <link rel="stylesheet" href="<?php echo base_url() ?>bootstrap/css/bootstrap.css"> -->
+		<!-- <link rel="stylesheet" href="<?php echo base_url() ?>bootstrap/css/balittas.css">		 -->
 
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
 	</head>
 	<body>
 		<!-- <div class="thetop"></div> -->
@@ -34,13 +31,13 @@
 					<?php 
 						foreach ($varietas as $row) {
 							$namaVarietas = ""; $narasi = "";
-							if (strlen($row->nama_varietas) > 22) {
-								$namaVarietas = substr($row->nama_varietas, 0, 22)." ...";
+							if (strlen($row->nama_varietas) > 30) {
+								$namaVarietas = substr($row->nama_varietas, 0, 30)."...";
 							} else {
 								$namaVarietas = $row->nama_varietas;
 							}
 
-							
+							$waktu = substr($row->waktu_upload, 0, 5);
 					 ?>
 					<div class="col-xs-12 col-sm-4 col-lg-4"> 
 						<div class="thumbnail thumbku" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
@@ -55,7 +52,7 @@
 									}
 								 ?>								
 								<span class="label label-success"><p class="glyphicon glyphicon-calendar"></p> <?php echo $row->tanggal_upload ?></span>
-								<span class="label label-warning"><p class="glyphicon glyphicon-time"></p> <?php echo $row->waktu_upload; ?></span>	
+								<span class="label label-warning"><p class="glyphicon glyphicon-time"></p> <?php echo $waktu; ?></span>	
 								<h4 style="color:#fece00;" title="<?php echo $row->nama_varietas; ?>"><?php echo $namaVarietas; ?></h4>
 							</a>
 							

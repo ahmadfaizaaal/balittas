@@ -232,12 +232,13 @@
     }
 }
 .thumbku:hover{
-  background-color: rgba(28,69,26,0.8);
+  background-color: rgba(28,69,26,0.9);
   transition: .4s ease;  
   color:white;
 }
 .thumbku{
-  background-color:rgba(36,112,101,0.1);  
+  /*background-color:rgba(36,112,101,0.1); */
+  background-color:rgba(28,69,26,0.7);  
 }
 .headerHover{
     color:white;

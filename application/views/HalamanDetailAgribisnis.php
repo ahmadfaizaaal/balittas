@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Balittas</title>
-		<meta charset="utf-8">
-		<!-- <link href="gambar/logo.png" rel="shortcut icon"> -->
-		<meta name="description" content="A Tuts+ course">
-		<!-- <link rel="stylesheet" href="webdesa.css"> -->
+		<!-- <title>Balittas</title>
+		<meta charset="utf-8">		
+		<meta name="description" content="A Tuts+ course">		
 		<link rel="stylesheet" href="<?php echo base_url() ?>bootstrap/css/bootstrap.css">
 		<link rel="stylesheet" href="<?php echo base_url() ?>bootstrap/css/balittas.css">
 		<link href="<?php echo base_url() ?>item img/Logo-Kementerian-Pertanian.png" rel="shortcut icon">
@@ -19,7 +17,7 @@
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js"></script>
-		<script type="text/javascript" src="<?php echo base_url() ?>bootstrap/js/jQuery.highlight.js"></script>
+		<script type="text/javascript" src="<?php echo base_url() ?>bootstrap/js/jQuery.highlight.js"></script> -->
 	</head>
 	<body>
 		

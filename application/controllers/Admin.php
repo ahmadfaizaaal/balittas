@@ -64,31 +64,34 @@
 			$targetpathgmbr = $targetpathgmbr.basename($_FILES['gambar']['name']);
 			$targetpathsk = $targetpathsk.basename($_FILES['sk']['name']);
 
-			if(move_uploaded_file($_FILES['gambar']['tmp_name'],$targetpathgmbr)&&move_uploaded_file($_FILES['sk']['tmp_name'],$targetpathsk)) {      							
-				$this->m_tembakau->add_varietas($namaVarietas,$tglPelepasan,$tgl,$wkt,$_FILES['sk']['name'],$_FILES['gambar']['name']);			
-				$this->m_tembakau->add_deskripsi_varietas($deskripsi);
-				// echo $this->input->post('temp')."<br>";
-				for ($i=0; $i < $this->input->post('temp') ; $i++) { 
-					$tesAtribut = $this->input->post('atribut'."$i");
-					if (!is_null($tesAtribut)) {
+			$gambarVarietas = "";
+			if (empty($_FILES['sk']['name']) || empty($_FILES['gambar']['name'])) {
+				$gambarVarietas = "default.jpg";
+			} else {
+				$gambarVarietas = $_FILES['gambar']['name'];
+			}
+			$this->m_tembakau->add_varietas($namaVarietas,$tglPelepasan,$tgl,$wkt,$_FILES['sk']['name'],$gambarVarietas);			
+			$this->m_tembakau->add_deskripsi_varietas($deskripsi);
+			// echo $this->input->post('temp')."<br>";
+			for ($i=0; $i < $this->input->post('temp') ; $i++) { 
+				$tesAtribut = $this->input->post('atribut'."$i");
+				if (!is_null($tesAtribut)) {
+					$idAtribut = $this->m_tembakau->getIdAtribut($this->input->post('atribut'."$i"));
+					if (!empty($idAtribut)) {
+						$this->m_tembakau->add_detail_deskripsi($idAtribut,$this->input->post('value'."$i"));
+						// echo "->".$this->input->post('value'."$i")."<br>";
+						// echo "->".$this->input->post('value0')."<br>";
+						// echo "->".$this->input->post('value2')."<br>";
+					} else {
+						$this->m_tembakau->addAtribut($this->input->post('atribut'."$i"));
 						$idAtribut = $this->m_tembakau->getIdAtribut($this->input->post('atribut'."$i"));
-						if (!empty($idAtribut)) {
-							$this->m_tembakau->add_detail_deskripsi($idAtribut,$this->input->post('value'."$i"));
-							// echo "->".$this->input->post('value'."$i")."<br>";
-							// echo "->".$this->input->post('value0')."<br>";
-							// echo "->".$this->input->post('value2')."<br>";
-						} else {
-							$this->m_tembakau->addAtribut($this->input->post('atribut'."$i"));
-							$idAtribut = $this->m_tembakau->getIdAtribut($this->input->post('atribut'."$i"));
-							$this->m_tembakau->add_detail_deskripsi($idAtribut,$this->input->post('value'."$i"));
-						}
+						$this->m_tembakau->add_detail_deskripsi($idAtribut,$this->input->post('value'."$i"));
 					}
-				}				
-				redirect(base_url('admin/tembakau'));	
-			} else{      
-				echo "There was an error uploading the file, please try again!";  
-			}		
-						
+				}
+			}
+			move_uploaded_file($_FILES['gambar']['tmp_name'],$targetpathgmbr);
+			move_uploaded_file($_FILES['sk']['tmp_name'],$targetpathsk);				
+			redirect(base_url('admin/tembakau'));	
 		}
 		public function editVarietas(){
 			$this->load->model("m_tembakau");

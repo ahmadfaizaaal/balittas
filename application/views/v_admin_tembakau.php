@@ -436,7 +436,7 @@
             <div class="modal-content">
               <div class="modal-header">
                 <h4 class="modal-title">Tambah Data Varietas</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color: white;">&times;</button>
               </div>
                  <form enctype="multipart/form-data" action="<?php echo base_url('admin/tambahVarietas'); ?>" method="post" class="form-horizontal" autocomplete="off">
                     <div class="modal-body">
@@ -447,7 +447,7 @@
                         <div class="form-group" style="padding-bottom: 0px">
                             <label>Upload Gambar</label>
                             <div class="input-group image-preview">
-                                <input type="text" class="form-control image-preview-filename" disabled="disabled">    
+                                <input type="text" class="form-control image-preview-filename" disabled="disabled" placeholder="250x150 piksel">    
                                 <span class="input-group-btn">
                                     <button type="button" class="btn btn-default image-preview-clear" style="display:none;">
                                         <span class="glyphicon glyphicon-remove"></span> Clear
@@ -615,7 +615,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Edit Data Varietas</h4>`
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color: white;">&times;</button>
                 </div>
                 <form enctype="multipart/form-data" action="<?php echo base_url('admin/editVarietas'); ?>" method="post" class="form-horizontal">
                     <div class="modal-body">
@@ -678,7 +678,7 @@
             <div class="modal-content">                
                 <div class="modal-header">
                         <h4 class="modal-title">Hapus Data Varietas</h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color: white;">&times;</button>
                 </div>
                 <div class="modal-body">                        
                     <p>Yakin Ingin menghapus data ini ?</p>
@@ -706,7 +706,7 @@
             <div class="modal-content">
               <div class="modal-header">
                 <h4 class="modal-title">Data Spesifikasi Varietas</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color: white;">&times;</button>
               </div>
                  <form action="<?php echo base_url('admin/editDesVarietas'); ?>" method="post" class="form-horizontal">
                     <input hidden id="idSpe" name="idSpesifikasi">
@@ -832,7 +832,7 @@
             <div class="modal-content">
               <div class="modal-header">
                 <h4 class="modal-title">Tambah Data Leaflet</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color: white;">&times;</button>
               </div>
                  <form enctype="multipart/form-data" action="<?php echo base_url('admin/tambahLeaflet');?>" method="post" class="form-horizontal">
                     <div class="modal-body">
@@ -844,7 +844,7 @@
                             <label>Upload Gambar Ke-1</label>
                             <div class="input-group">              
                                 <input type="file" id="gmbr1" name="gambar1" style="display:none" onchange="document.getElementById('img1').value=this.value" accept="image/png, image/jpeg, image/gif" required>
-                                <input type="text" id="img1" style="width: 468px;height: 35px;" disabled="disable">
+                                <input type="text" id="img1" style="width: 468px;height: 35px;" disabled="disable" placeholder="1169x827 piksel">
                                 <input type="button" value="Pilih File" onclick="document.getElementById('gmbr1').click()" style="height: 35px;margin-top: -2px;" class="btn btn-default">                                
                             </div>
                         </div>                     
@@ -852,7 +852,7 @@
                             <label>Upload Gambar Ke-2</label>
                             <div class="input-group">                                
                                 <input type="file" id="gmbr2" name="gambar2" style="display:none" onchange="document.getElementById('img2').value=this.value" accept="image/png, image/jpeg, image/gif" required>
-                                <input type="text" id="img2" style="width: 468px;height: 35px;" disabled="disable" required>
+                                <input type="text" id="img2" style="width: 468px;height: 35px;" disabled="disable" placeholder="1169x827 piksel" required>
                                 <input type="button" value="Pilih File" onclick="document.getElementById('gmbr2').click()" style="height: 35px;margin-top: -2px;" class="btn btn-default">                                
                             </div>
                         </div>                                    
@@ -872,7 +872,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Edit Data Leaflet</h4>`
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color: white;">&times;</button>
                 </div>
                 <form enctype="multipart/form-data" action="<?php echo base_url('admin/editleaflet'); ?>" method="post" class="form-horizontal">
                     <div class="modal-body">
@@ -927,7 +927,7 @@
             <div class="modal-content">                
                 <div class="modal-header">
                         <h4 class="modal-title">Hapus Data Leaflet</h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color: white;">&times;</button>
                 </div>
                 <div class="modal-body">                        
                     <p>Yakin Ingin menghapus data ini ?</p>
@@ -955,7 +955,7 @@
             <div class="modal-content">
               <div class="modal-header">
                 <h4 class="modal-title">Tambah Data Monograf Teknologi Budidaya</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color: white;">&times;</button>
               </div>
                  <form enctype="multipart/form-data" action="<?php echo base_url('admin/tambahMonografTeknologi');?>" method="post" class="form-horizontal">
                     <div class="modal-body">
@@ -1048,7 +1048,7 @@
             <div class="modal-content">
               <div class="modal-header">
                 <h4 class="modal-title">Edit Data Teknologi Budidaya</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color: white;">&times;</button>
               </div>
                  <form enctype="multipart/form-data" action="<?php echo base_url('admin/editMonografTeknologi');?>" method="post" class="form-horizontal">
                     <div class="modal-body">
@@ -1100,7 +1100,7 @@
             <div class="modal-content">                
                 <div class="modal-header">
                         <h4 class="modal-title">Hapus Data Teknologi Budidaya</h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color: white;">&times;</button>
                 </div>
                 <div class="modal-body">                        
                     <p>Yakin Ingin menghapus data ini ?</p>
@@ -1128,7 +1128,7 @@
             <div class="modal-content">
               <div class="modal-header">
                 <h4 class="modal-title">Tambah Data Agribisnis</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color: white;">&times;</button>
               </div>
                  <form enctype="multipart/form-data" action="<?php echo base_url('admin/tambahAgribisnis');?>" method="post" class="form-horizontal">
                  <input hidden name="tempAgri" id="tempAgri" value="1">
@@ -1163,7 +1163,7 @@
                             <label>Upload Gambar</label>
                             <div class="input-group">              
                                 <input type="file" id="gmbragri" name="gambaragri" style="display:none" onchange="document.getElementById('agri').value=this.value" accept="image/png, image/jpeg, image/gif">
-                                <input type="text" id="agri" style="width: 468px;height: 35px;" disabled="disable">
+                                <input type="text" id="agri" style="width: 468px;height: 35px;" disabled="disable" placeholder="1923x1234 piksel">
                                 <input type="button" value="Pilih File" onclick="document.getElementById('gmbragri').click()" style="height: 35px;margin-top: -2px;" class="btn btn-default">                                
                             </div>
                         </div>
@@ -1219,7 +1219,7 @@
             <div class="modal-content">
               <div class="modal-header">
                 <h4 class="modal-title">Edit Data Agribisnis</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color: white;">&times;</button>
               </div>
                  <form enctype="multipart/form-data" action="<?php echo base_url('admin/editAgribisnis');?>" method="post" class="form-horizontal">
                     <div class="modal-body">
@@ -1275,7 +1275,7 @@
             <div class="modal-content">                
                 <div class="modal-header">
                         <h4 class="modal-title">Hapus Data Agribisnis</h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color: white;">&times;</button>
                 </div>
                 <div class="modal-body">                        
                     <p>Yakin Ingin menghapus data ini ?</p>
@@ -1303,7 +1303,7 @@
             <div class="modal-content">
               <div class="modal-header">
                 <h4 class="modal-title">Tambah Data Benih</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color: white;">&times;</button>
               </div>
                  <form enctype="multipart/form-data" action="<?php echo base_url('admin/tambahBenih');?>" method="post" class="form-horizontal">
                     <div class="modal-body">
@@ -1316,7 +1316,7 @@
                             <input type="text" class="form-control" name="stoksampai" placeholder="ex. 2018-08-17" required>
                         </div>                        
                         <div class="form-group">
-                            <label>Jumlah Stok</label>
+                            <label>Jumlah Stok (gram)</label>
                             <input type="number" step="any" placeholder="0.000" class="form-control" name="jumlahstok" required>
                         </div>     
                     </div>
@@ -1335,7 +1335,7 @@
             <div class="modal-content">
               <div class="modal-header">
                 <h4 class="modal-title">Edit Data Benih</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color: white;">&times;</button>
               </div>
                  <form enctype="multipart/form-data" action="<?php echo base_url('admin/editBenih');?>" method="post" class="form-horizontal">
                     <div class="modal-body">
@@ -1378,7 +1378,7 @@
             <div class="modal-content">                
                 <div class="modal-header">
                         <h4 class="modal-title">Hapus Data Benih</h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color: white;">&times;</button>
                 </div>
                 <div class="modal-body">                        
                     <p>Yakin Ingin menghapus data ini ?</p>
@@ -1406,7 +1406,7 @@
             <div class="modal-content">
               <div class="modal-header">
                 <h4 class="modal-title">Tambah Data Distribusi Benih</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color: white;">&times;</button>
               </div>
                  <form enctype="multipart/form-data" action="<?php echo base_url('admin/tambahDistribusiBenih');?>" method="post" class="form-horizontal" autocomplete="off">
                     <div class="modal-body">
@@ -1458,7 +1458,7 @@
             <div class="modal-content">
               <div class="modal-header">
                 <h4 class="modal-title">Edit Data Benih</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color: white;">&times;</button>
               </div>
                  <form enctype="multipart/form-data" action="<?php echo base_url('admin/editDistribusiBenih');?>" method="post" class="form-horizontal">
                     <div class="modal-body">
@@ -1518,7 +1518,7 @@
             <div class="modal-content">                
                 <div class="modal-header">
                         <h4 class="modal-title">Hapus Data Distribusi Benih</h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color: white;">&times;</button>
                 </div>
                 <div class="modal-body">                        
                     <p>Yakin Ingin menghapus data ini ?</p>

@@ -201,6 +201,11 @@
 	.modal .modal-content {
 		border-radius: 10px;
 	}
+	.modal .modal-header {
+		color: white;
+		background: rgb(92,184,92);
+		border-radius: 10px 10px 0 0;
+	}
 	.modal .modal-footer {
 		background: #ecf0f1;
 		border-radius: 0 0 10px 10px;

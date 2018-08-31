@@ -24,9 +24,57 @@
 					  	<li><a href="<?php echo base_url("produk/$url") ?>">Produk</a></li>
 						<li class="active">Benih</li> 
 					</ul>
-					<h3 class="text-left" style="color:black; font-family: Minion Pro"><?php echo $kategori; ?></h3>
-					<hr style="border-color: grey;margin-top: -10px;">
-					<table class="table table-hover" style="margin-top: -7px;">
+					<!-- <h3 class="text-left" style="color:black; font-family: Minion Pro"><?php echo $kategori; ?></h3>
+					<hr style="border-color: grey;margin-top: -10px;"> -->
+						<div class="row">
+							<div class="col-xs-3 col-sm-4 col-lg-4">
+								<h3 class="text-left hidden-xs" style="color:black; font-family: Minion Pro; padding-top: 18px; margin-top: 0px; margin-bottom: -5px;"><?php echo $kategori; ?></h3>
+								<h3 class="text-left hidden-sm hidden-lg" style="color:black; font-family: Minion Pro; padding-top: 18px; margin-top: 0px; margin-bottom: -5px;"><?php echo $kategori; ?></h3>
+							</div>
+							<div class="col-xs-3 col-sm-4 col-lg-4">
+								<h3 class="text-right hidden-xs" style="margin-left: 20px; padding-top: 18px; margin-top: 0px; margin-bottom: -5px; font-size: 14px;"><b>Filter by :</b></h3>
+								<h6 class="text-left hidden-sm hidden-lg" style="margin-left: 18px; padding-top: 18px; margin-top: 0px; margin-bottom: -5px;"><b>Filter by :</b></h6>
+							</div>
+							<div class="col-xs-3 col-sm-2 col-lg-2 text-right" style="padding-top: 7px;">
+							    <select class="form-control bulanBenih" id="bulanBenih" name="bulanBenih" style="margin-left: 13px;" onchange="filterBenih();">
+							        <option disabled>Bulan</option>
+							        <!-- <option value="Juni" selected>Juni</option> -->
+								<?php
+									$bulanBenih = array("Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember","--Semua--");
+									for($i = 0;$i < count($bulanBenih);$i++){
+										if ($i == 5) {
+											echo"<option value=$bulanBenih[$i] selected> $bulanBenih[$i] </option>";
+										} else {
+											echo"<option value=$bulanBenih[$i]> $bulanBenih[$i] </option>";
+										}
+									}
+								?>
+							    </select>
+							</div>
+							<div class="col-xs-3 col-sm-2 col-lg-2 text-right" style="padding-top: 7px;">
+								<select class="form-control tahunBenih" id="tahunBenih" name="tahunBenih" onchange="filterBenih();">
+							    	<option disabled>Tahun</option>
+							    	<!-- <option value="2018" selected>2018</option> -->
+							    	<?php
+										for($i = 2017;$i <= 2029;$i++){
+											if ($i == "2018") {
+												echo"<option value=$i selected> $i </option>";
+											} else {
+												echo"<option value=$i> $i </option>";
+											}
+										}
+									?>
+							    </select>
+							</div>
+							<!-- <div class="col-xs-1 col-sm-1 col-lg-1 text-right">
+							    <button class="btn btn-success" type="submit">Lihat</button>
+							</div> -->
+						</div>
+						<br>
+						<hr style="border-color: grey;margin-top: -15px;">
+
+					<div id="tabelstokbenih"  style="margin-top: -7px;">
+					<table class="table table-hover">
 						<thead style="background-color: rgba(28,69,26,0.9);border-bottom: 3px solid white; color:#fece00;">
 							<th>No</th>
 							<th>Varietas</th>
@@ -35,11 +83,11 @@
 						</thead >
 						<tbody>
 						<?php 
-							if($this->uri->segment(3)){
-			                     $count = $this->uri->segment(3);
-			                } else{
+							// if($this->uri->segment(3)){
+			    //                  $count = $this->uri->segment(3);
+			    //             } else{
 			                     $count = 0;
-			                }
+			                // }
 
 							foreach ($dataBenih as $row) {
 								$count++;	
@@ -55,25 +103,33 @@
 						 ?>
 						</tbody>
 					</table>
-					<br>
-					<ul class="paginationKu pagerCustom" >
-						<?php foreach ($links as $link) {
-							echo "<li>". $link."</li>";
+					</div>
+					<!-- <br> -->
+					<!-- <ul class="paginationKu pagerCustom" > -->
+						<?php //foreach ($links as $link) {
+							//echo "<li>". $link."</li>";
 							// echo $jumlah;
-						} ?>
-					</ul>
-					<br>
+						//} ?>
+					<!-- </ul> -->
+					<br><br>
+
+
 
 					<!-- DISTRIBUSI BENIH -->				
-					<h3 class="text-left" style="color:black; font-family: Minion Pro">Distribusi Benih UPBS</h3>
-					<hr style="border-color: grey;margin-top: -8px;">
+					<!-- <h3 class="text-left" style="color:black; font-family: Minion Pro">Distribusi Benih UPBS</h3>
+					<hr style="border-color: grey;margin-top: -8px;"> -->
 					<!-- <div class="container-fluid"> -->
 						<div class="row">
-							<div class="col-xs-4 col-sm-8 col-lg-8">
-								<h5 class="text-right" style="margin-left: 20px;"><b>Filter by :</b></h5>
+							<div class="col-xs-3 col-sm-4 col-lg-4">
+								<h3 class="text-left hidden-xs" style="color:black; font-family: Minion Pro; padding-top: 18px; margin-top: 0px; margin-bottom: -5px;">Distribusi Benih UPBS</h3>
+								<h3 class="text-left hidden-sm hidden-lg" style="color:black; font-family: Minion Pro; padding-top: 18px; margin-top: 0px; margin-bottom: -5px;">Distribusi Benih UPBS</h3>
 							</div>
-							<div class="col-xs-4 col-sm-2 col-lg-2 text-right">
-							    <select class="form-control bulan" id="bulan" name="bulan" style="margin-left: 13px;" onchange="filter();">
+							<div class="col-xs-3 col-sm-4 col-lg-4">
+								<h3 class="text-right hidden-xs" style="margin-left: 20px; padding-top: 18px; margin-top: 0px; margin-bottom: -5px; font-size: 14px;"><b>Filter by :</b></h3>
+								<h6 class="text-right hidden-sm hidden-lg" style="margin-left: 18px; padding-top: 18px; margin-top: 0px; margin-bottom: -5px;"><b>Filter by :</b></h6>
+							</div>
+							<div class="col-xs-3 col-sm-2 col-lg-2 text-right" style="padding-top: 7px;">
+							    <select class="form-control bulan" id="bulan" name="bulan" style="margin-left: 13px;" onchange="filterDistribusi();">
 							        <option disabled>Bulan</option>
 							        <option value="Januari" selected>Januari</option>
 								<?php
@@ -84,12 +140,12 @@
 								?>
 							    </select>
 							</div>
-							<div class="col-xs-3 col-sm-2 col-lg-2 text-right">
-								<select class="form-control tahun" id="tahun" name="tahun" onchange="filter();">
+							<div class="col-xs-3 col-sm-2 col-lg-2 text-right" style="padding-top: 7px;">
+								<select class="form-control tahun" id="tahun" name="tahun" onchange="filterDistribusi();">
 							    	<option disabled>Tahun</option>
 							    	<option value="2009" selected>2009</option>
 							    	<?php
-										for($i = 2010;$i <= 2050;$i++){
+										for($i = 2010;$i <= 2023;$i++){
 											echo"<option value=$i> $i </option>";
 										}
 									?>
@@ -98,10 +154,12 @@
 							<!-- <div class="col-xs-1 col-sm-1 col-lg-1 text-right">
 							    <button class="btn btn-success" type="submit">Lihat</button>
 							</div> -->
-						<!-- </div> -->
-					</div>
+						</div>
+					<!-- </div> -->
 					<br>
-					<div id="table-data">
+					<hr style="border-color: grey;margin-top: -15px;">
+
+					<div id="table-data" style="margin-top: -7px;">
 						<table class="table table-hover">
 							<thead style="background-color: rgba(28,69,26,0.9);border-bottom: 3px solid white; color:#fece00;">
 								<th>No.</th>
@@ -201,75 +259,93 @@
 		  <img class="modalLeaflet-content" id="imgModal">
 		</div>
 		<script>
-		// Get the modal
-		var modal = document.getElementById('myModal');
-
-		// Get the image and insert it inside the modal - use its "alt" text as a caption
-		var max = document.getElementsByClassName("leafletImg");
-		for (var i = 0; i < max.length; i++) {
-			var img = document.getElementsByClassName("leafletImg")[i];
-			var modalImg = document.getElementById("imgModal");
-			img.onclick = function(){
-			    modal.style.display = "block";
-			    modalImg.src = this.src;
+			//----------------------------------MODAL LEAFLET----------------------------------------
+			var modal = document.getElementById('myModal');
+			var max = document.getElementsByClassName("leafletImg");
+			for (var i = 0; i < max.length; i++) {
+				var img = document.getElementsByClassName("leafletImg")[i];
+				var modalImg = document.getElementById("imgModal");
+				img.onclick = function(){
+				    modal.style.display = "block";
+				    modalImg.src = this.src;
+				}
 			}
-		}
+			var span = document.getElementsByClassName("closeModal")[0];
+			span.onclick = function() { 
+			    modal.style.display = "none";
+			}
+			//---------------------------------------------------------------------------------------
 
-		// Get the <span> element that closes the modal
-		var span = document.getElementsByClassName("closeModal")[0];
-
-		// When the user clicks on <span> (x), close the modal
-		span.onclick = function() { 
-		    modal.style.display = "none";
-		}
-		<!-- END OF MODALS -->
-
-		function filter(){
 			var acuan = ["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember","--Semua--"];
-			var bulan = $("#bulan").val();
-			for (var i = 0; i < acuan.length; i++) {
-				if (bulan == acuan[i]) {
-					if (i < 9) {
-						bulan = "0" + (i+1);
-					} else {
-						if (i == 12) {
-							bulan = "_%_%";
+
+			function filter(obj) {
+				for (var i = 0; i < acuan.length; i++) {
+					if (obj == acuan[i]) {
+						if (i < 9) {
+							obj = "0" + (i+1);
 						} else {
-							bulan = (i+1);
+							if (i == 12) {
+								obj = "_%_%";
+							} else {
+								obj = (i+1);
+							}
 						}
 					}
 				}
+				return obj;
 			}
-			var tahun = $("#tahun").val();
-			// alert(bulan);
-		    $.ajax({
-		        type:"POST",
-		        url: "../produk/filterDistribusi",
-		        data: "tahun_bulan=" + tahun + "-" + bulan,
-		        dataType : "html",
-		        success:function(msg){
-		            $("#table-data").html(msg);                
-		        },
-		        error:function(){
-					alert("Search failed");
-				}
-		  	});
-		 //  	var input, filter, table, tr, td, i;
-			// table = document.getElementById("tabelku");
-			// tr = table.getElementsByTagName("tr");
-			// for (i = 0; i < tr.length; i++) {
-			//   td = tr[i].getElementsByTagName("td")[2];
-			//   if (td) {
-			//     if ((td.innerHTML.toUpperCase().indexOf(bulan) > -1) && (td.innerHTML.toUpperCase().indexOf(tahun) > -1))  {
-			//       tr[i].style.display = "";
-			//     } else {
-			//       tr[i].style.display = "none";
-			//     }
-			//   }       
-			// }
-		}
+
+			function filterDistribusi(){
+				var bulan = filter($("#bulan").val());
+				var tahun = $("#tahun").val();
+			    $.ajax({
+			        type:"POST",
+			        url: "../produk/filterDistribusi",
+			        data: "tahun_bulan=" + tahun + "-" + bulan,
+			        dataType : "html",
+			        success:function(msg){
+			            $("#table-data").html(msg);                
+			        },
+			        error:function(){
+						alert("Search failed");
+					}
+			  	});
+			}
+
+			function filterBenih(){
+				var bulan = filter($("#bulanBenih").val());
+				// var bulan = $("#bulanBenih").val();
+				// for (var i = 0; i < acuan.length; i++) {
+				// 	if (bulan == acuan[i]) {
+				// 		if (i < 9) {
+				// 			bulan = "0" + (i+1);
+				// 		} else {
+				// 			if (i == 12) {
+				// 				bulan = "_%_%";
+				// 			} else {
+				// 				bulan = (i+1);
+				// 			}
+				// 		}
+				// 	}
+				// }
+				var tahun = $("#tahunBenih").val();
+				// alert(tahun);
+			    $.ajax({
+			        type:"POST",
+			        url: "../produk/filterStokBenih",
+			        data: "tahun_bulanBenih=" + tahun + "-" + bulan,
+			        dataType : "html",
+			        success:function(msg){
+			            $("#tabelstokbenih").html(msg);                
+			        },
+			        error:function(){
+						alert("Search failed");
+					}
+			  	});
+			}
+
 		</script>
 	</body>	
-	<br><br><br>
+	<br><br>
 	
 </html>

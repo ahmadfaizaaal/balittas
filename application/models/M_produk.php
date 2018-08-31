@@ -2,14 +2,14 @@
 	class M_produk extends CI_Model
 	{
 
-		public function selectBenihAll($sampai, $dari)
-		{
-	        $query = $this->db->select("*");
-	        $query = $this->db->from("benih b");
-			$query = $this->db->limit($sampai, $dari);
-	        $query = $this->db->get();
-	        return $query->result();
-		}
+		// public function selectBenihAll($sampai, $dari)
+		// {
+	 //        $query = $this->db->select("*");
+	 //        $query = $this->db->from("benih b");
+		// 	$query = $this->db->limit($sampai, $dari);
+	 //        $query = $this->db->get();
+	 //        return $query->result();
+		// }
 
 		public function getJumlahBenih() {
 			$query = $this->db->get('benih');
@@ -39,6 +39,25 @@
 			$query = $this->db->where("tanggal like",$tahun."-".$bulan."-_%_%");
 			$query = $this->db->order_by("db.id_distribusi", "asc");
 			// $query = $this->db->limit($sampai, $dari);
+	        $query = $this->db->get();
+	        return $query->result();
+		}
+
+		public function selectStokBenih()
+		{
+	        $query = $this->db->select("*");
+	        $query = $this->db->from("benih b");
+	        $query = $this->db->where("stok_sampai like","2018-06-_%_%");
+	        $query = $this->db->order_by("id_benih", "asc");
+	        $query = $this->db->get();
+	        return $query->result();
+		}
+
+		public function selectStokBenihFiltered($tahun, $bulan) {
+			$query = $this->db->select("*");
+	        $query = $this->db->from("benih b");
+	        $query = $this->db->where("stok_sampai like",$tahun."-".$bulan."-_%_%");
+			$query = $this->db->order_by("id_benih", "asc");
 	        $query = $this->db->get();
 	        return $query->result();
 		}

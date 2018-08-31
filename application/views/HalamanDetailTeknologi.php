@@ -38,7 +38,7 @@
 									<img src="<?php echo base_url() ?>assets/gambarTBD/<?php echo $rowA->gambar_tekno; ?>" alt="" style="width: 100%;border-radius: 3px;">
 									<br>
 									<div class="container-fluid">									
-										<h4 style="color:rgb(242,97,5); font-size: 24px; font-family: Minion Pro;"><strong class="pencarian"><?php echo $rowA->jenis_teknologi_budidaya; ?></strong></h4>									
+										<h4 style="color:rgb(242,97,5); font-size: 24px; font-family: helmet;"><strong class="pencarian"><?php echo $rowA->jenis_teknologi_budidaya; ?></strong></h4>									
 										<p style="text-indent: 0.5in; text-align: justify;" class="pencarian"><?php echo $rowA->deskripsi; ?></p>
 
 										<br>
@@ -101,7 +101,7 @@
 				</div>
 				<div class="col-sm-3 col-lg-3">
 					
-					<h3 class="text-left" style="color:black; margin-top: -25px; font-family: Minion Pro">Pencarian</h3>
+					<h3 class="text-left" style="color:black; margin-top: -25px; font-family: helmet">Pencarian</h3>
 					<hr style="border-color: grey;margin-top: -10px;">
 					<div class="container-fluid" style="background-color:rgba(28,69,26,0.9);border-radius: 5px;margin-top: -7px;margin-bottom: -10px;">
 						<form method="get" action="<?php echo base_url('pencarian'); ?>" style="margin-top: 15px; margin-bottom: 15px;">
@@ -116,7 +116,7 @@
 							 </div>
 						</form>						
 					</div>
-					<a href="<?php echo base_url('leaflet') ?>" style="text-decoration-line:none;" title="Klik untuk menuju halaman leaflet"><h3 class="text-left" style="color:black;font-family: Minion Pro">Leaflet</h3></a>
+					<a href="<?php echo base_url('leaflet') ?>" style="text-decoration-line:none;" title="Klik untuk menuju halaman leaflet"><h3 class="text-left" style="color:black;font-family: helmet">Leaflet</h3></a>
 					<hr style="border-color: grey;margin-top: -10px;margin-bottom: 0px;">	
 					<?php 
 						$ganjil = true;

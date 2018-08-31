@@ -24,12 +24,12 @@
 					  	<li><a href="<?php echo base_url("produk/$url") ?>">Produk</a></li>
 						<li class="active">Benih</li> 
 					</ul>
-					<!-- <h3 class="text-left" style="color:black; font-family: Minion Pro"><?php echo $kategori; ?></h3>
+					<!-- <h3 class="text-left" style="color:black; font-family: helmet"><?php echo $kategori; ?></h3>
 					<hr style="border-color: grey;margin-top: -10px;"> -->
 						<div class="row">
 							<div class="col-xs-3 col-sm-4 col-lg-4">
-								<h3 class="text-left hidden-xs" style="color:black; font-family: Minion Pro; padding-top: 18px; margin-top: 0px; margin-bottom: -5px;"><?php echo $kategori; ?></h3>
-								<h3 class="text-left hidden-sm hidden-lg" style="color:black; font-family: Minion Pro; padding-top: 18px; margin-top: 0px; margin-bottom: -5px;"><?php echo $kategori; ?></h3>
+								<h3 class="text-left hidden-xs" style="color:black; font-family: helmet; padding-top: 18px; margin-top: 0px; margin-bottom: -5px;"><?php echo $kategori; ?></h3>
+								<h3 class="text-left hidden-sm hidden-lg" style="color:black; font-family: helmet; padding-top: 18px; margin-top: 0px; margin-bottom: -5px;"><?php echo $kategori; ?></h3>
 							</div>
 							<div class="col-xs-3 col-sm-4 col-lg-4">
 								<h3 class="text-right hidden-xs" style="margin-left: 20px; padding-top: 18px; margin-top: 0px; margin-bottom: -5px; font-size: 14px;"><b>Filter by :</b></h3>
@@ -116,13 +116,13 @@
 
 
 					<!-- DISTRIBUSI BENIH -->				
-					<!-- <h3 class="text-left" style="color:black; font-family: Minion Pro">Distribusi Benih UPBS</h3>
+					<!-- <h3 class="text-left" style="color:black; font-family: helmet">Distribusi Benih UPBS</h3>
 					<hr style="border-color: grey;margin-top: -8px;"> -->
 					<!-- <div class="container-fluid"> -->
 						<div class="row">
 							<div class="col-xs-3 col-sm-4 col-lg-4">
-								<h3 class="text-left hidden-xs" style="color:black; font-family: Minion Pro; padding-top: 18px; margin-top: 0px; margin-bottom: -5px;">Distribusi Benih UPBS</h3>
-								<h3 class="text-left hidden-sm hidden-lg" style="color:black; font-family: Minion Pro; padding-top: 18px; margin-top: 0px; margin-bottom: -5px;">Distribusi Benih UPBS</h3>
+								<h3 class="text-left hidden-xs" style="color:black; font-family: helmet; padding-top: 18px; margin-top: 0px; margin-bottom: -5px;">Distribusi Benih UPBS</h3>
+								<h3 class="text-left hidden-sm hidden-lg" style="color:black; font-family: helmet; padding-top: 18px; margin-top: 0px; margin-bottom: -5px;">Distribusi Benih UPBS</h3>
 							</div>
 							<div class="col-xs-3 col-sm-4 col-lg-4">
 								<h3 class="text-right hidden-xs" style="margin-left: 20px; padding-top: 18px; margin-top: 0px; margin-bottom: -5px; font-size: 14px;"><b>Filter by :</b></h3>
@@ -217,7 +217,7 @@
 				</div>				
 				<div class="col-sm-3 col-lg-3">
 					<br>
-					<h3 class="text-left" style="color:black;font-family: Minion Pro">Pencarian</h3>
+					<h3 class="text-left" style="color:black;font-family: helmet">Pencarian</h3>
 					<hr style="border-color: grey;margin-top: -10px;">
 					<div class="container-fluid" style="background-color:rgba(28,69,26,0.9);border-radius: 5px;margin-top: -7px;margin-bottom: -10px;">
 						<form method="get" action="<?php echo base_url('pencarian'); ?>" style="margin-top: 15px; margin-bottom: 15px;">
@@ -231,7 +231,7 @@
 							 </div>
 						</form>						
 					</div>
-					<a href="<?php echo base_url() ?>leaflet" style="text-decoration-line:none;" title="Klik untuk menuju halaman leaflet"><h3 class="text-left" style="color:black;font-family: Minion Pro">Leaflet</h3></a>
+					<a href="<?php echo base_url() ?>leaflet" style="text-decoration-line:none;" title="Klik untuk menuju halaman leaflet"><h3 class="text-left" style="color:black;font-family: helmet">Leaflet</h3></a>
 					<hr style="border-color: grey;margin-top: -10px;margin-bottom: 0px;">					
 					<?php 
 						$ganjil = true;

@@ -26,7 +26,7 @@
 						<li><a href="<?php echo base_url("varietas/jenistembakau/$url") ?>">Jenis Tembakau</a></li>
 						<li class="active"><?php echo $kategori; ?></li> 
 					</ul>
-					<h3 class="text-left" style="color:black; font-family: Minion Pro">Berdasarkan <?php echo $kategori; ?></h3>
+					<h3 class="text-left" style="color:black; font-family: helmet">Berdasarkan <?php echo $kategori; ?></h3>
 					<hr style="border-color: grey;margin-top: -10px;">
 
 				
@@ -146,7 +146,7 @@
 				</div>				
 				<div class="col-sm-3 col-lg-3">
 					<br>
-					<h3 class="text-left" style="color:black;font-family: Minion Pro">Pencarian</h3>
+					<h3 class="text-left" style="color:black;font-family: helmet">Pencarian</h3>
 					<hr style="border-color: grey;margin-top: -10px;">
 					<div class="container-fluid" style="background-color:rgba(28,69,26,0.9);border-radius: 5px;margin-top: -7px;margin-bottom: -8px;">
 						<form method="get" action="<?php echo base_url('pencarian'); ?>" style="margin-top: 15px; margin-bottom: 15px;">
@@ -160,7 +160,7 @@
 							 </div>
 						</form>						
 					</div>
-					<a href="<?php echo base_url() ?>leaflet" style="text-decoration-line:none;" title="Klik untuk menuju halaman leaflet"><h3 class="text-left" style="color:black;font-family: Minion Pro">Leaflet</h3></a>
+					<a href="<?php echo base_url() ?>leaflet" style="text-decoration-line:none;" title="Klik untuk menuju halaman leaflet"><h3 class="text-left" style="color:black;font-family: helmet">Leaflet</h3></a>
 					<hr style="border-color: grey;margin-top: -10px;margin-bottom: 0px;">					
 					<?php 
 						$ganjil = true;

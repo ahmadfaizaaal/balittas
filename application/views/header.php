@@ -41,7 +41,7 @@
 					    <ul class="nav navbar-nav navbar-right" style="margin-top: 10px;margin-right: 75px;">
 					      	<a href="<?php echo base_url() ?>" class="glyphicon glyphicon-home dropbtnHeader" style="text-decoration-line: none;font-size: 14px;"></a>
 					      	<div class="dropdownHeader">
-							  	<div class="dropbtnHeader" style="font-family: Minion Pro">Jenis Tembakau <span class="caret"></div>
+							  	<div class="dropbtnHeader" style="font-family: helmet">Jenis Tembakau <span class="caret"></div>
 							  	<div class="dropdownHeader-content" style="margin: 0px 0px 0px -30px;">
 								  	<div class="container-fluid">
 								  		<a href="<?php echo base_url() ?>varietas/jenistembakau/asalusul" style="margin-top: 10px;">Asal Usul</a>
@@ -57,7 +57,7 @@
 							  	</div>
 							</div>
 							<div class="dropdownHeader">
-							  	<div class="dropbtnHeader" style="font-family: Minion Pro">Produk <span class="caret"></div>
+							  	<div class="dropbtnHeader" style="font-family: helmet">Produk <span class="caret"></div>
 							  	<div class="dropdownHeader-content" style="margin: 0px 0px 0px -178px;">
 								  	<div class="container-fluid">	  		
 							          	<a href="<?php echo base_url() ?>produk/benih" style="margin-top: 10px;">Benih</a>
@@ -71,7 +71,7 @@
 							  	</div>
 							</div>
 							<div class="dropdownHeader">
-							  	<div class="dropbtnHeader" style="font-family: Minion Pro">Teknologi Budidaya <span class="caret"></div>
+							  	<div class="dropbtnHeader" style="font-family: helmet">Teknologi Budidaya <span class="caret"></div>
 							  	<div class="dropdownHeader-content" style="margin: 0px 0px 0px -265px;">
 								  	<div class="container-fluid">
 								  		<div class="row">

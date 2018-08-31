@@ -63,7 +63,7 @@
 							</div>
 							<div class="col-sm-9 col-lg-9">
 								<div class="col-sm-4 col-lg-4 batasfooter">
-									<h3 style="margin-top: 4px; font-family: Minion Pro;">Link Terkait</h3>
+									<h3 style="margin-top: 4px; font-family: helmet;">Link Terkait</h3>
 									<hr style="margin-top: -5px; margin-bottom: 10px; border-color: #fece00;">		
 									<table>
 										<tbody>
@@ -112,7 +112,7 @@
 									<br>														
 								</div>
 								<div class="col-sm-4 col-lg-4 batasfooter">
-									<h3 style="margin-top: 4px; font-family: Minion Pro;">Sosial Media</h3>
+									<h3 style="margin-top: 4px; font-family: helmet;">Sosial Media</h3>
 									<hr style="margin-top: -5px; margin-bottom: 13px; border-color: #fece00;">
 									<div class="row">
 										<div class="col-xs-3 col-sm-3 col-lg-3" style="margin: 0px -7px 9px 0px;">

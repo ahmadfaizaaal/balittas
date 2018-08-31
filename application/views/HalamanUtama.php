@@ -25,7 +25,7 @@
 					  	<li class="active">Beranda</li> 
 					  	<li></li>
 					</ul>
-				<h3 class="text-left" style="color:black; font-family: Minion Pro">Varietas Terbaru</h3>
+				<h3 class="text-left" style="color:black; font-family: helmet">Varietas Terbaru</h3>
 				<hr style="border-color: grey; margin-top: -10px;">
 				<div class="row" style="margin-top: -7px;">
 					<?php 
@@ -87,7 +87,7 @@
 				</div>				
 				<div class="col-sm-3 col-lg-3">
 					<br>
-					<h3 class="text-left" style="color:black;font-family: Minion Pro">Pencarian</h3>
+					<h3 class="text-left" style="color:black;font-family: helmet">Pencarian</h3>
 					<hr style="border-color: grey;margin-top:  -10px;">
 					<div class="container-fluid" style="background-color:rgba(28,69,26,0.9);border-radius: 5px;margin-top: -7px;margin-bottom: -8px;">
 						<form method="get" action="<?php echo base_url('pencarian'); ?>" style="margin-top: 15px; margin-bottom: 15px;">
@@ -101,7 +101,7 @@
 							 </div>
 						</form>						
 					</div>					
-					<a href="<?php echo base_url('leaflet') ?>" style="text-decoration-line:none;" title="Klik untuk menuju halaman leaflet"><h3 class="text-left" style="color:black;font-family: Minion Pro">Leaflet</h3></a>
+					<a href="<?php echo base_url('leaflet') ?>" style="text-decoration-line:none;" title="Klik untuk menuju halaman leaflet"><h3 class="text-left" style="color:black;font-family: helmet">Leaflet</h3></a>
 					<hr style="border-color: grey;margin-top:  -10px; margin-bottom: 0px;">
 					<?php 
 						$ganjil = true;
@@ -129,7 +129,7 @@
 			<div class="container-fluid" style="background-color: rgba(28,69,26,0.8);">
 				<div class="container">
 				<!-- Produk -->
-				<h3 class="text-center" style="color:white;font-family: Minion Pro;"><strong>Produk</strong></h3>
+				<h3 class="text-center" style="color:white;font-family: helmet;"><strong>Produk</strong></h3>
 				<p class="text-center" style="color: white;"><span style="font-size: 20px; font-weight: bold; font-family: hobo std; color: #fece00;">I</span> novasi teknologi yang paling strategis untuk mendukung pengembangan komoditas adalah varietas unggul. Penggunaan varietas unggul suatu komoditas mempunyai dampak yang sangat luas, antara lain dapat berpengaruh terhadap efisiensi biaya dalam budi daya, peningkatan produksi dan mutu, serta pemanfaatan lahan-lahan marginal, sehingga dapat berdampak sosial dan ekonomi yang cukup nyata bagi petani. Selain itu, penggunaan varietas unggul merupakan teknologi yang relatif mudah diterima dan diterapkan oleh petani.</p>
 				<br><br>
 				<div class="row" style="margin-top: -20px;">
@@ -139,7 +139,7 @@
 					    		<img src="<?php echo base_url() ?>item img/hazelnutWh.png" style="width: 40%" col="g">
 					    		<img src="<?php echo base_url() ?>item img/hazelnutY.png" style="width: 40%; display:none;" col="b">
 					    		<br>
-								<h4>Benih</h4>
+								<h4 style="font-family: helmet;">Benih</h4>
 					    	</div>
 					    </a>
 				    </div>
@@ -149,7 +149,7 @@
 					    		<img src="<?php echo base_url() ?>item img/toolsWh.png" style="width: 40%" col="g">
 					    		<img src="<?php echo base_url() ?>item img/toolsY.png" style="width: 40%; display:none;" col="b">
 					    		<br>
-								<h4>Alat & Mesin</h4>
+								<h4 style="font-family: helmet;">Alat & Mesin</h4>
 					    	</div>
 					    </a>
 				    </div>
@@ -159,7 +159,7 @@
 					    		<img src="<?php echo base_url() ?>item img/flaskWh.png" style="width: 40%" col="g">
 					    		<img src="<?php echo base_url() ?>item img/flaskY.png" style="width: 40%; display:none;" col="b">
 					    		<br>
-								<h4>Formula</h4>
+								<h4 style="font-family: helmet;">Formula</h4>
 					    	</div>
 					    </a>
 				    </div>
@@ -169,7 +169,7 @@
 					    		<img src="<?php echo base_url() ?>item img/pipeWh.png" style="width: 40%" col="g">
 					    		<img src="<?php echo base_url() ?>item img/pipeY.png" style="width: 40%; display:none;" col="b">
 					    		<br>
-								<h4>Produk Hilir</h4>
+								<h4 style="font-family: helmet;">Produk Hilir</h4>
 					    	</div>
 					    </a>
 				    </div>
@@ -180,7 +180,7 @@
 			<div class="container">
 			<div class="row">
 				<div class="col-sm-3 col-lg-3">
-					<h3 class="text-center" style="color:black;margin-top: 0px;font-family: Minion Pro;"><strong>Teknologi Budidaya</strong></h3>
+					<h3 class="text-center" style="color:black;margin-top: 0px;font-family: helmet;"><strong>Teknologi Budidaya</strong></h3>
 					<p class="text-center"><span style="font-size: 20px; font-weight: unset; font-family: hobo std; color: rgb(242,97,5);">T</span>eknologi budidaya pada tembakau dapat dikelompokkan menjadi beberapa jenis yang diantaranya adalah penangkaran benih, pesemaian, pemupukan, dan pemupukan bebas chlor. Selain itu, teknologi budidaya tembakau juga membahas mengenai penyakit-penyakit pada tembakau serta hama tembakau disertai cara pengendaliannya. Bagaimana proses panen, proses pasca panen, kesesuaian lahan, dan budidaya tembakau cerutu juga dibahas pada sub topik teknologi budidaya tembakau ini.</p>
 				</div>
 				<div class="col-sm-9 col-lg-9">
@@ -201,7 +201,7 @@
 										<img src="<?php echo base_url() ?>assets/gambarTBD/<?php echo $row->gambar_tekno; ?>" class="imageZoom" >
 										<div class="itemZoom-overlay top"></div>
 									</div>
-									<h4 style="font-family: Minion Pro;"><?php echo $row->jenis_teknologi_budidaya; ?></h4>
+									<h4 style="font-family: helmet;"><?php echo $row->jenis_teknologi_budidaya; ?></h4>
 									<hr style="margin:-6px 0px 5px 0px; border-color: orange;">
 									<div class="overlayhr"></div>
 									<p style="color:black;"><?php echo $deskripsi_teknologi; ?></p>
@@ -216,7 +216,7 @@
 			</div>
 			<!-- <hr> -->
 			<hr style="border-color: grey">
-			<a href="<?php echo base_url('agribisnis') ?>" style="text-decoration-line:none;" title="Klik untuk menuju halaman Agribisnis"><h3 class="text-center" style="color:black;font-family: Minion Pro; "><strong>Agribisnis Tembakau</strong></h3></a>
+			<a href="<?php echo base_url('agribisnis') ?>" style="text-decoration-line:none;" title="Klik untuk menuju halaman Agribisnis"><h3 class="text-center" style="color:black;font-family: helmet; "><strong>Agribisnis Tembakau</strong></h3></a>
 			<p style="text-align: justify; text-indent: 0.5in;"><span style="font-size: 20px; font-weight: unset; font-family: hobo std; color: rgb(242,97,5);">A</span> gribisnis tembakau mempunyai peran yang strategis dalam perekonomian lokal dan nasional. Sebagai komoditas yang bernilai ekonomis tinggi, usaha tani tembakau dapat menyumbang pendapatan petani sekitar 40−80% dari total pendapatan. Sedangkan sebagai bahan baku utama rokok, peranan tembakau semakin menentukan dalam perkembangan industri rokok. Industri rokok telah ditetapkan pemerintah sebagai salah satu industri prioritas nasional (Anonim 2010a), yang perkembangannya akan sangat mempengaruhi perkembangan ekonomi nasional. Target penerimaan negara dari cukai yang telah ditetapkan untuk tahun 2010 sebesar Rp61 triliun dan tahun 2011 sebesar Rp71 triliun; sedangkan penerimaan devisa dari ekspor tembakau sebesar US$564 juta. Usaha tani tembakau dan industri yang terkait juga menyediakan lapangan kerja bagi kurang lebih 10 juta orang. Selain sebagai usaha tani primer, agribisnis tembakau sangat terkait dengan industri hulu dan industri hilir, yang semuanya bernilai ekonomi tinggi. Industri hulu yang sangat erat hubungannya antara lain adalah usaha pembibitan dan pembuatan pupuk kandang. Sedangkan industri hilir yang sangat menopang agribisnis tembakau antara lain adalah usaha kerajinan tikar, alas pengering tembakau rajangan, kerajinan tali, dan usaha tani cengkeh (Anonim 2010a). </p>
 			<br><br>
 			<?php 
@@ -227,7 +227,7 @@
 					<img src="<?php echo base_url() ?>assets/gambarAgribisnis/<?php echo $row->gambar_agribisnis; ?>" class="image img-rounded" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
 				</div>
 				<div class="col-sm-8 col-lg-8">
-					<p style="font-size: 20px;color:rgb(242,97,5); font-family: Minion Pro;"><?php echo $row->jenis_agribisnis; ?></p>
+					<p style="font-size: 20px;color:rgb(242,97,5); font-family: helmet;"><?php echo $row->jenis_agribisnis; ?></p>
 					<p><?php echo $row->deskripsi_agribisnis; ?></p>	
 					<div class="text-right">						
 						<a href="<?php echo base_url('agribisnis/jenis/').urlencode(strtolower($row->jenis_agribisnis)); ?>">
@@ -245,7 +245,7 @@
 					<img src="<?php //echo base_url() ?>item img/tembakau.jpg" class="image img-rounded" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);">
 				</div>
 				<div class="col-sm-8 col-lg-8">
-					<p style="font-size: 20px;color:rgb(242,97,5); font-family: Minion Pro;">Budidaya tembakau madura</p>
+					<p style="font-size: 20px;color:rgb(242,97,5); font-family: helmet;">Budidaya tembakau madura</p>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident quod, quisquam fugiat maiores ipsam. Deserunt molestiae reiciendis, eius natus iure? ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati repudiandae tenetur illo vitae impedit eum culpa esse vero, hic repellendus.</p>
 					<div class="text-right">						
 						<a href="">

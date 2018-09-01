@@ -31,8 +31,8 @@
 					<?php 
 						foreach ($varietas as $row) {
 							$namaVarietas = ""; $narasi = "";
-							if (strlen($row->nama_varietas) > 30) {
-								$namaVarietas = substr($row->nama_varietas, 0, 30)."...";
+							if (strlen($row->nama_varietas) > 24) {
+								$namaVarietas = substr($row->nama_varietas, 0, 24)."...";
 							} else {
 								$namaVarietas = $row->nama_varietas;
 							}

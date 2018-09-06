@@ -103,7 +103,7 @@
 				    </div>
 
 				    <div class="collapse navbar-collapse" id="main">			    
-					    <ul class="nav navbar-nav navbar-right hidden-md hidden-lg" style="margin-top: 8px;margin-right: 75px;">
+					    <ul class="nav navbar-nav hidden-md hidden-lg" style="margin-top: 8px;margin-right: 75px;">
 					      	<a href="<?php echo base_url() ?>" class="glyphicon glyphicon-home dropbtnHeader" style="text-decoration-line: none;font-size: 14px;margin-left: 8px;"></a>
 					      	<li class="dropdown">
 					        	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Jenis Tembakau <span class="caret"></span></a>
